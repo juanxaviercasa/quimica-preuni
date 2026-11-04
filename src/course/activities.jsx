@@ -11,7 +11,7 @@ import {
 import { evaluate, formatNumber, withinTolerance } from "./expr.js";
 import { Feedback, RichText } from "./ui.jsx";
 
-const num = v => { const n = Number(String(v ?? "").replace(",", ".")); return Number.isFinite(n) ? n : null; };
+const num = v => { const text = String(v ?? "").trim(); if (!text) return null; const n = Number(text.replace(",", ".")); return Number.isFinite(n) ? n : null; };
 const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
 function GoalBox({ question, met, children }) {

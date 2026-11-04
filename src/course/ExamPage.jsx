@@ -50,7 +50,7 @@ export default function ExamPage() {
 
       <section className="cq-section">
         {mod.exam.length > 0 ? (
-          <ExamSet questions={mod.exam} title="Evaluación acumulativa" />
+          <ExamSet key={mod.number} questions={mod.exam} title="Evaluación acumulativa" />
         ) : (
           <p>La evaluación acumulativa para este módulo está en proceso de redacción.</p>
         )}

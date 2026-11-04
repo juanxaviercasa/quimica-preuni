@@ -82,7 +82,7 @@ export default function TopicPage() {
       </section>
 
       {/* Actividad Interactiva */}
-      {topic.activity && ActivityComponent ? (
+      {topic.status !== "bloqueado" && topic.activity && ActivityComponent ? (
         <section className="cq-section" aria-labelledby="act-heading" style={{ border: "2px solid rgba(139, 77, 176, 0.25)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
             <h2 id="act-heading" className="cq-section-title" style={{ margin: 0, border: "none", padding: 0 }}>
@@ -100,7 +100,7 @@ export default function TopicPage() {
             </ul>
           </div>
 
-          <ActivityComponent activity={topic.activity} />
+          <ActivityComponent key={topic.code} activity={topic.activity} />
         </section>
       ) : topic.status === "bloqueado" ? (
         <section className="cq-section" style={{ borderLeft: "4px solid #ef4444" }}>
@@ -157,7 +157,7 @@ export default function TopicPage() {
           <p style={{ fontSize: "0.95rem", color: "var(--muted, #6b7280)", marginBottom: "1.25rem" }}>
             Pon a prueba tu dominio conceptual antes de avanzar al siguiente tema.
           </p>
-          <ExamSet questions={topic.quiz} title="Mini examen" />
+          <ExamSet key={topic.code} questions={topic.quiz} title="Mini examen" />
         </section>
       )}
 

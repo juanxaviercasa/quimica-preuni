@@ -3,6 +3,7 @@
 import sourceIndex from "./sourceIndex.json" with { type: "json" };
 import { authoredModules } from "./modules/index.js";
 import { routeFor, moduleRoute, examRoute } from "./routes.js";
+import { hasPlaceholderContent } from "./contentQuality.js";
 
 const authoredByNumber = new Map(authoredModules.map(m => [m.number, m]));
 
@@ -25,6 +26,12 @@ function buildModule(source) {
       return { ...base, ...(authored?.intro ?? {}), kind: "intro", code: entry.code, route: base.route, hasContent: Boolean(authored?.intro) };
     }
     const topic = topicsByCode.get(entry.code);
+    if (topic && hasPlaceholderContent(topic)) {
+      return {
+        ...base, activity: topic.activity, hasContent: false, status: "bloqueado",
+        blockedReason: "La actividad y las preguntas necesitan contenido específico de esta lección."
+      };
+    }
     return topic
       ? { ...base, ...topic, title: base.title, fullTitle: base.fullTitle, route: base.route, hasContent: true, status: topic.status ?? "pendiente" }
       : { ...base, hasContent: false, status: "pendiente", blockedReason: "Contenido interactivo aún no redactado." };
@@ -41,7 +48,9 @@ function buildModule(source) {
     intro: entries.find(e => e.kind === "intro"),
     entries,
     topics,
-    exam: authored?.exam ?? [],
+    exam: topics.every(t => t.hasContent)
+      ? (authored?.exam ?? []).filter(q => !hasPlaceholderContent({ quiz: [q] }))
+      : [],
     examSources: authored?.examSources ?? []
   };
 }

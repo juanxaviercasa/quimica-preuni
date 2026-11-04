@@ -6,7 +6,7 @@ import { convertTemperature, checkBalance, calculatorValues, calculatorGoalMet, 
 export const FAMILIES = ["isotopes", "trends", "temperature", "calculator", "classify", "order", "compare", "builder", "balance"];
 export const STATUSES = ["listo", "pendiente", "bloqueado"];
 const UNIVERSITY_ATTRIBUTION = /\b(UNI|UNMSM|San Marcos|PUCP|UNSAAC|UNAC|DECO|CEPRE[- ]?\w*)\b/;
-const OBSOLETE_HOST = /tablaperiodica\.sistemazenit\.com/;
+const OBSOLETE_HOST = /https?:\/\/quimica\.sistemazenit\.com/;
 
 const isText = v => typeof v === "string" && v.trim().length > 0;
 

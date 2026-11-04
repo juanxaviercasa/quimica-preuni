@@ -113,7 +113,7 @@ export function ExamSet({ questions, title = "Mini examen", onFinish }) {
       ) : (
         <div className="cq-result" role="status" aria-live="polite">
           <strong>Resultado: {score}/{questions.length}</strong>
-          <span>{score === questions.length ? "¡Dominio completo!" : score >= Math.ceil(questions.length * 0.6) ? "Buen avance: revisa las soluciones marcadas." : "Repasa la actividad y el ejemplo, y vuelve a intentarlo."}</span>
+          <span>{score === questions.length ? "Respondiste correctamente todas las preguntas de este intento." : score >= Math.ceil(questions.length * 0.6) ? "Buen avance: revisa las soluciones marcadas." : "Repasa la actividad y el ejemplo, y vuelve a intentarlo."}</span>
           <button type="button" className="cq-btn" onClick={() => { setResponses({}); setFinished(false); }}>Reintentar</button>
         </div>
       )}
