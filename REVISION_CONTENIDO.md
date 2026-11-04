@@ -8,6 +8,8 @@ La reparación incluye renderizado de Markdown y LaTeX, rechazo de respuestas va
 
 ## Pendientes concretos
 
+Revisión posterior: las 48 preguntas de los módulos 1 y 2 cuentan con explicaciones por alternativa. En el módulo 1 se corrigió el dato de masa del ejercicio de fuerza a 4.5 kg y la inferencia de pureza del anillo. En el módulo 2 se corrigió la clave 2.8-3 al orden 5s < 4d < 4f < 6p según n + ℓ, se distinguieron ondas de materia de radiación electromagnética, se usó |ψ|² y se explicitó la aproximación de masas enteras del ejercicio de boro. Esto no aprueba aún la teoría completa ni las actividades de ambos módulos.
+
 - Las 504 claves originales requieren cálculo o revisión científica independiente. Sus explicaciones recuperadas indican la clave y remiten a los fundamentos, sin fingir una justificación nueva.
 - Faltan explicaciones específicas de cada distractor, práctica adicional en los temas con menos de dos desarrollos y simuladores propios en las familias aún cubiertas por reflexión guiada.
 - Los exámenes acumulativos reutilizan preguntas de las lecciones. Son repasos y no una prueba independiente.

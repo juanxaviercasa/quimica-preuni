@@ -9,6 +9,36 @@ import { convertTemperature, weightedAverage, checkBalance, TREND_PROPERTIES, tr
 import { routeFor, moduleRoute, examRoute, segmentToNumber } from "../src/course/routes.js";
 import { evaluate, withinTolerance } from "../src/course/expr.js";
 import { hasPlaceholderContent } from "../src/course/contentQuality.js";
+import { reviewQuestion } from "../src/course/reviewedQuestions.js";
+
+test("module two review corrects filling order and quantum terminology", () => {
+  const order = getEntry("2.8").quiz[2];
+  assert.equal(order.answer, 1);
+  assert.equal(order.options[order.answer], "5s < 4d < 4f < 6p");
+  assert.ok(getEntry("2.7").quiz[1].prompt.includes("ondas de materia"));
+  assert.ok(getEntry("2.7").quiz[2].options[2].includes("|ψ|²"));
+  for (const topic of getModule(2).topics) {
+    for (const question of topic.quiz) {
+      assert.equal(question.reviewStatus, "revisado");
+      assert.equal(question.why.length, question.options.length);
+    }
+  }
+});
+
+test("reviewed module one distinguishes force units and evidence of purity", () => {
+  const force = getEntry("1.6").quiz[1];
+  assert.ok(force.prompt.includes("4.5 kg"));
+  assert.equal(force.options[force.answer], "44 N");
+  const density = getEntry("1.7").quiz[1];
+  assert.ok(density.options[density.answer].includes("no demuestra"));
+  for (const topic of getModule(1).topics) {
+    for (const question of topic.quiz) {
+      assert.equal(question.why.length, question.options.length);
+      assert.equal(question.reviewStatus, "revisado");
+      assert.deepEqual(reviewQuestion(question).answer, question.answer);
+    }
+  }
+});
 
 test("course registry covers exactly 197 entries in 18 modules with zero validator errors", () => {
   const report = validateCourse({

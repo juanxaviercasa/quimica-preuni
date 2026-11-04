@@ -6,6 +6,7 @@ import { routeFor, moduleRoute, examRoute } from "./routes.js";
 import { hasPlaceholderContent } from "./contentQuality.js";
 import sourceContent from "./sourceContent.json" with { type: "json" };
 import { environmentalQuestions } from "./environmentQuestions.js";
+import { reviewQuestion } from "./reviewedQuestions.js";
 
 const authoredByNumber = new Map(authoredModules.map(m => [m.number, m]));
 
@@ -30,7 +31,7 @@ function buildModule(source) {
     const topic = topicsByCode.get(entry.code);
     const recovered = sourceContent[entry.code];
     if (recovered) {
-      const quiz = recovered.quiz.length ? recovered.quiz : environmentalQuestions(entry.code);
+      const quiz = (recovered.quiz.length ? recovered.quiz : environmentalQuestions(entry.code)).map(reviewQuestion);
       const specialized = ["1.8", "2.5", "3.10"].includes(entry.code);
       const activity = specialized ? topic.activity : {
         family: "guided", title: "Resuelve y contrasta tu razonamiento",
