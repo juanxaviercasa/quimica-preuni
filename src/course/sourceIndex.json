@@ -1,0 +1,2652 @@
+{
+  "generatedFrom": "Modificar/modulo_01.txt … modulo_18.txt",
+  "modules": [
+    {
+      "number": 1,
+      "title": "Módulo 1: Materia, Medición y Separación",
+      "description": "Estudia la clasificación y las propiedades de la materia, los fenómenos físicos y químicos, los métodos de separación, las unidades del Sistema Internacional y las herramientas de medición química.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_01_Materia_Medicion_y_Metodos_de_Separacion.webp",
+      "entries": [
+        {
+          "code": "1.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "1.0 Presentación: Materia y Medición",
+          "shortTitle": "Presentación: Materia y Medición",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_01_Materia_Medicion_y_Metodos_de_Separacion.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "1.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "1.1 Clasificación de la materia en sustancias simples, compuestas y mezclas",
+          "shortTitle": "Clasificación de la materia en sustancias simples, compuestas y mezclas",
+          "objective": "Comprender la organización fundamental de la materia, diferenciando a nivel microscópico y macroscópico las sustancias puras de las mezclas, con el rigor analítico exigido en los exámenes UNI y San Marcos (DECO).",
+          "sourceKeys": "1 (c), 2 (b), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.1_Clasificacion_de_la_materia_en_sustancias_simples_compuestas_y_mezclas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "1.2 Identificación de fenómenos físicos, químicos y alotrópicos",
+          "shortTitle": "Identificación de fenómenos físicos, químicos y alotrópicos",
+          "objective": "Distinguir con precisión científica los cambios que experimenta la materia, correlacionando la conservación o modificación de los enlaces intramoleculares con los fenómenos físicos, químicos, alotrópicos y nucleares.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.2_Identificacion_de_fenomenos_fisicos_quimicos_y_alotropicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "1.3 Diferenciación de propiedades físicas, químicas, intensivas y extensivas",
+          "shortTitle": "Diferenciación de propiedades físicas, químicas, intensivas y extensivas",
+          "objective": "Clasificar con rigor termodinámico las propiedades de la materia, evaluando su dependencia respecto a la masa del sistema y su capacidad de alterar la naturaleza química de la sustancia.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.3_Diferenciacion_de_propiedades_fisicas_quimicas_intensivas_y_extensivas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "1.4 Aplicación de métodos de separación de mezclas homogéneas y heterogéneas",
+          "shortTitle": "Aplicación de métodos de separación de mezclas homogéneas y heterogéneas",
+          "objective": "Seleccionar y diseñar trenes de separación de mezclas fundamentados en las diferencias de propiedades físicas y térmicas de las fases presentes, sin alterar la naturaleza química de los componentes.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.4_Aplicacion_de_metodos_de_separacion_de_mezclas_homogeneas_y_heterogeneas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "1.5 Conversión de unidades en el Sistema Internacional y análisis dimensional",
+          "shortTitle": "Conversión de unidades en el Sistema Internacional y análisis dimensional",
+          "objective": "Operar con destreza matemática los factores de conversión unitarios, prefijos del SI y las relaciones dimensionales aplicadas a los cálculos cuantitativos en química.",
+          "sourceKeys": "1 (b), 2 (a), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.5_Conversion_de_unidades_en_el_Sistema_Internacional_y_analisis_dimensional.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "1.6 Manejo de cifras significativas, redondeo y notación científica",
+          "shortTitle": "Manejo de cifras significativas, redondeo y notación científica",
+          "objective": "Reportar medidas experimentales y resultados de cálculos estequiométricos con la incertidumbre, precisión y exactitud requeridas bajo las reglas formales de cifras significativas y notación científica.",
+          "sourceKeys": "1 (d), 2 (d), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.6_Manejo_de_cifras_significativas_redondeo_y_notacion_cientifica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "1.7 Cálculo de densidad, gravedad específica y densidad relativa",
+          "shortTitle": "Cálculo de densidad, gravedad específica y densidad relativa",
+          "objective": "Determinar densidades absolutas y relativas de sustancias puras y mezclas multicomponentes, evaluando los efectos térmicos sobre el volumen y la flotabilidad.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.7_Calculo_de_densidad_gravedad_especifica_y_densidad_relativa.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "1.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "1.8 Determinación de escalas termométricas y medición de presión manométrica y absoluta",
+          "shortTitle": "Determinación de escalas termométricas y medición de presión manométrica y absoluta",
+          "objective": "Realizar conversiones rigurosas entre escalas termométricas relativas y absolutas, y calcular presiones absolutas, manométricas y barométricas en sistemas fluidos estáticos y dinámicos.",
+          "sourceKeys": "1 (a), 2 (b), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_01/Leccion_1.8_Determinacion_de_escalas_termometricas_y_medicion_de_presion_manometrica_y_absoluta.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Módulo 2: Estructura Atómica y Mecánica Cuántica",
+      "description": "Analiza la evolución de los modelos atómicos, las partículas subatómicas, la radiación, los números cuánticos y los fundamentos de la mecánica cuántica.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_02_Estructura_Atomica_y_Mecanica_Cuantica.webp",
+      "entries": [
+        {
+          "code": "2.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "2.0 Presentación: Estructura Atómica",
+          "shortTitle": "Presentación: Estructura Atómica",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_02_Estructura_Atomica_y_Mecanica_Cuantica.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "2.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "2.1 Evolución de los modelos atómicos y estructura del átomo nuclear",
+          "shortTitle": "Evolución de los modelos atómicos y estructura del átomo nuclear",
+          "objective": "Analizar la progresión histórica de las teorías atómicas desde el modelo corpuscular de Dalton hasta el átomo nuclear de Rutherford, contrastando sus postulados, aciertos experimentales y limitaciones conceptuales.",
+          "sourceKeys": "1 (b), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.1_Evolucion_de_los_modelos_atomicos_y_estructura_del_atomo_nuclear.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "2.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "2.2 Caracterización de partículas subatómicas fundamentales y notación de núclidos",
+          "shortTitle": "Caracterización de partículas subatómicas fundamentales y notación de núclidos",
+          "objective": "Identificar la masa, carga relativa y absoluta de las partículas subatómicas fundamentales (protón, neutrón y electrón) y representar correctamente cualquier núcleo atómico mediante su notación nuclear convencional.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.2_Caracterizacion_de_particulas_subatomicas_fundamentales_y_notacion_de_nuclidos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?sym=Na"
+          ]
+        },
+        {
+          "code": "2.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "2.3 Determinación de carga en iones monoatómicos, aniones y cationes",
+          "shortTitle": "Determinación de carga en iones monoatómicos, aniones y cationes",
+          "objective": "Cuantificar la variación electrónica asociada a los procesos de ionización monoatómica, determinando el número de electrones en cationes y aniones y reconociendo la invariabilidad del núcleo atómico.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.3_Determinacion_de_carga_en_iones_monoatomicos_aniones_y_cationes.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?sym=Na"
+          ]
+        },
+        {
+          "code": "2.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "2.4 Análisis de especies atómicas: isótopos, isóbaros, isótonos e isoelectrónicos",
+          "shortTitle": "Análisis de especies atómicas: isótopos, isóbaros, isótonos e isoelectrónicos",
+          "objective": "Comparar y contrastar las relaciones interatómicas fundamentales en función de sus nucleones y configuraciones electrónicas, aplicando sistemas de ecuaciones para resolver núclidos incógnita.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.4_Analisis_de_especies_atomicas_isotopos_isobaros_isotonos_e_isoelectronicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?tab=isotopes&sym=C"
+          ]
+        },
+        {
+          "code": "2.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "2.5 Cálculo de masa atómica promedio y abundancia isotópica",
+          "shortTitle": "Cálculo de masa atómica promedio y abundancia isotópica",
+          "objective": "Deducir y calcular la masa atómica relativa promedio reportada en la tabla periódica a partir de las abundancias porcentuales y masas isotópicas obtenidas por espectrometría de masas.",
+          "sourceKeys": "1 (b), 2 (c), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.5_Calculo_de_masa_atomica_promedio_y_abundancia_isotopica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?tab=isotopes&sym=C"
+          ]
+        },
+        {
+          "code": "2.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "2.6 Radiación electromagnética y aplicación de la teoría cuántica de Planck",
+          "shortTitle": "Radiación electromagnética y aplicación de la teoría cuántica de Planck",
+          "objective": "Comprender la naturaleza dual de la radiación electromagnética, relacionando longitud de onda, frecuencia y energía mediante la hipótesis cuántica de Max Planck y el efecto fotoeléctrico.",
+          "sourceKeys": "1 (b), 2 (c), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.6_Radiacion_electromagnetica_y_aplicacion_de_la_teoria_cuantica_de_Planck.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "2.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "2.7 Principios de la mecánica cuántica: De Broglie, Heisenberg y función de onda de Schrödinger",
+          "shortTitle": "Principios de la mecánica cuántica: De Broglie, Heisenberg y función de onda de Schrödinger",
+          "objective": "Fundamentar el modelo mecánico-cuántico moderno del átomo a partir de la dualidad onda-corpúsculo, el principio de indeterminación y la densidad probabilística orbital.",
+          "sourceKeys": "1 (b), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.7_Principios_de_la_mecanica_cuantica_De_Broglie_Heisenberg_y_funcion_de_onda_de_Schrodinger.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "2.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "2.8 Determinación de números cuánticos, formas de orbitales y cálculo de energía relativa",
+          "shortTitle": "Determinación de números cuánticos, formas de orbitales y cálculo de energía relativa",
+          "objective": "Asignar los cuatro números cuánticos a cualquier electrón en un átomo, describir la morfología de los orbitales atómicos y evaluar la estabilidad mediante el cálculo de la energía relativa.",
+          "sourceKeys": "1 (c), 2 (b), 3 (a) *(Nota: 5s=5, 4d=6, 6p=7, 4f=7; empate 6p y 4f gana 4f por menor n)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_02/Leccion_2.8_Determinacion_de_numeros_cuanticos_formas_de_orbitales_y_calculo_de_energia_relativa.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Módulo 3: Configuración Electrónica y Periodicidad",
+      "description": "Construye configuraciones electrónicas y relaciona la estructura electrónica con la posición, las propiedades periódicas y la reactividad de los elementos.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_03_Configuracion_Electronica_y_Tabla_Periodica_Moderna.webp",
+      "entries": [
+        {
+          "code": "3.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "3.0 Presentación: Tabla Periódica",
+          "shortTitle": "Presentación: Tabla Periódica",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_03_Configuracion_Electronica_y_Tabla_Periodica_Moderna.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "3.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "3.1 Aplicación del principio de construcción de Aufbau y regla de Moller",
+          "shortTitle": "Aplicación del principio de construcción de Aufbau y regla de Moller",
+          "objective": "Comprender y aplicar el Principio de Construcción de Aufbau y la regla de las diagonales (Moller) para distribuir secuencialmente los electrones en orden creciente de energía relativa en el estado basal de los átomos.",
+          "sourceKeys": "1 (d), 2 (a), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.1_Aplicacion_del_principio_de_construccion_de_Aufbau_y_regla_de_Moller.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "3.2 Distribución orbital mediante la regla de Hund y principio de exclusión de Pauli",
+          "shortTitle": "Distribución orbital mediante la regla de Hund y principio de exclusión de Pauli",
+          "objective": "Representar la configuración orbital de subniveles degenerados aplicando el principio de exclusión de Pauli y la regla de máxima multiplicidad de Hund.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.2_Distribucion_orbital_mediante_la_regla_de_Hund_y_principio_de_exclusion_de_Pauli.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "3.3 Elaboración de configuraciones electrónicas simplificadas con kernel de gases nobles",
+          "shortTitle": "Elaboración de configuraciones electrónicas simplificadas con kernel de gases nobles",
+          "objective": "Emplear la notación Kernel para condensar la estructura electrónica interna utilizando las configuraciones estables de gases nobles y determinar la capa de valencia.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.3_Elaboracion_de_configuraciones_electronicas_simplificadas_con_kernel_de_gases_nobles.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "3.4 Resolución de anomalías de configuración electrónica y análisis de paramagnetismo y diamagnetismo",
+          "shortTitle": "Resolución de anomalías de configuración electrónica y análisis de paramagnetismo y diamagnetismo",
+          "objective": "Identificar y corregir las anomalías de configuración electrónica ('antiserrucho') causadas por la estabilidad de subniveles d semillenos o llenos, y correlacionar la presencia de electrones desapareados con el comportamiento magnético.",
+          "sourceKeys": "1 (b), 2 (d), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.4_Resolucion_de_anomalias_de_configuracion_electronica_y_analisis_de_paramagnetismo_y_diamagnetismo.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "3.5 Configuración electrónica de iones y orden de pérdida de electrones de valencia",
+          "shortTitle": "Configuración electrónica de iones y orden de pérdida de electrones de valencia",
+          "objective": "Formular correctamente las configuraciones electrónicas de aniones y cationes, aplicando la regla de extracción electrónica a partir del nivel de energía más externo.",
+          "sourceKeys": "1 (b), 2 (b), 3 (d) *(La Plata neutra es [Kr] 5s¹ 4d¹⁰, al perder el 5s¹ queda 4d¹⁰ diamagnético)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.5_Configuracion_electronica_de_iones_y_orden_de_perdida_de_electrones_de_valencia.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?sym=Fe"
+          ]
+        },
+        {
+          "code": "3.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "3.6 Fundamentos de la ley periódica moderna de Moseley y diseño de la tabla periódica",
+          "shortTitle": "Fundamentos de la ley periódica moderna de Moseley y diseño de la tabla periódica",
+          "objective": "Comprender la fundamentación física de la Ley Periódica Moderna formulada por Henry Moseley mediante espectros de rayos X y su impacto en la ordenación de la Tabla Periódica.",
+          "sourceKeys": "1 (c), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.6_Fundamentos_de_la_ley_periodica_moderna_de_Moseley_y_diseno_de_la_tabla_periodica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "3.7 Determinación de periodo, grupo y bloque de elementos representativos y de transición",
+          "shortTitle": "Determinación de periodo, grupo y bloque de elementos representativos y de transición",
+          "objective": "Ubicar con exactitud cualquier elemento químico en la tabla periódica (periodo, grupo tradicional A/B, grupo IUPAC 1-18 y bloque) a partir de su número atómico Z.",
+          "sourceKeys": "1 (c), 2 (a), 3 (b) *(El Fe Z=26 es [Ar]4s² 3d⁶, en el 3d⁶ hay 4 orbitales semillenos)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.7_Determinacion_de_periodo_grupo_y_bloque_de_elementos_representativos_y_de_transicion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "3.8 Clasificación y propiedades generales de metales, no metales y metaloides",
+          "shortTitle": "Clasificación y propiedades generales de metales, no metales y metaloides",
+          "objective": "Clasificar los elementos químicos según sus propiedades mecánicas, térmicas, ópticas y químicas distintivas en metales, no metales y semimetales (metaloides).",
+          "sourceKeys": "1 (b), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.8_Clasificacion_y_propiedades_generales_de_metales_no_metales_y_metaloides.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "3.9 Tendencia y comparación de radio atómico y radio iónico en especies isoelectrónicas",
+          "shortTitle": "Tendencia y comparación de radio atómico y radio iónico en especies isoelectrónicas",
+          "objective": "Predecir y justificar las variaciones periódicas del tamaño atómico e iónico mediante los conceptos de carga nuclear efectiva (Z_ef) y efecto de apantallamiento.",
+          "sourceKeys": "1 (c), 2 (a), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.9_Tendencia_y_comparacion_de_radio_atomico_y_radio_ionico_en_especies_isoelectronicas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "3.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "3.10 Variación periódica de energía de ionización, afinidad electrónica y electronegatividad",
+          "shortTitle": "Variación periódica de energía de ionización, afinidad electrónica y electronegatividad",
+          "objective": "Cuantificar y correlacionar las variaciones de energía de ionización, afinidad electrónica y electronegatividad con la reactividad química y el carácter metálico.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(Por la anomalía de la estabilidad de capa semillena p³ en el Nitrógeno)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_03/Leccion_3.10_Variacion_periodica_de_energia_de_ionizacion_afinidad_electronica_y_electronegatividad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/laboratorio?tab=ionization&sym=Na"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Módulo 4: Enlace Químico e Interacciones",
+      "description": "Explica la formación de enlaces iónicos, covalentes y metálicos, la estructura de Lewis, la geometría molecular, la polaridad y las fuerzas intermoleculares.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_04_Enlace_Quimico_y_Fuerzas_Intermoleculares.webp",
+      "entries": [
+        {
+          "code": "4.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "4.0 Presentación: Enlace Químico",
+          "shortTitle": "Presentación: Enlace Químico",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_04_Enlace_Quimico_y_Fuerzas_Intermoleculares.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "4.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "4.1 Naturaleza del enlace químico, regla del octeto y notación de Lewis",
+          "shortTitle": "Naturaleza del enlace químico, regla del octeto y notación de Lewis",
+          "objective": "Comprender el enlace químico como un proceso de estabilización electrostática que minimiza la energía potencial del sistema atómico, aplicando la regla del octeto y los diagramas de puntos de Lewis.",
+          "sourceKeys": "1 (c), 2 (b), 3 (d)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.1_Naturaleza_del_enlace_quimico_regla_del_octeto_y_notacion_de_Lewis.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "4.2 Enlace iónico, transferencia de electrones y propiedades de los compuestos iónicos",
+          "shortTitle": "Enlace iónico, transferencia de electrones y propiedades de los compuestos iónicos",
+          "objective": "Explicar el mecanismo de transferencia electrónica completa en el enlace iónico, comprender la red cristalina y deducir las propiedades fisicoquímicas macroscópicas de los sólidos iónicos.",
+          "sourceKeys": "1 (c), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.2_Enlace_ionico_transferencia_de_electrones_y_propiedades_de_los_compuestos_ionicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "4.3 Enlace metálico, modelo del mar de electrones y propiedades de los metales",
+          "shortTitle": "Enlace metálico, modelo del mar de electrones y propiedades de los metales",
+          "objective": "Interpretar el enlace metálico a través del modelo del 'mar de electrones deslocalizados' y justificar rigurosamente la conductividad térmica, eléctrica, ductilidad y maleabilidad de los metales.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.3_Enlace_metalico_modelo_del_mar_de_electrones_y_propiedades_de_los_metales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "4.4 Enlace covalente: enlaces simples, múltiples, normales y coordinados o dativos",
+          "shortTitle": "Enlace covalente: enlaces simples, múltiples, normales y coordinados o dativos",
+          "objective": "Clasificar los tipos de enlace covalente según el número de pares de electrones compartidos y la procedencia de los mismos, construyendo estructuras de Lewis de especies moleculares y poliatómicas.",
+          "sourceKeys": "1 (d), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.4_Enlace_covalente_enlaces_simples_multiples_normales_y_coordinados_o_dativos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "4.5 Determinación de enlaces sigma y pi, estructuras resonantes y excepciones al octeto",
+          "shortTitle": "Determinación de enlaces sigma y pi, estructuras resonantes y excepciones al octeto",
+          "objective": "Cuantificar enlaces sigma (σ) y pi (π) en moléculas orgánicas e inorgánicas, representar híbridos de resonancia y analizar las excepciones por defecto, electrón impar y octeto expandido.",
+          "sourceKeys": "1 (d), 2 (c), 3 (d)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.5_Determinacion_de_enlaces_sigma_y_pi_estructuras_resonantes_y_excepciones_al_octeto.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "4.6 Polaridad de enlace a partir de la diferencia de electronegatividad y momento dipolar",
+          "shortTitle": "Polaridad de enlace a partir de la diferencia de electronegatividad y momento dipolar",
+          "objective": "Cuantificar el momento dipolar de un enlace covalente y predecir su polaridad a partir de la diferencia de electronegatividades y el desplazamiento de la densidad electrónica.",
+          "sourceKeys": "1 (c), 2 (c), 3 (a) *(El ΔEN es: C-C=0, C-N=0.5, C-O=1.0, C-F=1.5)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.6_Polaridad_de_enlace_a_partir_de_la_diferencia_de_electronegatividad_y_momento_dipolar.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "4.7 Determinación de hibridación atómica en enlaces sp, sp2, sp3 y octetos expandidos",
+          "shortTitle": "Determinación de hibridación atómica en enlaces sp, sp2, sp3 y octetos expandidos",
+          "objective": "Deducir la hibridación del átomo central aplicando el modelo de Número Estérico (NE), prediciendo la geometría de los orbitales híbridos y sus ángulos de enlace.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b) *(NE = 1 σ del doble + 1 σ del dativo + 1 par libre = 3)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.7_Determinacion_de_hibridacion_atomica_en_enlaces_sp_sp2_sp3_y_octetos_expandidos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "4.8 Predicción de geometría molecular mediante el modelo de repulsión RPECV",
+          "shortTitle": "Predicción de geometría molecular mediante el modelo de repulsión RPECV",
+          "objective": "Predecir con exactitud la geometría molecular tridimensional y la distorsión de los ángulos de enlace empleando el Modelo de Repulsión de Pares de Electrones de la Capa de Valencia (RPECV / VSEPR).",
+          "sourceKeys": "1 (d), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.8_Prediccion_de_geometria_molecular_mediante_el_modelo_de_repulsion_RPECV.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "4.9 Cálculo del momento dipolar resultante y determinación de la polaridad molecular",
+          "shortTitle": "Cálculo del momento dipolar resultante y determinación de la polaridad molecular",
+          "objective": "Determinar si una molécula es polar o apolar calculando la resultante vectorial de los momentos dipolares individuales a partir de su simetría tridimensional.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.9_Calculo_del_momento_dipolar_resultante_y_determinacion_de_la_polaridad_molecular.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "4.10 Fuerzas intermoleculares de Van der Waals: dipolo-dipolo y fuerzas de dispersión de London",
+          "shortTitle": "Fuerzas intermoleculares de Van der Waals: dipolo-dipolo y fuerzas de dispersión de London",
+          "objective": "Diferenciar los tipos de fuerzas intermoleculares (dipolo-dipolo y London) e interpretar cómo la masa molar y la polarizabilidad influyen en los puntos de ebullición de los líquidos y gases reales.",
+          "sourceKeys": "1 (d), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.10_Fuerzas_intermoleculares_de_Van_der_Waals_dipolo_dipolo_y_fuerzas_de_dispersion_de_London.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "4.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "4.11 Enlace puente de hidrógeno y su correlación con puntos de ebullición y solubilidad",
+          "shortTitle": "Enlace puente de hidrógeno y su correlación con puntos de ebullición y solubilidad",
+          "objective": "Comprender la naturaleza del enlace por puente de hidrógeno y correlacionar su presencia con las anomalías térmicas y de solubilidad en los compuestos moleculares.",
+          "sourceKeys": "1 (c), 2 (d), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_04/Leccion_4.11_Enlace_puente_de_hidrogeno_y_su_correlacion_con_puntos_de_ebullicion_y_solubilidad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Módulo 5: Gases, Líquidos y Cambios de Fase",
+      "description": "Comprende el comportamiento de gases y líquidos, aplica las leyes de los gases y relaciona presión, temperatura, volumen y cambios de fase.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_05_Estados_de_Agregacion_Gases_Liquidos_y_Diagramas_de_Fase.webp",
+      "entries": [
+        {
+          "code": "5.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "5.0 Presentación: Estados de la Materia",
+          "shortTitle": "Presentación: Estados de la Materia",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_05_Estados_de_Agregacion_Gases_Liquidos_y_Diagramas_de_Fase.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "5.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "5.1 Postulados de la teoría cinético-molecular aplicados al gas ideal",
+          "shortTitle": "Postulados de la teoría cinético-molecular aplicados al gas ideal",
+          "objective": "Comprender el modelo del gas ideal a partir de los postulados fundamentales de la Teoría Cinético-Molecular (TCM) de Clausius, Maxwell y Boltzmann, identificando las condiciones termodinámicas de idealidad.",
+          "sourceKeys": "1 (b), 2 (c), 3 (d)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.1_Postulados_de_la_teoria_cinetico_molecular_aplicados_al_gas_ideal.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "5.2 Resolución de procesos restringidos mediante las leyes de Boyle, Charles y Gay-Lussac",
+          "shortTitle": "Resolución de procesos restringidos mediante las leyes de Boyle, Charles y Gay-Lussac",
+          "objective": "Resolver problemas cuantitativos de transformaciones gaseosas de masa constante cuando una variable de estado (temperatura, presión o volumen) permanece fija.",
+          "sourceKeys": "1 (c), 2 (c), 3 (d) *(Primero Boyle: P aumenta x4. Luego Gay-Lussac: T aumenta x2, P aumenta x2. Total: 4x2 = 8P)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.2_Resolucion_de_procesos_restringidos_mediante_las_leyes_de_Boyle_Charles_y_Gay_Lussac.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "5.3 Aplicación de la ecuación universal de los gases ideales para masa, densidad y masa molar",
+          "shortTitle": "Aplicación de la ecuación universal de los gases ideales para masa, densidad y masa molar",
+          "objective": "Relacionar matemáticamente la presión, volumen, temperatura y cantidad de sustancia mediante la Ecuación de Estado Universal, calculando densidades y masas molares de fluidos gaseosos.",
+          "sourceKeys": "1 (b), 2 (b), 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.3_Aplicacion_de_la_ecuacion_universal_de_los_gases_ideales_para_masa_densidad_y_masa_molar.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "5.4 Hipótesis de Avogadro, volumen molar y condiciones normales",
+          "shortTitle": "Hipótesis de Avogadro, volumen molar y condiciones normales",
+          "objective": "Aplicar el principio de Avogadro y el concepto de volumen molar a condiciones normales para relacionar volúmenes medidos con cantidades estequiométricas molares.",
+          "sourceKeys": "1 (c), 2 (a), 3 (d)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.4_Hipotesis_de_Avogadro_volumen_molar_y_condiciones_normales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "5.5 Ecuación general de los gases en transformaciones con variables de estado simultáneas",
+          "shortTitle": "Ecuación general de los gases en transformaciones con variables de estado simultáneas",
+          "objective": "Analizar y resolver estados iniciales y finales de sistemas gaseosos cerrados donde la presión, volumen y temperatura varían de manera simultánea.",
+          "sourceKeys": "1 (d), 2 (b), 3 (a) *(P₂ = P₁/3; V₂ = 2V₁. P₁V₁/300 = (P₁/3)(2V₁)/T₂ ⇒ 1/300 = 2/3T₂ ⇒ T₂ = 200 K)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.5_Ecuacion_general_de_los_gases_en_transformaciones_con_variables_de_estado_simultaneas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "5.6 Análisis de mezclas gaseosas, fracción molar y ley de presiones parciales de Dalton",
+          "shortTitle": "Análisis de mezclas gaseosas, fracción molar y ley de presiones parciales de Dalton",
+          "objective": "Cuantificar la composición de mezclas homogéneas de gases que no reaccionan entre sí, determinando fracciones molares y presiones parciales mediante la Ley de Dalton.",
+          "sourceKeys": "1 (c), 2 (a) *(0.21 x 760 ≈ 160)*, 3 (c) *(A masas iguales, el Neón tiene el doble de moles porque su masa molar es la mitad, por ende ejerce el doble de presión)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.6_Analisis_de_mezclas_gaseosas_fraccion_molar_y_ley_de_presiones_parciales_de_Dalton.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "5.7 Ley de volúmenes parciales de Amagat y cálculo de masa molar aparente",
+          "shortTitle": "Ley de volúmenes parciales de Amagat y cálculo de masa molar aparente",
+          "objective": "Aplicar la Ley de Amagat para deducir la composición volumétrica de mezclas de gases ideales y determinar la masa molar promedio o aparente de la mezcla.",
+          "sourceKeys": "1 (d), 2 (b) *(50% de 28 + 50% de 2 = 14 + 1 = 15)*, 3 (c) *(Asume 100g: 50g H2 = 25 mol; 50g O2 = 1.56 mol. Total mol = 26.56. x_H2 = 25/26.56 = 0.94)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.7_Ley_de_volumenes_parciales_de_Amagat_y_calculo_de_masa_molar_aparente.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "5.8 Recolección de gases sobre agua, presión de vapor y cálculo de gas seco y humedad relativa",
+          "shortTitle": "Recolección de gases sobre agua, presión de vapor y cálculo de gas seco y humedad relativa",
+          "objective": "Cuantificar la presión y masa de gases insolubles recolectados en laboratorio por desplazamiento de agua, descontando la presión de vapor de agua y calculando humedades relativas.",
+          "sourceKeys": "1 (c), 2 (c), 3 (a) *(P_seco = 780 - 27 = 753 mmHg. n = (753 × 0.5) / (62.4 × 300) = 0.02 mol)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.8_Recoleccion_de_gases_sobre_agua_presion_de_vapor_y_calculo_de_gas_seco_y_humedad_relativa.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "5.9 Aplicación de la ley de Graham para efusión y difusión de gases",
+          "shortTitle": "Aplicación de la ley de Graham para efusión y difusión de gases",
+          "objective": "Predecir cuantitativamente las velocidades relativas, tiempos de escape y distancias de difusión de gases basándose en la Ley de Thomas Graham.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(√(64/16) = √4 = 2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.9_Aplicacion_de_la_ley_de_Graham_para_efusion_y_difusion_de_gases.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "5.10 Propiedades del estado líquido: viscosidad, tensión superficial y capilaridad",
+          "shortTitle": "Propiedades del estado líquido: viscosidad, tensión superficial y capilaridad",
+          "objective": "Explicar las propiedades macroscópicas fundamentales del estado líquido (viscosidad, tensión superficial y capilaridad) en función de las fuerzas intermoleculares de cohesión y adhesión.",
+          "sourceKeys": "1 (c), 2 (d), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.10_Propiedades_del_estado_liquido_viscosidad_tension_superficial_y_capilaridad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "5.11 Presión de vapor de líquidos, punto de ebullición y análisis de curvas de calentamiento",
+          "shortTitle": "Presión de vapor de líquidos, punto de ebullición y análisis de curvas de calentamiento",
+          "objective": "Interpretar el equilibrio líquido-vapor dinámico, la variación de la presión de vapor con la temperatura y deducir cuantitativamente cambios de entalpía a lo largo de curvas térmicas de calentamiento.",
+          "sourceKeys": "1 (b), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.11_Presion_de_vapor_de_liquidos_punto_de_ebullicion_y_analisis_de_curvas_de_calentamiento.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "5.12",
+          "order": 12,
+          "kind": "topic",
+          "title": "5.12 Interpretación de diagramas de fase, punto triple y punto crítico para el agua y dióxido de carbono",
+          "shortTitle": "Interpretación de diagramas de fase, punto triple y punto crítico para el agua y dióxido de carbono",
+          "objective": "Analizar diagramas de fase P vs. T, identificando las regiones monofásicas, curvas de coexistencia bifásica, el punto triple y el punto crítico para sustancias anómalas (agua) y ordinarias (CO₂).",
+          "sourceKeys": "1 (d), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_05/Leccion_5.12_Interpretacion_de_diagramas_de_fase_punto_triple_y_punto_critico_para_el_agua_y_dioxido_de_carbono.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Módulo 6: Nomenclatura y Formulación Inorgánica",
+      "description": "Desarrolla la formulación y nomenclatura de sustancias inorgánicas, incluyendo óxidos, hidruros, hidróxidos, ácidos, sales y compuestos coordinados.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_06_Nomenclatura_Inorganica_y_Formulacion_Quimica.webp",
+      "entries": [
+        {
+          "code": "6.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "6.0 Presentación: Nomenclatura Inorgánica",
+          "shortTitle": "Presentación: Nomenclatura Inorgánica",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_06_Nomenclatura_Inorganica_y_Formulacion_Quimica.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "6.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "6.1 Asignación de valencias y reglas para determinar estados de oxidación",
+          "shortTitle": "Asignación de valencias y reglas para determinar estados de oxidación",
+          "objective": "Diferenciar con rigor electroquímico la valencia del estado de oxidación (E.O.) y aplicar las reglas de asignación sistemáticas de la IUPAC para calcular los números de oxidación en especies neutras e iónicas.",
+          "sourceKeys": "1 (c), 2 (c), 3 (b) *(Es el tetrahidruroaluminato de litio, un hidruro metálico complejo donde el H actúa con -1)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.1_Asignacion_de_valencias_y_reglas_para_determinar_estados_de_oxidacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "6.2 Formulación y nomenclatura IUPAC, Stock y clásica de óxidos básicos y ácidos",
+          "shortTitle": "Formulación y nomenclatura IUPAC, Stock y clásica de óxidos básicos y ácidos",
+          "objective": "Formular y nombrar óxidos metálicos (básicos) y no metálicos (ácidos o anhídridos) empleando los tres sistemas normativos: Clásica/Tradicional, Stock e IUPAC/Sistemática.",
+          "sourceKeys": "1 (c), 2 (b), 3 (d) *(El Mn con +7 forma oxácidos, por ende Mn₂O₇ es un anhídrido/óxido ácido)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.2_Formulacion_y_nomenclatura_IUPAC_Stock_y_clasica_de_oxidos_basicos_y_acidos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "6.3 Formulación y nomenclatura de peróxidos, superóxidos y óxidos dobles",
+          "shortTitle": "Formulación y nomenclatura de peróxidos, superóxidos y óxidos dobles",
+          "objective": "Formular y diferenciar óxidos especiales: peróxidos (presencia de enlace O—O), superóxidos y óxidos mixtos o dobles salinos.",
+          "sourceKeys": "1 (b), 2 (b), 3 (b) *(CaO₂ es el peróxido de calcio; no se simplifica. El óxido de calcio normal es CaO)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.3_Formulacion_y_nomenclatura_de_peroxidos_superoxidos_y_oxidos_dobles.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "6.4 Obtención, formulación y nomenclatura de hidróxidos o bases",
+          "shortTitle": "Obtención, formulación y nomenclatura de hidróxidos o bases",
+          "objective": "Formular hidróxidos metálicos a partir de óxidos básicos y agua, nombrando según las tres nomenclaturas y caracterizando al ion hidróxido (OH⁻).",
+          "sourceKeys": "1 (c), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.4_Obtencion_formulacion_y_nomenclatura_de_hidroxidos_o_bases.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "6.5 Formulación y nomenclatura de hidruros metálicos y no metálicos",
+          "shortTitle": "Formulación y nomenclatura de hidruros metálicos y no metálicos",
+          "objective": "Formular hidruros iónicos metálicos y compuestos moleculares hidrogenados no metálicos con nombres propios aceptados universalmente por la IUPAC.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(AsH₃ es la Arsina; la Fosfina es PH₃)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.5_Formulacion_y_nomenclatura_de_hidruros_metalicos_y_no_metalicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "6.6 Ácidos hidrácidos en solución acuosa y formulación de aniones monoatómicos",
+          "shortTitle": "Ácidos hidrácidos en solución acuosa y formulación de aniones monoatómicos",
+          "objective": "Formular hidruros de los grupos VIA y VIIA diferenciando su estado gaseoso anhidro de su forma en disolución acuosa (ácidos hidrácidos) y derivar sus aniones monoatómicos por disociación protónica.",
+          "sourceKeys": "1 (c), 2 (c), 3 (d) *(El ácido yodhídrico debe denotarse como acuoso (ac), no líquido puro (l); el HI puro a temperatura ambiente es gas, no líquido)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.6_Acidos_hidracidos_en_solucion_acuosa_y_formulacion_de_aniones_monoatomicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "6.7 Formulación y nomenclatura clásica de ácidos oxácidos simples",
+          "shortTitle": "Formulación y nomenclatura clásica de ácidos oxácidos simples",
+          "objective": "Formular ácidos oxácidos ternarios mediante adición de agua a anhídridos y deducir sus fórmulas condensadas directas según la paridad del estado de oxidación del no metal central.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b) *(El Cl actúa con +5, que es la valencia 'ica' para los halógenos; la fórmula es HClO₍₅₊₁₎/₂ = HClO₃)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.7_Formulacion_y_nomenclatura_clasica_de_acidos_oxacidos_simples.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "6.8 Formulación de ácidos oxácidos especiales: polihidratados, poliácidos y tiácidos",
+          "shortTitle": "Formulación de ácidos oxácidos especiales: polihidratados, poliácidos y tiácidos",
+          "objective": "Resolver la formulación y nomenclatura de ácidos inorgánicos complejos polihidratados (prefijos meta, piro, orto), poliácidos y tioácidos de altísima frecuencia en exámenes de admisión UNI y San Marcos.",
+          "sourceKeys": "1 (b), 2 (b) *(Deriva del H₂S₂O₃, que tiene 2 azufres)*, 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.8_Formulacion_de_acidos_oxacidos_especiales_polihidratados_poliacidos_y_tiacidos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "6.9 Disociación de ácidos oxácidos y formulación sistemática de aniones poliatómicos",
+          "shortTitle": "Disociación de ácidos oxácidos y formulación sistemática de aniones poliatómicos",
+          "objective": "Formular aniones poliatómicos oxigenados neutros y ácidos derivados de la ionización escalonada de oxácidos, aplicando las reglas de cambio de sufijos de la IUPAC.",
+          "sourceKeys": "1 (c), 2 (b), 3 (a) *(Perclorato Cl=+7, Sulfato S=+6, Hipobromito Br=+1)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.9_Disociacion_de_acidos_oxacidos_y_formulacion_sistematica_de_aniones_poliatomicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "6.10 Formulación y nomenclatura de sales haloideas neutras, ácidas, básicas, dobles e hidratadas",
+          "shortTitle": "Formulación y nomenclatura de sales haloideas neutras, ácidas, básicas, dobles e hidratadas",
+          "objective": "Formular y clasificar sales haloideas (binarias y superiores sin oxígeno en el anión) derivadas de la reacción de neutralización entre ácidos hidrácidos e hidróxidos.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b) *(El KMgF₃ contiene dos cationes metálicos diferentes: K⁺ y Mg²⁺)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.10_Formulacion_y_nomenclatura_de_sales_haloideas_neutras_acidas_basicas_dobles_e_hidratadas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "6.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "6.11 Formulación y nomenclatura de oxisales neutras, ácidas, básicas, dobles e hidratadas",
+          "shortTitle": "Formulación y nomenclatura de oxisales neutras, ácidas, básicas, dobles e hidratadas",
+          "objective": "Formular y sistematizar la nomenclatura de oxisales inorgánicas en sus variantes neutras, ácidas, básicas, dobles y complejos hidratados mediante el cruce de cargas de aniones poliatómicos.",
+          "sourceKeys": "1 (d), 2 (b), 3 (a) *(El vitriolo verde es sulfato ferroso heptahidratado)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_06/Leccion_6.11_Formulacion_y_nomenclatura_de_oxisales_neutras_acidas_basicas_dobles_e_hidratadas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Módulo 7: Cálculos Químicos y Unidades de Masa",
+      "description": "Resuelve conversiones entre masa, moles, partículas y volumen, utilizando masa atómica, masa molar, composición porcentual y fórmulas químicas.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_07_Calculos_Quimicos_y_Unidades_Quimicas_de_Masa.webp",
+      "entries": [
+        {
+          "code": "7.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "7.0 Presentación: Cálculos Químicos",
+          "shortTitle": "Presentación: Cálculos Químicos",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_07_Calculos_Quimicos_y_Unidades_Quimicas_de_Masa.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "7.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "7.1 Definición de unidad de masa atómica, masa atómica relativa y masa fórmula",
+          "shortTitle": "Definición de unidad de masa atómica, masa atómica relativa y masa fórmula",
+          "objective": "Comprender la escala atómica de masas, la definición estándar de la UMA basada en el carbono-12 y diferenciar la masa molecular de la masa fórmula para compuestos iónicos y covalentes.",
+          "sourceKeys": "1 (c), 2 (b) *(Las sales iónicas usan masa fórmula)*, 3 (b) *(Na₂CO₃ es 106; 10H₂O es 180. Total: 106 + 180 = 286 u)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.1_Definicion_de_unidad_de_masa_atomica_masa_atomica_relativa_y_masa_formula.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "7.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "7.2 Concepto de mol, masa molar y aplicación de la constante de Avogadro",
+          "shortTitle": "Concepto de mol, masa molar y aplicación de la constante de Avogadro",
+          "objective": "Operar con precisión el concepto de mol como unidad fundamental del SI para cantidad de sustancia, enlazando la escala microscópica con la macroscópica mediante la Constante de Avogadro.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(N_A moléculas = 1 mol; 1 mol de SO₂ = 32 + 2(16) = 64 g)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.2_Concepto_de_mol_masa_molar_y_aplicacion_de_la_constante_de_Avogadro.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "7.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "7.3 Conversión cuantitativa entre gramos, moles, número de moléculas y átomos",
+          "shortTitle": "Conversión cuantitativa entre gramos, moles, número de moléculas y átomos",
+          "objective": "Realizar cálculos estequiométricos de conversión directa e inversa entre masa en gramos, cantidad de sustancia en moles, número de partículas y volúmenes gaseosos a condiciones normales.",
+          "sourceKeys": "1 (a) *(NaOH = 40g/mol; 0.2 × 40 = 8g)*, 2 (a) *(O₃ = 48g/mol; 96/48 = 2 moles = 2 N_A moléculas)*, 3 (c) *(C₃H₈ = 44g/mol; 220/44 = 5 moles. Cada molécula tiene 11 átomos. 5 × 11 = 55 moles de átomos = 55 N_A)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.3_Conversion_cuantitativa_entre_gramos_moles_numero_de_moleculas_y_atomos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "7.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "7.4 Interpretación de fórmulas químicas y cálculo de composición centesimal",
+          "shortTitle": "Interpretación de fórmulas químicas y cálculo de composición centesimal",
+          "objective": "Deducir el porcentaje en masa de cada elemento químico constituyente a partir de la fórmula química del compuesto aplicando la ley de proporciones definidas de Proust.",
+          "sourceKeys": "1 (b), 2 (a) *(M = 160; %Fe = 112/160 = 70%)*, 3 (b) *(M_total = 249.5; %H2O = 90/249.5 = 36.07%)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.4_Interpretacion_de_formulas_quimicas_y_calculo_de_composicion_centesimal.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "7.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "7.5 Determinación de la fórmula empírica a partir de porcentajes de composición elemental",
+          "shortTitle": "Determinación de la fórmula empírica a partir de porcentajes de composición elemental",
+          "objective": "Deducir la fórmula empírica o mínima de un compuesto químico desconocido a partir de datos experimentales de análisis elemental cuantitativo o combustión.",
+          "sourceKeys": "1 (c), 2 (a) *(C=42.86/12=3.57; O=57.14/16=3.57. Relación 1:1)*, 3 (c) *(C=85.7/12=7.14; H=14.3/1=14.3. Relación 1:2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.5_Determinacion_de_la_formula_empirica_a_partir_de_porcentajes_de_composicion_elemental.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "7.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "7.6 Determinación de la fórmula molecular a partir de la fórmula empírica y la masa molar",
+          "shortTitle": "Determinación de la fórmula molecular a partir de la fórmula empírica y la masa molar",
+          "objective": "Establecer la fórmula molecular real de un compuesto vinculando su fórmula empírica con la masa molecular experimental obtenida por métodos de densidad de vapor o espectrometría.",
+          "sourceKeys": "1 (c), 2 (b) *(M = 2 × 14 = 28 g/mol. FE(CH₂) = 14. k = 28/14 = 2. C₂H₄)*, 3 (b) *(FE = C₃H₄O₃ con masa 88. k = 176/88 = 2. FM = C₆H₈O₆)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_07/Leccion_7.6_Determinacion_de_la_formula_molecular_a_partir_de_la_formula_empirica_y_la_masa_molar.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Módulo 8: Reacciones Químicas y Balanceo",
+      "description": "Identifica tipos de reacciones químicas y balancea ecuaciones mediante tanteo, método algebraico, ion-electrón y otros procedimientos de conservación.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_08_Reacciones_Quimicas_y_Metodos_de_Balanceo.webp",
+      "entries": [
+        {
+          "code": "8.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "8.0 Presentación: Reacciones Químicas",
+          "shortTitle": "Presentación: Reacciones Químicas",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_08_Reacciones_Quimicas_y_Metodos_de_Balanceo.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "8.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "8.1 Identificación de evidencias experimentales y representación de ecuaciones químicas",
+          "shortTitle": "Identificación de evidencias experimentales y representación de ecuaciones químicas",
+          "objective": "Reconocer las transformaciones químicas mediante evidencias macroscópicas directas y representar simbólicamente los procesos mediante ecuaciones químicas balanceadas bajo la Ley de Conservación de la Masa.",
+          "sourceKeys": "1 (c), 2 (c), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.1_Identificacion_de_evidencias_experimentales_y_representacion_de_ecuaciones_quimicas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "8.2 Clasificación de reacciones químicas por mecanismo: síntesis, descomposición y sustitución",
+          "shortTitle": "Clasificación de reacciones químicas por mecanismo: síntesis, descomposición y sustitución",
+          "objective": "Clasificar las reacciones químicas según la reordenación estructural de sus átomos en síntesis, descomposición, desplazamiento simple y metátesis (doble desplazamiento).",
+          "sourceKeys": "1 (b), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.2_Clasificacion_de_reacciones_quimicas_por_mecanismo_sintesis_descomposicion_y_sustitucion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "8.3 Caracterización de reacciones de combustión completa e incompleta",
+          "shortTitle": "Caracterización de reacciones de combustión completa e incompleta",
+          "objective": "Diferenciar los procesos exotérmicos de combustión completa e incompleta de hidrocarburos, balanceando las ecuaciones y analizando la toxicidad del monóxido de carbono y el impacto del hollín.",
+          "sourceKeys": "1 (b), 2 (b), 3 (a) *(2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O. Suma = 2+7+4+6 = 19)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.3_Caracterizacion_de_reacciones_de_combustion_completa_e_incompleta.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "8.4 Reacciones exotérmicas, endotérmicas y diagramas de perfil de entalpía",
+          "shortTitle": "Reacciones exotérmicas, endotérmicas y diagramas de perfil de entalpía",
+          "objective": "Clasificar las reacciones químicas según la variación de entalpía estándar (ΔH) e interpretar rigurosamente los perfiles gráficos de energía potencial térmica.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(ΔH = 100 - 40 = +60 kJ/mol)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.4_Reacciones_exotermicas_endotermicas_y_diagramas_de_perfil_de_entalpia.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "8.5 Teoría de colisiones, energía de activación y formación del complejo activado",
+          "shortTitle": "Teoría de colisiones, energía de activación y formación del complejo activado",
+          "objective": "Analizar la cinética energética de una reacción mediante la teoría de colisiones efectivas, evaluando la energía de activación, el complejo activado y el efecto de los catalizadores.",
+          "sourceKeys": "1 (c), 2 (d), 3 (b) *(ΔH = 40 - 75 = -35 kcal/mol)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.5_Teoria_de_colisiones_energia_de_activacion_y_formacion_del_complejo_activado.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "8.6 Identificación de procesos redox, especies oxidadas, reducidas, agentes oxidantes y reductores",
+          "shortTitle": "Identificación de procesos redox, especies oxidadas, reducidas, agentes oxidantes y reductores",
+          "objective": "Identificar la transferencia de electrones en reacciones de óxido-reducción, reconociendo sin margen de error la especie oxidada, la reducida, el agente oxidante y el agente reductor.",
+          "sourceKeys": "1 (d), 2 (c) *(H pasa de 0 a +1)*, 3 (d) *(El H₂S se oxida, no se reduce)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.6_Identificacion_de_procesos_redox_especies_oxidadas_reducidas_agentes_oxidantes_y_reductores.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "8.7 Balanceo de ecuaciones químicas por el método de tanteo o simple inspección",
+          "shortTitle": "Balanceo de ecuaciones químicas por el método de tanteo o simple inspección",
+          "objective": "Balancear ecuaciones químicas no redox o sencillas aplicando el método de simple inspección bajo un orden secuencial riguroso.",
+          "sourceKeys": "1 (c), 2 (b) *(C₂H₅OH + 3 O₂ → 2 CO₂ + 3 H₂O)*, 3 (a) *(2 H₃PO₄ + 3 Ca(OH)₂ → 1 Ca₃(PO₄)₂ + 6 H₂O. Reactantes = 2 + 3 = 5)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.7_Balanceo_de_ecuaciones_quimicas_por_el_metodo_de_tanteo_o_simple_inspeccion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "8.8 Balanceo de ecuaciones redox por el método del cambio en el número de oxidación",
+          "shortTitle": "Balanceo de ecuaciones redox por el método del cambio en el número de oxidación",
+          "objective": "Balancear ecuaciones redox en fase sólida o gaseosa igualando la cantidad de electrones cedidos y ganados mediante el método del cambio en el número de oxidación.",
+          "sourceKeys": "1 (c), 2 (b) *(3Cu + 8HNO₃ → 3Cu(NO₃)₂ + 2NO + 4H₂O. Oxidante es HNO₃ con 8)*, 3 (a) *(1C + 2H₂SO₄ → 1CO₂ + 2SO₂ + 2H₂O. Forma Reducida SO₂(2) / Agente Reductor C(1) = 2/1 = 2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.8_Balanceo_de_ecuaciones_redox_por_el_metodo_del_cambio_en_el_numero_de_oxidacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "8.9 Balanceo de ecuaciones redox por el método ion-electrón en medio ácido",
+          "shortTitle": "Balanceo de ecuaciones redox por el método ion-electrón en medio ácido",
+          "objective": "Balancear ecuaciones redox en solución acuosa ácida descomponiendo las especies en semirreacciones iónicas netas empleando iones H⁺ y moléculas de H₂O.",
+          "sourceKeys": "1 (b), 2 (c) *(1 NO₃⁻ + 4 Zn + 10 H⁺ → 4 Zn²⁺ + 1 NH₄⁺ + 3 H₂O. Suma=23. Pero OJO, NH₄⁺ es catión amonio, el balance es 1+4+10+4+1+3 = 23. Miremos de nuevo: NO3- (3O), 3H2O(3O). H: 4 en amonio + 6 en agua = 10. Carga izq: -1+10 = +9. Der: 4(+2)+1 = +9. Está perfecto. Parece que la suma da 23, la alternativa más cercana o correcta requiere revisión exacta. Disculpe, 1+4+10+4+1+3=23, no hay clave exacta en el molde. Si asumimos agua como 3, ok)*.",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.9_Balanceo_de_ecuaciones_redox_por_el_metodo_ion_electron_en_medio_acido.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "8.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "8.10 Balanceo de ecuaciones redox por el método ion-electrón en medio básico",
+          "shortTitle": "Balanceo de ecuaciones redox por el método ion-electrón en medio básico",
+          "objective": "Balancear ecuaciones redox en solución acuosa alcalina utilizando el método estratégico de neutralización con iones oxidrilo (OH⁻) a partir del sistema ácido.",
+          "sourceKeys": "1 (b), 2 (a), 3 (b) *(Semirreacciones: 2CrO₄²⁻ + 8H₂O + 6e⁻ → 2Cr(OH)₃ + 10OH⁻ ; 3S²⁻ → 3S + 6e⁻. Neta: 2CrO₄²⁻ + 3S²⁻ + 8H₂O → 2Cr(OH)₃ + 3S + 10OH⁻. Suma = 2+3+8+2+3+10 = 28. Ajustando por posible simplificación o error de imprenta común: Asumiendo que S²- y S(0) y tal, sumamos. 28 no está, la más cercana o exacta requiere repasar coeficientes, típicamente en exámenes DECO esto suma 28)*. (*Ajuste: el balance correcto de CrO₄²⁻: 1CrO₄²⁻ + 4H₂O + 3e⁻ → 1Cr(OH)₃ + 5OH⁻. Multiplicando x2: 2, 8, 6 → 2, 10. Está correcto. Asumimos 28 como valor real)*.",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_08/Leccion_8.10_Balanceo_de_ecuaciones_redox_por_el_metodo_ion_electron_en_medio_basico.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Módulo 9: Estequiometría y Leyes Ponderales",
+      "description": "Aplica las leyes ponderales y las relaciones estequiométricas para resolver problemas con reactivo limitante, rendimiento, pureza y composición de sustancias.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_09_Estequiometria_y_Leyes_Ponderales.webp",
+      "entries": [
+        {
+          "code": "9.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "9.0 Presentación: Estequiometría",
+          "shortTitle": "Presentación: Estequiometría",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_09_Estequiometria_y_Leyes_Ponderales.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "9.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "9.1 Aplicación de la ley de conservación de la masa de Lavoisier en relaciones estequiométricas",
+          "shortTitle": "Aplicación de la ley de conservación de la masa de Lavoisier en relaciones estequiométricas",
+          "objective": "Fundamentar los cálculos estequiométricos a partir de la Ley de Conservación de la Materia de Antoine Lavoisier, verificando el balance ponderal estricto entre reactivos consumidos y productos formados.",
+          "sourceKeys": "1 (c), 2 (b), 3 (c) *(Masa O₂ = 122.5 - 74.5 = 48 g. Moles O₂ = 48/32 = 1.5 mol. V = 1.5 × 22.4 = 33.6 L)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.1_Aplicacion_de_la_ley_de_conservacion_de_la_masa_de_Lavoisier_en_relaciones_estequiometricas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "9.2 Aplicación de la ley de proporciones definidas de Proust en cálculos masa-masa y mol-mol",
+          "shortTitle": "Aplicación de la ley de proporciones definidas de Proust en cálculos masa-masa y mol-mol",
+          "objective": "Resolver relaciones estequiométricas cuantitativas masa-masa, mol-mol y masa-mol aplicando la Ley de las Proporciones Definidas de Louis Proust.",
+          "sourceKeys": "1 (b) *(10 g de A necesitan 25 g de B; como hay 30 g de B, sobran 5 g)*, 2 (b) *(100g producen 56g ⇒ 500g producen 5×56 = 280g)*, 3 (a) *(11600 g / 58 g/mol = 200 moles C₄H₁₀. Si 2 moles dan 10 de agua, 200 moles darán 1000 moles)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.2_Aplicacion_de_la_ley_de_proporciones_definidas_de_Proust_en_calculos_masa_masa_y_mol_mol.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "9.3 Aplicación de la ley volumétrica de Gay-Lussac en reacciones con reactivos y productos gaseosos",
+          "shortTitle": "Aplicación de la ley volumétrica de Gay-Lussac en reacciones con reactivos y productos gaseosos",
+          "objective": "Resolver estequiometría de fases gaseosas a presión y temperatura constantes mediante la Ley de Volúmenes de Combinación de Gay-Lussac y calcular la contracción volumétrica.",
+          "sourceKeys": "1 (c), 2 (a) *(Los 50 cm³ de CO producen 50 cm³ de CO₂. El O₂ consumido fue 25 cm³, pero la pregunta pide el volumen final de los gases producidos, que es solo el CO₂ = 50 cm³)*, 3 (a) *(Reactivos gaseosos: 1+5 = 6. Productos gaseosos: 3. Ojo: El agua es LÍQUIDA, coeficiente 0 para gases. C = (6-3)/6 = 3/6 = 1/2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.3_Aplicacion_de_la_ley_volumetrica_de_Gay_Lussac_en_reacciones_con_reactivos_y_productos_gaseosos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "9.4 Identificación cuantitativa de reactivo limitante y reactivo en exceso",
+          "shortTitle": "Identificación cuantitativa de reactivo limitante y reactivo en exceso",
+          "objective": "Identificar el reactivo limitante mediante el método del cociente estequiométrico y calcular tanto la cantidad de producto formado como la masa remanente del reactivo en exceso.",
+          "sourceKeys": "1 (d), 2 (a) *(Q(NH₃)=6/2=3; Q(CO₂)=4/1=4. RL es NH₃. Para 6 de NH₃ se gastan 3 de CO₂. Inicial 4 - Gasto 3 = 1 mol CO₂ sobrante)*, 3 (a) *(Moles: H₂=20, O₂=5. Ecuación: 2H₂+O₂→2H₂O. Q(H₂)=20/2=10; Q(O₂)=5/1=5. RL es O₂. Con 5 moles de O₂ se gastan 10 moles de H₂, y sobran 10 moles de H₂ (20g). El H₂O formado son 10 moles (180g))*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.4_Identificacion_cuantitativa_de_reactivo_limitante_y_reactivo_en_exceso.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "9.5 Cálculos estequiométricos con impurezas en reactivos y muestras minerales",
+          "shortTitle": "Cálculos estequiométricos con impurezas en reactivos y muestras minerales",
+          "objective": "Discriminar la fracción químicamente activa de un mineral o reactivo técnico impuro a partir de su porcentaje de pureza o ley mineral antes de alimentar la ecuación estequiométrica.",
+          "sourceKeys": "1 (c), 2 (c), 3 (b) *(Masa pura CaCO₃ = 125 × 0.80 = 100 g = 1 mol. Por estequiometría, 1 mol de CaCO₃ libera 1 mol de CO₂ = 22.4 L a C.N.)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.5_Calculos_estequiometricos_con_impurezas_en_reactivos_y_muestras_minerales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "9.6 Determinación de rendimiento teórico, rendimiento real y porcentaje de eficiencia",
+          "shortTitle": "Determinación de rendimiento teórico, rendimiento real y porcentaje de eficiencia",
+          "objective": "Calcular el rendimiento porcentual de un proceso químico comparando la masa real obtenida experimentalmente con la cantidad máxima teórica calculada por la estequiometría sobre papel.",
+          "sourceKeys": "1 (c), 2 (c) *(160/200 × 100 = 80%)*, 3 (b) *(Masa teórica que el horno debe 'intentar' hacer = 504 / 0.90 = 560 g de CaO. Por estequiometría, 100g CaCO₃ dan 56g CaO. Para 560g de CaO se requieren 1000g de CaCO₃)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.6_Determinacion_de_rendimiento_teorico_rendimiento_real_y_porcentaje_de_eficiencia.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "9.7 Estequiometría integrada con leyes de gases ideales y recolección de gases",
+          "shortTitle": "Estequiometría integrada con leyes de gases ideales y recolección de gases",
+          "objective": "Integrar los cálculos estequiométricos ponderales (masas y moles) con la ecuación de estado de gases ideales (PV=nRT) cuando los gases se recogen en condiciones arbitrarias, especialmente húmedos sobre agua.",
+          "sourceKeys": "1 (b), 2 (b), 3 (a) *(Estequiometría: 2 mol de azida dan 3 mol de N₂. Entonces 0.2 mol azida dan 0.3 moles de N₂. Presión de N₂ seco = 787 - 27 = 760 mmHg. V = (nRT)/P = (0.3 × 62.4 × 300) / 760 = 7.38 ≈ 7.4 L)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.7_Estequiometria_integrada_con_leyes_de_gases_ideales_y_recoleccion_de_gases.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "9.8 Cálculo de peso equivalente en elementos, óxidos, hidróxidos, ácidos y sales",
+          "shortTitle": "Cálculo de peso equivalente en elementos, óxidos, hidróxidos, ácidos y sales",
+          "objective": "Determinar el parámetro de combinación estequiométrica (θ) y calcular el peso equivalente o masa equivalente (P.Eq.) de elementos y compuestos inorgánicos puros en ausencia de transferencia redox.",
+          "sourceKeys": "1 (c), 2 (b), 3 (b) *(Por la trampa del fósforo, en el H₃PO₃ θ=2. P.Eq. = 82/2 = 41.0)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.8_Calculo_de_peso_equivalente_en_elementos_oxidos_hidroxidos_acidos_y_sales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "9.9 Determinación de peso equivalente en reacciones redox y cálculo de equivalentes-gramo",
+          "shortTitle": "Determinación de peso equivalente en reacciones redox y cálculo de equivalentes-gramo",
+          "objective": "Cuantificar el parámetro θ en procesos de óxido-reducción en función de los electrones transferidos y aplicar el cálculo del número de equivalentes-gramo (#Eq-g).",
+          "sourceKeys": "1 (d), 2 (b) *(El O en peróxido es -1, pasa a -2 en H₂O. El cambio es 1 electrón, y como hay 2 oxígenos en el H₂O₂, θ = 1×2 = 2)*, 3 (c) *(Azufre en H₂S es -2, en SO₂ es +4. Cambio de -2 a +4 = 6 electrones. θ=6. P.Eq = 34/6 = 5.67 g/eq)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.9_Determinacion_de_peso_equivalente_en_reacciones_redox_y_calculo_de_equivalentes_gramo.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "9.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "9.10 Aplicación de la ley del equivalente químico en reacciones de neutralización y precipitación",
+          "shortTitle": "Aplicación de la ley del equivalente químico en reacciones de neutralización y precipitación",
+          "objective": "Resolver problemas avanzados de estequiometría aplicando la potentísima Ley del Equivalente Químico de Richter-Wenzel, con la enorme ventaja de no requerir balancear previamente la ecuación química global.",
+          "sourceKeys": "1 (d), 2 (b) *(θ del Mg(OH)₂ es 2. P.Eq. = 58/2 = 29. #Eq-g = 0.58/29 = 0.02 eq. Neutraliza 0.02 eq de ácido)*, 3 (a) *(N_ácido × 20 = 0.1 × 40 ⇒ N_ácido = 0.2 N. Como N = M × θ, en H₂SO₄ θ=2. 0.2 = M × 2 ⇒ M = 0.1 M)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_09/Leccion_9.10_Aplicacion_de_la_ley_del_equivalente_quimico_en_reacciones_de_neutralizacion_y_precipitacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Módulo 10: Sistemas Dispersos y Soluciones",
+      "description": "Diferencia soluciones, coloides y suspensiones, y calcula concentración, solubilidad, propiedades coligativas y procesos de preparación de soluciones.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_10_Sistemas_Dispersos_y_Soluciones_Quimicas.webp",
+      "entries": [
+        {
+          "code": "10.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "10.0 Presentación: Soluciones Químicas",
+          "shortTitle": "Presentación: Soluciones Químicas",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_10_Sistemas_Dispersos_y_Soluciones_Quimicas.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "10.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "10.1 Clasificación de sistemas dispersos: soluciones verdaderas, coloides y suspensiones",
+          "shortTitle": "Clasificación de sistemas dispersos: soluciones verdaderas, coloides y suspensiones",
+          "objective": "Diferenciar los sistemas dispersos en función del diámetro de la partícula dispersa, evaluando su homogeneidad óptica, estabilidad mecánica y capacidad de filtración.",
+          "sourceKeys": "1 (a), 2 (b), 3 (c) *(Los coloides SÍ dispersan la luz visible, originando el Efecto Tyndall)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.1_Clasificacion_de_sistemas_dispersos_soluciones_verdaderas_coloides_y_suspensiones.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "10.2 Propiedades coloidales: efecto Tyndall, movimiento browniano y electroforesis",
+          "shortTitle": "Propiedades coloidales: efecto Tyndall, movimiento browniano y electroforesis",
+          "objective": "Analizar los fenómenos electrocinéticos y ópticos que confieren estabilidad única a los coloides: dispersión Tyndall, movimiento browniano cinético y electroforesis.",
+          "sourceKeys": "1 (b), 2 (c), 3 (a) *(El efecto Tyndall es por DISPERSIÓN física, no por absorción cuántica)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.2_Propiedades_coloidales_efecto_Tyndall_movimiento_browniano_y_electroforesis.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "10.3 Proceso de disolución, solvatación iónica y factores que regulan la solubilidad",
+          "shortTitle": "Proceso de disolución, solvatación iónica y factores que regulan la solubilidad",
+          "objective": "Comprender la termodinámica del proceso de disolución, el mecanismo de solvatación iónica dipolo-ion y los factores que rigen la solubilidad.",
+          "sourceKeys": "1 (c), 2 (b) *(Gases en líquidos: a mayor temperatura, menor solubilidad)*, 3 (d) *(S_g = k_H · P_g)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.3_Proceso_de_disolucion_solvatacion_ionica_y_factores_que_regulan_la_solubilidad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "10.4 Interpretación cuantitativa de curvas y tablas de solubilidad térmica",
+          "shortTitle": "Interpretación cuantitativa de curvas y tablas de solubilidad térmica",
+          "objective": "Cuantificar la solubilidad a diferentes temperaturas a partir de gráficos de solubilidad (S vs T), calculando masas de soluto disuelto y masas de precipitados cristalizados por enfriamiento.",
+          "sourceKeys": "1 (b), 2 (b) *(El agua solo disuelve 50g máximo. Masa solución = 100g agua + 50g soluto = 150g. Los 10g restantes quedan como sólido insoluble en el fondo)*, 3 (b) *(Dato clave: 550g de SOLUCIÓN. A 80°C, 100g H₂O + 120g sal = 220g solución teórica. Si la teórica es 220g, en 550g reales (2.5 veces más), hay 2.5×100 = 250g de agua y 2.5×120 = 300g de sal inicial. A 20°C, los 250g de agua solo soportan: 250 × (40/100) = 100g disueltos. Precipita = 300 - 100 = 200g)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.4_Interpretacion_cuantitativa_de_curvas_y_tablas_de_solubilidad_termica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "10.5 Cálculo de unidades físicas de concentración: porcentaje en masa, volumen y masa-volumen",
+          "shortTitle": "Cálculo de unidades físicas de concentración: porcentaje en masa, volumen y masa-volumen",
+          "objective": "Calcular la concentración analítica de soluciones en unidades físicas porcentuales (% m/m, % V/V, % m/V), vinculándolas operativamente mediante el uso de la densidad macroscópica de la disolución.",
+          "sourceKeys": "1 (b), 2 (c), 3 (a) *(Masa total = 80+120=200g. %m/m = 80/200 × 100 = 40%. %m/V = 80/220 × 100 = 36.36%)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.5_Calculo_de_unidades_fisicas_de_concentracion_porcentaje_en_masa_volumen_y_masa_volumen.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "10.6 Determinación de concentración en partes por millón en muestras acuosas y gaseosas",
+          "shortTitle": "Determinación de concentración en partes por millón en muestras acuosas y gaseosas",
+          "objective": "Cuantificar concentraciones en partes por millón (ppm) para solutos a nivel de trazas críticas en control ambiental de aguas potables, vertimientos tóxicos y calidad de aire atmosférico.",
+          "sourceKeys": "1 (b), 2 (a) *(0.00005% × 10 000 = 0.5 ppm)*, 3 (c) *(ppm = 8 mg / 2 kg = 4 ppm)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.6_Determinacion_de_concentracion_en_partes_por_millon_en_muestras_acuosas_y_gaseosas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "10.7 Cálculo de molaridad a partir de masa de soluto, volumen y densidad de disolución",
+          "shortTitle": "Cálculo de molaridad a partir de masa de soluto, volumen y densidad de disolución",
+          "objective": "Calcular la Molaridad (M) de las disoluciones químicas y dominar la fórmula maestra de conversión rápida a partir de la densidad y el porcentaje de pureza para reactivos comerciales.",
+          "sourceKeys": "1 (d), 2 (c) *(Moles = M × V = 0.15 × 2 = 0.30 moles. Masa = 0.30 × 58.5 = 17.55 g)*, 3 (a) *(M = (10 × 1.84 × 98) / 98 = 18.4 M)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.7_Calculo_de_molaridad_a_partir_de_masa_de_soluto_volumen_y_densidad_de_disolucion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "10.8 Cálculo de normalidad y deducción de la relación matemática entre normalidad y molaridad",
+          "shortTitle": "Cálculo de normalidad y deducción de la relación matemática entre normalidad y molaridad",
+          "objective": "Calcular la Normalidad (N) de disoluciones electrolíticas y aplicar la ley fundamental de equivalencia química N = M × θ para saltar de Molaridad a Normalidad instantáneamente.",
+          "sourceKeys": "1 (b), 2 (c) *(Como H₂SO₄ tiene θ=2, 0.1 N = M × 2 ⇒ M = 0.05 M)*, 3 (b) *(HCN es monoprótico, θ=1, por tanto N=M)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.8_Calculo_de_normalidad_y_deduccion_de_la_relacion_matematica_entre_normalidad_y_molaridad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "10.9 Cálculo de molalidad y fracción molar en disoluciones binarias y multicomponentes",
+          "shortTitle": "Cálculo de molalidad y fracción molar en disoluciones binarias y multicomponentes",
+          "objective": "Operar con unidades químicas de concentración que son 100% independientes de la temperatura ambiental: Molalidad (m) y Fracción Molar (x_i), vitales para el estudio termodinámico de las propiedades coligativas.",
+          "sourceKeys": "1 (c), 2 (b), 3 (d) *(n_etanol = 46/46 = 1 mol. n_agua = 90/18 = 5 moles. Total = 6 moles. x_etanol = 1 / 6 ≈ 0.166...)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.9_Calculo_de_molalidad_y_fraccion_molar_en_disoluciones_binarias_y_multicomponentes.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "10.10 Operaciones con soluciones: cálculo de dilución y concentración resultante",
+          "shortTitle": "Operaciones con soluciones: cálculo de dilución y concentración resultante",
+          "objective": "Calcular variaciones y atenuaciones de concentración en procesos de dilución por adición de disolvente, basándose en la conservación universal de la masa del soluto.",
+          "sourceKeys": "1 (c), 2 (b) *(C₁V₁ = C₂V₂ ⇒ 30% × V₁ = 3% × 500 ⇒ 30V₁ = 1500 ⇒ V₁ = 50 mL)*, 3 (d) *(0.4 × 100 = 0.1 × V₂ ⇒ V₂ = 400 mL totales. Agua añadida = 400 - 100 = 300 mL)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.10_Operaciones_con_soluciones_calculo_de_dilucion_y_concentracion_resultante.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "10.11 Mezcla de soluciones con soluto común sin reacción química",
+          "shortTitle": "Mezcla de soluciones con soluto común sin reacción química",
+          "objective": "Determinar algebraicamente la concentración molar y el volumen resultante al combinar en un mismo recipiente dos o más soluciones del mismo soluto que poseen concentraciones diferentes.",
+          "sourceKeys": "1 (c), 2 (c) *(M_f × (V₁+V₂) = M₁V₁ + M₂V₂ ⇒ 2(1+V₂) = 5(1) + 1(V₂) ⇒ 2 + 2V₂ = 5 + V₂ ⇒ V₂ = 3 Litros)*, 3 (d) *(V_final = 800 mL. M_final = [10(100) + 6(200) + 2(500)] / 800 = [1000 + 1200 + 1000] / 800 = 3200 / 800 = 4.0 M)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.11_Mezcla_de_soluciones_con_soluto_comun_sin_reaccion_quimica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "10.12",
+          "order": 12,
+          "kind": "topic",
+          "title": "10.12 Estequiometría de soluciones aplicada a volumetría y titulación ácido-base",
+          "shortTitle": "Estequiometría de soluciones aplicada a volumetría y titulación ácido-base",
+          "objective": "Aplicar las rigurosas relaciones volumétricas de titulación ácido-base (Ley del Equivalente Químico) para determinar analíticamente la concentración desconocida de analitos empleando soluciones patrón (titulantes o valorantes).",
+          "sourceKeys": "1 (c), 2 (c), 3 (c) *(Ojo: en el HCl monoprótico la M=N, así que N_ácido = 0.2 N. Aplicamos N_base×V_base = N_ácido×V_ácido ⇒ 0.4×200 = 0.2×V_ácido ⇒ V_ácido = 80/0.2 = 400 mL)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_10/Leccion_10.12_Estequiometria_de_soluciones_aplicada_a_volumetria_y_titulacion_acido_base.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Módulo 11: Cinética y Mecanismos de Reacción",
+      "description": "Estudia la velocidad de reacción, los factores que la modifican, las leyes de velocidad, la energía de activación y los mecanismos de reacción.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_11_Cinetica_Quimica_y_Mecanismos_de_Reaccion.webp",
+      "entries": [
+        {
+          "code": "11.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "11.0 Presentación: Cinética Química",
+          "shortTitle": "Presentación: Cinética Química",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_11_Cinetica_Quimica_y_Mecanismos_de_Reaccion.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "11.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "11.1 Expresión de rapidez de reacción química media e instantánea",
+          "shortTitle": "Expresión de rapidez de reacción química media e instantánea",
+          "objective": "Definir rigurosamente la rapidez de reacción química en términos del cambio de concentración respecto al tiempo, diferenciando entre velocidad media e instantánea.",
+          "sourceKeys": "1 (c), 2 (c) *(v(CO₂)/16 = v(octano)/2 ⇒ v(CO₂)/16 = 4.0/2 ⇒ v(CO₂) = 2 × 16 = 32.0)*, 3 (d)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.1_Expresion_de_rapidez_de_reaccion_quimica_media_e_instantanea.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "11.2 Factores que modifican la rapidez: naturaleza de reactivos, grado de división, temperatura y concentración",
+          "shortTitle": "Factores que modifican la rapidez: naturaleza de reactivos, grado de división, temperatura y concentración",
+          "objective": "Explicar a nivel atómico y cinético los factores fundamentales que controlan la velocidad de una reacción química basándose en la teoría de colisiones efectivas.",
+          "sourceKeys": "1 (d), 2 (b), 3 (b) *(La temperatura JAMÁS disminuye la energía de activación; la temperatura solo le da a las moléculas la energía necesaria para superar dicha barrera)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.2_Factores_que_modifican_la_rapidez_naturaleza_de_reactivos_grado_de_division_temperatura_y_concentracion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "11.3 Formulación de la ley de acción de masas, ley de velocidad y orden total de reacción",
+          "shortTitle": "Formulación de la ley de acción de masas, ley de velocidad y orden total de reacción",
+          "objective": "Formular matemáticamente la Ley Diferencial de Velocidad, identificando los órdenes parciales, el orden total de reacción y deduciendo las unidades correctas de la constante específica de rapidez (k).",
+          "sourceKeys": "1 (d), 2 (b), 3 (c) *(Al ser reacción elemental, v = k[X]²[Y]¹. Al reducir el volumen a la mitad, la concentración de todos los gases se duplica. v_nueva = k(2[X])²(2[Y])¹ = k(4[X]²)(2[Y]) = 8 k[X]²[Y] = 8v_inicial)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.3_Formulacion_de_la_ley_de_accion_de_masas_ley_de_velocidad_y_orden_total_de_reaccion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "11.4 Determinación experimental del orden de reacción por el método de velocidades iniciales",
+          "shortTitle": "Determinación experimental del orden de reacción por el método de velocidades iniciales",
+          "objective": "Determinar algebraicamente los órdenes parciales, el orden global, la ley de velocidad y el valor numérico con unidades correctas de la constante k a partir de matrices de datos de laboratorio.",
+          "sourceKeys": "1 (b) *(De Exp 1 a 2, [A]x2 y v x2 ⇒ 2ᵅ = 2 ⇒ α=1)*, 2 (b) *(De Exp 1 a 3, [B]x2 y v x4 (0.02 a 0.08) ⇒ 2ᵝ = 4 ⇒ β=2)*, 3 (a) *(v = k[A]¹[B]². Con datos Exp 1: 0.02 = k(0.1)(0.1)². k = 0.02 / 0.001 = 20. Orden total 3, unidades L²/mol²s)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.4_Determinacion_experimental_del_orden_de_reaccion_por_el_metodo_de_velocidades_iniciales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "11.5 Aplicación de la ecuación de Arrhenius para el cálculo de energía de activación",
+          "shortTitle": "Aplicación de la ecuación de Arrhenius para el cálculo de energía de activación",
+          "objective": "Aplicar analíticamente la ecuación de Arrhenius en sus formas exponencial, linealizada y bipuntual para calcular la energía de activación (Ea) y predecir constantes de rapidez a distintas temperaturas.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b) *(ln(2) = (Ea/8.31) × [(310 - 300) / (300 × 310)] ⇒ 0.693 = Ea/8.31 × (10 / 93000) ⇒ Ea = (0.693 × 8.31 × 9300) = 53556 J/mol ≈ 53.6 kJ/mol)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.5_Aplicacion_de_la_ecuacion_de_Arrhenius_para_el_calculo_de_energia_de_activacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "11.6 Catálisis homogénea, heterogénea y efecto de los catalizadores en perfiles energéticos",
+          "shortTitle": "Catálisis homogénea, heterogénea y efecto de los catalizadores en perfiles energéticos",
+          "objective": "Comparar los mecanismos de catálisis homogénea y heterogénea, analizando cómo un catalizador altera la ruta de reacción disminuyendo la energía de activación sin modificar la termodinámica del sistema.",
+          "sourceKeys": "1 (c), 2 (d), 3 (b) *(I es Falso, K depende de T. II es Verdadero, ofrece un nuevo mecanismo/atajo. III es Falso, ΔH es función de estado invariable)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.6_Catalisis_homogenea_heterogenea_y_efecto_de_los_catalizadores_en_perfiles_energeticos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "11.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "11.7 Análisis de mecanismos de reacción, molecularidad y etapa determinante de la velocidad",
+          "shortTitle": "Análisis de mecanismos de reacción, molecularidad y etapa determinante de la velocidad",
+          "objective": "Identificar la molecularidad de procesos elementales, discernir operativamente entre intermediarios y catalizadores, y deducir la ley de velocidad basándose exclusivamente en la etapa determinante.",
+          "sourceKeys": "1 (d), 2 (c) *(La etapa más lenta es justamente la que tiene la mayor montaña que escalar: la mayor Energía de Activación)*, 3 (c) *(El Cl entra al inicio y sale libre al final: Catalizador. El ClO se forma y luego se destruye: Intermediario)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_11/Leccion_11.7_Analisis_de_mecanismos_de_reaccion_molecularidad_y_etapa_determinante_de_la_velocidad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Módulo 12: Equilibrio Químico y Reversibilidad",
+      "description": "Comprende el equilibrio dinámico, calcula constantes de equilibrio y aplica el principio de Le Châtelier a sistemas químicos reversibles.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_12_Equilibrio_Quimico_en_Sistemas_Reversibles.webp",
+      "entries": [
+        {
+          "code": "12.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "12.0 Presentación: Equilibrio Químico",
+          "shortTitle": "Presentación: Equilibrio Químico",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_12_Equilibrio_Quimico_en_Sistemas_Reversibles.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "12.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "12.1 Reversibilidad de reacciones químicas y establecimiento del equilibrio dinámico",
+          "shortTitle": "Reversibilidad de reacciones químicas y establecimiento del equilibrio dinámico",
+          "objective": "Comprender la naturaleza termodinámica y cinética del equilibrio químico dinámico en recipientes cerrados, diferenciándolo conceptual y gráficamente de una reacción estática o completa.",
+          "sourceKeys": "1 (c), 2 (c), 3 (c) *(El equilibrio es independiente de la vía; se puede llegar partiendo de reactivos puros o de productos puros)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.1_Reversibilidad_de_reacciones_quimicas_y_establecimiento_del_equilibrio_dinamico.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "12.2 Deducción y cálculo de la constante de equilibrio en función de concentraciones (Kc)",
+          "shortTitle": "Deducción y cálculo de la constante de equilibrio en función de concentraciones (Kc)",
+          "objective": "Deducir la expresión matemática de la constante de equilibrio en función de las concentraciones molares (K_c) mediante la ley de acción de masas, interpretando su magnitud cuantitativa.",
+          "sourceKeys": "1 (d), 2 (c) *(K_c enorme = casi todo se transforma en producto)*, 3 (d) *(Sólidos no participan, valen 1)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.2_Deduccion_y_calculo_de_la_constante_de_equilibrio_en_funcion_de_concentraciones_Kc.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "12.3 Deducción y cálculo de la constante de equilibrio en presiones parciales (Kp) y relación Kp-Kc",
+          "shortTitle": "Deducción y cálculo de la constante de equilibrio en presiones parciales (Kp) y relación Kp-Kc",
+          "objective": "Formular la constante de equilibrio exclusiva para fases gaseosas (K_p) y aplicar la ecuación maestra que interrelaciona K_p y K_c basándose en la ecuación universal de gases ideales.",
+          "sourceKeys": "1 (c), 2 (b) *(El único gas es el CO₂ en productos (1). En reactivos no hay gases (0). Δn = 1 - 0 = +1)*, 3 (a) *(Δn = 2 - 3 = -1. K_p = K_c(RT)⁻¹ ⇒ K_c = K_p × (RT)¹ = 3.4 × (0.082 × 1000) = 3.4 × 82 = 278.8 ≈ 279)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.3_Deduccion_y_calculo_de_la_constante_de_equilibrio_en_presiones_parciales_Kp_y_relacion_Kp_Kc.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "12.4 Propiedades operativas de la constante de equilibrio: inversión, ponderación y suma de ecuaciones",
+          "shortTitle": "Propiedades operativas de la constante de equilibrio: inversión, ponderación y suma de ecuaciones",
+          "objective": "Manipular algebraicamente ecuaciones químicas en equilibrio aplicando las propiedades operativas (inversión, multiplicación escalar y combinación lineal) sobre sus constantes de equilibrio.",
+          "sourceKeys": "1 (b) *(1/10 = 0.1)*, 2 (b) *(K_global = K₁ × K₂ = (5×10³) × (4×10²) = 20 × 10⁵ = 2.0 × 10⁶)*, 3 (a) *(Necesitamos SO₂ y SO₃ con coef. 1, así que multiplicamos la Ec.1 por 1/2 ⇒ K₁' = √16 = 4. La Ec.2 queda igual con NO₂ a la izquierda, K₂ = 0.5. Sumamos: K₃ = K₁' × K₂ = 4 × 0.5 = 2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.4_Propiedades_operativas_de_la_constante_de_equilibrio_inversion_ponderacion_y_suma_de_ecuaciones.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "12.5 Cálculo del cociente de reacción (Q) y predicción de la dirección espontánea del equilibrio",
+          "shortTitle": "Cálculo del cociente de reacción (Q) y predicción de la dirección espontánea del equilibrio",
+          "objective": "Evaluar el cociente de reacción (Q) en cualquier instante arbitrario para predecir rigurosamente la dirección termodinámica neta hacia la cual se desplazará el sistema para alcanzar el estado de equilibrio.",
+          "sourceKeys": "1 (c), 2 (c) *(Q ≪ K)*, 3 (a) *(Molaridades: [N₂]=0.2M, [H₂]=0.6M, [NH₃]=1.2M. Q_c = (1.2)² / [ (0.2) × (0.6)³ ] = 1.44 / [0.2 × 0.216] = 1.44 / 0.0432 = 33.3. ¡Oh! Q (33.3) > K (1.2). Hay exceso de productos. El sistema va a la izquierda. Velocidad inversa supera a la directa. Clave correcta corregida: (b))*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.5_Calculo_del_cociente_de_reaccion_Q_y_prediccion_de_la_direccion_espontanea_del_equilibrio.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "12.6 Planteamiento del equilibrio en sistemas homogéneos y sistemas heterogéneos",
+          "shortTitle": "Planteamiento del equilibrio en sistemas homogéneos y sistemas heterogéneos",
+          "objective": "Formular correctamente las expresiones de K_c y K_p para equilibrios heterogéneos, comprendiendo el concepto físico-químico de actividad constante (unitaria) para sólidos y líquidos puros.",
+          "sourceKeys": "1 (c), 2 (d) *(El AgCl sólido no se escribe)*, 3 (b) *(El sólido libera NH₃ y H₂S en proporción 1:1. Si P_total = 0.8, cada gas ejerce 0.4 atm. K_p = P_NH₃ × P_H₂S = 0.4 × 0.4 = 0.16)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.6_Planteamiento_del_equilibrio_en_sistemas_homogeneos_y_sistemas_heterogeneos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "12.7 Cálculo de concentraciones y presiones en equilibrio mediante tablas de avance de reacción",
+          "shortTitle": "Cálculo de concentraciones y presiones en equilibrio mediante tablas de avance de reacción",
+          "objective": "Resolver problemas cuantitativos complejos de equilibrio químico construyendo tablas estequiométricas I-C-E (Inicio, Cambio, Equilibrio) tanto en concentraciones molares como en presiones.",
+          "sourceKeys": "1 (b), 2 (c) *(B_eq = 2x = 2 atm ⇒ x = 1 atm. A_eq = 4 - x = 4 - 1 = 3 atm. K_p = (2)² / 3 = 4/3 = 1.33)*, 3 (b) *(C₀ / K_c = 2 / 4 = 0.5 ≪ 400. La aproximación no sirve, toca aspa y cuadrática rigurosa)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.7_Calculo_de_concentraciones_y_presiones_en_equilibrio_mediante_tablas_de_avance_de_reaccion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "12.8 Determinación del grado de disociación y porcentaje de conversión en el equilibrio",
+          "shortTitle": "Determinación del grado de disociación y porcentaje de conversión en el equilibrio",
+          "objective": "Calcular el grado de disociación (α) de especies moleculares en sistemas en equilibrio, deduciendo su relación funcional con la presión total de la mezcla y las constantes K_c y K_p.",
+          "sourceKeys": "1 (c), 2 (b) *(Se formaron 2 moles H₂, entonces reaccionaron 4 moles de HI. %α = (Gastado/Inicio)×100 = (4/10)×100 = 40%)*, 3 (c) *(Gastas C₀α de A, y por estequiometría de 2:1 produces la mitad de dímero: (C₀α)/2 )*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.8_Determinacion_del_grado_de_disociacion_y_porcentaje_de_conversion_en_el_equilibrio.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "12.9 Aplicación del principio de Le Chatelier ante cambios de concentración, volumen y presión",
+          "shortTitle": "Aplicación del principio de Le Chatelier ante cambios de concentración, volumen y presión",
+          "objective": "Predecir cuantitativa y cualitativamente el desplazamiento del equilibrio frente a perturbaciones de concentración, presión y volumen utilizando el Principio de Le Chatelier.",
+          "sourceKeys": "1 (b), 2 (c), 3 (d) *(Al ser un sólido puro, la adición o sustracción de carbono C(s) no altera su concentración en la expresión de equilibrio, no genera perturbación)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.9_Aplicacion_del_principio_de_Le_Chatelier_ante_cambios_de_concentracion_volumen_y_presion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "12.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "12.10 Aplicación del principio de Le Chatelier ante variaciones de temperatura y adición de gases inertes",
+          "shortTitle": "Aplicación del principio de Le Chatelier ante variaciones de temperatura y adición de gases inertes",
+          "objective": "Analizar el efecto supremo de la temperatura sobre el valor numérico de la constante de equilibrio, y evaluar el engañoso impacto de inyectar gases inertes en un reactor.",
+          "sourceKeys": "1 (c), 2 (c) *(Baja T favorece la reacción exo a la derecha. Alta P aplasta el gas hacia donde hay menos moles: la derecha de 4 a 2. Esta es la doble llave maestra del proceso Haber)*, 3 (d) *(Volumen constante = presiones parciales idénticas = nada cambia)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_12/Leccion_12.10_Aplicacion_del_principio_de_Le_Chatelier_ante_variaciones_de_temperatura_y_adicion_de_gases_inertes.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Módulo 13: Equilibrio Iónico: Ácidos y Bases",
+      "description": "Analiza ácidos, bases y sales mediante sus teorías, calcula pH y pOH, estudia soluciones buffer, hidrólisis y equilibrios de solubilidad.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_13_Equilibrio_Ionico_Acidos_Bases_y_Sales.webp",
+      "entries": [
+        {
+          "code": "13.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "13.0 Presentación: Equilibrio Iónico",
+          "shortTitle": "Presentación: Equilibrio Iónico",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_13_Equilibrio_Ionico_Acidos_Bases_y_Sales.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "13.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "13.1 Propiedades de ácidos y bases y fundamentos de la teoría de Arrhenius",
+          "shortTitle": "Propiedades de ácidos y bases y fundamentos de la teoría de Arrhenius",
+          "objective": "Identificar las propiedades fenomenológicas y organolépticas de ácidos y bases, y fundamentar la teoría de disociación electrolítica de Svante Arrhenius reconociendo sus alcances y limitaciones en medios no acuosos.",
+          "sourceKeys": "1 (c), 2 (c), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.1_Propiedades_de_acidos_y_bases_y_fundamentos_de_la_teoria_de_Arrhenius.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "13.2 Teoría de Brønsted-Lowry: pares conjugados ácido-base y sustancias anfóteras",
+          "shortTitle": "Teoría de Brønsted-Lowry: pares conjugados ácido-base y sustancias anfóteras",
+          "objective": "Aplicar el modelo protónico de Brønsted-Lowry identificando pares conjugados ácido-base, evaluando la fuerza relativa de sus especies y caracterizando sustancias anfóteras.",
+          "sourceKeys": "1 (b), 2 (a), 3 (c) *(Los pares conjugados deben diferir únicamente en 1 átomo de hidrógeno. En la \"c\", el H₃O⁺ pierde 1 H⁺ y se convierte en H₂O)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.2_Teoria_de_Bronsted_Lowry_pares_conjugados_acido_base_y_sustancias_anfoteras.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "13.3 Teoría de Lewis: formación de enlaces coordinados en ácidos y bases",
+          "shortTitle": "Teoría de Lewis: formación de enlaces coordinados en ácidos y bases",
+          "objective": "Comprender la teoría electrónica de Lewis, identificando ácidos (electrófilos) y bases (nucleófilos) mediante la formación de enlaces covalentes coordinados o dativos.",
+          "sourceKeys": "1 (c), 2 (b) *(Carece de H⁺, por lo que no encaja en Arrhenius ni Brønsted, pero tiene un orbital vacío, siendo un electrófilo o ácido de Lewis perfecto)*, 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.3_Teoria_de_Lewis_formacion_de_enlaces_coordinados_en_acidos_y_bases.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "13.4 Autoionización del agua, constante del producto iónico Kw y escalas de pH y pOH",
+          "shortTitle": "Autoionización del agua, constante del producto iónico Kw y escalas de pH y pOH",
+          "objective": "Comprender la naturaleza anfiprótica del agua mediante su equilibrio de autoionización, deduciendo analíticamente las escalas logarítmicas de pH y pOH y su variación letal con la temperatura.",
+          "sourceKeys": "1 (b), 2 (b) *(pH = -log(2.0) = -0.30, los pH negativos sí existen en alta concentración)*, 3 (c) *(Al subir T, Kw sube, por ej a 10⁻¹². La raíz es 10⁻⁶, por lo que pH=6, pero sigue neutra)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.4_Autoionizacion_del_agua_constante_del_producto_ionico_Kw_y_escalas_de_pH_y_pOH.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "13.5 Cálculo de pH y pOH en disoluciones acuosas de ácidos fuertes y bases fuertes",
+          "shortTitle": "Cálculo de pH y pOH en disoluciones acuosas de ácidos fuertes y bases fuertes",
+          "objective": "Resolver cuantitativamente el cálculo de pH y pOH en disoluciones de electrolitos fuertes, comprendiendo que se ionizan al 100% y contemplando el aporte del agua en sistemas extremadamente diluidos.",
+          "sourceKeys": "1 (c) *(Los ácidos fuertes no tienen K_a, se disocian totalmente al 100%)*, 2 (b) *(-log(10⁻²) = 2.0)*, 3 (a) *(Moles = 0.40/40 = 0.01 mol. Molaridad = 0.01 mol / 10 L = 10⁻³ M. [OH⁻] = 10⁻³. pOH = 3. pH = 14 - 3 = 11.0)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.5_Calculo_de_pH_y_pOH_en_disoluciones_acuosas_de_acidos_fuertes_y_bases_fuertes.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "13.6 Equilibrio en electrolitos débiles: constantes de acidez (Ka), basicidad (Kb) y ley de Ostwald",
+          "shortTitle": "Equilibrio en electrolitos débiles: constantes de acidez (Ka), basicidad (Kb) y ley de Ostwald",
+          "objective": "Formular el equilibrio químico reversible en ácidos y bases débiles, definir las constantes de acidez (K_a) y basicidad (K_b), deducir la ley de dilución de Ostwald y evaluar la íntima relación termodinámica entre K_a, K_b y K_w.",
+          "sourceKeys": "1 (b), 2 (c), 3 (c) *(K_a ≈ C₀ × α² = 0.1 × (0.01)² = 0.1 × 0.0001 = 1.0 × 10⁻⁵. La aproximación es válida porque α es muy pequeño < 0.05)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.6_Equilibrio_en_electrolitos_debiles_constantes_de_acidez_Ka_basicidad_Kb_y_ley_de_Ostwald.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "13.7 Cálculo de pH y concentraciones iónicas en ácidos débiles monopróticos y bases débiles",
+          "shortTitle": "Cálculo de pH y concentraciones iónicas en ácidos débiles monopróticos y bases débiles",
+          "objective": "Determinar algebraicamente el pH, el porcentaje de ionización y las concentraciones de equilibrio en sistemas débiles, aplicando el atajo matemático del criterio de validez del 5%.",
+          "sourceKeys": "1 (c) *(HA ⇌ H⁺ + A⁻. Salen 1 y 1 a la vez, x = x)*, 2 (d) *([OH⁻] = √(10⁻⁵ × 0.1) = √(10⁻⁶) = 10⁻³. pOH = 3. pH = 14 - 3 = 11.0)*, 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.7_Calculo_de_pH_y_concentraciones_ionicas_en_acidos_debiles_monoproticos_y_bases_debiles.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "13.8 Hidrólisis de sales neutras, ácidas y básicas y determinación cualitativa y cuantitativa del pH",
+          "shortTitle": "Hidrólisis de sales neutras, ácidas y básicas y determinación cualitativa y cuantitativa del pH",
+          "objective": "Comprender el fenómeno de la hidrólisis salina como la venganza termodinámica de los iones débiles contra el agua, deduciendo el pH resultante según la genealogía química de la sal.",
+          "sourceKeys": "1 (b) *(El NaCl proviene de HCl fuerte y NaOH fuerte, nadie se hidroliza)*, 2 (b) *(El amonio NH₄⁺ proviene del amoníaco débil; se hidrolizará soltando H⁺ al suelo)*, 3 (c) *(Como el K_a del ácido acético y el K_b del amoníaco son prácticamente el mismo número, al enfrentarse en la hidrólisis empatan matemáticamente, anulando mutuamente su efecto y el pH se queda en ≈7.0)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.8_Hidrolisis_de_sales_neutras_acidas_y_basicas_y_determinacion_cualitativa_y_cuantitativa_del_pH.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "13.9 Mecanismo de soluciones amortiguadoras buffer y aplicación de la ecuación de Henderson-Hasselbalch",
+          "shortTitle": "Mecanismo de soluciones amortiguadoras buffer y aplicación de la ecuación de Henderson-Hasselbalch",
+          "objective": "Explicar el poderoso mecanismo termodinámico de las soluciones buffer para resistir ataques externos, y aplicar la ecuación de Henderson-Hasselbalch para calcular el pH y calibrar la capacidad amortiguadora máxima.",
+          "sourceKeys": "1 (c), 2 (b) *(pH = 4.2 + log(5.0/0.5) = 4.2 + log(10) = 4.2 + 1 = 5.2)*, 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.9_Mecanismo_de_soluciones_amortiguadoras_buffer_y_aplicacion_de_la_ecuacion_de_Henderson_Hasselbalch.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "13.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "13.10 Análisis de curvas de valoración ácido-base y selección de indicadores químicos",
+          "shortTitle": "Análisis de curvas de valoración ácido-base y selección de indicadores químicos",
+          "objective": "Analizar termodinámicamente las curvas de titulación potenciométrica ácido-base identificando el punto de equivalencia teórico, y seleccionar con rigor el indicador químico idóneo garantizando un viraje preciso.",
+          "sourceKeys": "1 (c), 2 (b) *(Fenolftaleína vira justo en la zona alcalina donde cae el PE del acetato)*, 3 (d) *(El rojo cresol vira en un rango extremadamente ácido, muy por debajo de la zona de salto brusco que arranca recién en 3.5, lo que daría un error volumétrico inmenso antes de tiempo)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_13/Leccion_13.10_Analisis_de_curvas_de_valoracion_acido_base_y_seleccion_de_indicadores_quimicos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Módulo 14: Electroquímica y Celdas Galvánicas",
+      "description": "Relaciona las reacciones redox con la producción de energía eléctrica, el funcionamiento de celdas galvánicas, la electrólisis y las leyes de Faraday.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_14_Electroquimica_Celdas_Galvanicas_y_Electrolisis.webp",
+      "entries": [
+        {
+          "code": "14.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "14.0 Presentación: Electroquímica",
+          "shortTitle": "Presentación: Electroquímica",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_14_Electroquimica_Celdas_Galvanicas_y_Electrolisis.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "14.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "14.1 Principios de la electroquímica y componentes de una celda galvánica o voltaica",
+          "shortTitle": "Principios de la electroquímica y componentes de una celda galvánica o voltaica",
+          "objective": "Comprender la interconversión termodinámica entre energía química y eléctrica, distinguiendo la arquitectura operativa, el flujo de electrones y la polaridad en una celda galvánica frente a una electrolítica.",
+          "sourceKeys": "1 (b), 2 (a) *(CAT-RED nunca cambia. En cualquier celda, el cátodo hace la reducción. Al enchufarlo, es una reducción forzada/electrolítica)*, 3 (c) *(Ánodo(-) hacia Cátodo(+))*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.1_Principios_de_la_electroquimica_y_componentes_de_una_celda_galvanica_o_voltaica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "14.2 Funcionamiento de la pila de Daniell, notación abreviada de celda y rol del puente salino",
+          "shortTitle": "Funcionamiento de la pila de Daniell, notación abreviada de celda y rol del puente salino",
+          "objective": "Describir el funcionamiento electroquímico de la histórica pila de Daniell, escribir su notación diagramática estandarizada IUPAC y fundamentar el papel vital del puente salino.",
+          "sourceKeys": "1 (c), 2 (a) *(El Pb se oxida a Pb²⁺, el recipiente se vuelve muy positivo. El puente manda los ANIONES (NO₃⁻) hacia el ÁNODO para neutralizarlo)*, 3 (b) *(El Al pierde 3e⁻, el Fe gana 2e⁻. Cruzando: 2Al + 3Fe²⁺ → 2Al³⁺ + 3Fe. Suma = 2+3+2+3 = 10)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.2_Funcionamiento_de_la_pila_de_Daniell_notacion_abreviada_de_celda_y_rol_del_puente_salino.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "14.3 Electrodo estándar de hidrógeno y determinación de potenciales estándar de reducción",
+          "shortTitle": "Electrodo estándar de hidrógeno y determinación de potenciales estándar de reducción",
+          "objective": "Comprender la necesidad del Electrodo Estándar de Hidrógeno (EEH) como el \"nivel del mar\" (cero de referencia) de la electroquímica, y clasificar metales usando los potenciales estándar de reducción.",
+          "sourceKeys": "1 (c), 2 (a) *(El Fe se oxida más fácil que el Cu. El barril de Fe se oxidará (se picará) y el Cu²⁺ se reducirá ensuciando el fondo)*, 3 (c) *(El Al tiene menor E° de reducción (-1.66), por lo que se oxida (Ánodo). El Sn se reduce (Cátodo). Los electrones van de Ánodo a Cátodo, o sea de Al a Sn)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.3_Electrodo_estandar_de_hidrogeno_y_determinacion_de_potenciales_estandar_de_reduccion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "14.4 Cálculo de la fuerza electromotriz estándar de celda y predicción de espontaneidad redox",
+          "shortTitle": "Cálculo de la fuerza electromotriz estándar de celda y predicción de espontaneidad redox",
+          "objective": "Calcular la fuerza electromotriz estándar (E°celda) de una pila combinando potenciales de reducción tabulados, y predecir de forma absoluta si una reacción química ocurrirá espontáneamente o no.",
+          "sourceKeys": "1 (c), 2 (b) *(E° = Cátodo(Zn) - Ánodo(Cu) = -0.76 - (+0.34) = -1.10 V. Al ser negativo es no espontáneo)*, 3 (c) *(El Pb es mayor (-0.13 > -1.66), por lo que Pb es el cátodo. E = Cátodo - Ánodo = -0.13 - (-1.66) = +1.53 V)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.4_Calculo_de_la_fuerza_electromotriz_estandar_de_celda_y_prediccion_de_espontaneidad_redox.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "14.5 Correlación termodinámica entre potencial estándar de celda, energía libre y constante de equilibrio",
+          "shortTitle": "Correlación termodinámica entre potencial estándar de celda, energía libre y constante de equilibrio",
+          "objective": "Integrar la santa trinidad de ecuaciones químicas, interrelacionando analíticamente el voltaje de celda (E°celda), el Trabajo Útil / Energía de Gibbs (ΔG°) y la Constante de Equilibrio (K).",
+          "sourceKeys": "1 (b), 2 (b), 3 (a) *(El Cu pasa de 0 a +2 (pierde 2e⁻). El Fe pasa de +3 a +2, y como hay 2 Fe, gana 2e⁻. Los electrones totales transferidos son 2. n=2)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.5_Correlacion_termodinamica_entre_potencial_estandar_de_celda_energia_libre_y_constante_de_equilibrio.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "14.6 Aplicación de la ecuación de Nernst en celdas galvánicas en condiciones no estándar",
+          "shortTitle": "Aplicación de la ecuación de Nernst en celdas galvánicas en condiciones no estándar",
+          "objective": "Deducir y aplicar la ecuación de Nernst para calcular el potencial real de una pila bajo concentraciones no estándar, y evaluar su decaimiento de voltaje hasta la muerte electroquímica (equilibrio).",
+          "sourceKeys": "1 (b), 2 (c) *(Un reactivo alto y producto bajo hace Q diminuto, log Q muy negativo, lo que vuelve la resta una suma, elevando el voltaje por los aires)*, 3 (a) *(Ecuación balanceada: Al + 3Ag⁺ → Al³⁺ + 3Ag. Sólidos no cuentan. Productos [Al³⁺]¹ / Reactivos [Ag⁺]³)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.6_Aplicacion_de_la_ecuacion_de_Nernst_en_celdas_galvanicas_en_condiciones_no_estandar.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "14.7 Análisis operativo de celdas de concentración, acumuladores de plomo y celdas de combustible",
+          "shortTitle": "Análisis operativo de celdas de concentración, acumuladores de plomo y celdas de combustible",
+          "objective": "Analizar la física exótica de las celdas de concentración, describir la carga/descarga de la batería de plomo del automóvil y caracterizar la revolución ecológica de las celdas de combustible.",
+          "sourceKeys": "1 (a), 2 (c), 3 (c) *(La recarga es una electrólisis forzada que almacena de nuevo la energía eléctrica como energía química potencial)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.7_Analisis_operativo_de_celdas_de_concentracion_acumuladores_de_plomo_y_celdas_de_combustible.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "14.8 Cinética y termodinámica de la corrosión del hierro y técnicas de protección catódica y ánodo de sacrificio",
+          "shortTitle": "Cinética y termodinámica de la corrosión del hierro y técnicas de protección catódica y ánodo de sacrificio",
+          "objective": "Comprender la corrosión del óxido metálico no como un desgaste simple, sino como un letal proceso de microcelda galvánica espontánea acoplada a la humedad, e implementar curas industriales preventivas.",
+          "sourceKeys": "1 (b), 2 (d), 3 (c) *(Al conectarle algo que se oxida (el Mg ánodo), los e- fluyen hacia el acero, forzando a que allí solo pueda ocurrir reducción, volviéndolo un cátodo intocable)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.8_Cinetica_y_termodinamica_de_la_corrosion_del_hierro_y_tecnicas_de_proteccion_catodica_y_anodo_de_sacrificio.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "14.9 Estructura de celdas electrolíticas y electrólisis de sales haloideas anhidras fundidas",
+          "shortTitle": "Estructura de celdas electrolíticas y electrólisis de sales haloideas anhidras fundidas",
+          "objective": "Identificar la estructura operativa forzada de una celda electrolítica y predecir los productos atómicos resultantes en los electrodos al derretir sales en ausencia total de agua.",
+          "sourceKeys": "1 (c), 2 (c) *(Proceso Hall-Héroult para obtención universal de aluminio)*, 3 (a) *(El catión potasio va al cátodo negativo y gana 1e⁻ (se reduce). El anión bromuro va al ánodo positivo y pierde e⁻ (se oxida) formando gas o líquido rojo Br₂)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.9_Estructura_de_celdas_electroliticas_y_electrolisis_de_sales_haloideas_anhidras_fundidas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "14.10 Electrólisis de soluciones acuosas diluidas y concentradas: electrólisis del agua acidulada y salmuera",
+          "shortTitle": "Electrólisis de soluciones acuosas diluidas y concentradas: electrólisis del agua acidulada y salmuera",
+          "objective": "Predecir inteligentemente los productos de electrólisis en soluciones acuosas, analizando las duras leyes de competencia termodinámica entre el solvente (agua) y los caprichosos iones del soluto.",
+          "sourceKeys": "1 (b), 2 (c), 3 (d) *(La plata Ag es un metal lo suficientemente noble y dócil como para atrapar los electrones antes que el agua se rompa, logrando electro-depositarse formando un baño de plata maciza)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.10_Electrolisis_de_soluciones_acuosas_diluidas_y_concentradas_electrolisis_del_agua_acidulada_y_salmuera.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "14.11 Aplicación cuantitativa de la primera ley de Faraday para masa depositada o volumen de gas liberado",
+          "shortTitle": "Aplicación cuantitativa de la primera ley de Faraday para masa depositada o volumen de gas liberado",
+          "objective": "Formular matemáticamente la Primera Ley de Faraday para calcular con enorme rigor analítico los gramos y kilogramos exactos de metales electrodepositados o los balones de gases puros liberados en la industria.",
+          "sourceKeys": "1 (c), 2 (a) *(El agua bota oxígeno O₂ perdiendo 4e⁻, θ=4. V = (22.4 × 96.5 × 100) / (4 × 96500) = (22.4 × 9650) / 386000 = 22.4 × 0.025 = 0.56 L)*, 3 (b) *(Mol Zn = M×V = 2×0.5=1 mol. Masa a extraer = 65g. 65 = (65 × 19.3 × t) / (2 × 96500). Despejando: t = (2 × 96500)/19.3 = 10000 segundos. Para pasar a horas: 10000 / 3600 = 2.777... horas)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.11_Aplicacion_cuantitativa_de_la_primera_ley_de_Faraday_para_masa_depositada_o_volumen_de_gas_liberado.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "14.12",
+          "order": 12,
+          "kind": "topic",
+          "title": "14.12 Aplicación de la segunda ley de Faraday en celdas electrolíticas conectadas en serie",
+          "shortTitle": "Aplicación de la segunda ley de Faraday en celdas electrolíticas conectadas en serie",
+          "objective": "Desenmascarar la Segunda Ley de Faraday a sistemas industriales macizos de cubas electrolíticas acopladas en serie, pulverizando el cálculo cruzado de masas metálicas mediante la ley inquebrantable de los equivalentes químicos universales.",
+          "sourceKeys": "1 (d), 2 (c) *(Moles₁ × θ₁ = Moles₂ × θ₂ ⇒ 3 mol(Ag) × 1 = x mol(Au) × 3 ⇒ 3 = 3x ⇒ x = 1.0 mol de Oro aplastante)*, 3 (b) *(Cu²⁺ tiene θ=2, P.Eq=31.75. Cr³⁺ tiene θ=3, P.Eq=17.33. Ecuación colosal de Faraday: 6.35/31.75 = m(Cr)/17.33 ⇒ 0.2 = m(Cr)/17.33 ⇒ m(Cr) = 0.2 × 17.33 = 3.466 ≈ 3.47 gramos de cromo destellante)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_14/Leccion_14.12_Aplicacion_de_la_segunda_ley_de_Faraday_en_celdas_electroliticas_conectadas_en_serie.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Módulo 15: Química Orgánica e Hidrocarburos",
+      "description": "Examina la tetravalencia y hibridación del carbono, la nomenclatura, estructura, propiedades y reacciones de alcanos, alquenos y alquinos.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_15_Quimica_Organica_Estructura_del_Carbono_e_Hidrocarburos_Alifaticos.webp",
+      "entries": [
+        {
+          "code": "15.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "15.0 Presentación: Química Orgánica",
+          "shortTitle": "Presentación: Química Orgánica",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_15_Quimica_Organica_Estructura_del_Carbono_e_Hidrocarburos_Alifaticos.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "15.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "15.1 Propiedades químicas del átomo de carbono: tetravalencia, autosaturación y reactividad",
+          "shortTitle": "Propiedades químicas del átomo de carbono: tetravalencia, autosaturación y reactividad",
+          "objective": "Comprender la naturaleza fisicoquímica del carbono, reconociendo el hito histórico del derrumbe del vitalismo y analizando sus cuatro propiedades químicas fundamentales.",
+          "sourceKeys": "1 (b), 2 (d), 3 (c) *(En \"a\" fallan CO₂ y HCN. En \"b\" falla H₂CO₃. En \"d\" falla el carburo de calcio CaC₂)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.1_Propiedades_quimicas_del_atomo_de_carbono_tetravalencia_autosaturacion_y_reactividad.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "15.2 Reactivación de hibridación (sp3, sp2, sp), geometría y enlaces sigma y pi en cadenas de carbono",
+          "shortTitle": "Reactivación de hibridación (sp3, sp2, sp), geometría y enlaces sigma y pi en cadenas de carbono",
+          "objective": "Identificar instantáneamente la hibridación, la geometría y el ángulo de enlace de cada átomo de carbono, y dominar el conteo total de enlaces sigma (σ) y pi (π) en moléculas complejas.",
+          "sourceKeys": "1 (b), 2 (c), 3 (a) *(El ácido acético es C₂H₄O₂. Cadena abierta. Total de átomos = 8. Enlaces σ = 8 - 1 = 7 σ. Hay un doble enlace C=O que aporta 1 π)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.2_Reactivacion_de_hibridacion_sp3_sp2_sp_geometria_y_enlaces_sigma_y_pi_en_cadenas_de_carbono.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "15.3 Clasificación de tipos de carbono e hidrógenos primarios, secundarios, terciarios y cuaternarios",
+          "shortTitle": "Clasificación de tipos de carbono e hidrógenos primarios, secundarios, terciarios y cuaternarios",
+          "objective": "Clasificar estructuralmente los átomos de carbono e hidrógeno según el grado de sustitución y conectividad carbonada en hidrocarburos saturados.",
+          "sourceKeys": "1 (c), 2 (b) *(El neopentano es un C central cuaternario rodeado de 4 grupos CH₃ primarios. 4×3 = 12 hidrógenos primarios)*, 3 (b) *(Tiene dos grupos CH₂, por tanto 2×2 = 4 hidrógenos secundarios. Tiene cuatro grupos CH₃, por tanto 4×3 = 12 hidrógenos primarios)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.3_Clasificacion_de_tipos_de_carbono_e_hidrogenos_primarios_secundarios_terciarios_y_cuaternarios.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "15.4 Representación de fórmulas orgánicas: global, desarrollada, semidesarrollada y topológica",
+          "shortTitle": "Representación de fórmulas orgánicas: global, desarrollada, semidesarrollada y topológica",
+          "objective": "Representar e interconvertir moléculas orgánicas en sus diferentes niveles de notación gráfica y aplicar la fórmula matemática del Índice de Deficiencia de Hidrógeno (IDH).",
+          "sourceKeys": "1 (d), 2 (b) *(IDH = 19 + 1 - (28/2) = 20 - 14 = 6. Si sabemos que la molécula ya gasta 4 insaturaciones formando los 4 anillos obligatorios, le sobran 2 de IDH. Esos 2 restantes corresponden obligatoriamente a 2 dobles enlaces)*, 3 (b) *(IDH = 8 + 1 - [(10 - 4)/2] = 9 - [6/2] = 9 - 3 = 6)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.4_Representacion_de_formulas_organicas_global_desarrollada_semidesarrollada_y_topologica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "15.5 Clasificación y resolución de isomería estructural: cadena, posición y función",
+          "shortTitle": "Clasificación y resolución de isomería estructural: cadena, posición y función",
+          "objective": "Identificar, diferenciar y formular los tres tipos fundamentales de isomería constitucional plana, evitando las falacias visuales del dibujo molecular en el plano.",
+          "sourceKeys": "1 (c), 2 (a) *(Difieren en la ramificación del esqueleto carbonado, pero mantienen la misma familia de alcanos)*, 3 (c) *(Un aldehído es siempre isómero funcional de una cetona, ambos responden a la fórmula CₙH₂ₙO)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.5_Clasificacion_y_resolucion_de_isomeria_estructural_cadena_posicion_y_funcion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "15.6 Propiedades físicas de alcanos lineales según longitud de cadena y fuerzas intermoleculares",
+          "shortTitle": "Propiedades físicas de alcanos lineales según longitud de cadena y fuerzas intermoleculares",
+          "objective": "Predecir y justificar las variaciones de los puntos de ebullición, densidad y solubilidad en alcanos basándose en su masa molar, polarizabilidad y grado de ramificación molecular.",
+          "sourceKeys": "1 (d), 2 (b), 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.6_Propiedades_fisicas_de_alcanos_lineales_segun_longitud_de_cadena_y_fuerzas_intermoleculares.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "15.7 Nomenclatura IUPAC de alcanos ramificados y radicales alquilo comunes (iso, sec, ter, neo)",
+          "shortTitle": "Nomenclatura IUPAC de alcanos ramificados y radicales alquilo comunes (iso, sec, ter, neo)",
+          "objective": "Nombrar y formular alcanos ramificados complejos aplicando el cerco de reglas oficiales de la IUPAC y el orden alfabético estricto de los sustituyentes alquilo.",
+          "sourceKeys": "1 (c) *(Los prefijos \"iso\" sí se alfabetizan)*, 2 (b) *(El nombre base de la cadena es \"pentano\", lo que indica 5 carbonos en fila india)*, 3 (a) *(El 'ter-' se omite para el alfabeto (solo se ve la 'b'), el 'di-' se omite (solo se ve la 'm'). El orden alfabético B, E, M es impecablemente correcto)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.7_Nomenclatura_IUPAC_de_alcanos_ramificados_y_radicales_alquilo_comunes_iso_sec_ter_neo.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "15.8 Formulación y nomenclatura de cicloalcanos, conformaciones y tensión de anillo",
+          "shortTitle": "Formulación y nomenclatura de cicloalcanos, conformaciones y tensión de anillo",
+          "objective": "Nombrar cicloalcanos sustituidos, comprender a fondo la teoría de la tensión de anillo de Baeyer y analizar la vital estabilidad conformacional en 3D del ciclohexano.",
+          "sourceKeys": "1 (b), 2 (c), 3 (c) *(Los grupos voluminosos siempre buscan la periferia ecuatorial de la silla para evitar los graves choques estéricos o repulsiones diaxiales 1,3)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.8_Formulacion_y_nomenclatura_de_cicloalcanos_conformaciones_y_tension_de_anillo.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "15.9 Alquenos: nomenclatura IUPAC, hibridación de carbonos e isomería geométrica cis-trans",
+          "shortTitle": "Alquenos: nomenclatura IUPAC, hibridación de carbonos e isomería geométrica cis-trans",
+          "objective": "Nombrar alquenos ramificados y polienos otorgando señorío al doble enlace, y diagnosticar con certeza infalible la existencia de isomería espacial cis-trans.",
+          "sourceKeys": "1 (d), 2 (b) *(El but-2-eno tiene un CH₃ y un H en el C2, y otro CH₃ y un H en el C3. Ambos carbonos del puente cumplen la condición)*, 3 (d) *(En el 1,2-dicloroeteno el C1 tiene un Cl y un H, y el C2 tiene un Cl y un H. Cumplen perfecto. El resto falla por tener grupos gemelos en el mismo C)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.9_Alquenos_nomenclatura_IUPAC_hibridacion_de_carbonos_e_isomeria_geometrica_cis_trans.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "15.10 Alquinos y eninos: formulación, nomenclatura IUPAC y acidez de hidrógenos terminales",
+          "shortTitle": "Alquinos y eninos: formulación, nomenclatura IUPAC y acidez de hidrógenos terminales",
+          "objective": "Formular alquinos y compuestos mixtos (eninos), destrozar las complejas reglas de desempate en la numeración combinada y fundamentar químicamente el asombroso carácter ácido de los alquinos terminales.",
+          "sourceKeys": "1 (b), 2 (c) *(Solo el hex-1-ino posee el protón ácido terminal amarrado al carbono sp)*, 3 (a) *(Doble arranca en C1, el siguiente en C3, y el triple arranca en C5. Si vas al revés, el triple arrancaría en C2 y el doble en C4 y C6. Los números bajos (1,3,5) aplastan numéricamente a (2,4,6). Se lee primero eno y luego ino)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.10_Alquinos_y_eninos_formulacion_nomenclatura_IUPAC_y_acidez_de_hidrogenos_terminales.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "15.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "15.11 Reactividad de hidrocarburos: reacciones de combustión y adición electrofílica en insaturaciones",
+          "shortTitle": "Reactividad de hidrocarburos: reacciones de combustión y adición electrofílica en insaturaciones",
+          "objective": "Predecir los productos macroscópicos de combustión, y dominar majestuosamente las reacciones orgánicas de adición electrofílica en alquenos y alquinos aplicando el dictamen de Markovnikov.",
+          "sourceKeys": "1 (d), 2 (b) *(El H va al CH₂ terminal que tiene 2 hidrógenos; el bromo pesado ancla en el C2 formando 2-bromobutano puro por Markovnikov)*, 3 (c) *(Efecto Anti-Markovnikov o efecto peróxido de Kharasch, solo exclusivo y real cuando juntas la dupla de HBr + Peróxidos)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_15/Leccion_15.11_Reactividad_de_hidrocarburos_reacciones_de_combustion_y_adicion_electrofilica_en_insaturaciones.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Módulo 16: Hidrocarburos y Funciones Oxigenadas",
+      "description": "Estudia la aromaticidad y las reacciones del benceno, junto con la estructura, nomenclatura y propiedades de alcoholes, éteres, aldehídos, cetonas, ácidos y ésteres.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_16_Hidrocarburos_Aromaticos_y_Funciones_Oxigenadas.webp",
+      "entries": [
+        {
+          "code": "16.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "16.0 Presentación: Funciones Oxigenadas",
+          "shortTitle": "Presentación: Funciones Oxigenadas",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_16_Hidrocarburos_Aromaticos_y_Funciones_Oxigenadas.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "16.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "16.1 Estructura y estabilidad por resonancia del benceno y regla de aromaticidad de Hückel",
+          "shortTitle": "Estructura y estabilidad por resonancia del benceno y regla de aromaticidad de Hückel",
+          "objective": "Explicar la deslocalización electrónica y estabilidad termodinámica por resonancia del anillo bencénico, y aplicar con rigor analítico los cuatro criterios de aromaticidad y la regla de Hückel.",
+          "sourceKeys": "1 (c), 2 (a) *(Tiene 8 electrones π, que encaja en la fórmula de anti-aromaticidad 4n, por eso huye de ser plano)*, 3 (b) *(La energía de estabilización es tan fuerte que la molécula prefiere no romper su nube π, evitando las adiciones)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.1_Estructura_y_estabilidad_por_resonancia_del_benceno_y_regla_de_aromaticidad_de_Huckel.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "16.2 Nomenclatura de derivados monosustituidos y disustituidos del benceno (orto, meta, para)",
+          "shortTitle": "Nomenclatura de derivados monosustituidos y disustituidos del benceno (orto, meta, para)",
+          "objective": "Nombrar derivados bencénicos monosustituidos y disustituidos empleando tanto la nomenclatura sistemática IUPAC como los prefijos posicionales espaciales clásicos orto-, meta- y para-.",
+          "sourceKeys": "1 (c), 2 (d), 3 (c) *(El C₆H₅— colgado como rama se llama siempre FENIL o fenilo. El bencil exige un CH₂ extra como puente)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.2_Nomenclatura_de_derivados_monosustituidos_y_disustituidos_del_benceno_orto_meta_para.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "16.3 Estructura y nomenclatura de hidrocarburos aromáticos condensados: naftaleno y antraceno",
+          "shortTitle": "Estructura y nomenclatura de hidrocarburos aromáticos condensados: naftaleno y antraceno",
+          "objective": "Identificar la enigmática estructura de los hidrocarburos aromáticos policíclicos (HAP), reconocer sin fallos las posiciones alfa y beta, y evaluar su pesada relevancia ambiental.",
+          "sourceKeys": "1 (d), 2 (c), 3 (a) *(El antraceno y el fenantreno tienen 3 anillos. De los 14 carbonos (3 hexágonos pegados), 4 carbonos son internos de fusión y no tienen H. Solo quedan 10 hidrógenos libres en el perímetro. Fórmula: C₁₄H₁₀. Masa: 14(12) + 10(1) = 168 + 10 = 178 g/mol)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.3_Estructura_y_nomenclatura_de_hidrocarburos_aromaticos_condensados_naftaleno_y_antraceno.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "16.4 Alcoholes: clasificación, nomenclatura IUPAC y efecto del puente de hidrógeno en propiedades físicas",
+          "shortTitle": "Alcoholes: clasificación, nomenclatura IUPAC y efecto del puente de hidrógeno en propiedades físicas",
+          "objective": "Clasificar estructuralmente los alcoholes según el carbono anfitrión, nombrarlos usando las duras reglas de la IUPAC y justificar termodinámicamente sus espectaculares puntos de ebullición.",
+          "sourceKeys": "1 (d), 2 (a), 3 (b) *(El fenol pertenece a la familia de los fenoles aromáticos, sus propiedades de hiper-acidez lo divorcian por completo de los alcoholes alifáticos ordinarios)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.4_Alcoholes_clasificacion_nomenclatura_IUPAC_y_efecto_del_puente_de_hidrogeno_en_propiedades_fisicas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "16.5 Caracterización de polioles, fenoles y reactivación del equilibrio ácido-base en la acidez fenólica",
+          "shortTitle": "Caracterización de polioles, fenoles y reactivación del equilibrio ácido-base en la acidez fenólica",
+          "objective": "Identificar la aplastante utilidad de los polioles comerciales, diferenciar diametralmente a los fenoles de los alcoholes normales y desnudar el mecanismo termodinámico que otorga al fenol su agresiva acidez.",
+          "sourceKeys": "1 (d), 2 (c), 3 (b) *(El anión fenóxido reparte su maldición negativa hacia las posiciones orto y para del anillo, quitándole el peso al pobre átomo de oxígeno, volviéndose la especie más cómoda del universo)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.5_Caracterizacion_de_polioles_fenoles_y_reactivacion_del_equilibrio_acido_base_en_la_acidez_fenolica.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "16.6 Reacciones redox en alcoholes: oxidación controlada de alcoholes primarios, secundarios y deshidratación",
+          "shortTitle": "Reacciones redox en alcoholes: oxidación controlada de alcoholes primarios, secundarios y deshidratación",
+          "objective": "Predecir magistralmente los productos de oxidación selectiva de alcoholes según el agente oxidante empleado, y dominar las temperaturas de control en las reacciones de deshidratación.",
+          "sourceKeys": "1 (d), 2 (b) *(El etanol se oxida hasta ácido acético en ese tubo, y al oxidarse él, está OBLIGANDO al dicromato naranja a reducirse al verde Cr³⁺. El que fuerza al otro a reducirse, es el Agente Reductor)*, 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.6_Reacciones_redox_en_alcoholes_oxidacion_controlada_de_alcoholes_primarios_secundarios_y_deshidratacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "16.7 Formulación y nomenclatura de éteres y análisis de volatilidad frente a alcoholes isómeros",
+          "shortTitle": "Formulación y nomenclatura de éteres y análisis de volatilidad frente a alcoholes isómeros",
+          "objective": "Formular y nombrar éteres simétricos y asimétricos conforme a las reglas IUPAC, y fundamentar la terrorífica volatilidad de estos líquidos frente a sus pesados isómeros de función (los alcoholes).",
+          "sourceKeys": "1 (d), 2 (a) *(El etil enganchado al oxígeno y al etano matriz conforma estructuralmente el alcoxialcano Etoxi-etano)*, 3 (c)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.7_Formulacion_y_nomenclatura_de_eteres_y_analisis_de_volatilidad_frente_a_alcoholes_isomeros.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "16.8 Aldehídos y cetonas: polaridad del grupo carbonilo, nomenclatura e isomería funcional",
+          "shortTitle": "Aldehídos y cetonas: polaridad del grupo carbonilo, nomenclatura e isomería funcional",
+          "objective": "Caracterizar el campo de batalla electrofílico del grupo carbonilo, formular aldehídos y cetonas sin vacilar según las directrices de oro de la IUPAC y dominar la creación de pares de isómeros funcionales.",
+          "sourceKeys": "1 (c) *(Son pares isómeros de función inmaculados bajo la firma C₃H₆O)*, 2 (b) *(El aldehído CHO no se clasifica como primario o secundario, la parte alifática es el 3-metilbutil que presenta un C terciario ramificado abrazando dos extremos CH₃ terminales primarios)*, 3 (a) *(El 4,4-dimetilpentanal tiene 5 carbonos de cadena + 2 del dimetil = 7 Carbonos en total. Al ser un aldehído puro e intacto responde universalmente al sagrado patrón CₙH₂ₙO. Por lo que la fórmula global de él y su cetona gemela será C₇H₁₄O, la cual como es impar no acepta división matemática empírica inferior, conservándose idéntica)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.8_Aldehidos_y_cetonas_polaridad_del_grupo_carbonilo_nomenclatura_e_isomeria_funcional.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "16.9 Ensayos químicos de caracterización y diferenciación redox: reactivo de Tollens y reactivo de Fehling",
+          "shortTitle": "Ensayos químicos de caracterización y diferenciación redox: reactivo de Tollens y reactivo de Fehling",
+          "objective": "Diferenciar analíticamente y con certeza inquebrantable a los aldehídos de las cetonas, empleando como árbitros absolutos las reacciones de óxido-reducción en tubo de ensayo con los majestuosos reactivos de Tollens y Fehling.",
+          "sourceKeys": "1 (c), 2 (b) *(Las cetosas como la fructosa sufren una isomerización forzada en el pH básico del ensayo de Tollens y de Fehling, convirtiéndose falsamente en aldosas reductoras, por lo que engañan a las pruebas dando un falso positivo glorioso)*, 3 (c) *(La Propanona es cetona y no hace nada. El Benzaldehído es aldehído aromático bloqueado por el gran anillo para reducir a un agente suave y voluminoso como Fehling. El único aldehído ligero libre y veloz es el propanal)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.9_Ensayos_quimicos_de_caracterizacion_y_diferenciacion_redox_reactivo_de_Tollens_y_reactivo_de_Fehling.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "16.10 Ácidos carboxílicos: reactivación de constantes de acidez, nomenclatura y formación de sales orgánicas",
+          "shortTitle": "Ácidos carboxílicos: reactivación de constantes de acidez, nomenclatura y formación de sales orgánicas",
+          "objective": "Formular y nombrar magistralmente ácidos carboxílicos acatando el dominio de la IUPAC, justificar la invulnerabilidad resonante del anión carboxilato y balancear reacciones destructivas de neutralización orgánica.",
+          "sourceKeys": "1 (b), 2 (c) *(El ácido de las hormigas es el Fórmico, nombre IUPAC puro = Ácido metanoico)*, 3 (b) *(El ácido y la base chocan, liberan agua H₂O, y el potasio positivo K⁺ se aparea felizmente con el anión carboxilato orgánico CH₃COO⁻ engendrando la sal neutra acetato de potasio)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.10_Acidos_carboxilicos_reactivacion_de_constantes_de_acidez_nomenclatura_y_formacion_de_sales_organicas.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "16.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "16.11 Ésteres: síntesis por esterificación de Fischer, nomenclatura IUPAC e hidrólisis",
+          "shortTitle": "Ésteres: síntesis por esterificación de Fischer, nomenclatura IUPAC e hidrólisis",
+          "objective": "Formular sin fallos la reacción de esterificación reversible de Fischer, nombrar ésteres exóticos aplicando el protocolo de prefijos compuestos de la IUPAC y diseccionar sus fatales rutas orgánicas de hidrólisis ácida y saponificación jabonosa en caliente.",
+          "sourceKeys": "1 (d), 2 (b) *(Las esencias de ésteres alifáticos menores de bajo costo replican el perfil aromático de las frutas y engañan al gusto animal al carecer de puentes H pesados y elevar su volatilidad extrema hasta los receptores nasales del humano en dosis traza microgramos)*, 3 (a) *(El jabón sólido ancestral que rompe la grasa orgánica se forja mediante saponificación destructiva arrancándole a la cadena grasa sus gliceroles de escape al vacío purificador con sosa cáustica rutilante pura)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_16/Leccion_16.11_Esteres_sintesis_por_esterificacion_de_Fischer_nomenclatura_IUPAC_e_hidrolisis.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Módulo 17: Funciones Nitrogenadas y Biomoléculas",
+      "description": "Analiza aminas, amidas, nitrilos y otros compuestos nitrogenados, además de la estructura y función de biomoléculas y materiales poliméricos.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_17_Funciones_Nitrogenadas_Biomoleculas_y_Polimeros.webp",
+      "entries": [
+        {
+          "code": "17.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "17.0 Presentación: Funciones Nitrogenadas",
+          "shortTitle": "Presentación: Funciones Nitrogenadas",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_17_Funciones_Nitrogenadas_Biomoleculas_y_Polimeros.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "17.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "17.1 Aminas: clasificación, nomenclatura y reactivación del carácter básico según Brønsted-Lowry y Lewis",
+          "shortTitle": "Aminas: clasificación, nomenclatura y reactivación del carácter básico según Brønsted-Lowry y Lewis",
+          "objective": "Clasificar aminas según el grado de sustitución del átomo de nitrógeno, formularlas con la IUPAC y fundamentar rigurosamente su carácter básico y nucleofílico.",
+          "sourceKeys": "1 (c), 2 (b) *(Las aminas son bases, el limón es ácido; neutralizan formando sales iónicas que no huelen y se van con el agua)*, 3 (a) *(CH₃-NH-CH₃ tiene el enlace N-H intacto para hacer puentes de H)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.1_Aminas_clasificacion_nomenclatura_y_reactivacion_del_caracter_basico_segun_Bronsted_Lowry_y_Lewis.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "17.2 Formulación y nomenclatura de amidas y nitrilos y comparación de polaridad molecular",
+          "shortTitle": "Formulación y nomenclatura de amidas y nitrilos y comparación de polaridad molecular",
+          "objective": "Formular y nombrar amidas y nitrilos conforme a las estrictas normas IUPAC, justificar la curiosa neutralidad ácido-base de las amidas mediante la resonancia y comparar sus aplastantes puntos de ebullición.",
+          "sourceKeys": "1 (b), 2 (a) *(Los ácidos carboxílicos hierven altísimo formando dímeros, pero las amidas primarias rompen todos los récords tejiendo redes en 3D infinitas, haciéndolas casi inamovibles, por lo que el ácido, aunque hierva a 118°C, ebulle mucho antes que la amida de 221°C)*, 3 (c) *(Hay 3 carbonos en los CH más 1 carbono del CN = 4 carbonos matriz. Cadena madre es butano. Terminación nitrilo = Butanonitrilo)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.2_Formulacion_y_nomenclatura_de_amidas_y_nitrilos_y_comparacion_de_polaridad_molecular.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "17.3 Nomenclatura de compuestos orgánicos polifuncionales según la jerarquía de grupos funcionales IUPAC",
+          "shortTitle": "Nomenclatura de compuestos orgánicos polifuncionales según la jerarquía de grupos funcionales IUPAC",
+          "objective": "Determinar con rigor absoluto la función principal y los sustituyentes secundarios en moléculas orgánicas polifuncionales mediante la tabla oficial de prioridades IUPAC y formular el nombre sistemático impecable.",
+          "sourceKeys": "1 (d), 2 (b) *(El aldehído CHO gana, es el C1. La amina NH₂ cae en el C3 y se llama prefijo amino. Los aldehídos puros no necesitan llevar el número 1 en el nombre porque por definición nacen en las fronteras. Queda 3-aminobutanal)*, 3 (a) *(El ácido manda, el C1 es el carboxilo. El OH queda en C3 (hidroxi) y el carbonilo cetónico queda en C5 (oxo). Se alfabetiza: la H de hidroxi va antes de la O de oxo. Nombre: Ácido 3-hidroxi-5-oxohexanoico)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.3_Nomenclatura_de_compuestos_organicos_polifuncionales_segun_la_jerarquia_de_grupos_funcionales_IUPAC.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "17.4 Carbohidratos: estructura, clasificación en aldosas, cetosas, monosacáridos, disacáridos y polisacáridos",
+          "shortTitle": "Carbohidratos: estructura, clasificación en aldosas, cetosas, monosacáridos, disacáridos y polisacáridos",
+          "objective": "Clasificar los carbohidratos según su complejidad hidrolítica y el grupo carbonilo dominante, diseccionar el enlace O-glucosídico y diferenciar disacáridos reductores de los herméticamente bloqueados.",
+          "sourceKeys": "1 (b), 2 (c), 3 (b) *(El glucógeno animal está hiper-ramificado como un arbusto frondoso, teniendo nudos alfa-1,6 cada 8 a 12 residuos de glucosa; esto crea miles de extremos libres que pueden romperse y devorarse al mismo tiempo cuando el músculo exige energía de arranque instantánea explosiva, superando al perezoso almidón vegetal que tiene ramas alejadas)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.4_Carbohidratos_estructura_clasificacion_en_aldosas_cetosas_monosacaridos_disacaridos_y_polisacaridos.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "17.5 Lípidos: estructura de triglicéridos, ácidos grasos saturados e insaturados y reacción de saponificación",
+          "shortTitle": "Lípidos: estructura de triglicéridos, ácidos grasos saturados e insaturados y reacción de saponificación",
+          "objective": "Distinguir arquitectónicamente entre grasas y aceites, formular la estructura química estelar de los triglicéridos y dominar el balance estequiométrico de la agresiva reacción de saponificación.",
+          "sourceKeys": "1 (b), 2 (c) *(Al meter gas H₂ se rompen los enlaces pi de los aceites, logrando atestar la molécula de hidrógenos hasta enderezar las cadenas orgánicas a lo largo para que cristalicen)*, 3 (a)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.5_Lipidos_estructura_de_trigliceridos_acidos_grasos_saturados_e_insaturados_y_reaccion_de_saponificacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "17.6 Aminoácidos: estructura anfótera, reactivación del punto isoeléctrico y formación del enlace peptídico",
+          "shortTitle": "Aminoácidos: estructura anfótera, reactivación del punto isoeléctrico y formación del enlace peptídico",
+          "objective": "Comprender la esquizofrenia estructural de los α-aminoácidos, fundamentar su carácter anfótero (Zwitterion), descifrar el Punto Isoeléctrico (pI) y formular el irrompible enlace peptídico plano.",
+          "sourceKeys": "1 (c), 2 (c) *(En el pI, la carga positiva compensa a la negativa en un 100%, formando el mutante neutro Zwitterion dipolo, cayendo a su mínima solubilidad y quietud eléctrica)*, 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.6_Aminoacidos_estructura_anfotera_reactivacion_del_punto_isoelectrico_y_formacion_del_enlace_peptidico.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "17.7 Proteínas: niveles de organización estructural y reactivación de fuerzas intermoleculares en la desnaturalización",
+          "shortTitle": "Proteínas: niveles de organización estructural y reactivación de fuerzas intermoleculares en la desnaturalización",
+          "objective": "Caracterizar verticalmente los cuatro misteriosos niveles de organización espacial de las proteínas y dominar la masacre físico-química del fenómeno de desnaturalización térmica.",
+          "sourceKeys": "1 (d), 2 (a) *(La desnaturalización térmica deshace las estructuras y puentes del edificio desde el nivel cuaternario, terciario y secundario. Convierte al edificio funcional en escombros. Pero a pesar del calor excesivo, el cimiento lineal de la casa (La Estructura Primaria con sus enlaces peptídicos) que ata ladrillo con ladrillo, sobrevive casi invulnerable, manteniendo la fila del collar recta, aunque inútil biológicamente)*, 3 (c) *(Cuando una simple cadena no basta, el agrupar cadenas de polipéptidos gigantes juntas en racimos abrazados como un trébol (subunidades) marca la llegada e inauguración de la estructura Cuaternaria suprema, como lo atestigua mundialmente el tetrámero rojo de la Hemoglobina transportadora de oxígeno celular)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.7_Proteinas_niveles_de_organizacion_estructural_y_reactivacion_de_fuerzas_intermoleculares_en_la_desnaturalizacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "17.8 Polímeros sintéticos: mecanismos de polimerización por adición y condensación",
+          "shortTitle": "Polímeros sintéticos: mecanismos de polimerización por adición y condensación",
+          "objective": "Diferenciar con exactitud los mecanismos de polimerización por adición y condensación, reconociendo sin vacilar las estructuras químicas de los principales polímeros sintéticos industriales que inundan el planeta.",
+          "sourceKeys": "1 (c) *(La regla de oro del nombre Condensación: Los monómeros al chocar de frente, rompen e intercambian trozos inútiles estorbosos sueltos entre sí y terminan escupiendo inexorable y obligatoriamente una molécula bebé extra subalterna residual no plástica inservible como agua limpia pura o un alcohol líquido como subproducto no deseado. Es decir... condensa sudando agua)*, 2 (c) *(El PET que tocas a diario es la cima suprema de las botellas traslúcidas de polímero termoplástico soplado por calor blando y estirado a máquina de origen de cadena condensada tipo POLIÉSTER, reciclable 100% en la cadena circular ambiental)*, 3 (b) *(El Teflón PTFE nace únicamente por ADICIÓN a martillazos de apertura agresiva de su doble enlace CF₂=CF₂ inestable e inflamable, absorbiendo adentro todo el 100% de la carga de sus átomos. Nadie sale huyendo, nadie exuda. No hay condensación, no suda una sola lágrima o gota acuosa)*",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.8_Polimeros_sinteticos_mecanismos_de_polimerizacion_por_adicion_y_condensacion.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        },
+        {
+          "code": "17.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "17.9 Materiales tecnológicos modernos: cristales líquidos, polímeros conductores y nanomateriales de carbono",
+          "shortTitle": "Materiales tecnológicos modernos: cristales líquidos, polímeros conductores y nanomateriales de carbono",
+          "objective": "Analizar las propiedades fisicoquímicas cuánticas y aplicaciones avanzadas de los cristales líquidos visuales, los plásticos semiconductores orgánicos asombrosos y el olimpo estructural de los nanomateriales alotrópicos y milagrosos derivados puramente del carbono (Fullerenos C₆₀, Nanotubos asimétricos CNT y el majestuoso rey cuántico plano llamado Grafeno hexagonal libre).",
+          "sourceKeys": "1 (c), 2 (c), 3 (b)",
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_17/Leccion_17.9_Materiales_tecnologicos_modernos_cristales_liquidos_polimeros_conductores_y_nanomateriales_de_carbono.webp",
+          "currentLinks": [
+            "https://tablaperiodica.sistemazenit.com/"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Módulo 18: Metalurgia, Ambiente y Sostenibilidad",
+      "description": "Integra procesos de extracción y refinación de metales con el análisis de contaminación ambiental, tratamiento de residuos y principios de química sostenible.",
+      "imageUrl": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_18_Metalurgia_Extractiva_Contaminacion_Ambiental_y_Quimica_Sostenible.webp",
+      "entries": [
+        {
+          "code": "18.0",
+          "order": 0,
+          "kind": "intro",
+          "title": "18.0 Presentación: Metalurgia y Ambiente",
+          "shortTitle": "Presentación: Metalurgia y Ambiente",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/portadas_modulos/Modulo_18_Metalurgia_Extractiva_Contaminacion_Ambiental_y_Quimica_Sostenible.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.1",
+          "order": 1,
+          "kind": "topic",
+          "title": "18.1 Procesamiento mineralógico: caracterización de menas, ganga y concentración por flotación",
+          "shortTitle": "Procesamiento mineralógico: caracterización de menas, ganga y concentración por flotación",
+          "objective": "Diferenciar entre mineral, mena y ganga, calcular la ley del mineral y explicar el fundamento fisicoquímico de la concentración por flotación espumante según la mojabilidad interfacial.",
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.1_Procesamiento_mineralogico_caracterizacion_de_menas_ganga_y_concentracion_por_flotacion.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.2",
+          "order": 2,
+          "kind": "topic",
+          "title": "18.2 Siderurgia del hierro: reacciones redox en el alto horno, reducción carbotérmica y obtención de acero",
+          "shortTitle": "Siderurgia del hierro: reacciones redox en el alto horno, reducción carbotérmica y obtención de acero",
+          "objective": "Analizar las zonas de temperatura y las reacciones químicas redox en el alto horno siderúrgico, identificando la reducción carbotérmica del hierro, la formación de escoria y la conversión del arrabio a acero.",
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.2_Siderurgia_del_hierro_reacciones_redox_en_el_alto_horno_reduccion_carbotermica_y_obtencion_de_acero.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.3",
+          "order": 3,
+          "kind": "topic",
+          "title": "18.3 Metalurgia del cobre: tostación, lixiviación ácida y refinación electrolítica",
+          "shortTitle": "Metalurgia del cobre: tostación, lixiviación ácida y refinación electrolítica",
+          "objective": "Comprender las rutas pirometalúrgica e hidrometalúrgica del cobre y describir cuantitativamente la refinación electrolítica del cobre blíster a cobre catódico del $99.99\\%$.",
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.3_Metalurgia_del_cobre_tostacion_lixiviacion_acida_y_refinacion_electrolitica.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.4",
+          "order": 4,
+          "kind": "topic",
+          "title": "18.4 Metalurgia de metales preciosos: procesos de cianuración y refinación de oro y plata",
+          "shortTitle": "Metalurgia de metales preciosos: procesos de cianuración y refinación de oro y plata",
+          "objective": "Comprender el mecanismo de lixiviación oxidativa del oro mediante cianuración (Ecuación de Elsner), fundamentar el control del $\\text{pH}$ alcalino y analizar la recuperación por cementación con zinc y carbón activado.",
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.4_Metalurgia_de_metales_preciosos_procesos_de_cianuracion_y_refinacion_de_oro_y_plata.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.5",
+          "order": 5,
+          "kind": "topic",
+          "title": "18.5 Clasificación de contaminantes ambientales según naturaleza, origen y persistencia ecológica",
+          "shortTitle": "Clasificación de contaminantes ambientales según naturaleza, origen y persistencia ecológica",
+          "objective": "Clasificar los contaminantes ambientales según su naturaleza físico-química, origen antrópico o natural, y diferenciar con precisión analítica contaminantes primarios de secundarios.",
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.5_Clasificacion_de_contaminantes_ambientales_segun_naturaleza_origen_y_persistencia_ecologica.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.6",
+          "order": 6,
+          "kind": "topic",
+          "title": "18.6 Química de la atmósfera y ciclo catalítico de degradación del ozono estratosférico por clorofluorocarbonos",
+          "shortTitle": "Química de la atmósfera y ciclo catalítico de degradación del ozono estratosférico por clorofluorocarbonos",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.6_Quimica_de_la_atmosfera_y_ciclo_catalitico_de_degradacion_del_ozono_estratosferico_por_clorofluorocarbonos.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.7",
+          "order": 7,
+          "kind": "topic",
+          "title": "18.7 Efecto invernadero: balance radiativo, gases de forzamiento térmico y cambio climático global",
+          "shortTitle": "Efecto invernadero: balance radiativo, gases de forzamiento térmico y cambio climático global",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.7_Efecto_invernadero_balance_radiativo_gases_de_forzamiento_termico_y_cambio_climatico_global.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.8",
+          "order": 8,
+          "kind": "topic",
+          "title": "18.8 Mecanismo de formación de lluvia ácida a partir de óxidos de azufre y nitrógeno y neutralización de suelos",
+          "shortTitle": "Mecanismo de formación de lluvia ácida a partir de óxidos de azufre y nitrógeno y neutralización de suelos",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.8_Mecanismo_de_formacion_de_lluvia_acida_a_partir_de_oxidos_de_azufre_y_nitrogeno_y_neutralizacion_de_suelos.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.9",
+          "order": 9,
+          "kind": "topic",
+          "title": "18.9 Contaminación del agua: demanda biológica de oxígeno (DBO), eutrofización y toxicidad por metales pesados",
+          "shortTitle": "Contaminación del agua: demanda biológica de oxígeno (DBO), eutrofización y toxicidad por metales pesados",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.9_Contaminacion_del_agua_demanda_biologica_de_oxigeno_DBO_eutrofizacion_y_toxicidad_por_metales_pesados.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.10",
+          "order": 10,
+          "kind": "topic",
+          "title": "18.10 Etapas de potabilización y tratamiento de aguas: coagulación, floculación, sedimentación y desinfección",
+          "shortTitle": "Etapas de potabilización y tratamiento de aguas: coagulación, floculación, sedimentación y desinfección",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.10_Etapas_de_potabilizacion_y_tratamiento_de_aguas_coagulacion_floculacion_sedimentacion_y_desinfeccion.webp",
+          "currentLinks": []
+        },
+        {
+          "code": "18.11",
+          "order": 11,
+          "kind": "topic",
+          "title": "18.11 Contaminación de suelos, degradación de plásticos y principios fundamentales de la química verde",
+          "shortTitle": "Contaminación de suelos, degradación de plásticos y principios fundamentales de la química verde",
+          "objective": null,
+          "sourceKeys": null,
+          "image": "https://pub-f437343ef3644813a6dfe05f1813070c.r2.dev/lecciones/modulo_18/Leccion_18.11_Contaminacion_de_suelos_degradacion_de_plasticos_y_principios_fundamentales_de_la_quimica_verde.webp",
+          "currentLinks": []
+        }
+      ]
+    }
+  ]
+}
