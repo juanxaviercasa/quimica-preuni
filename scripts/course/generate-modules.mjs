@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+throw new Error("Generador retirado: producía contenido de plantilla. Usa repair-content.mjs para recuperar las fuentes y conserva la revisión científica pendiente.");
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const sourceDir = resolve(root, "../Modificar");
 const outDir = resolve(root, "src/course/modules");

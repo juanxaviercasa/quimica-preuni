@@ -6,6 +6,7 @@ import { ACTIVITY_COMPONENTS, FAMILY_LABELS } from "./activities.jsx";
 import { PracticeSet, ExamSet } from "./QuestionSet.jsx";
 import { RichText } from "./ui.jsx";
 import "./course.css";
+import { StudyText, WorkedPractice } from "./StudyContent.jsx";
 
 export default function TopicPage() {
   const { moduleSegment, topicSegment } = useParams();
@@ -82,6 +83,10 @@ export default function TopicPage() {
       </section>
 
       {/* Actividad Interactiva */}
+      {topic.theory && <section id="fundamentos" className="cq-section">
+        <h2>Fundamentos de la lección</h2>
+        <StudyText text={topic.theory} />
+      </section>}
       {topic.status !== "bloqueado" && topic.activity && ActivityComponent ? (
         <section className="cq-section" aria-labelledby="act-heading" style={{ border: "2px solid rgba(139, 77, 176, 0.25)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
@@ -115,6 +120,10 @@ export default function TopicPage() {
       )}
 
       {/* Ejemplo Resuelto */}
+      {topic.workedPractice?.length > 0 && <section className="cq-section">
+        <h2>Práctica con desarrollo</h2>
+        <WorkedPractice examples={topic.workedPractice} />
+      </section>}
       {topic.example && (
         <section className="cq-section" aria-labelledby="ex-heading">
           <h2 id="ex-heading" className="cq-section-title">

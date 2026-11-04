@@ -10,6 +10,7 @@ import {
 } from "./families.js";
 import { evaluate, formatNumber, withinTolerance } from "./expr.js";
 import { Feedback, RichText } from "./ui.jsx";
+import { GuidedActivity } from "./StudyContent.jsx";
 
 const num = v => { const text = String(v ?? "").trim(); if (!text) return null; const n = Number(text.replace(",", ".")); return Number.isFinite(n) ? n : null; };
 const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
@@ -495,6 +496,7 @@ export function BalanceActivity({ activity }) {
 }
 
 export const ACTIVITY_COMPONENTS = {
+  guided: GuidedActivity,
   temperature: TemperatureActivity,
   isotopes: IsotopesActivity,
   trends: TrendsActivity,
@@ -507,6 +509,7 @@ export const ACTIVITY_COMPONENTS = {
 };
 
 export const FAMILY_LABELS = {
+  guided: "Predicción y contraste de soluciones",
   temperature: "Conversor de temperaturas e intervalos",
   isotopes: "Laboratorio de isótopos",
   trends: "Tendencias periódicas con datos",

@@ -6,7 +6,7 @@ function QuestionInput({ q, value, onChange, disabled, name }) {
   if (q.type === "num") {
     return (
       <label className="cq-num">
-        <span>Tu respuesta{q.unit ? ` (${q.unit})` : ""}</span>
+          <span>Tu respuesta{q.unit ? ` (${q.unit})` : ""}</span>
         <input
           type="text"
           inputMode="decimal"

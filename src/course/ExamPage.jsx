@@ -44,7 +44,7 @@ export default function ExamPage() {
           <span className="cq-tag">{mod.exam.length} preguntas de admisión</span>
         </div>
         <p style={{ color: "var(--muted, #6b7280)", fontSize: "1.05rem", marginTop: "0.5rem" }}>
-          Esta evaluación integra los conceptos fundamentales de «{mod.title}». Cada pregunta evalúa un objetivo observable del módulo con distractores analizados según criterios IUPAC y de admisión.
+          Repaso acumulativo de «{mod.title}». Reutiliza preguntas de las lecciones para comprobar la retención. Las claves del material original siguen en revisión.
         </p>
       </header>
 

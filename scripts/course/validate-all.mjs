@@ -25,4 +25,6 @@ if (report.warnings.length > 0) {
 }
 
 if (report.errors.length > 0) process.exit(1);
-else console.log("✅ ¡TODOS LOS DATOS Y MÓDULOS CUMPLEN EL 100% DE VALIDACIÓN!");
+else if (report.warnings.length || report.stats.pending || report.stats.blocked) {
+  console.log("Estructura válida. La revisión pedagógica sigue pendiente; consulta las advertencias.");
+} else console.log("Estructura válida y sin advertencias registradas.");

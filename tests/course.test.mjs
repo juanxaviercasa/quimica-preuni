@@ -8,6 +8,7 @@ import { isotopesData } from "../src/data/isotopesData.js";
 import { convertTemperature, weightedAverage, checkBalance, TREND_PROPERTIES, trendValue } from "../src/course/families.js";
 import { routeFor, moduleRoute, examRoute, segmentToNumber } from "../src/course/routes.js";
 import { evaluate, withinTolerance } from "../src/course/expr.js";
+import { hasPlaceholderContent } from "../src/course/contentQuality.js";
 
 test("course registry covers exactly 197 entries in 18 modules with zero validator errors", () => {
   const report = validateCourse({
@@ -22,15 +23,16 @@ test("course registry covers exactly 197 entries in 18 modules with zero validat
   assert.equal(report.stats.intros, 18);
   assert.equal(report.stats.ready, 0);
   assert.equal(report.stats.routes, 197);
-  assert.equal(report.stats.questions, 0);
-  assert.ok(allEntries.filter(e => e.kind === "topic").every(e => e.status === "bloqueado"));
+  assert.ok(report.stats.questions >= 537);
+  assert.ok(allEntries.filter(e => e.kind === "topic").every(e => e.status === "pendiente"));
+  assert.ok(allEntries.filter(e => e.kind === "topic").every(e => !hasPlaceholderContent(e)));
 });
 
 test("pilot topic 1.8 (temperatures): exact 273.15 shift and thermal interval distinction", () => {
   const t18 = getEntry("1.8");
   assert.ok(t18);
   assert.equal(t18.activity.family, "temperature");
-  assert.equal(t18.status, "bloqueado");
+  assert.equal(t18.status, "pendiente");
 
   // Exact shift: 0 °C = 273.15 K
   assert.equal(convertTemperature(0, "C", "K", "temperatura"), 273.15);
@@ -55,7 +57,7 @@ test("pilot topic 2.5 (isotopes): weighted average atomic mass grounded on IUPAC
   const t25 = getEntry("2.5");
   assert.ok(t25);
   assert.equal(t25.activity.family, "isotopes");
-  assert.equal(t25.status, "bloqueado");
+  assert.equal(t25.status, "pendiente");
 
   // Carbon natural abundance: 12.0000 * 0.9893 + 13.0034 * 0.0107
   const cData = isotopesData["C"];
@@ -72,7 +74,7 @@ test("pilot topic 3.10 (trends): periodic trends vector and property ordering gr
   const t310 = getEntry("3.10");
   assert.ok(t310);
   assert.equal(t310.activity.family, "trends");
-  assert.equal(t310.status, "bloqueado");
+  assert.equal(t310.status, "pendiente");
 
   const bySymbol = new Map(elements118.map(e => [e.symbol, e]));
   const group1 = ["Li", "Na", "K", "Rb", "Cs"];

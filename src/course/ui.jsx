@@ -1,8 +1,15 @@
 import { Fragment } from "react";
+import Markdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 /** Minimal rich text: **negrita** and line breaks. Chemistry uses Unicode (H₂O, 10⁻³). */
 export function RichText({ text, as: Tag = "span", className }) {
   if (text === null || text === undefined) return null;
+  if (String(text).includes("$")) {
+    return <Tag className={className}><Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}
+      components={{ p: ({ children }) => <span>{children}</span> }}>{String(text)}</Markdown></Tag>;
+  }
   const lines = String(text).split("\n");
   return (
     <Tag className={className}>

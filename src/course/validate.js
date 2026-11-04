@@ -3,7 +3,7 @@
 import { parseExpression, variablesOf, evaluate, withinTolerance } from "./expr.js";
 import { convertTemperature, checkBalance, calculatorValues, calculatorGoalMet, trendValue, TREND_PROPERTIES, TEMPERATURE_SCALES, builderIsCorrect } from "./families.js";
 
-export const FAMILIES = ["isotopes", "trends", "temperature", "calculator", "classify", "order", "compare", "builder", "balance"];
+export const FAMILIES = ["guided", "isotopes", "trends", "temperature", "calculator", "classify", "order", "compare", "builder", "balance"];
 export const STATUSES = ["listo", "pendiente", "bloqueado"];
 const UNIVERSITY_ATTRIBUTION = /\b(UNI|UNMSM|San Marcos|PUCP|UNSAAC|UNAC|DECO|CEPRE[- ]?\w*)\b/;
 const OBSOLETE_HOST = /https?:\/\/quimica\.sistemazenit\.com/;
@@ -114,16 +114,20 @@ function validateTopic(topic, ctx) {
   }
   // Worked example
   const ex = topic.example;
-  if (!ex || !isText(ex.statement) || !Array.isArray(ex.steps) || ex.steps.length < 1 || !isText(ex.answer)) err(where, "ejemplo resuelto incompleto");
+  if ((!ex || !isText(ex.statement) || !Array.isArray(ex.steps) || ex.steps.length < 1 || !isText(ex.answer)) && !topic.workedPractice?.length) {
+    (topic.status === "pendiente" ? warn : err)(where, "ejemplo resuelto incompleto");
+  }
   // Practice and quiz
-  if (!Array.isArray(topic.practice) || topic.practice.length < 2) err(where, "menos de 2 ejercicios de práctica");
+  if ((topic.practice?.length || 0) + (topic.workedPractice?.length || 0) < 2) {
+    (topic.status === "pendiente" ? warn : err)(where, "menos de 2 ejercicios de práctica");
+  }
   if (!Array.isArray(topic.quiz) || topic.quiz.length < 3) err(where, "menos de 3 preguntas de mini examen");
   (topic.practice ?? []).forEach((q, i) => validateQuestion(q, `${where} práctica ${i + 1}`, ctx));
   (topic.quiz ?? []).forEach((q, i) => validateQuestion(q, `${where} mini examen ${i + 1}`, ctx));
   // Sources
   if (!Array.isArray(topic.sources) || topic.sources.length < 1) err(where, "sin referencias científicas");
   (topic.sources ?? []).forEach((s, i) => {
-    if (!isText(s.label) || !/^https:\/\//.test(s.url ?? "")) err(where, `referencia ${i + 1} sin etiqueta o URL https`);
+    if (!isText(s.label) || !/^(https:\/\/|#fundamentos$)/.test(s.url ?? "")) err(where, `referencia ${i + 1} sin etiqueta o URL https`);
   });
   if (!topic.review || !["verificado", "pendiente"].includes(topic.review.status)) err(where, "sin registro de revisión científica (review.status)");
 }
@@ -141,7 +145,9 @@ export function validateQuestion(q, where, { err, warn, questionIds }) {
     else {
       if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) err(where, `clave fuera de rango (${q.answer})`);
       if (new Set(q.options.map(o => String(o).trim())).size !== q.options.length) err(where, "opciones repetidas");
-      if (!Array.isArray(q.why) || q.why.length !== q.options.length) err(where, "falta explicar cada distractor (why[] con una entrada por opción)");
+      if (!Array.isArray(q.why) || q.why.length !== q.options.length) {
+        (q.reviewStatus ? warn : err)(where, "falta explicar cada distractor (why[] con una entrada por opción)");
+      }
       else q.why.forEach((w, i) => { if (i !== q.answer && !isText(w)) err(where, `distractor ${String.fromCharCode(97 + i)} sin explicación`); });
     }
   } else if (q.type === "num") {
@@ -163,6 +169,9 @@ function validateFamily(act, where, ctx) {
   const p = act.params ?? {};
   const g = act.goal ?? {};
   switch (act.family) {
+    case "guided":
+      if (!isText(p.solution) || !isText(p.theory)) throw new Error("El caso requiere fundamentos y solución.");
+      break;
     case "calculator": {
       if (!Array.isArray(p.inputs) || p.inputs.length < 1) throw new Error("sin entradas");
       if (!Array.isArray(p.outputs) || p.outputs.length < 1) throw new Error("sin salidas");

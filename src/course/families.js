@@ -109,7 +109,7 @@ export function trendValue(element, prop) {
 
 /* ---------- Preguntas ---------- */
 export function gradeQuestion(question, response) {
-  if (response === undefined || response === null || response === "") return false;
+  if (response === undefined || response === null || String(response).trim() === "") return false;
   if (question.type === "num") {
     const value = Number(String(response).replace(",", "."));
     return Number.isFinite(value) && withinTolerance(value, question.answer, question.tolerance);
