@@ -20,7 +20,7 @@ try {
   const errors = [];
   page.on("pageerror", error => errors.push(error.message));
   for (const entry of allEntries) {
-    await page.goto("http://127.0.0.1:5197" + entry.route);
+    await page.goto("http://127.0.0.1:5197" + entry.route, { waitUntil: "domcontentloaded" });
     await page.locator("h1").waitFor();
     const content = await page.locator("main").innerText();
     assert.ok(!content.includes("Parámetro de control A"), entry.code);

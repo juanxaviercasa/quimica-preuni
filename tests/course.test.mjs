@@ -11,6 +11,38 @@ import { evaluate, withinTolerance } from "../src/course/expr.js";
 import { hasPlaceholderContent } from "../src/course/contentQuality.js";
 import { reviewQuestion } from "../src/course/reviewedQuestions.js";
 
+test("all 537 questions have reviewed keys and complete reasoning", () => {
+  const questions = courseModules.flatMap(m => m.topics.flatMap(t => t.quiz));
+  assert.equal(questions.length, 537);
+  for (const q of questions) {
+    assert.equal(q.reviewStatus, "revisado", q.id);
+    assert.equal(q.why.length, q.options.length, q.id);
+    assert.ok(q.why.every(text => text.trim().length > 0), q.id);
+    assert.ok(!q.explanation.startsWith("Clave del material del curso:"), q.id);
+    assert.equal(new Set(q.options).size, q.options.length, q.id);
+  }
+});
+
+test("reviewed redox, equilibrium and organic carbon-count keys match independent calculations", () => {
+  const chromate = [
+    { side: "reactants", atoms: { Cr: 1, O: 4 }, charge: -2 },
+    { side: "reactants", atoms: { S: 1 }, charge: -2 },
+    { side: "reactants", atoms: { H: 2, O: 1 }, charge: 0 },
+    { side: "products", atoms: { Cr: 1, O: 3, H: 3 }, charge: 0 },
+    { side: "products", atoms: { S: 1 }, charge: 0 },
+    { side: "products", atoms: { O: 1, H: 1 }, charge: -1 }
+  ];
+  const coefficients = [2, 3, 8, 2, 3, 10];
+  assert.equal(checkBalance(chromate, coefficients).ok, true);
+  const q = getEntry("8.10").quiz[2];
+  assert.equal(Number(q.options[q.answer]), coefficients.reduce((a, b) => a + b));
+  assert.ok(1.2 ** 2 / (0.2 * 0.6 ** 3) > 1.2);
+  const equilibrium = getEntry("12.5").quiz[2];
+  assert.equal(equilibrium.options[equilibrium.answer], "Hacia reactivos.");
+  const carbon = getEntry("16.8").quiz[1];
+  assert.equal(carbon.options[carbon.answer], "Tres carbonos primarios y un carbono terciario.");
+});
+
 test("module two review corrects filling order and quantum terminology", () => {
   const order = getEntry("2.8").quiz[2];
   assert.equal(order.answer, 1);

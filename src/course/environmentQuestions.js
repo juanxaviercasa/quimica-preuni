@@ -65,7 +65,7 @@ export function environmentalQuestions(code) {
     for (let i = 0; i < answer; i++) options.unshift(options.pop());
     return {
       id: `environment-${code}-${index + 1}`, type: "mc", prompt, options, answer, explanation,
-      why: options.map(() => explanation)
+      why: options.map(() => explanation), reviewStatus: "revisado"
     };
   });
 }
