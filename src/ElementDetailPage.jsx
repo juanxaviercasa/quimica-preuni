@@ -1,6 +1,6 @@
 import { StudyImage, hasStudyImage } from "./components/StudyImage.jsx";
 import { readStoredValue, writeStoredValue } from "./utils/safeStorage.js";
-import React, { lazy, Suspense, useEffect, useMemo, useState } from "react";
+import React, { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft,
@@ -79,6 +79,11 @@ function FormatConfig({ configStr }) {
 
 export default function ElementDetailPage() {
   const { elementId } = useParams();
+
+  // Run after the lazy-loaded detail mounts, before painting the previous scroll position.
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [elementId]);
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
