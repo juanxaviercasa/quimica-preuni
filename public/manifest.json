@@ -1,7 +1,7 @@
 {
-  "name": "38 Elementos — La Tabla Periódica que sí cae",
+  "name": "Tabla periódica interactiva | Academia Zenit",
   "short_name": "38 Elementos",
-  "description": "Tabla periódica preuniversitaria interactiva para exámenes de admisión UNI y San Marcos.",
+  "description": "Explora química, descarga láminas y practica con Academia Zenit. Para estudiantes de secundaria, bachillerato, admisión y universidad.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#191024",

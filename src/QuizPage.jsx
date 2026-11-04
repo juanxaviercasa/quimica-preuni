@@ -32,14 +32,14 @@ function Result({ topic, questions, answers, score, onRetry, reviewMode }) {
           target="_blank"
           rel="noreferrer"
           className="quiz-mistake-cta"
-          title="Comunidad Química Zenit en Skool"
+          title="Comunidad Academia Zenit en Skool"
         >
           <div className="cta-mistake-badge">
             <Sparkles size={13} />
-            <span>Comunidad Oficial Química Zenit</span>
+            <span>Comunidad Oficial Academia Zenit</span>
           </div>
           <strong>Revisa las explicaciones y refuerza los conceptos que te costaron.</strong>
-          <span>Eso es exactamente lo que resolvemos en vivo con bancos en Skool →</span>
+          <span>Unirme gratis a la comunidad en Skool para seguir aprendiendo →</span>
         </a>
       ) : (
         <a
@@ -47,17 +47,18 @@ function Result({ topic, questions, answers, score, onRetry, reviewMode }) {
           target="_blank"
           rel="noreferrer"
           className="quiz-perfect-cta"
-          title="Comunidad de Élite Química Zenit en Skool"
+          title="Comunidad Academia Zenit en Skool"
         >
           <div className="cta-perfect-badge">
             <Sparkles size={13} />
             <span>¡Todas las respuestas correctas!</span>
           </div>
           <strong>Buen resultado en esta práctica de {topic.title}.</strong>
-          <span>Lleva tu preparación al siguiente nivel con simulacros avanzados en Skool →</span>
+          <span>Comparte tu progreso en Academia Zenit. Unirme gratis a la comunidad en Skool →</span>
         </a>
       )}
 
+      <p>Academia Zenit en Skool · Acceso gratuito y membresía premium opcional.</p>
       <h2>Revisión</h2>
       {questions.map((question, index) => {
         const correct = answers[index] === question.answer;

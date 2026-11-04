@@ -270,7 +270,7 @@ export function ElementSpellerModal({ isOpen, onClose, onSelectElement }) {
                               <div className="tile-bottom-bar">
                                 <span className="tile-name">{elem.name}</span>
                                 {elem.isPreUni && (
-                                  <span className="tile-preuni-star" title="Elemento Clave Pre-UNI">★</span>
+                                  <span className="tile-preuni-star" title="Elemento de la selección inicial">★</span>
                                 )}
                               </div>
                             </div>
@@ -300,11 +300,11 @@ export function ElementSpellerModal({ isOpen, onClose, onSelectElement }) {
               </div>
 
               <div className="metric-box">
-                <span className="metric-label">Elementos Clave Pre-UNI</span>
+                <span className="metric-label">Elementos de la selección inicial</span>
                 <strong className="metric-value highlight-accent">
                   {stats.preuniCount} / {stats.totalElements} ({stats.preuniPercent}%)
                 </strong>
-                <small className="metric-hint">De los 38 que sí caen en admisión</small>
+                <small className="metric-hint">De los 38 propuestos para empezar</small>
               </div>
 
               <div className="metric-box">

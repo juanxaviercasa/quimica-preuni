@@ -138,7 +138,7 @@ try {
   });
   await check("guide traps focus, restores it and opens ionization from its action", async () => {
     await visit("/");
-    const trigger = page.locator(".floating-guide-trigger");
+    const trigger = page.locator(".guide-nav-btn");
     await trigger.click();
     await page.locator(".guide-modal-backdrop").waitFor({ timeout: 10000 });
     for (let i = 0; i < 30; i++) {
@@ -146,7 +146,7 @@ try {
       assert.ok(await page.evaluate(() => Boolean(document.activeElement.closest('[role="dialog"]'))));
     }
     await page.keyboard.press("Escape");
-    await page.waitForFunction(() => document.activeElement.classList.contains("floating-guide-trigger"));
+    await page.waitForFunction(() => document.activeElement.classList.contains("guide-nav-btn"));
     await trigger.click();
     await page.locator(".guide-nav-list button").filter({ hasText: "Salto Cuántico" }).click();
     await page.locator(".guide-action-btn.primary").click();
@@ -162,7 +162,7 @@ try {
     await page.locator(".diagnostic-result").waitFor();
     assert.equal(await page.locator('meta[property="og:image"]').getAttribute("content"), "https://tablaperiodica.sistemazenit.com/visuals/hero-periodic-map.jpg");
     await visit("/");
-    assert.ok((await page.locator(".hero-img").first().getAttribute("srcset")).includes("webp"));
+    assert.ok((await page.locator(".path-img").first().getAttribute("srcset")).includes("webp"));
     await page.screenshot({ path: fileURLToPath(new URL("mobile-home.png", output)), fullPage: true });
     await page.setViewportSize({ width: 1440, height: 1000 });
     await page.screenshot({ path: fileURLToPath(new URL("desktop-home.png", output)), fullPage: true });
@@ -170,13 +170,6 @@ try {
   });
   await check("additional dialogs open, keep keyboard focus and close cleanly", async () => {
     await visit("/");
-    await page.getByRole("button", { name: "Abrir Deletreo Químico", exact: true }).click();
-    await page.locator(".speller-modal-overlay").waitFor();
-    assert.match(await page.locator(".speller-modal-overlay").innerText(), /suma de masas atómicas/i);
-    await page.keyboard.press("Shift+Tab");
-    assert.ok(await page.evaluate(() => Boolean(document.activeElement.closest('.speller-modal-overlay'))));
-    await page.keyboard.press("Escape");
-    await page.waitForFunction(() => document.activeElement.classList.contains('speller-nav-btn'));
     await visit("/laboratorio");
     await page.getByRole("button", { name: "Ir a descargar Láminas de Estudio Gratis" }).click();
     await page.locator(".laminas-modal-overlay").waitFor();

@@ -12186,105 +12186,6 @@ button { cursor: pointer; } a { color: inherit; }
   scroll-margin-top: 32px;
 }
 
-/* WhatsApp Community & Free Admission Classes Section Card */
-.laminas-whatsapp-card {
-  margin-top: 28px;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(18, 140, 126, 0.12) 100%);
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  border-radius: 16px;
-  padding: 22px 26px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.08);
-}
-
-[data-theme="dark"] .laminas-whatsapp-card {
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.06) 0%, rgba(18, 140, 126, 0.1) 100%);
-  border-color: rgba(37, 211, 102, 0.25);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
-}
-
-.whatsapp-card-content {
-  flex: 1;
-  max-width: 720px;
-}
-
-.whatsapp-card-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(37, 211, 102, 0.15);
-  color: #128c7e;
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
-  margin-bottom: 8px;
-}
-
-[data-theme="dark"] .whatsapp-card-badge {
-  color: #25d366;
-  background: rgba(37, 211, 102, 0.12);
-  border-color: rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-card-title {
-  font-size: 17px;
-  font-weight: 800;
-  color: #0f172a;
-  margin: 0 0 6px;
-  line-height: 1.35;
-}
-
-[data-theme="dark"] .whatsapp-card-title {
-  color: #f8fafc;
-}
-
-.whatsapp-card-desc {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.55;
-  margin: 0;
-}
-
-[data-theme="dark"] .whatsapp-card-desc {
-  color: #94a3b8;
-}
-
-.whatsapp-join-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #25d366;
-  color: #ffffff !important;
-  font-weight: 700;
-  font-size: 13.5px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  flex-shrink: 0;
-}
-
-.whatsapp-join-btn:hover {
-  background: #20ba59;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-  color: #ffffff !important;
-}
-
-.whatsapp-btn-short-text {
-  display: none;
-}
-
 /* Modal Overlay & Window */
 .laminas-modal-overlay {
   position: fixed;
@@ -12793,76 +12694,6 @@ button { cursor: pointer; } a { color: inherit; }
   color: #fde68a;
 }
 
-/* Strategic WhatsApp Free Admission Classes Modal Card */
-.modal-whatsapp-card {
-  margin-top: 14px;
-  margin-bottom: 14px;
-  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(18, 140, 126, 0.12) 100%);
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  border-radius: 12px;
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-[data-theme="dark"] .modal-whatsapp-card {
-  background: rgba(37, 211, 102, 0.05);
-  border-color: rgba(37, 211, 102, 0.25);
-}
-
-.modal-whatsapp-card .whatsapp-card-badge {
-  align-self: flex-start;
-  margin-bottom: 0;
-}
-
-.modal-whatsapp-heading {
-  font-size: 13px;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0;
-  line-height: 1.35;
-}
-
-[data-theme="dark"] .modal-whatsapp-heading {
-  color: #f1f5f9;
-}
-
-.modal-whatsapp-desc {
-  font-size: 11.5px;
-  color: #475569;
-  margin: 0;
-  line-height: 1.45;
-}
-
-[data-theme="dark"] .modal-whatsapp-desc {
-  color: #94a3b8;
-}
-
-.modal-whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: #25d366;
-  color: #ffffff !important;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 4px;
-  transition: all 0.2s ease;
-  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
-}
-
-.modal-whatsapp-btn:hover {
-  background: #20ba59;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-  color: #ffffff !important;
-}
-
 /* Strategic Skool QR Card */
 .laminas-skool-card {
   padding: 16px;
@@ -13074,26 +12905,6 @@ button { cursor: pointer; } a { color: inherit; }
   }
   .lamina-showcase-thumb-wrap {
     height: 220px;
-  }
-  /* Recuadro de WhatsApp en tablet: disposición horizontal armónica */
-  .laminas-whatsapp-card {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px 24px;
-    text-align: left;
-  }
-  .whatsapp-card-content {
-    flex: 1;
-    min-width: 0;
-  }
-  .whatsapp-join-btn {
-    flex-shrink: 0;
-    width: auto;
-    max-width: 320px;
-    padding: 12px 18px;
-    font-size: 13px;
   }
   /* Contact CTA en tablet: horizontal limpio sin deformaciones */
   .contact-cta {
@@ -13322,49 +13133,6 @@ button { cursor: pointer; } a { color: inherit; }
     height: 200px;
   }
 
-  /* Recuadro de WhatsApp en móvil: 100% vertical, texto fluido y legible */
-  .laminas-whatsapp-card {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 20px 16px !important;
-    gap: 16px !important;
-    text-align: left !important;
-  }
-  .whatsapp-card-content {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .whatsapp-card-badge {
-    align-self: flex-start;
-    margin-bottom: 8px;
-    font-size: 10.5px;
-  }
-  .whatsapp-card-title {
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
-    margin: 0 0 6px !important;
-  }
-  .whatsapp-card-desc {
-    font-size: 12.5px !important;
-    line-height: 1.5 !important;
-  }
-  .whatsapp-join-btn {
-    width: 100% !important;
-    max-width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 13px 16px !important;
-    font-size: 13.5px !important;
-    min-height: 48px !important;
-    white-space: normal !important;
-  }
-  .whatsapp-btn-full-text {
-    display: inline;
-  }
-  .whatsapp-btn-short-text {
-    display: none;
-  }
-
   /* Contact CTA (Skool): NUNCA STICKY NI ANCLADO PERENNE. Sección final elegante y natural */
   .contact-cta {
     position: static !important;
@@ -13423,28 +13191,6 @@ button { cursor: pointer; } a { color: inherit; }
     padding: 8px 12px;
     font-size: 11px;
   }
-
-  /* Modal WhatsApp & Skool Cards */
-  .modal-whatsapp-card {
-    padding: 14px;
-    gap: 8px;
-  }
-  .modal-whatsapp-heading {
-    font-size: 13.5px;
-    line-height: 1.35;
-  }
-  .modal-whatsapp-desc {
-    font-size: 12px;
-    line-height: 1.45;
-  }
-  .modal-whatsapp-btn {
-    width: 100%;
-    min-height: 44px;
-    font-size: 12.5px;
-    justify-content: center;
-    text-align: center;
-    white-space: normal;
-  }
   .laminas-skool-card {
     padding: 14px;
   }
@@ -13495,30 +13241,6 @@ button { cursor: pointer; } a { color: inherit; }
   }
   .guide-btn-short-text {
     display: inline;
-  }
-  .whatsapp-btn-full-text {
-    display: none;
-  }
-  .whatsapp-btn-short-text {
-    display: inline;
-  }
-  .laminas-whatsapp-card {
-    padding: 15px 13px;
-    gap: 13px;
-    border-radius: 13px;
-  }
-  .whatsapp-card-title {
-    font-size: 14.5px;
-    line-height: 1.35;
-  }
-  .whatsapp-card-desc {
-    font-size: 12px;
-    line-height: 1.45;
-  }
-  .whatsapp-join-btn {
-    font-size: 12.5px;
-    padding: 11px 12px;
-    min-height: 44px;
   }
   .contact-cta {
     padding: 15px 13px;
@@ -13602,3 +13324,62 @@ button { cursor: pointer; } a { color: inherit; }
 .catalog-sources dl > div { margin:1rem 0; }
 .catalog-sources dt { font-weight:700; }
 .catalog-sources dd { margin:.35rem 0; line-height:1.6; }
+/* Download-first home: compact controls, readable touch targets and local table scrolling. */
+.home-shortcuts { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 12px 0 24px; }
+.home-shortcuts a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; color: var(--accent, #6b2d8c); font-weight: 600; }
+#laminas-descarga { scroll-margin-top: 90px; margin-top: 12px; }
+#laminas-descarga .laminas-showcase-title { font-size: clamp(23px, 3vw, 32px); }
+#laminas-descarga .lamina-showcase-thumb-wrap { height: clamp(150px, 17vw, 220px); }
+#laminas-descarga .lamina-showcase-info { padding: 16px; gap: 8px; }
+#laminas-descarga .lamina-item-desc { margin: 0 0 12px; }
+#tabla-periodica { scroll-margin-top: 90px; }
+#table-heading { font-size: clamp(21px, 2.5vw, 28px); margin: 0 0 6px; }
+.table-intro { margin: 0 0 14px; font-size: 14px; opacity: .8; }
+#tabla-periodica .table-mode-switch-wrapper { padding: 10px; margin-bottom: 10px; gap: 12px; }
+#tabla-periodica .mode-btn { min-height: 44px; padding: 9px 14px; }
+#tabla-periodica .mode-pill, #tabla-periodica .adv-pill { display: none !important; }
+.table-options { border: 1px solid rgba(107,45,140,.2); border-radius: 10px; margin-bottom: 10px; padding: 0 12px; }
+.table-options > summary, .table-reading-help > summary { cursor: pointer; padding: 12px 0; font-size: 13px; font-weight: 600; min-height: 44px; }
+.table-options .advanced-tools-toolbar { border: 0; padding: 0; margin: 0 0 12px; background: transparent; box-shadow: none; }
+#tabla-periodica .table-controls-wrapper { align-items: flex-start; gap: 8px 16px; margin: 0 0 10px; }
+#tabla-periodica .table-layers { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; }
+#tabla-periodica .table-layers button { min-height: 40px; }
+.table-reading-help { margin-left: auto; }
+.table-reading-help .element-legend { margin: 0 0 10px; }
+#tabla-periodica .periodic-board-scroll { overscroll-behavior-x: contain; }
+[data-theme="dark"] .home-shortcuts a { color: #d4a7ef; }
+@media (max-width: 700px) {
+  .home-shortcuts { gap: 4px; margin-bottom: 18px; }
+  .home-shortcuts a { font-size: 13px; }
+  #laminas-descarga .laminas-cards-grid { grid-template-columns: 1fr; gap: 12px; }
+  #laminas-descarga .lamina-showcase-thumb-wrap { height: 160px; }
+  #laminas-descarga .lamina-item-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  #laminas-descarga .lamina-action-btn.view { grid-column: 1 / -1; }
+  #tabla-periodica .table-mode-switch-wrapper { flex-direction: column; align-items: stretch; }
+  #tabla-periodica .mode-toggle-group { width: 100%; flex-direction: row !important; }
+  #tabla-periodica .mode-btn { flex: 1; font-size: 12px; padding: 8px; justify-content: center; }
+  #tabla-periodica .mode-aux-options { justify-content: flex-start; }
+  .table-reading-help { width: 100%; margin-left: 0; }
+  .table-options .advanced-tools-toolbar { display: grid; grid-template-columns: 1fr 1fr; }
+  .table-options .adv-tool-btn { white-space: normal; min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #laminas-descarga *, #tabla-periodica * { scroll-behavior: auto; animation: none; transition: none; }
+}
+.download-community { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+.skool-primary-cta, .home-shortcuts a.skool-primary-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 12px 18px; border-radius: 10px; background: #6b2d8c; color: #fff; text-decoration: none; font-weight: 700; line-height: 1.4; }
+.skool-primary-cta:hover { background: #552370; }
+.skool-primary-cta:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+.table-community-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; margin: 24px 0; border: 1px solid rgba(107,45,140,.24); border-radius: 16px; background: rgba(107,45,140,.06); }
+.table-community-cta h2 { font-size: clamp(20px,2.3vw,26px); margin: 6px 0 8px; }
+.table-community-cta p { max-width: 760px; margin: 0; line-height: 1.6; font-size: 14px; }
+.table-community-cta .skool-primary-cta { flex-shrink: 0; }
+[data-theme="dark"] .skool-primary-cta, [data-theme="dark"] .home-shortcuts a.skool-primary-cta { background: #8541a7; color: #fff; }
+@media (max-width: 700px) {
+  .download-community { width: 100%; gap: 8px; }
+  .download-community .skool-primary-cta { width: 100%; }
+  .table-community-cta { flex-direction: column; align-items: stretch; padding: 18px; gap: 16px; }
+}
+
+/* Preserve the data color against the base card background overrides. */
+#tabla-periodica .periodic-grid.is-heatmap-active .element:not(.has-no-heatmap-data) { background: var(--element-heatmap-color) !important; }

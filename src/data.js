@@ -42,7 +42,7 @@ const answerIndex = { a: 0, b: 1, c: 2, d: 3 };
 
 const microLessons = {
   "los-38": {
-    objective: "Construir el mapa mínimo de elementos para el examen.",
+    objective: "Reconocer una selección inicial de elementos y su ubicación en la tabla.",
     points: [
       "Los primeros 20 elementos son la base del recorrido.",
       "El grupo de estudio del bloque d reúne Cr, Mn, Fe, Co, Ni, Cu y Zn; el Zn tiene estado de oxidación habitual +2.",

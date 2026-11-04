@@ -14,7 +14,7 @@ import {
   Image as ImageIcon,
   MessageCircle
 } from "lucide-react";
-import { communityUrl, whatsappCommunityUrl } from "../config.js";
+import { communityUrl } from "../config.js";
 
 const LAMINAS_DATA = [
   {
@@ -254,42 +254,17 @@ export function LaminasViewerModal({ isOpen, onClose, initialLaminaId = "complet
               </div>
             </div>
 
-            {/* Strategic WhatsApp Free Admission Classes Card */}
-            <div className="modal-whatsapp-card">
-              <div className="whatsapp-card-badge">
-                <MessageCircle size={13} className="whatsapp-icon" aria-hidden="true" />
-                <span>Clases en Vivo Gratuitas</span>
-              </div>
-              <h4 className="modal-whatsapp-heading">
-                ¿Quieres repasar ejercicios tipo examen con clases en vivo?
-              </h4>
-              <p className="modal-whatsapp-desc">
-                Únete a la comunidad de postulantes en WhatsApp. Compartimos enlaces a clases gratuitas, solucionarios y tips de admisión.
-              </p>
-              <a
-                href={whatsappCommunityUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-whatsapp-btn"
-                title="Unirme al grupo de WhatsApp de clases gratuitas"
-              >
-                <MessageCircle size={16} />
-                <span>Unirme a WhatsApp (Gratis)</span>
-                <ArrowUpRight size={14} />
-              </a>
-            </div>
-
             {/* Strategic Skool Community QR Card */}
             <div className="laminas-skool-card">
               <div className="skool-card-badge">
                 <Sparkles size={13} aria-hidden="true" />
-                <span>Preparación Preuniversitaria</span>
+                <span>Química para Latinoamérica</span>
               </div>
               <h4 className="skool-card-heading">
-                ¿Postulas a la UNI o San Marcos?
+                Ya tienes tu tabla. Ahora aprende a utilizarla.
               </h4>
               <p className="skool-card-lead">
-                Estas láminas te ayudarán con la teoría. Si deseas resolver bancos oficiales, simulacros y prepararte con clases especializadas, conéctate a la <strong>Comunidad Química Zenit en Skool</strong>.
+                Usa estas láminas para repasar y continúa aprendiendo en <strong>Academia Zenit en Skool</strong>. Una comunidad para estudiantes de secundaria, bachillerato, admisión y primeros cursos universitarios.
               </p>
 
               {/* QR Code */}
@@ -297,7 +272,7 @@ export function LaminasViewerModal({ isOpen, onClose, initialLaminaId = "complet
                 <div className="skool-qr-frame">
                   <img
                     src="/visuals/qr-skool-community.svg"
-                    alt="Código QR de la comunidad Química Zenit en Skool"
+                    alt="Código QR de la comunidad Academia Zenit en Skool"
                     className="skool-qr-image"
                   />
                 </div>
@@ -312,14 +287,14 @@ export function LaminasViewerModal({ isOpen, onClose, initialLaminaId = "complet
                 target="_blank"
                 rel="noopener noreferrer"
                 className="skool-community-link-btn"
-                title="Abrir enlace a la comunidad de Química Zenit en Skool"
+                title="Abrir enlace a la comunidad de Academia Zenit en Skool"
               >
-                <span>Acceder a Química Zenit en Skool</span>
+                <span>Unirme gratis a la comunidad</span>
                 <ArrowUpRight size={16} aria-hidden="true" />
               </a>
 
               <small className="skool-card-note">
-                Bancos de preguntas resueltos · Clases intensivas · Simulacros de examen
+                Acceso gratuito · Membresía premium opcional
               </small>
             </div>
           </aside>

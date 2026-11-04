@@ -75,7 +75,7 @@ import {
 import { ElementComparatorModal } from "./components/ElementComparatorModal.jsx";
 import { MisconceptionsGuideModal, ElementSpellerModal, StudyGuideModal, LaminasViewerModal } from "./components/DeferredModals.jsx";
 import { useModalDialog } from "./hooks/useModalDialog.js";
-import { communityUrl, whatsappCommunityUrl } from "./config.js";
+import { communityUrl } from "./config.js";
 import {
   getBestScore,
   getDiagnostic,
@@ -113,6 +113,7 @@ function getElementTrendValue(element, propertyId) {
   if (!element) return null;
   switch (propertyId) {
     case "en":
+    case "electronegativity":
       return element.electronegativity && element.electronegativity !== "—"
         ? parseFloat(element.electronegativity)
         : (element.en && element.en !== "—" ? parseFloat(element.en) : null);
@@ -170,7 +171,7 @@ const examTrapDefinitions = {
     title: "Especies Químicas Isoelectrónicas en Exámenes de Admisión",
     elements: ["N", "O", "F", "Ne", "Na", "Mg", "Al", "P", "S", "Cl", "Ar", "K", "Ca"],
     description:
-      "Pregunta recurrente: ordenar cationes y aniones isoelectrónicos por radio atómico/iónico. Para especies isoelectrónicas con 10 electrones (configuración de Neón): r(N³⁻) > r(O²⁻) > r(F⁻) > r(Ne) > r(Na⁺) > r(Mg²⁺) > r(Al³⁺). A mayor carga nuclear Z, mayor atracción sobre los 10 electrones y menor radio iónico."
+      "Ejercicio de práctica: ordenar cationes y aniones isoelectrónicos por radio atómico/iónico. Para especies isoelectrónicas con 10 electrones (configuración de Neón): r(N³⁻) > r(O²⁻) > r(F⁻) > r(Ne) > r(Na⁺) > r(Mg²⁺) > r(Al³⁺). A mayor carga nuclear Z, mayor atracción sobre los 10 electrones y menor radio iónico."
   }
 };
 
@@ -553,7 +554,7 @@ function ElementLegend({ tableMode, tableLayer = "families" }) {
             </span>
             <span
               className={`legend-tile-star ${highlightedPart === "star" ? "is-highlighted" : ""}`}
-              title="Elemento esencial de examen preuniversitario"
+              title="Elemento de la selección inicial de estudio"
             >
               ★
             </span>
@@ -623,12 +624,12 @@ function ElementLegend({ tableMode, tableLayer = "families" }) {
         className={`legend-preuni-footer ${highlightedPart === "star" ? "is-active" : ""}`}
         onMouseEnter={() => setHighlightedPart("star")}
         onMouseLeave={() => setHighlightedPart(null)}
-        title="Elemento esencial preuniversitario"
+        title="Elemento de la selección inicial"
       >
         <span className="preuni-star-badge" aria-hidden="true">★</span>
         <div className="preuni-footer-text">
-          <strong>★ = Elemento esencial de examen preuniversitario</strong>
-          <span>Priorizado en temarios de admisión (UNI, San Marcos, PUCP)</span>
+          <strong>★ = Elemento de la selección inicial de estudio</strong>
+          <span>Selección inicial de estudio; amplíala según tu curso o temario</span>
         </div>
       </div>
     </div>
@@ -695,7 +696,7 @@ function ElementModal({ element, onClose }) {
 
             <div className="modal-meta-chips">
               {element.isPreUni && (
-                <span className="meta-chip chip-preuni">★ 38 Esencial Preuni</span>
+                <span className="meta-chip chip-preuni">★ 38 Esencial Inicio</span>
               )}
               <span className="meta-chip">Bloque {element.block.toUpperCase()}</span>
               <span className="meta-chip">{element.phase}</span>
@@ -825,16 +826,16 @@ function Layout({ children }) {
 
   return (
     <div className="app-shell">
-      {/* Top Authority Bar: Química Zenit en Skool */}
+      {/* Top Authority Bar: Academia Zenit en Skool */}
       <div className="top-authority-bar">
         <div className="top-authority-inner">
           <div className="top-authority-left">
             <span className="top-authority-badge">
               <span className="live-dot" aria-hidden="true" />
-              <span>Química Zenit</span>
+              <span>Academia Zenit</span>
             </span>
             <span className="top-authority-text">
-              Comunidad oficial de preparación intensiva para la UNI y San Marcos
+              Química para Latinoamérica · Comunidad en Skool
             </span>
           </div>
           <a
@@ -842,9 +843,9 @@ function Layout({ children }) {
             target="_blank"
             rel="noreferrer"
             className="top-authority-link"
-            title="Conocer la comunidad de aprendizaje Química Zenit en Skool"
+            title="Conocer la comunidad Academia Zenit en Skool (Gratis y Premium)"
           >
-            <span>Conocer Comunidad</span>
+            <span>Unirme gratis a la comunidad</span>
             <ArrowUpRight size={13} aria-hidden="true" />
           </a>
         </div>
@@ -854,7 +855,7 @@ function Layout({ children }) {
         <Link className="brand" to="/" aria-label="38 Elementos, inicio">
           <StudyImage
             src={darkMode ? "/logo-dark.svg" : "/logo.svg"}
-            alt="38 Elementos · La tabla periódica que sí cae"
+            alt="38 Elementos · Aprende química con Academia Zenit"
           />
         </Link>
         <div className="header-actions">
@@ -891,16 +892,6 @@ function Layout({ children }) {
             <span className="guide-btn-text">¿Cómo Estudiar?</span>
             <span className="guide-btn-short-text">Guía</span>
           </button>
-          <button
-            type="button"
-            className="speller-nav-btn"
-            onClick={() => setShowSpellerModal(true)}
-            aria-label="Abrir Deletreo Químico"
-            title="Deletreo Químico: convierte cualquier palabra en elementos de la tabla periódica"
-          >
-            <span className="speller-btn-emoji">🔤</span>
-            <span className="speller-btn-text">Deletreo Químico</span>
-          </button>
           <span className="streak">
             <StudyImage
               src="/visuals/student-avatar.jpg"
@@ -921,15 +912,15 @@ function Layout({ children }) {
         </div>
       </header>
       {children}
-      <aside className="contact-cta" aria-label="Únete a la comunidad de Química Zenit">
+      <aside className="contact-cta" aria-label="Únete a la comunidad de Academia Zenit">
         <div className="contact-cta-left">
           <div className="contact-cta-badge">
             <span className="live-dot" aria-hidden="true" />
-            <span>Comunidad Oficial en Skool</span>
+            <span>Comunidad en Skool · Acceso gratuito y premium opcional</span>
           </div>
-          <strong className="contact-cta-title">¿Postulas a la UNI o San Marcos?</strong>
+          <strong className="contact-cta-title">Entiende química. Resuelve con confianza.</strong>
           <p className="contact-cta-desc">
-            Únete a la comunidad de aprendizaje de Química Zenit: clases intensivas, bancos de admisión oficiales resueltos paso a paso y simulacros semanales.
+            Academia Zenit es una academia online de química para estudiantes de Latinoamérica. Refuerza tus clases, prepárate para admisión o fortalece tus bases para la universidad. Acceso gratuito y membresía premium opcional.
           </p>
         </div>
         <div className="contact-cta-actions">
@@ -947,9 +938,9 @@ function Layout({ children }) {
             target="_blank"
             rel="noreferrer"
             className="contact-cta-button"
-            title="Acceder a la comunidad oficial Química Zenit en Skool"
+            title="Acceder a la comunidad oficial Academia Zenit en Skool"
           >
-            <span>Acceder a Skool</span>
+            <span>Unirme gratis a la comunidad</span>
             <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </div>
@@ -1019,9 +1010,9 @@ function LaminasStudySection() {
           <Sparkles size={13} className="text-amber" aria-hidden="true" />
           <span>Material Gratuito Descargable</span>
         </div>
-        <h2 className="laminas-showcase-title">
-          Láminas de la Tabla Periódica en Alta Resolución
-        </h2>
+        <h1 className="laminas-showcase-title">
+          Láminas de la tabla periódica gratis
+        </h1>
         <p className="laminas-showcase-sub">
           Descarga en <strong>PDF vectorial (para imprimir sin pixelar)</strong> o en <strong>Imagen HD (para tu celular o tablet)</strong>. Ambas láminas en formato horizontal.
         </p>
@@ -1040,7 +1031,7 @@ function LaminasStudySection() {
                 src={item.previewImg}
                 alt={item.title}
                 className="lamina-showcase-img"
-                loading="lazy"
+                loading="eager"
               />
               <div className="lamina-thumb-overlay">
                 <span className="lamina-zoom-tag">
@@ -1097,33 +1088,6 @@ function LaminasStudySection() {
         ))}
       </div>
 
-      {/* WhatsApp Free Admission Classes Funnel Card */}
-      <div className="laminas-whatsapp-card">
-        <div className="whatsapp-card-content">
-          <div className="whatsapp-card-badge">
-            <MessageCircle size={14} className="whatsapp-icon" aria-hidden="true" />
-            <span>Comunidad de WhatsApp · Clases en Vivo Gratuitas</span>
-          </div>
-          <h3 className="whatsapp-card-title">
-            ¿Quieres repasar las fijas de examen con clases en vivo gratuitas?
-          </h3>
-          <p className="whatsapp-card-desc">
-            Únete a nuestro grupo de WhatsApp para postulantes. Compartimos enlaces a sesiones en vivo, solucionarios de exámenes de admisión (UNI / San Marcos) y tips de resolución rápida.
-          </p>
-        </div>
-        <a
-          href={whatsappCommunityUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="whatsapp-join-btn"
-          title="Unirme al grupo de WhatsApp de clases gratuitas de Química Zenit"
-        >
-          <MessageCircle size={18} />
-          <span className="whatsapp-btn-full-text">Unirme al Grupo de WhatsApp (Gratis)</span>
-          <span className="whatsapp-btn-short-text">Unirme a WhatsApp (Gratis)</span>
-          <ArrowUpRight size={15} />
-        </a>
-      </div>
     </section>
   );
 }
@@ -1134,7 +1098,6 @@ function Home() {
     () => readStoredValue("quimica-preuni-table-mode") || "study"
   );
   const [studyDimOther, setStudyDimOther] = useState(true);
-  const [query, setQuery] = useState("");
   const [examTrapFilter, setExamTrapFilter] = useState("all");
   const [category, setCategory] = useState("all");
   const [selectedFamily, setSelectedFamily] = useState("all");
@@ -1158,7 +1121,7 @@ function Home() {
   const [activeTrendId, setActiveTrendId] = useState("radius");
 
   // Heatmap Sub-state
-  const [heatmapPropertyId, setHeatmapPropertyId] = useState("en");
+  const [heatmapPropertyId, setHeatmapPropertyId] = useState("electronegativity");
 
   // Temperature Simulation Sub-state
   const [temperatureK, setTemperatureK] = useState(293.15); // ~20°C standard ambient
@@ -1250,27 +1213,22 @@ function Home() {
 
   // Compute elements to display reactively
   const { displayElements, countMatching } = useMemo(() => {
-    const q = query.trim().toLowerCase();
 
     if (tableMode === "study") {
       if (!studyDimOther) {
         // Only return matching preuni elements
         const list = elements.filter((el) => {
           if (!el.isPreUni) return false;
-          const matchesQ =
-            !q || `${el.name} ${el.symbol} ${el.z}`.toLowerCase().includes(q);
           const matchesCat = category === "all" || el.category === category;
-          return matchesQ && matchesCat;
+          return matchesCat;
         });
         return { displayElements: list, countMatching: list.length };
       }
 
       // Map view: full grid with 38 highlighted and other 80 dimmed
       const list = elements.map((el) => {
-        const matchesQ =
-          !q || `${el.name} ${el.symbol} ${el.z}`.toLowerCase().includes(q);
         const matchesCat = category === "all" || el.category === category;
-        const isActive = el.isPreUni && matchesQ && matchesCat;
+        const isActive = el.isPreUni && matchesCat;
         return {
           ...el,
           isDimmed: !isActive,
@@ -1286,8 +1244,6 @@ function Home() {
     const activeTargetPeriod = lockedPeriod || focusedPeriod;
 
     const list = elements.map((el) => {
-      const matchesQ =
-        !q || `${el.name} ${el.symbol} ${el.z}`.toLowerCase().includes(q);
       const matchesFam = selectedFamily === "all" || el.family === selectedFamily;
       const matchesBlock = selectedBlock === "all" || el.block === selectedBlock;
       const matchesPhase = selectedPhase === "all" || el.phase === selectedPhase;
@@ -1311,10 +1267,9 @@ function Home() {
         }
       }
 
-      const isMatch = matchesQ && matchesFam && matchesBlock && matchesPhase && matchesInspector && matchesExamTrap;
+      const isMatch = matchesFam && matchesBlock && matchesPhase && matchesInspector && matchesExamTrap;
 
       const hasActiveFilters =
-        Boolean(q) ||
         selectedFamily !== "all" ||
         selectedBlock !== "all" ||
         selectedPhase !== "all" ||
@@ -1333,7 +1288,6 @@ function Home() {
   }, [
     tableMode,
     studyDimOther,
-    query,
     category,
     selectedFamily,
     selectedBlock,
@@ -1366,154 +1320,17 @@ function Home() {
 
   return (
     <main>
-      <nav className="quick-table-access" aria-label="Acceso rápido a la tabla">
-        <a className="primary-action" href="#tabla-periodica" onClick={() => requestAnimationFrame(() => document.getElementById("tabla-periodica")?.focus({ preventScroll: true }))}><Atom size={18} /> Ver tabla periódica</a>
-        <span>Explora un elemento o busca su símbolo.</span>
+      <LaminasStudySection />
+      <nav className="home-shortcuts" aria-label="Accesos de estudio">
+        <a href="#tabla-periodica" onClick={() => requestAnimationFrame(() => document.getElementById("tabla-periodica")?.focus({ preventScroll: true }))}>Ver tabla periódica <ChevronDown size={16} /></a>
+        <div className="download-community"><span>Ya tienes tu tabla. Aprende a utilizarla en Academia Zenit, nuestra comunidad en Skool.</span><a className="skool-primary-cta" href={communityUrl} target="_blank" rel="noopener noreferrer" data-cta-placement="downloads">Unirme gratis a la comunidad <ArrowUpRight size={16} /></a></div>
       </nav>
-      <section className="learning-mode" aria-labelledby="mode-heading">
-        <div>
-          <span className="eyebrow">Aprendizaje adaptativo</span>
-          <h2 id="mode-heading">Tu siguiente paso, con intención.</h2>
-          <p>
-            {diagnostic
-              ? `Diagnóstico completado: ${diagnostic.score}/${diagnostic.total}.`
-              : "Haz un diagnóstico breve para que la plataforma te recomiende una ruta."}
-            {dueReviews > 0
-              ? ` Tienes ${dueReviews} repaso${dueReviews === 1 ? "" : "s"} listo${dueReviews === 1 ? "" : "s"}.`
-              : ""}
-          </p>
-        </div>
-        <div className="learning-mode-actions">
-          {!diagnostic && (
-            <Link className="secondary-action" to="/diagnostico">
-              <ListChecks size={16} /> Hacer diagnóstico
-            </Link>
-          )}
-          {diagnostic && (
-            <Link className="secondary-action" to="/diagnostico">
-              Ver mi mapa
-            </Link>
-          )}
-          <Link className="primary-action" to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
-            <ListChecks size={16} /> {dueReviews > 0 ? "Repasar ahora" : "Continuar ruta"}
-          </Link>
-        </div>
-      </section>
-
-      <section className="pathways" aria-label="Rutas de aprendizaje">
-        <Link to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
-          <StudyImage src="/visuals/path-exam.jpg" alt="" loading="lazy" className="path-img" />
-          <span className="eyebrow">Ruta Examen</span>
-          <strong>Practica con foco</strong>
-          <small>Preguntas, valencias y velocidad para tu próxima evaluación.</small>
-        </Link>
-        <Link to="/laboratorio">
-          <StudyImage src="/visuals/path-understanding.jpg" alt="" loading="lazy" className="path-img" />
-          <span className="eyebrow">Ruta Comprensión</span>
-          <strong>Laboratorio PhET</strong>
-          <small>Construye átomos, iones e isótopos con masa ponderada real.</small>
-        </Link>
-        <Link to="/docentes">
-          <StudyImage src="/visuals/teacher-learning-map.jpg" alt="" loading="lazy" className="path-img" />
-          <span className="eyebrow">Para acompañar</span>
-          <strong>Vista docente</strong>
-          <small>Observa progreso y conceptos que necesitan intervención.</small>
-        </Link>
-      </section>
-
-      {/* Chemical Misconceptions Callout Banner */}
-      <section className="misconceptions-callout-banner" aria-label="Trampas de examen y conceptos erróneos">
-        <div className="banner-icon-wrap">
-          <ShieldAlert size={28} />
-        </div>
-        <div className="banner-content">
-          <span className="banner-badge">Didáctica Antialucinación · Estándar RSC</span>
-          <h3>¿Sabías que el radio atómico disminuye hacia la derecha?</h3>
-          <p>
-            Aprende y supera las 6 trampas conceptuales clásicas de los exámenes UNI y San Marcos:
-            atracción <em>Z</em><sub>eff</sub>, orden de pérdida de electrones en metales de transición, antiserrucho,
-            valencia vs estado de oxidación y el cálculo de masa atómica decimal.
-          </p>
-        </div>
-        <button
-          type="button"
-          className="banner-action-btn"
-          onClick={() => setShowMisconceptionsModal(true)}
-        >
-          <Sparkles size={15} /> Explorar 6 Trampas de Examen
-        </button>
-      </section>
-
-      {/* Hero Section adaptative to tableMode */}
-      <section className="hero">
-        <StudyImage
-          src="/visuals/hero-periodic-map.jpg"
-          alt="Mapa de la tabla periódica"
-          className="hero-img"
-          loading="lazy"
-        />
-        <div className="hero-content">
-          {tableMode === "study" ? (
-            <>
-              <div className="hero-number">
-                38 <span>de 118</span>
-              </div>
-              <h1>Esto es lo que necesitas memorizar.</h1>
-              <p>
-                Empieza por estos 38 elementos priorizados para practicar. Los otros 80 están en
-                gris y puedes explorarlos en el modo IUPAC completo.
-              </p>
-            </>
-          ) : (
-            <>
-              <div className="hero-number">
-                118 <span>IUPAC</span>
-              </div>
-              <h1>Catálogo Periódico Completo Oficial.</h1>
-              <p>
-                Explora los 118 elementos químicos, con configuración cuántica, bloques s, p, d, f,
-                lantánidos, actínidos y visor 3D volumétrico.
-              </p>
-            </>
-          )}
-        </div>
-      </section>
-
-      <section className="study-guide" aria-labelledby="guide-heading">
-        <div>
-          <span className="eyebrow">Ruta sugerida</span>
-          <h2 id="guide-heading">Aprende en orden, practica con intención.</h2>
-          <p>
-            {completedTopics === 0
-              ? "Empieza por la base y avanza tema a tema."
-              : `Has completado ${completedTopics} de ${topics.length} temas. Tu siguiente paso es ${nextTopic.title}.`}
-          </p>
-        </div>
-        <Link className="primary-action" to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
-          <ListChecks size={16} aria-hidden="true" />{" "}
-          {completedTopics === topics.length ? "Repasar de nuevo" : "Continuar ruta"}
-        </Link>
-        <div
-          className="route-progress"
-          aria-label={`${completedTopics} de ${topics.length} temas completados`}
-        >
-          <span style={{ width: `${(completedTopics / topics.length) * 100}%` }} />
-        </div>
-        {completedTopics === topics.length && (
-          <StudyImage
-            src="/visuals/module-certificate.jpg"
-            alt="Certificado de completitud"
-            className="certificate-img"
-            loading="lazy"
-          />
-        )}
-      </section>
 
       <section id="tabla-periodica" tabIndex={-1} className={`table-section mode-${tableMode}`} aria-labelledby="table-heading">
-        <FactCarousel />
-        <h2 id="table-heading" className="sr-only">
+        <h2 id="table-heading">
           Tabla periódica interactiva
         </h2>
+        <p className="table-intro">Toca un elemento para ver sus propiedades. Elige qué dato mostrar en las casillas.</p>
 
         {/* Dual Mode Switcher Toolbar */}
         <div className="table-mode-switch-wrapper">
@@ -1525,8 +1342,8 @@ function Home() {
               onClick={() => setTableMode("study")}
             >
               <Target size={16} aria-hidden="true" />
-              <span>Modo Estudio (38 Esenciales)</span>
-              <span className="mode-pill">Preuni</span>
+              <span>38 para empezar</span>
+              <span className="mode-pill">Inicio</span>
             </button>
             <button
               role="tab"
@@ -1535,7 +1352,7 @@ function Home() {
               onClick={() => setTableMode("iupac")}
             >
               <Atom size={16} aria-hidden="true" />
-              <span>Modo Completo (118 IUPAC)</span>
+              <span>118 elementos</span>
               <span className="mode-pill">Oficial</span>
             </button>
           </div>
@@ -1548,7 +1365,7 @@ function Home() {
                   checked={studyDimOther}
                   onChange={(e) => setStudyDimOther(e.target.checked)}
                 />
-                <span>Mostrar mapa con otros 80 atenuados</span>
+                <span>Mostrar los demás atenuados</span>
               </label>
             ) : (
               <span className="filter-count-badge">
@@ -1558,6 +1375,8 @@ function Home() {
           </div>
         </div>
 
+        <details className="table-options">
+          <summary>Más herramientas y filtros</summary>
         {/* Advanced Tools Toolbar (Disponible en ambos modos) */}
         <div className="advanced-tools-toolbar" role="toolbar" aria-label="Herramientas analíticas avanzadas">
           <button
@@ -1639,19 +1458,8 @@ function Home() {
             title="Confronta y supera los 6 errores conceptuales y trampas clásicas de exámenes (Royal Society of Chemistry)"
           >
             <ShieldAlert size={15} />
-            <span>Trampas RSC</span>
+            <span>Errores frecuentes</span>
             <span className="adv-pill">6 Errores</span>
-          </button>
-
-          <button
-            type="button"
-            className="adv-tool-btn"
-            onClick={() => window.dispatchEvent(new CustomEvent("open-speller-modal"))}
-            title="Deletreo Químico: escribe cualquier palabra y transfórmala en elementos de la tabla periódica"
-          >
-            <span style={{ fontSize: "14px" }}>🔤</span>
-            <span>Deletreo</span>
-            <span className="adv-pill">Speller</span>
           </button>
 
           <button
@@ -1662,7 +1470,7 @@ function Home() {
           >
             <BookOpen size={15} />
             <span>¿Cómo Estudiar?</span>
-            <span className="adv-pill">Tips UNI</span>
+            <span className="adv-pill">Guía de estudio</span>
           </button>
 
 
@@ -1804,26 +1612,6 @@ function Home() {
           />
         )}
 
-        {/* Search input common to both modes */}
-        <label className="search">
-          <Search size={17} aria-hidden="true" />
-          <span className="sr-only">Buscar elemento</span>
-          <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Busca por nombre, símbolo o número — ej. hierro, Fe, 26, oro, Au, 79"
-          />
-          {query && (
-            <button
-              onClick={() => setQuery("")}
-              style={{ background: "none", border: "none", color: "inherit", padding: 0 }}
-              aria-label="Limpiar búsqueda"
-            >
-              <X size={15} />
-            </button>
-          )}
-        </label>
-
         {/* Mode-specific Filters */}
         {tableMode === "study" ? (
           <div className="filters" role="group" aria-label="Filtrar elementos preuniversitarios">
@@ -1906,7 +1694,7 @@ function Home() {
         <div className="exam-traps-bar" role="toolbar" aria-label="Filtros rápidos de trampas de examen">
           <div className="traps-label-group">
             <AlertTriangle size={14} className="text-amber" />
-            <span>Foco Trampas UNI / San Marcos:</span>
+            <span>Errores frecuentes en química:</span>
           </div>
           <div className="traps-buttons-group">
             <button
@@ -1990,6 +1778,8 @@ function Home() {
           </div>
         )}
 
+        </details>
+
 <div className="table-controls-wrapper">
           <div className="table-layers" role="group" aria-label="Capas de la tabla">
             {tableLayers.map((layer) => (
@@ -2003,7 +1793,7 @@ function Home() {
               </button>
             ))}
           </div>
-          <ElementLegend tableMode={tableMode} tableLayer={tableLayer} />
+          <details className="table-reading-help"><summary>Cómo leer una casilla</summary><ElementLegend tableMode={tableMode} tableLayer={tableLayer} /></details>
         </div>
 
         {/* The Periodic Board Layout */}
@@ -2158,6 +1948,7 @@ function Home() {
                     ...(heatmapColor
                       ? {
                           backgroundColor: heatmapColor,
+                          "--element-heatmap-color": heatmapColor,
                           borderColor: "rgba(255, 255, 255, 0.45)"
                         }
                       : {})
@@ -2225,10 +2016,119 @@ function Home() {
         )}
       </section>
 
+      <aside className="table-community-cta" aria-label="Continúa aprendiendo en Academia Zenit">
+        <div><span className="eyebrow">Tu siguiente paso</span><h2>De conocer los elementos a resolver ejercicios.</h2><p>Refuerza química para secundaria o bachillerato, admisión y tus primeros cursos universitarios. Conoce Academia Zenit en Skool: acceso gratuito y membresía premium opcional.</p></div>
+        <a className="skool-primary-cta" href={communityUrl} target="_blank" rel="noopener noreferrer" data-cta-placement="after-table">Unirme gratis a la comunidad <ArrowUpRight size={18} /></a>
+      </aside>
+
+      <section className="learning-mode" aria-labelledby="mode-heading">
+        <div>
+          <span className="eyebrow">Aprendizaje adaptativo</span>
+          <h2 id="mode-heading">Tu siguiente paso, con intención.</h2>
+          <p>
+            {diagnostic
+              ? `Diagnóstico completado: ${diagnostic.score}/${diagnostic.total}.`
+              : "Haz un diagnóstico breve para que la plataforma te recomiende una ruta."}
+            {dueReviews > 0
+              ? ` Tienes ${dueReviews} repaso${dueReviews === 1 ? "" : "s"} listo${dueReviews === 1 ? "" : "s"}.`
+              : ""}
+          </p>
+        </div>
+        <div className="learning-mode-actions">
+          {!diagnostic && (
+            <Link className="secondary-action" to="/diagnostico">
+              <ListChecks size={16} /> Hacer diagnóstico
+            </Link>
+          )}
+          {diagnostic && (
+            <Link className="secondary-action" to="/diagnostico">
+              Ver mi mapa
+            </Link>
+          )}
+          <Link className="primary-action" to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
+            <ListChecks size={16} /> {dueReviews > 0 ? "Repasar ahora" : "Continuar ruta"}
+          </Link>
+        </div>
+      </section>
+
+      <section className="pathways" aria-label="Rutas de aprendizaje">
+        <Link to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
+          <StudyImage src="/visuals/path-exam.jpg" alt="" loading="lazy" className="path-img" />
+          <span className="eyebrow">Preparación para admisión</span>
+          <strong>Practica con foco</strong>
+          <small>Preguntas, valencias y velocidad para tu próxima evaluación.</small>
+        </Link>
+        <Link to="/laboratorio">
+          <StudyImage src="/visuals/path-understanding.jpg" alt="" loading="lazy" className="path-img" />
+          <span className="eyebrow">Química desde cero</span>
+          <strong>Laboratorio PhET</strong>
+          <small>Construye átomos, iones e isótopos con masa ponderada real.</small>
+        </Link>
+        <Link to="/docentes">
+          <StudyImage src="/visuals/teacher-learning-map.jpg" alt="" loading="lazy" className="path-img" />
+          <span className="eyebrow">Para acompañar</span>
+          <strong>Vista docente</strong>
+          <small>Observa progreso y conceptos que necesitan intervención.</small>
+        </Link>
+      </section>
+
+      {/* Chemical Misconceptions Callout Banner */}
+      <section className="misconceptions-callout-banner" aria-label="Trampas de examen y conceptos erróneos">
+        <div className="banner-icon-wrap">
+          <ShieldAlert size={28} />
+        </div>
+        <div className="banner-content">
+          <span className="banner-badge">Didáctica Antialucinación · Estándar RSC</span>
+          <h3>¿Sabías que el radio atómico disminuye hacia la derecha?</h3>
+          <p>
+            Revisa seis errores frecuentes al estudiar química y resolver ejercicios:
+            atracción <em>Z</em><sub>eff</sub>, orden de pérdida de electrones en metales de transición, antiserrucho,
+            valencia vs estado de oxidación y el cálculo de masa atómica decimal.
+          </p>
+        </div>
+        <button
+          type="button"
+          className="banner-action-btn"
+          onClick={() => setShowMisconceptionsModal(true)}
+        >
+          <Sparkles size={15} /> Revisar seis errores frecuentes
+        </button>
+      </section>
+
+      <section className="study-guide" aria-labelledby="guide-heading">
+        <div>
+          <span className="eyebrow">Ruta sugerida</span>
+          <h2 id="guide-heading">Aprende en orden, practica con intención.</h2>
+          <p>
+            {completedTopics === 0
+              ? "Empieza por la base y avanza tema a tema."
+              : `Has completado ${completedTopics} de ${topics.length} temas. Tu siguiente paso es ${nextTopic.title}.`}
+          </p>
+        </div>
+        <Link className="primary-action" to={`/quiz/${nextTopic.id}${dueReviews > 0 ? "?mode=review" : ""}`}>
+          <ListChecks size={16} aria-hidden="true" />{" "}
+          {completedTopics === topics.length ? "Repasar de nuevo" : "Continuar ruta"}
+        </Link>
+        <div
+          className="route-progress"
+          aria-label={`${completedTopics} de ${topics.length} temas completados`}
+        >
+          <span style={{ width: `${(completedTopics / topics.length) * 100}%` }} />
+        </div>
+        {completedTopics === topics.length && (
+          <StudyImage
+            src="/visuals/module-certificate.jpg"
+            alt="Certificado de completitud"
+            className="certificate-img"
+            loading="lazy"
+          />
+        )}
+      </section>
+
       <section className="topics" aria-labelledby="topics-heading">
         <div className="section-heading">
           <div>
-            <h2 id="topics-heading">Chuletas por tema</h2>
+            <h2 id="topics-heading">Resúmenes y práctica por tema</h2>
             <p>Ocho recorridos para estudiar, practicar y revisar.</p>
           </div>
           <span>
@@ -2350,8 +2250,7 @@ function Home() {
         onClose={() => setShowMisconceptionsModal(false)}
       />
 
-      {/* Strategic Downloadable Sheets Section & WhatsApp Funnel */}
-      <LaminasStudySection />
+
     </main>
   );
 }
@@ -2513,19 +2412,6 @@ function App() {
           />
         </Routes>
       </Suspense>
-
-      {/* Floating Global Guide Helper Button */}
-      <button
-        type="button"
-        className="floating-guide-trigger"
-        onClick={() => setShowStudyGuide(true)}
-        aria-label="Abrir Guía de Estudio"
-        title="Guía de Estudio: ¿cómo estudiar la tabla periódica? (Atajo: presiona ?)"
-      >
-        <span className="pulsing-dot" />
-        <BookOpen size={16} />
-        <span>¿Cómo Estudiar?</span>
-      </button>
 
       {/* Interactive Master Study Guide Modal */}
       <StudyGuideModal

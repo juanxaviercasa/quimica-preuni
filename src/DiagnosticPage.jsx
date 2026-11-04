@@ -74,24 +74,24 @@ export default function DiagnosticPage() {
         <div className="diag-cta-top">
           <div className="diag-cta-badge">
             <Sparkles size={14} />
-            <span>Comunidad Oficial Química Zenit</span>
+            <span>Comunidad Oficial Academia Zenit</span>
           </div>
-          <span className="diag-cta-free-tag">Acompañamiento Intensivo</span>
+          <span className="diag-cta-free-tag">Sigue aprendiendo</span>
         </div>
         <div className="diag-cta-content">
-          <h3>¿Quieres nivelar tus temas pendientes antes del examen?</h3>
+          <h3>¿Qué tema de química quieres reforzar?</h3>
           <p>
-            No te quedes estudiando solo. En nuestra comunidad de <strong>Skool</strong> resolvemos en vivo los ejercicios de banco de los temas que te tocaron repasar, con solucionarios paso a paso y simulacros semanales tipo UNI y San Marcos.
+            Usa tu diagnóstico para elegir qué repasar. Continúa aprendiendo con <strong>Academia Zenit en Skool</strong>, una comunidad abierta a estudiantes de Latinoamérica. Acceso gratuito y membresía premium opcional.
           </p>
           <a
             href={communityUrl}
             target="_blank"
             rel="noreferrer"
             className="diag-cta-btn"
-            title="Acceder a la comunidad Química Zenit en Skool"
+            title="Acceder a la comunidad Academia Zenit en Skool"
           >
             <Target size={16} />
-            <span>Unirme a Química Zenit en Skool</span>
+            <span>Unirme gratis a la comunidad</span>
             <ArrowUpRight size={16} />
           </a>
         </div>

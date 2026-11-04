@@ -29,20 +29,20 @@ export const STUDY_GUIDE_MODULES = [
     id: "strategy",
     icon: Target,
     badge: "Estrategia",
-    title: "1. Los 38 Esenciales vs IUPAC",
+    title: "1. Empieza con 38 y explora los 118",
     summary: "Cómo organizar el estudio inicial con 38 elementos priorizados y ampliar después.",
     color: "#f59e0b",
-    tags: ["Pre-UNI", "Modo Estudio", "IUPAC", "San Marcos", "Pareto"],
+    tags: ["Fundamentos", "Modo Estudio", "IUPAC", "Tabla periódica"],
     content: {
-      lead: "En un examen de admisión competitivo (UNI, San Marcos, Villarreal, Callao, PUCP), memorizar los 118 elementos a ciegas es ineficiente y contraproducente.",
+      lead: "Empieza por comprender cómo se organiza la tabla. Usa la selección de 38 elementos como punto de partida y explora los 118 según lo que necesites aprender.",
       principles: [
         {
-          heading: "El Principio de Pareto (Regla 80/20):",
-          text: "Empieza con elementos frecuentes en los ejercicios del curso y amplía el estudio según el temario y los exámenes oficiales de la universidad a la que postulas."
+          heading: "Una selección para empezar:",
+          text: "Empieza con elementos frecuentes en los ejercicios del curso y amplía el estudio según el temario y los exámenes oficiales de la institución a la que deseas ingresar."
         },
         {
-          heading: "Modo Estudio Pre-UNI vs Modo IUPAC Completo:",
-          text: "Usa el selector superior 'Modo Estudio Pre-UNI' para atenuar los otros 80 elementos y enfocarte en los 38 con estrella dorada ★. Cuando necesites investigar elementos raros, sintéticos o lantánidos, cambia a 'Modo IUPAC'."
+          heading: "38 para empezar o 118 elementos:",
+          text: "Usa el selector superior '38 para empezar' para atenuar los otros 80 elementos y enfocarte en los 38 con estrella dorada ★. Cuando necesites investigar elementos raros, sintéticos o lantánidos, cambia a '118 elementos'."
         },
         {
           heading: "La Tríada de Oro (Z, Símbolo, Masa redondeada):",
@@ -103,7 +103,7 @@ export const STUDY_GUIDE_MODULES = [
           text: "Cuando se terminan los electrones del nivel de valencia y se intenta arrancar un electrón de la capa interna (isoelectrónica con un gas noble), la energía se multiplica por 3.5× hasta más de 10×."
         },
         {
-          heading: "La Fórmula Mnemotécnica Pre-UNI:",
+          heading: "Una regla para recordar:",
           text: "En ejercicios de elementos representativos, un gran salto tras retirar n electrones externos puede indicar n electrones de valencia. No se aplica automáticamente a gases nobles ni a metales de transición."
         }
       ],
@@ -202,13 +202,13 @@ export const STUDY_GUIDE_MODULES = [
   {
     id: "traps",
     icon: ShieldAlert,
-    badge: "Trampas RSC",
+    badge: "Errores frecuentes",
     title: "7. Los 6 Errores Conceptuales Clásicos (RSC)",
     summary: "Supera los errores y trampas más frecuentes identificados por la Royal Society of Chemistry.",
     color: "#ef4444",
     tags: ["RSC", "Trampas", "Octeto", "Antiserrucho", "Radio Iónico"],
     content: {
-      lead: "Los postulantes a menudo pierden puntos no por falta de estudio, sino por caer en mitos y generalizaciones falsas.",
+      lead: "Los estudiantes a menudo se equivocan no por falta de estudio, sino por caer en mitos y generalizaciones falsas.",
       principles: [
         {
           heading: "Trampa 1: Creer que la Regla del Octeto es universal e inviolable:",
@@ -223,7 +223,7 @@ export const STUDY_GUIDE_MODULES = [
           text: "Realidad: En los subniveles d⁴ y d⁹ ocurre un salto de estabilidad semilleno o lleno: Cr (Z=24) es [Ar] 4s¹ 3d⁵ (NO 4s² 3d⁴); Cu (Z=29) es [Ar] 4s¹ 3d¹⁰ (NO 4s² 3d⁹)."
         }
       ],
-      examTip: "Abre el botón 'Trampas RSC' en la barra de herramientas de la tabla para revisar los 6 casos con justificación rigurosa y preguntas modelo de examen.",
+      examTip: "Abre 'Más herramientas y filtros' y elige 'Errores frecuentes' para revisar seis casos explicados y practicar con preguntas.",
       actionLabel: "Ver las 6 Trampas Clásicas",
       actionType: "tool-misconceptions"
     }
@@ -232,28 +232,28 @@ export const STUDY_GUIDE_MODULES = [
     id: "community",
     icon: Users,
     badge: "Comunidad Skool",
-    title: "8. Grupo de Estudio y Clases en Vivo",
-    summary: "Resuelve dudas con otros postulantes, accede a solucionarios UNI/San Marcos y clases en vivo en Skool.",
+    title: "8. Aprende en comunidad",
+    summary: "Conoce Academia Zenit, una comunidad de química para Latinoamérica en Skool, con acceso gratuito y membresía premium opcional.",
     color: "#10b981",
-    tags: ["Comunidad", "Skool", "UNI", "San Marcos", "Clases en vivo", "Solucionarios", "Admisión"],
+    tags: ["Comunidad", "Skool", "Latinoamérica", "Secundaria", "Bachillerato", "Universidad", "Admisión"],
     content: {
-      lead: "El ingreso a la universidad no tiene por qué ser un camino solitario. Únete al espacio oficial de postulantes en Química Zenit.",
+      lead: "Aprende química según tu objetivo: reforzar tus clases, prepararte para admisión o fortalecer tus bases universitarias. Conoce la comunidad de Academia Zenit en Skool.",
       principles: [
         {
-          heading: "Dudas y Consultas 24/7:",
-          text: "Sube fotos de problemas difíciles de academias (CepreUNI, Pre San Marcos, Vallejo, Aduni). Entre postulantes avanzados y profesores resolvemos el paso a paso detallado."
+          heading: "Comparte tu objetivo:",
+          text: "Al presentarte, cuenta desde qué país estudias, tu nivel y qué tema quieres comprender mejor."
         },
         {
-          heading: "Simulacros y Bancos de Admisión en PDF:",
-          text: "Descarga bancos de preguntas clasificadas por temas (enlace químico, tabla periódica, estequiometría, gases) con claves rigurosamente verificadas."
+          heading: "Elige qué necesitas reforzar:",
+          text: "Identifica tus dudas y consulta los recursos disponibles en la comunidad. Si preparas un examen, contrasta los contenidos con su temario oficial."
         },
         {
-          heading: "Sesiones y Clases en Vivo:",
-          text: "Participa en transmisiones periódicas donde analizamos las fijas de admisión y estrategias para resolver preguntas en menos de 90 segundos."
+          heading: "Conoce las opciones de acceso:",
+          text: "Puedes unirte gratuitamente. Revisa dentro de Skool qué incluye el acceso gratuito y qué ofrece la membresía premium opcional."
         }
       ],
       examTip: "Estudiar en comunidad te permite consultar dudas, explicar tu razonamiento y practicar con acompañamiento.",
-      actionLabel: "Acceder a la Comunidad en Skool",
+      actionLabel: "Unirme gratis a la comunidad",
       actionType: "open-community"
     }
   }
@@ -335,7 +335,7 @@ export function StudyGuideModal({ isOpen, onClose, onExecuteAction }) {
             <div>
               <div className="guide-eyebrow">
                 <Flame size={13} className="text-purple-bright" />
-                <span>Metodología de Estudio Pre-UNI y Universitario</span>
+                <span>Guía para aprender y practicar química</span>
               </div>
               <h2 id="guide-title" className="guide-title">
                 ¿Cómo estudiar y dominar la química con esta app?
@@ -500,7 +500,7 @@ export function StudyGuideModal({ isOpen, onClose, onExecuteAction }) {
                 <div className="guide-community-strip-info">
                   <Users size={16} className="text-emerald" />
                   <span>
-                    ¿Dudas con este tema? Pregunta a postulantes y profesores en la <strong>Comunidad Oficial Skool</strong>.
+                    ¿Quieres seguir aprendiendo? Conoce <strong>Academia Zenit en Skool</strong>, nuestra comunidad de química para Latinoamérica.
                   </span>
                 </div>
                 <a

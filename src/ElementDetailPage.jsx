@@ -991,22 +991,22 @@ export default function ElementDetailPage() {
         <section className="detail-community-card">
           <div className="detail-comm-badge">
             <Sparkles size={14} />
-            <span>Comunidad Oficial Química Zenit</span>
+            <span>Comunidad Oficial Academia Zenit</span>
           </div>
           <div className="detail-comm-content">
-            <h3>¿Dudas con este elemento en problemas tipo examen?</h3>
+            <h3>¿Quieres comprender mejor este elemento?</h3>
             <p>
-              No te quedes atascado. En nuestra comunidad de <strong>Skool</strong> resolvemos bancos de preguntas, simulacros semanales y ejercicios complejos de admisión junto a profesores y postulantes a la UNI y San Marcos.
+              Sigue explorando química con <strong>Academia Zenit en Skool</strong>. Un espacio para estudiantes de Latinoamérica que quieren reforzar sus conocimientos y avanzar en su aprendizaje. Acceso gratuito y membresía premium opcional.
             </p>
             <a
               href={communityUrl}
               target="_blank"
               rel="noreferrer"
               className="detail-comm-btn"
-              title="Unirme a la comunidad Química Zenit en Skool"
+              title="Unirme a la comunidad Academia Zenit en Skool"
             >
               <Target size={16} />
-              <span>Unirme a Química Zenit en Skool</span>
+              <span>Unirme gratis a la comunidad</span>
               <ArrowUpRight size={15} />
             </a>
           </div>

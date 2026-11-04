@@ -64,7 +64,7 @@ export function IonizationQuantumJumpWidget({
             <Zap size={18} />
           </div>
           <div>
-            <span className="jump-eyebrow">Diagnóstico Cuántico Pre-UNI</span>
+            <span className="jump-eyebrow">Explora la energía de ionización</span>
             <h3 className="jump-heading">Salto Cuántico de Energías de Ionización (I₁ → I₂ → I₃)</h3>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function IonizationQuantumJumpWidget({
             onClick={() => setActiveTab("challenge")}
           >
             <Award size={13} />
-            <span>Reto Examen UNI</span>
+            <span>Retos de admisión</span>
           </button>
           <button
             type="button"
