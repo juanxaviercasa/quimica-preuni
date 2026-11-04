@@ -20,7 +20,8 @@ function githubPagesFallback() {
 
 export default defineConfig({
   base,
-  plugins: [react(), githubPagesFallback()],
+  // Cloudflare Pages serves index.html for SPA routes when there is no root 404.html.
+  plugins: [react(), ...(process.env.CF_PAGES === "1" ? [] : [githubPagesFallback()])],
   build: {
     rollupOptions: {
       input: {
