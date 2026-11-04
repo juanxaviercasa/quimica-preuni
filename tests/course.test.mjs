@@ -57,6 +57,20 @@ test("module two review corrects filling order and quantum terminology", () => {
   }
 });
 
+test("recovered theory exposes the scientific scope notes for corrected claims", () => {
+  const cases = [
+    ["1.1", "agua desionizada no es automáticamente agua pura"],
+    ["3.1", "regla de n + ℓ es un modelo útil"],
+    ["12.3", "gases se comportan idealmente"],
+    ["14.5", "ΔG° = −nFE°"],
+    ["18.10", "normativa local"]
+  ];
+  for (const [code, phrase] of cases) {
+    assert.ok(getEntry(code).theory.toLowerCase().includes(phrase.toLowerCase()), code);
+    assert.ok(getEntry(code).theory.includes("Nota de precisión científica"), code);
+  }
+});
+
 test("reviewed module one distinguishes force units and evidence of purity", () => {
   const force = getEntry("1.6").quiz[1];
   assert.ok(force.prompt.includes("4.5 kg"));

@@ -8,6 +8,7 @@ import sourceContent from "./sourceContent.json" with { type: "json" };
 import { environmentalQuestions } from "./environmentQuestions.js";
 import { reviewQuestion } from "./reviewedQuestions.js";
 import { correctRemainingQuestion } from "./questionCorrections.js";
+import { correctTheory } from "./theoryCorrections.js";
 
 const authoredByNumber = new Map(authoredModules.map(m => [m.number, m]));
 
@@ -46,7 +47,7 @@ function buildModule(source) {
         }
       };
       return {
-        ...base, objective: base.sourceObjective || topic?.objective || `Explicar y aplicar: ${base.fullTitle}.`, theory: recovered.theory,
+        ...base, objective: base.sourceObjective || topic?.objective || `Explicar y aplicar: ${base.fullTitle}.`, theory: correctTheory(entry.code, recovered.theory),
         workedPractice: recovered.examples, activity, quiz, practice: [],
         summary: [base.sourceObjective || topic?.objective || base.fullTitle], hasContent: true, status: "pendiente",
         review: {
