@@ -90,6 +90,10 @@ const DiagnosticPage = lazy(() => import("./DiagnosticPage.jsx"));
 const LabPage = lazy(() => import("./LabPage.jsx"));
 const TeacherPage = lazy(() => import("./TeacherPage.jsx"));
 const ElementDetailPage = lazy(() => import("./ElementDetailPage.jsx"));
+const CourseIndexPage = lazy(() => import("./course/CourseIndexPage.jsx"));
+const ModulePage = lazy(() => import("./course/ModulePage.jsx"));
+const TopicPage = lazy(() => import("./course/TopicPage.jsx"));
+const ExamPage = lazy(() => import("./course/ExamPage.jsx"));
 const loadAtomViewer = () => import("./components/AtomViewer3D.jsx");
 const AtomViewer3D = lazy(loadAtomViewer);
 
@@ -881,6 +885,17 @@ function Layout({ children }) {
             <span className="nav-gift-text">Láminas Gratis ↓</span>
             <span className="nav-gift-short-text">Láminas</span>
           </button>
+          <Link
+            to="/curso/quimica"
+            className="guide-nav-btn"
+            style={{ textDecoration: "none" }}
+            aria-label="Abrir Curso de Química PreUNI"
+            title="Curso de Química PreUNI: 18 módulos y lecciones interactivas"
+          >
+            <BookOpen size={14} />
+            <span className="guide-btn-text">Curso PreUNI</span>
+            <span className="guide-btn-short-text">Curso</span>
+          </Link>
           <button
             type="button"
             className="guide-nav-btn"
@@ -2058,6 +2073,12 @@ function Home() {
           <strong>Practica con foco</strong>
           <small>Preguntas, valencias y velocidad para tu próxima evaluación.</small>
         </Link>
+        <Link to="/curso/quimica">
+          <StudyImage src="/visuals/teacher-learning-map.jpg" alt="" loading="lazy" className="path-img" />
+          <span className="eyebrow">Plan de estudio integral</span>
+          <strong>Curso PreUNI (18 Módulos)</strong>
+          <small>179 lecciones interactivas, simuladores por tema y evaluaciones.</small>
+        </Link>
         <Link to="/laboratorio">
           <StudyImage src="/visuals/path-understanding.jpg" alt="" loading="lazy" className="path-img" />
           <span className="eyebrow">Química desde cero</span>
@@ -2397,6 +2418,10 @@ function App() {
                   <Route path="/laboratorio" element={<LabPage />} />
                   <Route path="/docentes" element={<TeacherPage />} />
                   <Route path="/quiz/:topicId" element={<QuizPage />} />
+                  <Route path="/curso/quimica" element={<CourseIndexPage />} />
+                  <Route path="/curso/quimica/:moduleSegment" element={<ModulePage />} />
+                  <Route path="/curso/quimica/:moduleSegment/evaluacion" element={<ExamPage />} />
+                  <Route path="/curso/quimica/:moduleSegment/:topicSegment" element={<TopicPage />} />
                   <Route
                     path="*"
                     element={
