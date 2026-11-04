@@ -1,37 +1,56 @@
-# ⚛️ Tabla Periódica Interactiva
+# ⚛️ Química PreUNI · Plataforma Web Interactiva
 
-> **Aplicación web interactiva para exploración pedagógica de elementos químicos, propiedades atómicas, tendencias periódicas y modelos de capas electrónicas.**
+> **Plataforma educativa completa de Química Preuniversitaria (Academia Zenit) con 18 módulos interactivos, simuladores conceptuales, tabla periódica oficial IUPAC, visor 3D, autodiagnóstico y exámenes acumulativos de estilo admisión.**
 
-![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla%20ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-Grid%20%26%20Flexbox-1572B6?style=flat-square&logo=css3&logoColor=white)
-![Education](https://img.shields.io/badge/Domain-Ciencias%20%26%20Educación-10B981?style=flat-square)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Education](https://img.shields.io/badge/Domain-Química%20PreUNI-10B981?style=flat-square)
+![Domain](https://img.shields.io/badge/URL-quimica.sistemazenit.com-8B4DB0?style=flat-square)
 
 ---
 
-## 🎯 Características Principales
+## 🎯 Arquitectura y Contenidos
 
-- 🧪 **Catálogo Completo de 118 Elementos**: Desde el Hidrógeno ($Z=1$) hasta el Oganesón ($Z=118$).
-- 🔍 **Filtrado y Búsqueda Dinámica**:
-  - Filtrado por estado de agregación a 20°C (Sólido, Líquido, Gas, Desconocido).
-  - Categorización cromática por familias: Metales alcalinos, alcalinotérreos, lantánidos, actínidos, metales de transición, metaloides, no metales, halógenos y gases nobles.
-- 📊 **Mapa de Calor de Propiedades Periódicas**: Visualización de gradientes de electronegatividad de Pauling, radio atómico, afinidad electrónica y primera energía de ionización.
-- 📱 **Modal de Ficha Técnica Detallada**: Masa atómica estándar, configuración electrónica, puntos de fusión/ebullición, densidad y año/autor del descubrimiento.
-- 🎨 **Layout Adaptable**: Construido con **CSS Grid 18 columnas** con soporte para scroll horizontal en móviles sin deformar la estructura periódica estándar IUPAC.
+1. 📚 **Curso Completo de 18 Módulos (197 Lecciones)**:
+   - Cobertura integral desde Materia y Medición hasta Metalurgia, Contaminación y Química Verde.
+   - Cada lección cuenta con objetivo observable, fundamentos clave, simulador interactivo, ejemplo resuelto modelo admisión, práctica guiada con retroalimentación inmediata y mini examen conceptual.
+   - Evaluaciones acumulativas integradoras por módulo (8+ preguntas rigurosamente revisadas).
+2. 🔬 **Simuladores y Actividades Interactivas por Tema**:
+   - Conversor exacto de temperaturas e intervalos térmicos ($\Delta T$) con cero absoluto y punto de congelación $273.15\text{ K}$ (BIPM).
+   - Laboratorio de isótopos y masa atómica promedio ponderada con abundancia natural IUPAC / CIAAW.
+   - Comparador y visualizador de tendencias periódicas (radio, $EI_1$, electronegatividad de Pauling y afinidad electrónica) contrastado con datos experimentales NIST ASD.
+   - Balanza estequiométrica con conservación de masa y carga en reacciones químicas.
+   - Simuladores paramétricos de gases ($PV=nRT$), disoluciones ($M, N$), cinética y equilibrio químico ($K_c, K_p, \text{pH}$).
+3. 🧪 **Herramientas de Apoyo Integradas**:
+   - **Tabla Periódica Dinámica**: 118 elementos IUPAC y vista focalizada de 38 elementos esenciales PreUNI.
+   - **Visor 3D de Orbitales y Átomos**: Modelado atómico interactivo con Three.js / React Three Fiber.
+   - **Diagnóstico y Práctica Adaptativa**: Test de entrada con mapa de fortalezas y repaso espaciado.
 
 ---
 
 ## 💻 Ejecución Local
 
 ```bash
-# Clonar y ejecutar
-git clone https://github.com/juanxaviercasa/tabla-periodica.git
-cd tabla-periodica
-python -m http.server 3000
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Compilar para producción y previsualizar
+npm run build
+npm run preview
+
+# Ejecutar suite de pruebas unitarias y validación del curso
+npm test
+
+# Ejecutar verificación completa en navegador (Playwright)
+npm run test:browser
 ```
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor y Proyecto
 
 **Juan Xavier Cabello** — Educación en Ciencias y Desarrollo Web Full-Stack.  
-[LinkedIn](https://www.linkedin.com/in/xaviercabello/) · [GitHub](https://github.com/juanxaviercasa)
+Academia Zenit · [Comunidad en Skool](https://www.skool.com/academia-zenit-3587/about) · [quimica.sistemazenit.com](https://quimica.sistemazenit.com)

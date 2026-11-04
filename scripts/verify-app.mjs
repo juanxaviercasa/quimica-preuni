@@ -160,7 +160,7 @@ try {
       await page.getByRole("button", { name: i === 5 ? "Ver mi mapa" : "Siguiente", exact: true }).click();
     }
     await page.locator(".diagnostic-result").waitFor();
-    assert.equal(await page.locator('meta[property="og:image"]').getAttribute("content"), "https://tablaperiodica.sistemazenit.com/visuals/hero-periodic-map.jpg");
+    assert.equal(await page.locator('meta[property="og:image"]').getAttribute("content"), "https://quimica.sistemazenit.com/visuals/hero-periodic-map.jpg");
     await visit("/");
     assert.ok((await page.locator(".path-img").first().getAttribute("srcset")).includes("webp"));
     await page.screenshot({ path: fileURLToPath(new URL("mobile-home.png", output)), fullPage: true });

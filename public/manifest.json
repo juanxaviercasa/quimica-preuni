@@ -1,7 +1,7 @@
 {
-  "name": "Tabla periódica interactiva | Academia Zenit",
-  "short_name": "38 Elementos",
-  "description": "Explora química, descarga láminas y practica con Academia Zenit. Para estudiantes de secundaria, bachillerato, admisión y universidad.",
+  "name": "Curso de Química PreUNI | Academia Zenit",
+  "short_name": "Química Zenit",
+  "description": "Curso completo de química preuniversitaria con 18 módulos interactivos, simuladores, tabla periódica oficial y exámenes de admisión.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#191024",

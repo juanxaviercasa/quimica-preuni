@@ -839,7 +839,7 @@ function Layout({ children }) {
               <span>Academia Zenit</span>
             </span>
             <span className="top-authority-text">
-              Química para Latinoamérica · Comunidad en Skool
+              Curso Completo de Química PreUNI · Comunidad en Skool
             </span>
           </div>
           <a
@@ -856,10 +856,10 @@ function Layout({ children }) {
       </div>
 
       <header className="site-header">
-        <Link className="brand" to="/" aria-label="38 Elementos, inicio">
+        <Link className="brand" to="/" aria-label="Química PreUNI · Academia Zenit, inicio">
           <StudyImage
             src={darkMode ? "/logo-dark.svg" : "/logo.svg"}
-            alt="38 Elementos · Aprende química con Academia Zenit"
+            alt="Química PreUNI · Academia Zenit"
           />
         </Link>
         <div className="header-actions">
@@ -887,7 +887,7 @@ function Layout({ children }) {
           </button>
           <Link
             to="/curso/quimica"
-            className="guide-nav-btn"
+            className="course-nav-btn"
             style={{ textDecoration: "none" }}
             aria-label="Abrir Curso de Química PreUNI"
             title="Curso de Química PreUNI: 18 módulos y lecciones interactivas"
@@ -1336,16 +1336,34 @@ function Home() {
   return (
     <main>
       <LaminasStudySection />
-      <nav className="home-shortcuts" aria-label="Accesos de estudio">
+      <nav className="home-shortcuts" aria-label="Accesos del curso de química">
+        <Link
+          to="/curso/quimica"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            padding: "0.6rem 1rem",
+            background: "#8b4db0",
+            color: "#ffffff",
+            borderRadius: "8px",
+            fontWeight: "700",
+            textDecoration: "none",
+            boxShadow: "0 2px 8px rgba(139, 77, 176, 0.3)"
+          }}
+        >
+          <BookOpen size={16} />
+          <span>Ver los 18 Módulos del Curso PreUNI →</span>
+        </Link>
         <a href="#tabla-periodica" onClick={() => requestAnimationFrame(() => document.getElementById("tabla-periodica")?.focus({ preventScroll: true }))}>Ver tabla periódica <ChevronDown size={16} /></a>
-        <div className="download-community"><span>Ya tienes tu tabla. Aprende a utilizarla en Academia Zenit, nuestra comunidad en Skool.</span><a className="skool-primary-cta" href={communityUrl} target="_blank" rel="noopener noreferrer" data-cta-placement="downloads">Unirme gratis a la comunidad <ArrowUpRight size={16} /></a></div>
+        <div className="download-community"><span>Aprende química paso a paso en Academia Zenit, nuestra comunidad en Skool.</span><a className="skool-primary-cta" href={communityUrl} target="_blank" rel="noopener noreferrer" data-cta-placement="downloads">Unirme gratis a la comunidad <ArrowUpRight size={16} /></a></div>
       </nav>
 
       <section id="tabla-periodica" tabIndex={-1} className={`table-section mode-${tableMode}`} aria-labelledby="table-heading">
         <h2 id="table-heading">
           Tabla periódica interactiva
         </h2>
-        <p className="table-intro">Toca un elemento para ver sus propiedades. Elige qué dato mostrar en las casillas.</p>
+        <p className="table-intro">Herramienta del curso. Toca un elemento para ver sus propiedades, configuraciones, estados y saltos cuánticos.</p>
 
         {/* Dual Mode Switcher Toolbar */}
         <div className="table-mode-switch-wrapper">

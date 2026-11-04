@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tablaperiodica.sistemazenit.com/sitemap.xml
+Sitemap: https://quimica.sistemazenit.com/sitemap.xml

@@ -1,6 +1,6 @@
 // Central route helpers for the course. Routes are derived only from lesson codes.
 export const COURSE_BASE = "/curso/quimica";
-export const PUBLIC_ORIGIN = "https://tablaperiodica.sistemazenit.com";
+export const PUBLIC_ORIGIN = "https://quimica.sistemazenit.com";
 
 const pad = n => String(n).padStart(2, "0");
 

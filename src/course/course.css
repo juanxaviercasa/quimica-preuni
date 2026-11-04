@@ -952,3 +952,33 @@
 .cq-sources-list a:hover {
   text-decoration: underline;
 }
+
+.course-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(139, 77, 176, 0.12);
+  border: 1px solid rgba(139, 77, 176, 0.3);
+  color: #8b4db0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.course-nav-btn:hover {
+  background: #8b4db0;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .course-nav-btn {
+  background: rgba(212, 167, 239, 0.15);
+  border-color: rgba(212, 167, 239, 0.35);
+  color: #d4a7ef;
+}
+
+[data-theme="dark"] .course-nav-btn:hover {
+  background: #8b4db0;
+  color: #ffffff;
+}

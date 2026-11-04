@@ -6,7 +6,7 @@ import { convertTemperature, checkBalance, calculatorValues, calculatorGoalMet, 
 export const FAMILIES = ["isotopes", "trends", "temperature", "calculator", "classify", "order", "compare", "builder", "balance"];
 export const STATUSES = ["listo", "pendiente", "bloqueado"];
 const UNIVERSITY_ATTRIBUTION = /\b(UNI|UNMSM|San Marcos|PUCP|UNSAAC|UNAC|DECO|CEPRE[- ]?\w*)\b/;
-const OBSOLETE_HOST = /quimica\.sistemazenit\.com/;
+const OBSOLETE_HOST = /tablaperiodica\.sistemazenit\.com/;
 
 const isText = v => typeof v === "string" && v.trim().length > 0;
 
@@ -73,8 +73,12 @@ export function validateCourse({ modules, sourceIndex, elements, isotopes }) {
   }
 
   // ---- Obsolete links anywhere in authored data ----
-  const raw = JSON.stringify(modules.filter(m => m.authored).map(m => ({ t: m.topics, e: m.exam, i: m.intro })));
-  if (OBSOLETE_HOST.test(raw)) err("datos", "contienen enlaces a quimica.sistemazenit.com");
+  const raw = JSON.stringify(modules.filter(m => m.authored).map(m => ({
+    t: m.topics.map(t => ({ a: t.activity, e: t.example, p: t.practice, q: t.quiz, s: t.sources, sum: t.summary })),
+    e: m.exam,
+    i: m.intro
+  })));
+  if (OBSOLETE_HOST.test(raw)) err("datos", "contienen enlaces a tablaperiodica.sistemazenit.com");
 
   const topics = modules.flatMap(m => m.topics);
   const stats = {
