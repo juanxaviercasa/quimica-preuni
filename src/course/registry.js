@@ -10,6 +10,7 @@ import { reviewQuestion } from "./reviewedQuestions.js";
 import { correctRemainingQuestion } from "./questionCorrections.js";
 import { correctTheory } from "./theoryCorrections.js";
 import { supplementalWorkedPractice } from "./supplementalWorkedPractice.js";
+import { addPracticeReinforcement } from "./practiceReinforcement.js";
 
 const authoredByNumber = new Map(authoredModules.map(m => [m.number, m]));
 
@@ -49,7 +50,7 @@ function buildModule(source) {
       };
       return {
         ...base, objective: base.sourceObjective || topic?.objective || `Explicar y aplicar: ${base.fullTitle}.`, theory: correctTheory(entry.code, recovered.theory),
-        workedPractice: [...recovered.examples, ...(supplementalWorkedPractice[entry.code] ?? [])], activity, quiz, practice: [],
+        workedPractice: addPracticeReinforcement([...recovered.examples, ...(supplementalWorkedPractice[entry.code] ?? [])], quiz), activity, quiz, practice: [],
         summary: [base.sourceObjective || topic?.objective || base.fullTitle], hasContent: true, status: "pendiente",
         review: {
           status: "pendiente", doubts: ["Revisión completa de teoría, desarrollos originales y actividades aún pendiente."],

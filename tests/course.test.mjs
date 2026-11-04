@@ -78,6 +78,13 @@ test("module 18 includes two worked, safety-conscious cases in every lesson", ()
   }
 });
 
+test("every recovered lesson has at least two explained practice cases", () => {
+  for (const module of courseModules) for (const topic of module.topics) {
+    assert.ok(topic.workedPractice.length >= 2, topic.code);
+    assert.ok(topic.workedPractice.every(item => item.statement && item.solution), topic.code);
+  }
+});
+
 test("reviewed module one distinguishes force units and evidence of purity", () => {
   const force = getEntry("1.6").quiz[1];
   assert.ok(force.prompt.includes("4.5 kg"));
