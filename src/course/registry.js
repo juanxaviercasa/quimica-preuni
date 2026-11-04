@@ -45,7 +45,8 @@ function buildModule(source) {
         reuse: "Análisis de casos de la lección",
         params: {
           solution: recovered.examples[0]?.solution || quiz[0]?.explanation,
-          theory: recovered.theory
+          theory: recovered.theory,
+          checkpoint: quiz[0]
         }
       };
       return {

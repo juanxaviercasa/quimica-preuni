@@ -85,6 +85,15 @@ test("every recovered lesson has at least two explained practice cases", () => {
   }
 });
 
+test("every guided recovered lesson exposes a reviewed interactive checkpoint", () => {
+  for (const module of courseModules) for (const topic of module.topics) {
+    if (topic.activity.family !== "guided") continue;
+    const checkpoint = topic.activity.params.checkpoint;
+    assert.equal(checkpoint.reviewStatus, "revisado", topic.code);
+    assert.ok(checkpoint.explanation, topic.code);
+  }
+});
+
 test("reviewed module one distinguishes force units and evidence of purity", () => {
   const force = getEntry("1.6").quiz[1];
   assert.ok(force.prompt.includes("4.5 kg"));
