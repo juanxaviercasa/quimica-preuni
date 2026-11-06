@@ -30,7 +30,7 @@ function CourseRequest({ type, params, children }) {
   if (!isSignedIn) return <Paywall signedIn={false}/>;
   if (state.loading) return <main className="cq-pay-state"><p>Cargando contenido protegido…</p></main>;
   if (state.error?.status === 402) return <Paywall signedIn={true}/>;
-  if (state.error) return <main className="cq-pay-state"><h1>No se pudo abrir el curso</h1><p role="alert">{state.error.message}</p><button type="button" onClick={() => setState({ loading: true, data: null, error: null })}>Intentar nuevamente</button><Link to="/">Volver al inicio</Link></main>;
+  if (state.error) return <main className="cq-pay-state"><h1>No se pudo abrir el curso</h1><p role="alert">{state.error.message}</p><button type="button" onClick={() => window.location.reload()}>Intentar nuevamente</button><Link to="/">Volver al inicio</Link></main>;
   return children(state.data);
 }
 
