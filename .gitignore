@@ -7,3 +7,6 @@ dist/
 .env.local
 .deploy_report.json
 .review-output/
+
+# Example variables may be committed; never commit real values.
+!.env.example
