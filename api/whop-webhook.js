@@ -1,4 +1,6 @@
 import { unwrapWebhook } from "@whop/sdk/helpers";
+
+export const config = { api: { bodyParser: false } };
 import { clerkClient, configured, linkMembership, noStore, whopClient } from "./_lib/security.js";
 
 const getId = x => typeof x === "string" ? x : x?.id;
