@@ -2,6 +2,7 @@ import { unwrapWebhook } from "@whop/sdk/helpers";
 
 export const config = { api: { bodyParser: false } };
 import { clerkClient, configured, linkMembership, noStore, whopClient } from "./_lib/security.js";
+import { isAllowedWhopPlanId } from "./_lib/plans.js";
 
 const getId = x => typeof x === "string" ? x : x?.id;
 const membershipIdFrom = item => getId(item?.membership) || item?.membership_id;
@@ -57,7 +58,7 @@ export default async function handler(req, res) {
     const planId = planIdFrom(verified) || planIdFrom(data);
     // Without a matching purchased plan, verified membership and Clerk mapping,
     // NEVER grant access, even if a signed webhook was received.
-    if (!clerkId || !membershipId || (planId && planId !== process.env.WHOP_PLAN_ID))
+    if (!clerkId || !membershipId || (planId && !isAllowedWhopPlanId(planId)))
       return res.status(200).json({ received: true, linked: false });
     const linked = await linkMembership(clerkId, membershipId);
     return res.status(200).json({ received: true, linked });

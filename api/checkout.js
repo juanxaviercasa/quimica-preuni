@@ -1,4 +1,5 @@
 import { authenticatedUser, configured, noStore, whopClient } from "./_lib/security.js";
+import { whopPlanIdForChoice } from "./_lib/plans.js";
 
 export default async function handler(req, res) {
   noStore(res);
@@ -6,10 +7,12 @@ export default async function handler(req, res) {
   if (!configured()) return res.status(503).json({ error: "Pagos sin configurar." });
   const actor = await authenticatedUser(req);
   if (!actor) return res.status(401).json({ error: "Inicia sesión antes de comprar." });
+  const planId = whopPlanIdForChoice(req.body?.plan);
+  if (!planId) return res.status(400).json({ error: "Selecciona una opción de suscripción válida." });
   try {
     // The authenticated Clerk ID comes exclusively from the verified session.
     const config = await whopClient().checkoutConfigurations.create({
-      plan_id: process.env.WHOP_PLAN_ID,
+      plan_id: planId,
       mode: "payment",
       redirect_url: new URL("/pago/resultado", process.env.APP_URL).toString(),
       metadata: { userId: actor.id }

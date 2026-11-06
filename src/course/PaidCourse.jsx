@@ -38,12 +38,14 @@ export function Paywall({ signedIn }) {
   const { getToken } = useAuth();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [billingPlan, setBillingPlan] = useState("monthly");
   async function checkout() {
     setBusy(true); setError("");
     try {
       const token = await getToken();
       const response = await fetch("/api/checkout", { method: "POST",
-        headers: { Authorization: `Bearer ${token}` }, credentials: "omit" });
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ plan: billingPlan }), credentials: "omit" });
       const data = await response.json();
       if (!response.ok || !data.checkoutUrl) throw new Error(data.error || "No se pudo abrir el pago.");
       window.location.assign(data.checkoutUrl);
@@ -54,6 +56,17 @@ export function Paywall({ signedIn }) {
     <h1>Tu preparación, en un solo lugar.</h1>
     <p>Accede a los 18 módulos, explicaciones, actividades, simuladores, práctica y exámenes del curso completo mediante una membresía activa.</p>
     <div className="cq-pay-perks"><span><CheckCircle size={18}/> Lecciones paso a paso</span><span><CheckCircle size={18}/> Ejercicios y evaluaciones</span><span><CheckCircle size={18}/> Actividades interactivas</span></div>
+    <fieldset className="cq-pay-plans" aria-label="Elige tu plan de suscripción">
+      <legend>Elige cómo pagar</legend>
+      <label className={billingPlan === "monthly" ? "cq-pay-plan is-selected" : "cq-pay-plan"}>
+        <input type="radio" name="billing-plan" value="monthly" checked={billingPlan === "monthly"} onChange={() => setBillingPlan("monthly")}/>
+        <span><strong>Mensual</strong><span>US$19 cada mes</span></span>
+      </label>
+      <label className={billingPlan === "annual" ? "cq-pay-plan is-selected" : "cq-pay-plan"}>
+        <input type="radio" name="billing-plan" value="annual" checked={billingPlan === "annual"} onChange={() => setBillingPlan("annual")}/>
+        <span><strong>Anual</strong><span>US$190 al año · ahorras US$38</span></span>
+      </label>
+    </fieldset>
     {!signedIn ? <div className="cq-pay-actions"><SignUpButton mode="modal"><button className="cq-pay-primary">Crear cuenta y continuar <ArrowRight size={18}/></button></SignUpButton><SignInButton mode="modal"><button className="cq-pay-secondary">Ya tengo cuenta · Ingresar</button></SignInButton></div> :
       <div className="cq-pay-actions"><button className="cq-pay-primary" onClick={checkout} disabled={busy}>{busy ? "Preparando pago…" : "Obtener acceso al curso"} <ArrowRight size={18}/></button><span className="cq-pay-hint">¿Ya pagaste? Tu acceso se habilitará después de verificar el pago.</span><UserButton/></div>}
     {error && <p role="alert" className="cq-pay-error">{error}</p>}

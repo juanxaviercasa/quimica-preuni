@@ -7,7 +7,7 @@
 - `@clerk/react` administra el registro, inicio de sesión y perfil. `@clerk/backend` verifica el JWT en el servidor.
 - El frontend ya **no importa** `src/course/registry.js` desde las rutas del curso. Las páginas `/curso/quimica/*` piden módulos, lecciones y exámenes a `/api/course` con `Authorization: Bearer <session token>`.
 - `/api/course` y `/api/access` verifican sesión y una membresía Whop activa **en servidor en cada petición**, vinculada a metadatos privados de Clerk y al producto/plan configurados. Respuestas `private, no-store`.
-- `/api/checkout` crea un checkout de Whop con plan fijo configurado en servidor y metadatos `userId` derivados de la sesión verificada, nunca de datos manipulables del navegador.
+- `/api/checkout` acepta solo la opción `monthly` o `annual`; resuelve el ID desde variables privadas del servidor y añade metadatos `userId` derivados de la sesión verificada, nunca de datos manipulables del navegador.
 - `/api/whop-webhook` exige la firma Whop del cuerpo en bruto, revisa el pago y la membresía en Whop y almacena el identificador de membresía en los metadatos **privados** de Clerk. Si falla cualquier validación, no concede acceso.
 - Se utiliza `@whop/sdk` con `WhopEnvironment.Sandbox` para pruebas.
 - `/pago/resultado` permite consultar el estado, pero **no autoriza** la entrada por parámetros de la URL.
@@ -26,12 +26,13 @@ El repositorio de GitHub actualmente es **público**, y su historial puede inclu
 | `CLERK_SECRET_KEY` | Servidor | Clave privada Clerk. **Nunca** `VITE_`. |
 | `WHOP_COMPANY_API_KEY` | Servidor | Clave de API de tu empresa Whop con mínimos permisos necesarios. |
 | `WHOP_WEBHOOK_SECRET` | Servidor | Secreto de firma del webhook, comienza con `ws_`. |
-| `WHOP_PLAN_ID` | Servidor | Plan **de pago recurrente** del curso, `plan_`. |
+| `WHOP_MONTHLY_PLAN_ID` | Servidor | ID `plan_` del plan recurrente mensual (US$19/mes). |
+| `WHOP_ANNUAL_PLAN_ID` | Servidor | ID `plan_` del plan recurrente anual (US$190/año). |
 | `WHOP_PRODUCT_ID` | Servidor | Producto del curso, `prod_`. |
 | `WHOP_SANDBOX` | Servidor | `true` para pruebas, `false` en producción. |
 | `APP_URL` | Servidor | Origen de la app, como `https://quimica.sistemazenit.com`. |
 
-No se han incluido claves reales en el repositorio. **No pegues ninguna clave secreta en un chat, comentario, commit o issue de GitHub**. Guárdalas en las variables de entorno de Vercel. En Clerk, configura tu dominio de producción. En Whop Sandbox crea el producto y plan, registra un webhook público `https://<tu-dominio>/api/whop-webhook` y suscríbete a `payment.succeeded`, `membership.activated` y `membership.deactivated` (verifica que los nombres coincidan con los ofrecidos por tu API versionada).
+No se han incluido claves reales en el repositorio. **No pegues ninguna clave secreta en un chat, comentario, commit o issue de GitHub**. Guárdalas en las variables de entorno de Vercel. En Clerk, configura tu dominio de producción. En Whop Sandbox crea el producto y los dos planes recurrentes, registra un webhook público `https://<tu-dominio>/api/whop-webhook` y suscríbete a `payment.succeeded`, `membership.activated` y `membership.deactivated` (verifica que los nombres coincidan con los ofrecidos por tu API versionada). Mantén los planes ocultos del escaparate hasta completar pruebas de checkout y membresía; confirma en Sandbox que se pueden comprar desde el checkout API antes de mantener esa visibilidad.
 
 ## Validación previa al lanzamiento (obligatoria)
 
@@ -43,7 +44,7 @@ No se han incluido claves reales en el repositorio. **No pegues ninguna clave se
 6. Cambia claves y configuración a producción únicamente tras pruebas, valida webhook de producción, políticas de reembolso y renovación y prueba un pago real de importe controlado.
 7. Configura y prueba `APP_URL`, Vercel y el dominio antes de migrar el DNS. Asegura que la entrega HTTPS de `/api/course` no permita caché pública.
 
-**Limitaciones actuales:** No se pudieron ejecutar pruebas ni hacer pagos sandbox desde este entorno y no hay acceso directo a tus cuentas Clerk o Whop. La activación del ciclo completo **no está verificada**. La API está diseñada para **fallar cerrada** ante configuración o membresía inválidas. No fusiones esta rama hasta completar estas pruebas.
+**Limitaciones actuales:** La activación del ciclo completo con las cuentas reales **no está verificada**. La API está diseñada para **fallar cerrada** ante configuración o membresía inválidas. No fusiones esta rama hasta completar estas pruebas.
 
 ## Documentación de referencia
 - https://clerk.com/docs/reference/backend/verify-token

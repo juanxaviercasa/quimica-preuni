@@ -1,5 +1,6 @@
 import { createClerkClient, verifyToken } from "@clerk/backend";
 import { WhopClient, WhopEnvironment } from "@whop/sdk";
+import { isAllowedWhopPlanId } from "./plans.js";
 
 export function noStore(res) {
   res.setHeader("Cache-Control", "private, no-store, max-age=0");
@@ -21,7 +22,8 @@ export function whopClient() {
 
 export function configured() {
   return Boolean(process.env.CLERK_SECRET_KEY && process.env.WHOP_COMPANY_API_KEY &&
-    process.env.WHOP_PLAN_ID && process.env.WHOP_PRODUCT_ID && process.env.APP_URL);
+    process.env.WHOP_MONTHLY_PLAN_ID && process.env.WHOP_ANNUAL_PLAN_ID &&
+    process.env.WHOP_PRODUCT_ID && process.env.APP_URL);
 }
 
 export async function authenticatedUser(req) {
@@ -49,7 +51,7 @@ export function isValidMembership(membership) {
   const productId = idOf(membership.product) || membership.product_id;
   if (productId !== process.env.WHOP_PRODUCT_ID) return false;
   const planId = idOf(membership.plan) || membership.plan_id;
-  if (planId !== process.env.WHOP_PLAN_ID) return false;
+  if (!isAllowedWhopPlanId(planId)) return false;
   const status = String(membership.status || "").toLowerCase();
   if (!["active", "completed"].includes(status)) return false;
   if (!validDate(membership.current_period_end)) return false;
