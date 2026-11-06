@@ -95,6 +95,7 @@ const PaidIndex = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ defa
 const PaidModule = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidModule })));
 const PaidTopic = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidTopic })));
 const PaidExam = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidExam })));
+const PaymentResult = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaymentResult })));
 const loadAtomViewer = () => import("./components/AtomViewer3D.jsx");
 const AtomViewer3D = lazy(loadAtomViewer);
 
@@ -2394,6 +2395,7 @@ function App() {
                   <Route path="/laboratorio" element={<LabPage />} />
                   <Route path="/docentes" element={<TeacherPage />} />
                   <Route path="/quiz/:topicId" element={<QuizPage />} />
+                  <Route path="/pago/resultado" element={<PaymentResult />} />
                   <Route path="/curso/quimica" element={<PaidIndex />} />
                   <Route path="/curso/quimica/:moduleSegment" element={<PaidModule />} />
                   <Route path="/curso/quimica/:moduleSegment/evaluacion" element={<PaidExam />} />
