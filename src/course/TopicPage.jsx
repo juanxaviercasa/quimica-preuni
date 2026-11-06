@@ -38,7 +38,7 @@ export default function TopicPage() {
     <main className="cq-page" aria-labelledby="topic-title">
       <header className="cq-header">
         <div className="cq-breadcrumb">
-          <Link to="/">Tabla Periódica</Link>
+          <Link to="/">Inicio</Link>
           <ChevronRightIcon />
           <Link to="/curso/quimica">Curso de Química</Link>
           <ChevronRightIcon />
@@ -55,8 +55,8 @@ export default function TopicPage() {
             <h1 id="topic-title" className="cq-title">{topic.code} {topic.title}</h1>
           </div>
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-            <span className={`cq-badge ${topic.status}`}>{topic.status}</span>
-            {topic.activity?.reuse && <span className="cq-tag">{topic.activity.reuse}</span>}
+            {topic.status === "bloqueado" && <span className="cq-badge bloqueado">Contenido en preparación</span>}
+            
           </div>
         </div>
       </header>

@@ -858,34 +858,9 @@ function Layout({ children }) {
 
       <header className="site-header">
         <Link className="brand" to="/" aria-label="Química PreUNI · Academia Zenit, inicio">
-          <StudyImage
-            src={darkMode ? "/logo-dark.svg" : "/logo.svg"}
-            alt="Química PreUNI · Academia Zenit"
-          />
+          <span className="course-brand-mark" aria-hidden="true">⚛</span><span className="course-brand-copy"><strong>Química PreUNI</strong><small>ACADEMIA ZENIT</small></span>
         </Link>
         <div className="header-actions">
-          {/* Downloadable Laminas Button (Smooth Scroll to Bottom Section) */}
-          <button
-            type="button"
-            className="laminas-nav-btn"
-            onClick={() => {
-              const el = document.getElementById("laminas-descarga");
-              if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
-                el.classList.add("laminas-pulse-glow");
-                setTimeout(() => el.classList.remove("laminas-pulse-glow"), 2200);
-              } else {
-                setSelectedLaminaId("completa");
-                setShowLaminasModal(true);
-              }
-            }}
-            aria-label="Ir a descargar Láminas de Estudio Gratis"
-            title="Ir a la sección de láminas didácticas para descargar en PDF e Imagen HD"
-          >
-            <span className="nav-gift-emoji">📥</span>
-            <span className="nav-gift-text">Láminas Gratis ↓</span>
-            <span className="nav-gift-short-text">Láminas</span>
-          </button>
           <Link
             to="/curso/quimica"
             className="course-nav-btn"
@@ -897,17 +872,7 @@ function Layout({ children }) {
             <span className="guide-btn-text">Curso PreUNI</span>
             <span className="guide-btn-short-text">Curso</span>
           </Link>
-          <button
-            type="button"
-            className="guide-nav-btn"
-            onClick={() => window.dispatchEvent(new CustomEvent("open-study-guide"))}
-            aria-label="Abrir Guía de Estudio"
-            title="Guía de Estudio: ¿cómo estudiar la tabla periódica y aprovechar la app al 100%?"
-          >
-            <BookOpen size={14} />
-            <span className="guide-btn-text">¿Cómo Estudiar?</span>
-            <span className="guide-btn-short-text">Guía</span>
-          </button>
+          <a className="guide-nav-btn" href="https://tablaperiodica.sistemazenit.com/">Tabla periódica ↗</a>
           <span className="streak">
             <StudyImage
               src="/visuals/student-avatar.jpg"
@@ -940,15 +905,6 @@ function Layout({ children }) {
           </p>
         </div>
         <div className="contact-cta-actions">
-          <button
-            type="button"
-            className="contact-cta-qr-btn"
-            onClick={() => setShowLaminasModal(true)}
-            title="Ver código QR para escanear con tu celular"
-          >
-            <QrCode size={15} />
-            <span>Ver QR</span>
-          </button>
           <a
             href={communityUrl}
             target="_blank"
@@ -2327,7 +2283,7 @@ class GlobalErrorBoundary extends Component {
                 window.location.href = "/";
               }}
             >
-              Volver a la Tabla Periódica
+              Volver al inicio
             </button>
             <button
               type="button"

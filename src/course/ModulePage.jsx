@@ -22,13 +22,12 @@ export default function ModulePage() {
     );
   }
 
-  const readyCount = mod.topics.filter(t => t.status === "listo").length;
 
   return (
     <main className="cq-page" aria-labelledby="mod-title">
       <header className="cq-header">
         <div className="cq-breadcrumb">
-          <Link to="/">Tabla Periódica</Link>
+          <Link to="/">Inicio</Link>
           <ChevronRight size={14} aria-hidden="true" />
           <Link to="/curso/quimica">Curso de Química</Link>
           <ChevronRight size={14} aria-hidden="true" />
@@ -39,9 +38,6 @@ export default function ModulePage() {
             <span style={{ fontSize: "0.85rem", fontWeight: "700", color: "#8b4db0", textTransform: "uppercase" }}>Módulo {String(mod.number).padStart(2, "0")}</span>
             <h1 id="mod-title" className="cq-title">{mod.title}</h1>
           </div>
-          <span className={`cq-badge ${readyCount === mod.topics.length ? "listo" : "pendiente"}`}>
-            {readyCount} de {mod.topics.length} temas interactivos listos
-          </span>
         </div>
         <p style={{ color: "var(--muted, #6b7280)", fontSize: "1.05rem", marginTop: "0.5rem" }}>{mod.description}</p>
       </header>
@@ -80,8 +76,8 @@ export default function ModulePage() {
               <div style={{ flex: "1 1 300px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.25rem" }}>
                   <span style={{ fontWeight: "700", color: "#8b4db0" }}>{t.code}</span>
-                  <span className={`cq-badge ${t.status}`}>{t.status}</span>
-                  {t.activity?.reuse && <span className="cq-tag">{t.activity.reuse}</span>}
+                  {t.status === "bloqueado" && <span className="cq-badge bloqueado">Contenido en preparación</span>}
+                  
                 </div>
                 <h3 style={{ fontSize: "1.05rem", fontWeight: "600", margin: "0.25rem 0" }}>{t.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted, #6b7280)", margin: 0 }}>

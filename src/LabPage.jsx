@@ -218,7 +218,7 @@ export default function LabPage() {
     <main className="lab-page-redesigned">
       {/* Top Breadcrumb & Nav */}
       <div className="lab-page-topbar">
-        <Link className="back-button" to="/">
+        <Link className="back-button" to="/tabla">
           <ArrowLeft size={16} /> Volver a la Tabla Periódica
         </Link>
         <span className="lab-system-badge">

@@ -25,7 +25,7 @@ export default function ExamPage() {
     <main className="cq-page" aria-labelledby="exam-title">
       <header className="cq-header">
         <div className="cq-breadcrumb">
-          <Link to="/">Tabla Periódica</Link>
+          <Link to="/">Inicio</Link>
           <ChevronRight size={14} aria-hidden="true" />
           <Link to="/curso/quimica">Curso de Química</Link>
           <ChevronRight size={14} aria-hidden="true" />

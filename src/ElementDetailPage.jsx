@@ -218,7 +218,7 @@ export default function ElementDetailPage() {
             <strong>{elementId}</strong>".
           </p>
           <div className="not-found-actions">
-            <Link to="/" className="primary-action">
+            <Link to="/tabla" className="primary-action">
               <ArrowLeft size={16} /> Volver a la Tabla Periódica
             </Link>
           </div>
@@ -263,7 +263,7 @@ export default function ElementDetailPage() {
       <header className="detail-topbar" role="banner">
         <div className="topbar-left">
           <Link
-            to="/"
+            to="/tabla"
             className="topbar-back-btn"
             title="Volver a la Tabla Periódica general"
           >
@@ -1022,7 +1022,7 @@ export default function ElementDetailPage() {
         {/* Footer Navigation Bar */}
         <footer className="detail-footer">
           <div className="detail-footer-inner">
-            <Link to="/" className="secondary-action">
+            <Link to="/tabla" className="secondary-action">
               <ArrowLeft size={16} /> Volver al catálogo completo de la tabla
             </Link>
             <span className="footer-credits">

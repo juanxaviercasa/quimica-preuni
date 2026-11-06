@@ -13385,3 +13385,5 @@ button { cursor: pointer; } a { color: inherit; }
 
 /* Preserve the data color against the base card background overrides. */
 #tabla-periodica .periodic-grid.is-heatmap-active .element:not(.has-no-heatmap-data) { background: var(--element-heatmap-color) !important; }
+
+.course-brand-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:#6b2d8c;color:white;font-size:30px}.course-brand-copy{display:flex;flex-direction:column;margin-left:12px;color:#6b2d8c;line-height:1.1}.course-brand-copy strong{font:800 19px Archivo,sans-serif}.course-brand-copy small{font:600 9px IBM Plex Mono,monospace;letter-spacing:.12em;margin-top:5px}.guide-nav-btn{text-decoration:none}
