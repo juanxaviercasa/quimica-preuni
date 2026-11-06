@@ -114,3 +114,14 @@ export function PaidExam() {
     <Link className="cq-btn" to={mod.route}><ArrowLeft size={16}/> Volver al módulo</Link>
   </main>}</CourseRequest>;
 }
+
+export function PaymentResult() {
+  const { isLoaded, isSignedIn } = useAuth();
+  return <main className="cq-paywall">
+    <span className="cq-pay-kicker"><ShieldCheck size={17}/> CONFIRMACIÓN DE PAGO</span>
+    <h1>Gracias por elegir Química PreUNI</h1>
+    <p>Whop procesa tu pago y notifica la activación. El acceso se concederá cuando el servidor verifique una membresía vigente; el redireccionamiento por sí solo no habilita el curso.</p>
+    {!isLoaded ? <p>Comprobando tu sesión…</p> : !isSignedIn ? <SignInButton mode="modal"><button className="cq-pay-primary">Iniciar sesión</button></SignInButton> : <Link to="/curso/quimica" className="cq-pay-primary" style={{ padding: "14px 20px", borderRadius: 10 }}>Comprobar mi acceso <ArrowRight size={17}/></Link>}
+    <p className="cq-pay-hint">Si todavía no aparece tu membresía, vuelve a comprobarla. No es necesario pagar otra vez.</p>
+  </main>;
+}
