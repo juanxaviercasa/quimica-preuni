@@ -1014,3 +1014,23 @@
 [data-theme="dark"] .cq-catalog-facts span,[data-theme="dark"] .cq-catalog-facts strong{color:#dfd1ef}
 [data-theme="dark"] .cq-catalog-search{background:#30253b;border-color:#655375;color:#e7ddf6}[data-theme="dark"] .cq-catalog-search input{color:#fff}[data-theme="dark"] .cq-catalog-search input::placeholder{color:#b9aecb}
 [data-theme="dark"] .cq-catalog-bottom{background:#342845;color:#e9dffc}[data-theme="dark"] .cq-module-actions{border-color:#50415e}
+
+
+/* Continuidad visual para módulos, lecciones y exámenes */
+.cq-page:not(.cq-catalog){max-width:1080px;padding:clamp(18px,3vw,40px) clamp(16px,3vw,32px) 85px}
+.cq-page:not(.cq-catalog) .cq-header{padding:27px clamp(18px,3vw,34px);background:linear-gradient(130deg,#f6f2ff,#fdfcff);border:1px solid #e6def2;border-radius:19px;margin-bottom:24px}
+.cq-page:not(.cq-catalog) .cq-title{font-family:'Outfit',Arial,sans-serif;letter-spacing:-.045em;font-size:clamp(30px,3.6vw,43px);line-height:1.15;margin-top:9px}
+.cq-page:not(.cq-catalog) .cq-section{border-radius:17px;padding:clamp(19px,3vw,31px);box-shadow:0 5px 24px #30205208}
+.cq-page:not(.cq-catalog) .cq-section-title{font-family:'Outfit',Arial,sans-serif;font-size:clamp(20px,2vw,25px);letter-spacing:-.02em;padding-bottom:14px}
+.cq-page:not(.cq-catalog) .cq-btn{min-height:40px;border-radius:10px;justify-content:center}
+.cq-page:not(.cq-catalog) .cq-btn.primary{background:#6942c7;border-color:#6942c7;color:#fff}
+.cq-page:not(.cq-catalog) .cq-btn.primary:hover{background:#5432a6}
+.cq-page:not(.cq-catalog) .cq-objective-box{background:#f5f0ff;border-color:#754bd2;border-radius:0 12px 12px 0;line-height:1.7}
+.cq-page:not(.cq-catalog) .cq-nav{gap:14px}
+.cq-page:not(.cq-catalog) .cq-nav a{border-radius:12px}
+.cq-module-page .cq-section article:has(> div > .cq-btn){transition:border-color .2s,box-shadow .2s}
+.cq-module-page .cq-section article:has(> div > .cq-btn):hover{border-color:#b69ce9!important;box-shadow:0 8px 20px #38215c0c}
+.cq-page:not(.cq-catalog) :focus-visible{outline:3px solid #a58af0;outline-offset:3px}
+[data-theme="dark"] .cq-page:not(.cq-catalog) .cq-header{background:linear-gradient(130deg,#342544,#272035);border-color:#584568}
+[data-theme="dark"] .cq-page:not(.cq-catalog) .cq-objective-box{background:#352645;color:#f1e5fc}
+@media(max-width:600px){.cq-page:not(.cq-catalog) .cq-header{padding:22px 17px}.cq-page:not(.cq-catalog) .cq-section{margin-bottom:17px}.cq-page:not(.cq-catalog) .cq-btn{width:auto}.cq-page:not(.cq-catalog) .cq-nav{flex-wrap:wrap}}
