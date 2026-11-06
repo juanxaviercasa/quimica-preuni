@@ -49,7 +49,7 @@ export default async function handler(req, res) {
     let verified = data;
     if (kind === "payment.succeeded") {
       if (!data.id) return res.status(422).json({ error: "Pago sin identificador" });
-      verified = await whopClient().payments.retrieve(data.id);
+      verified = await whopClient().payments.retrieve({ id: data.id });
     }
     const clerkId = clerkIdFrom(verified) || clerkIdFrom(data);
     const membershipId = membershipIdFrom(verified) || membershipIdFrom(data) ||
