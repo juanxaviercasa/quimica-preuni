@@ -14,9 +14,10 @@ export default async function handler(req, res) {
       redirect_url: new URL("/pago/resultado", process.env.APP_URL).toString(),
       metadata: { userId: actor.id }
     });
-    if (!config?.id) throw new Error("Missing checkout session id");
+    if (!config?.id || !config.purchase_url || !/^https:\/\/([a-z0-9-]+\.)?whop\.com\//i.test(config.purchase_url)) throw new Error("Missing trusted checkout URL");
     return res.status(200).json({
       sessionId: config.id,
+      checkoutUrl: config.purchase_url,
       environment: process.env.WHOP_SANDBOX === "true" ? "sandbox" : "production"
     });
   } catch {
