@@ -1,3 +1,4 @@
+import Landing from "./Landing.jsx";
 import { StudyImage } from "./components/StudyImage.jsx";
 import { readStoredValue, writeStoredValue } from "./utils/safeStorage.js";
 import { Component, lazy, Suspense, useEffect, useMemo, useState } from "react";
@@ -2378,7 +2379,7 @@ function App() {
     switch (actionType) {
       case "study-mode":
         writeStoredValue("quimica-preuni-table-mode", "study");
-        navigate("/");
+        navigate("/tabla");
         setTimeout(() => {
           window.dispatchEvent(new CustomEvent("set-table-mode", { detail: "study" }));
         }, 50);
@@ -2393,13 +2394,13 @@ function App() {
         }, 100);
         break;
       case "tool-temperature":
-        navigate("/");
+        navigate("/tabla");
         setTimeout(() => {
           window.dispatchEvent(new CustomEvent("open-adv-tool", { detail: "temperature" }));
         }, 100);
         break;
       case "tool-comparator":
-        navigate("/");
+        navigate("/tabla");
         setTimeout(() => {
           window.dispatchEvent(new CustomEvent("open-comparator-modal"));
         }, 100);
@@ -2425,13 +2426,14 @@ function App() {
         }
       >
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/elemento/:elementId" element={<ElementDetailPage />} />
           <Route
             path="*"
             element={
               <Layout>
                 <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/tabla" element={<Home />} />
                   <Route path="/diagnostico" element={<DiagnosticPage />} />
                   <Route path="/laboratorio" element={<LabPage />} />
                   <Route path="/docentes" element={<TeacherPage />} />
