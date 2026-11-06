@@ -48,10 +48,12 @@ export function isValidMembership(membership) {
   if (!membership || !process.env.WHOP_PRODUCT_ID) return false;
   const productId = idOf(membership.product) || membership.product_id;
   if (productId !== process.env.WHOP_PRODUCT_ID) return false;
+  const planId = idOf(membership.plan) || membership.plan_id;
+  if (planId !== process.env.WHOP_PLAN_ID) return false;
   const status = String(membership.status || "").toLowerCase();
   if (!["active", "completed"].includes(status)) return false;
   if (!validDate(membership.current_period_end)) return false;
-  if (membership.banned === true || membership.cancelled === true || membership.canceled === true) return false;
+  if (membership.banned === true) return false;
   return true;
 }
 
@@ -59,7 +61,7 @@ export async function membershipFor(clerkUserId) {
   const user = await clerkClient().users.getUser(clerkUserId);
   const membershipId = user.privateMetadata?.whopCourse?.membershipId;
   if (typeof membershipId !== "string" || !/^mem_[a-zA-Z0-9]+$/.test(membershipId)) return null;
-  const membership = await whopClient().memberships.retrieve(membershipId);
+  const membership = await whopClient().memberships.retrieve({ id: membershipId });
   if (!isValidMembership(membership)) return null;
   return membership;
 }
