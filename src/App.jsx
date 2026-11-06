@@ -91,10 +91,10 @@ const DiagnosticPage = lazy(() => import("./DiagnosticPage.jsx"));
 const LabPage = lazy(() => import("./LabPage.jsx"));
 const TeacherPage = lazy(() => import("./TeacherPage.jsx"));
 const ElementDetailPage = lazy(() => import("./ElementDetailPage.jsx"));
-const CourseIndexPage = lazy(() => import("./course/CourseIndexPage.jsx"));
-const ModulePage = lazy(() => import("./course/ModulePage.jsx"));
-const TopicPage = lazy(() => import("./course/TopicPage.jsx"));
-const ExamPage = lazy(() => import("./course/ExamPage.jsx"));
+const PaidIndex = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidIndex })));
+const PaidModule = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidModule })));
+const PaidTopic = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidTopic })));
+const PaidExam = lazy(() => import("./course/PaidCourse.jsx").then(m => ({ default: m.PaidExam })));
 const loadAtomViewer = () => import("./components/AtomViewer3D.jsx");
 const AtomViewer3D = lazy(loadAtomViewer);
 
@@ -2394,10 +2394,10 @@ function App() {
                   <Route path="/laboratorio" element={<LabPage />} />
                   <Route path="/docentes" element={<TeacherPage />} />
                   <Route path="/quiz/:topicId" element={<QuizPage />} />
-                  <Route path="/curso/quimica" element={<CourseIndexPage />} />
-                  <Route path="/curso/quimica/:moduleSegment" element={<ModulePage />} />
-                  <Route path="/curso/quimica/:moduleSegment/evaluacion" element={<ExamPage />} />
-                  <Route path="/curso/quimica/:moduleSegment/:topicSegment" element={<TopicPage />} />
+                  <Route path="/curso/quimica" element={<PaidIndex />} />
+                  <Route path="/curso/quimica/:moduleSegment" element={<PaidModule />} />
+                  <Route path="/curso/quimica/:moduleSegment/evaluacion" element={<PaidExam />} />
+                  <Route path="/curso/quimica/:moduleSegment/:topicSegment" element={<PaidTopic />} />
                   <Route
                     path="*"
                     element={
