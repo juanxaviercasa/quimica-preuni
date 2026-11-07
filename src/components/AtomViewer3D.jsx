@@ -362,7 +362,7 @@ function AtomScene({
 }
 
 // Main Interactive AtomViewer3D Component
-export default function AtomViewer3D({ element }) {
+export default function AtomViewer3D({ element, compact = false }) {
   const [isPaused, setIsPaused] = useState(false);
   const [showLabels, setShowLabels] = useState(true);
   const [modelMode, setModelMode] = useState("bohr"); // 'bohr' | 'cloud'
@@ -389,27 +389,28 @@ export default function AtomViewer3D({ element }) {
 
   const cameraConfig = useMemo(() => {
     const maxR = 2.6 + (shells.length - 1) * 1.35;
-    const zDist = Math.max(16, maxR * 2.35);
+    const zDist = Math.max(compact ? 18 : 16, maxR * (compact ? 3 : 2.35));
     const yDist = Math.min(5, 2.5 + shells.length * 0.35);
     return {
       position: [0, yDist, zDist],
       fov: 42
     };
-  }, [shells]);
+  }, [shells, compact]);
 
   if (!element) return null;
 
   return (
-    <div className="atom-viewer-3d-wrapper">
+    <div className={compact ? "atom-viewer-3d-wrapper atom-viewer-3d-compact" : "atom-viewer-3d-wrapper"}>
       {/* 3D Interactive Canvas with cleanup on unmount */}
       <div className="atom-canvas-stage">
         <AtomErrorBoundary>
           <Canvas
             camera={cameraConfig}
+            dpr={[1, compact ? 1.5 : 2]}
             gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
             onCreated={({ gl }) => {
               // Proper pixel ratio clamping to preserve GPU memory on retina displays
-              gl.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+              gl.setPixelRatio(Math.min(window.devicePixelRatio, compact ? 1.5 : 2));
             }}
           >
             <AtomScene
