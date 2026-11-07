@@ -1,0 +1,55 @@
+/* Scoped pricing presentation: independent from the main landing shell. */
+.sz-landing .sz-launch-head{max-width:900px;margin:0 0 27px}
+.sz-landing .sz-launch-head h2{margin:10px 0 15px}
+.sz-landing .sz-launch-banner{max-width:1020px;margin:0 auto 24px;display:flex;align-items:center;gap:15px;padding:19px 23px;border-radius:16px;background:linear-gradient(105deg,#0D2A49,#102039);border:1px solid #B88B32;color:#F9E7C2;box-shadow:0 17px 35px #07172D1B}
+.sz-landing .sz-launch-banner svg{color:#F1BC58;flex:none}
+.sz-landing .sz-launch-banner>div{display:grid;gap:5px}
+.sz-landing .sz-launch-banner strong{font:750 15px/1.4 'Inter',sans-serif;color:#FFE0A0}
+.sz-landing .sz-launch-banner span{font:500 12px/1.6 'Inter',sans-serif;color:#E3EAF2}
+.sz-landing .sz-launch-banner.is-regular{background:#FFF6E5;color:#2A3548;border-color:#DFCC9F}
+.sz-landing .sz-launch-banner.is-regular strong{color:#5F451D}
+.sz-landing .sz-launch-banner.is-regular span{color:#647085}
+.sz-landing .sz-launch-plan{padding:32px;gap:0}
+.sz-landing .sz-launch-plan.is-featured{border-color:#C79737;box-shadow:0 16px 45px #B5791320}
+.sz-landing .sz-launch-card-top{display:flex;flex-direction:column;gap:7px;min-height:141px}
+.sz-landing .sz-launch-plan h3{margin:6px 0 0;font-size:34px}
+.sz-landing .sz-launch-plan .sz-plan-sub{min-height:0;margin:0;max-width:360px}
+.sz-landing .sz-launch-plan-mark{align-self:start;margin-top:7px;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:100px;background:#F6E2B5;color:#7E4A08;font-size:11px;font-weight:800}
+.sz-landing .sz-launch-pricing{padding:15px 0 8px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.sz-landing .sz-launch-was{display:flex;align-items:center;gap:13px;color:#677285;font-size:13px;font-weight:650;line-height:1.4}
+.sz-landing .sz-launch-was del{font:700 25px/1 'Inter',sans-serif;color:#6A6F79;text-decoration-color:#B44E33;text-decoration-thickness:2px}
+.sz-landing .sz-launch-price-main{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.sz-landing .sz-launch-price-main>strong{font:800 clamp(46px,5vw,62px)/1.05 'Inter',sans-serif;letter-spacing:-.065em;color:#0B1D3C}
+.sz-landing .sz-launch-price-main>span{color:#667387;font-size:14px;font-weight:650}
+.sz-landing .sz-launch-discount{display:inline-block;border-radius:9px;padding:8px 11px;background:#EAF7ED;color:#246447;font-size:12px;font-weight:800;line-height:1.45}
+.sz-landing .sz-launch-discount span{font-weight:650}
+.sz-landing .sz-launch-regular{color:#58667B;font-size:12px;font-weight:650}
+.sz-landing .sz-launch-comparison{font-size:12px;line-height:1.65;color:#556779;margin:4px 0 0;max-width:390px}
+.sz-landing .sz-launch-plan .sz-plan-divider{margin:18px 0}
+.sz-landing .sz-launch-plan ul{margin:0 0 25px;display:grid;gap:15px}
+.sz-landing .sz-launch-plan li{font-size:13px;line-height:1.55}
+.sz-landing .sz-launch-plan li svg{color:#B58125}
+.sz-landing .sz-launch-card-footnote{margin:11px 0 0;font-size:11px;line-height:1.6;color:#6A7485;text-align:center}
+.sz-landing .sz-launch-grandfather{max-width:1020px;margin:22px auto 0;padding:24px 27px;border:1px solid #DEC68B;border-radius:18px;display:flex;gap:16px;align-items:start;background:#FFF9E9}
+.sz-landing .sz-launch-shield{width:45px;height:45px;flex:none;display:grid;place-items:center;background:#F4E4B9;color:#885A12;border-radius:12px}
+.sz-landing .sz-launch-grandfather h3{font-size:23px;line-height:1.22;margin:0 0 7px;color:#192B41}
+.sz-landing .sz-launch-grandfather p{font-size:13px;line-height:1.75;margin:0;color:#536176}
+.sz-landing .sz-pricing .sz-plan-notice{margin-top:18px}
+.sz-landing .sz-pricing .sz-plan-notice p{font-size:12px}
+@media(max-width:840px){
+  .sz-landing .sz-launch-card-top{min-height:0}
+  .sz-landing .sz-launch-plan{padding:26px}
+  .sz-landing .sz-launch-price-main>strong{font-size:48px}
+}
+@media(max-width:610px){
+  .sz-landing .sz-launch-banner{padding:17px;align-items:start}
+  .sz-landing .sz-launch-banner strong{font-size:13px}
+  .sz-landing .sz-launch-banner span{font-size:11px}
+  .sz-landing .sz-launch-plan{padding:23px 21px}
+  .sz-landing .sz-launch-card-top{min-height:0}
+  .sz-landing .sz-launch-price-main>strong{font-size:50px}
+  .sz-landing .sz-launch-grandfather{padding:19px;gap:10px}
+  .sz-landing .sz-launch-shield{width:36px;height:36px}
+  .sz-landing .sz-launch-grandfather h3{font-size:19px}
+  .sz-landing .sz-launch-grandfather p{font-size:12px}
+}
