@@ -60,13 +60,20 @@ test("server resolver uses distinct recurring Whop plan IDs before/after deadlin
   assert.throws(() => resolveWhopPlanId("monthly", { WHOP_MONTHLY_LAUNCH_PLAN_ID: "https://evil" }, before), /sin configurar/);
 });
 
-test("pricing UI provides transparent comparison, grandfathering and disabled checkout", () => {
+test("pricing UI shows a single currency symbol, full membership value and connected checkout intent", () => {
   const page = readFileSync(new URL("../src/components/LaunchPricing.jsx", import.meta.url), "utf8");
-  assert.match(page, /<del>/);
-  assert.match(page, /Inscripción próximamente/);
-  assert.match(page, /disabled/);
-  assert.match(page, /mientras sigas activo/);
+  assert.match(page, /crossed \? "del"/);
+  assert.match(page, /sz-launch-currency/);
+  assert.match(page, /<span className="sz-launch-digits">\{amount\}<\/span>/);
+  assert.doesNotMatch(page, /US\$\$\{/);
+  assert.doesNotMatch(page, /Inscripción próximamente/);
+  assert.match(page, /Elegir plan/);
+  assert.match(page, /Clases grupales en vivo todas las semanas/);
+  assert.match(page, /Prácticas y exámenes autocorregidos/);
+  assert.match(page, /Comunidad privada de estudiantes/);
+  assert.match(page, /\/api\/checkout/);
+  assert.match(page, /El cobro no se ha iniciado/);
   assert.match(page, /30 de noviembre de 2026/);
   assert.match(page, /1 de diciembre de 2026/);
-  assert.match(page, /No estamos procesando compras/);
+  assert.match(page, /tu tarifa en las renovaciones/i);
 });
