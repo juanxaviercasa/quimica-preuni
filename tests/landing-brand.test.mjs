@@ -12,13 +12,17 @@ test("brand assets use the Zenit phoenix and preserve sales-only navigation", ()
   const css = read("../src/landing.css");
   assert.match(landing, /Química Zenit/);
   assert.match(landing, /zenit-phoenix\.svg/);
-  assert.match(landing, /ruta-visual-zenit\.svg/);
+  assert.match(landing, /dolor-estudiante\.webp/);
+  assert.match(landing, /visualizacion-atomica\.webp/);
+  assert.match(landing, /sz-learning-photos/);
   assert.match(logo, /Fénix de Academia Zenit/);
+  assert.match(logo, /M1154 1298/); // eye restored
   assert.match(favicon, /#0B1D3C/);
   assert.match(css, /--sz-navy:#0B1D3C/);
   assert.doesNotMatch(landing, /to="\/curso\/quimica/);
   assert.doesNotMatch(landing, /to=\{module\.route\}/);
   assert.match(landing, /Inscripción próximamente/);
+  assert.match(css, /\.sz-module-photo img\{[^}]*object-fit:contain/);
 });
 
 test("gas model conserves PV = nRT while pressure responds inversely to volume", () => {
@@ -48,4 +52,17 @@ test("atom and gas demos expose interactive drag controls", () => {
   assert.match(gas, /onPointerMove/);
   assert.match(gas, /onKeyDown/);
   assert.match(landing, /<GasPistonDemo\s*\/>/);
+});
+
+test("gold isotope and ideal gas parameters are displayed in the sales page", () => {
+  const atom = read("../src/components/LandingAtomExperience.jsx");
+  const gas = read("../src/components/GasPistonDemo.jsx");
+  for (const field of ["Número atómico", "Número de masa", "Protones", "Neutrones", "Electrones"]) {
+    assert.ok(atom.includes(field));
+  }
+  assert.match(atom, /goldMassNumber - goldProtons/);
+  for (const field of ["Presión", "Volumen", "Moles", "Constante", "Temperatura"]) {
+    assert.ok(gas.includes(field));
+  }
+  assert.match(gas, /sz-gas-constants/);
 });
