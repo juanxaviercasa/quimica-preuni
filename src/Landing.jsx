@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight, ArrowUpRight, Atom, BookOpen, Check, CheckCircle2, ChevronDown,
   ClipboardCheck, Clock3, Download, FlaskConical, GraduationCap, Layers3,
-  LockKeyhole, Menu, Minus, PlayCircle, ShieldCheck, Sparkles, Target, X
+  Menu, Minus, PlayCircle, ShieldCheck, Sparkles, Target, X
 } from "lucide-react";
 import LandingAtomExperience from "./components/LandingAtomExperience.jsx";
 import GasPistonDemo from "./components/GasPistonDemo.jsx";
+import LaunchPricing from "./components/LaunchPricing.jsx";
 import { salesModules, salesModuleCount, salesTopicCount } from "./landingProgram.js";
 import "./landing.css";
 
@@ -41,7 +42,9 @@ const faqs = [
   { q: "¿Qué contiene el programa?", a: "El índice reúne 18 módulos y 179 temas organizados, con objetivos de aprendizaje, ejemplos, actividades interactivas y evaluaciones. La disponibilidad y revisión final de cada lección debe comprobarse en el temario." },
   { q: "¿Necesito tener una base sólida antes de empezar?", a: "No necesariamente. El recorrido comienza con materia, medición y estructura atómica antes de avanzar a cálculos, reacciones, equilibrio y química orgánica." },
   { q: "¿Puedo estudiar desde mi celular?", a: "La plataforma tiene un diseño adaptable a pantallas móviles y computadoras. Algunos modelos 3D necesitan un navegador moderno y un dispositivo compatible con WebGL." },
-  { q: "¿Cómo funcionarán los pagos mensual y anual?", a: "Se están preparando dos modalidades de suscripción con verificación de acceso. Los importes de esta página son referenciales hasta configurar y probar los planes en Whop; no se están cobrando desde esta landing." },
+  { q: "¿Hasta cuándo puedo acceder al precio de lanzamiento?", a: "La tarifa especial está prevista para altas realizadas como máximo el 30 de noviembre de 2026 a las 11:59 p. m. (hora de Perú). Desde el 1 de diciembre, las nuevas suscripciones usarán las tarifas regulares de US$29 mensuales o US$290 anuales. Las inscripciones online siguen pendientes de habilitación." },
+  { q: "¿Mantendré mi precio promocional cuando se renueve la suscripción?", a: "La oferta está diseñada para mantener US$19 al mes o US$190 al año en las renovaciones de la misma membresía, siempre que se haya contratado dentro del plazo y no se interrumpa. Si la cancelas, vence o debes volver a contratar, se aplicará el precio vigente." },
+  { q: "¿Cómo funcionarán los pagos mensual y anual?", a: "Ambas opciones serán suscripciones recurrentes; la mensual se renueva cada mes y la anual cada año. El pago con Whop y el acceso con Clerk aún no están habilitados en esta landing. Antes del lanzamiento comprobaremos en el checkout los importes y condiciones exactas." },
   { q: "¿Los recursos complementarios se pueden descargar?", a: "Sí. La ruta de estudio, la ficha de fórmulas y la guía de repaso tienen una versión imprimible. Puedes abrirlas y elegir «Imprimir o guardar en PDF» desde tu navegador." },
   { q: "¿El curso garantiza ingresar a la universidad?", a: "No. El curso ofrece herramientas para estudiar y practicar química. El resultado de un examen depende de la preparación integral y de múltiples factores, por lo que no se promete una admisión garantizada." },
   { q: "¿Qué sucede si aún no está habilitada la inscripción?", a: "Puedes revisar el contenido del programa y las muestras disponibles. La compra se habilitará cuando las cuentas de autenticación, las membresías y los cobros estén correctamente configurados y verificados." }
@@ -223,14 +226,7 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="sz-section sz-pricing" id="planes">
-          <SectionHead overline="ELIGE TU MODALIDAD" title={<>Una inversión en tu forma de <span>aprender y practicar química.</span></>} description="La integración de pagos está en preparación. Estos son los precios previstos para las dos modalidades de acceso, sujetos a confirmación antes de habilitar la inscripción."/>
-          <div className="sz-plan-grid">
-            <article className="sz-plan-card"><p className="sz-plan-kicker">MODALIDAD FLEXIBLE</p><h3>Mensual</h3><p className="sz-plan-sub">Para avanzar módulo por módulo con renovación mensual.</p><div className="sz-plan-price"><strong>US$19</strong><span>/ mes</span></div><div className="sz-plan-divider"/><ul><li><Check size={16}/> Acceso al programa durante la membresía</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Recursos de aprendizaje disponibles</li></ul><button type="button" className="sz-btn sz-btn-outline sz-plan-pending" disabled>Inscripción próximamente</button></article>
-            <article className="sz-plan-card is-featured"><span className="sz-plan-highlight">MEJOR VALOR ANUAL PREVISTO</span><p className="sz-plan-kicker">MODALIDAD CONTINUA</p><h3>Anual</h3><p className="sz-plan-sub">Para organizar tu preparación con una perspectiva de todo el año.</p><div className="sz-plan-price"><strong>US$190</strong><span>/ año</span></div><p className="sz-plan-savings">US$38 menos que 12 meses del precio mensual previsto.</p><div className="sz-plan-divider"/><ul><li><Check size={16}/> El mismo programa completo</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Un solo pago anual previsto</li></ul><button type="button" className="sz-btn sz-btn-primary sz-plan-pending" disabled>Inscripción próximamente</button></article>
-          </div>
-          <div className="sz-plan-notice" role="note"><LockKeyhole size={19}/><p><strong>Inscripción online aún no habilitada.</strong> No estamos procesando compras desde esta página. El registro con Clerk y el cobro con Whop se activarán solo después de configurar los planes y verificar el checkout, la renovación y el acceso.</p></div>
-        </section>
+        <LaunchPricing />
 
         <section className="sz-faq-wrap" id="preguntas">
           <div className="sz-section sz-faq">
