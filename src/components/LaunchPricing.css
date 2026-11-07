@@ -111,3 +111,24 @@
  .sz-landing .sz-membership-conclusion{align-items:flex-start;padding:16px}
  .sz-landing .sz-membership-conclusion p{font-size:12px}
 }
+
+
+/* Paquetes compactos: ninguna fila huérfana ni beneficios repetidos */
+.sz-landing .sz-membership-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1020px;margin:0 auto 24px}
+.sz-landing .sz-membership-benefit{min-height:110px;padding:20px 22px}
+.sz-landing .sz-membership-benefit h3{font-size:15px;margin-bottom:6px}
+.sz-landing .sz-membership-benefit p{font-size:12px;line-height:1.58}
+.sz-landing .sz-launch-card-top{min-height:132px}
+.sz-landing .sz-launch-plan{padding:28px 30px}
+.sz-landing .sz-launch-plan .sz-plan-divider{margin:16px 0}
+.sz-landing .sz-launch-plan ul{gap:12px;margin-bottom:24px}
+.sz-landing .sz-launch-plan .sz-launch-comparison{font-size:12px;line-height:1.55}
+.sz-landing .sz-launch-grandfather{padding:20px 23px}
+.sz-landing .sz-launch-grandfather h3{font-size:20px}
+.sz-landing .sz-launch-terms{font-size:11px;line-height:1.6;margin-top:16px}
+@media(max-width:610px){
+ .sz-landing .sz-membership-grid{grid-template-columns:1fr}
+ .sz-landing .sz-membership-benefit{min-height:0;padding:16px}
+ .sz-landing .sz-launch-plan{padding:23px 20px}
+ .sz-landing .sz-launch-card-top{min-height:0}
+}
