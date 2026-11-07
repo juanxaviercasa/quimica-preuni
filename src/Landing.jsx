@@ -62,7 +62,7 @@ export default function Landing() {
       <a className="sz-skip" href="#contenido">Saltar al contenido principal</a>
       <header className="sz-header">
         <Link className="sz-brand" to="/" aria-label="Academia Zenit, inicio" onClick={() => setMenuOpen(false)}>
-          <span className="sz-brand-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="35" height="52" /></span>
+          <span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="35" height="52" /></span>
           <span><strong>Química <em>Zenit</em></strong><small>CURSO PREUNIVERSITARIO</small></span>
         </Link>
         <button type="button" className="sz-menu" aria-label={menuOpen ? "Cerrar navegación" : "Abrir navegación"} aria-expanded={menuOpen} aria-controls="sz-nav" onClick={() => setMenuOpen(!menuOpen)}>
@@ -109,7 +109,7 @@ export default function Landing() {
             {[
               { image: "/brand/dolor-estudiante.webp", alt: "Fotografía de apuntes de química con fórmulas incompletas y preguntas pendientes de resolver", step: "01 · EL PROBLEMA", title: "Tantas fórmulas… y las mismas dudas." },
               { image: "/brand/visualizacion-atomica.webp", alt: "Representación fotorrealista de un modelo atómico luminoso en un laboratorio", step: "02 · EL CAMBIO", title: "Cuando lo visualizas, empiezas a entenderlo." },
-              { image: "/brand/practica-guiada.webp", alt: "Fotografía de una práctica guiada sobre gases ideales con cálculos y verificaciones", step: "03 · EL RESULTADO", title: "Resuelve con método y comprueba tus pasos." }
+              { image: "https://images.presentationgo.com/2025/04/latino-student-chemistry-lab.jpg", alt: "Fotografía de un estudiante practicando química con apuntes y materiales de laboratorio", step: "03 · EL RESULTADO", title: "Resuelve con método y comprueba tus pasos." }
             ].map(item => (
               <figure key={item.step} className="sz-learning-photo">
                 <img src={item.image} alt={item.alt} loading="lazy" width="720" height="540" />
@@ -212,7 +212,7 @@ export default function Landing() {
 
         <section className="sz-founder-wrap" id="academia">
           <div className="sz-section sz-founder">
-            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="86" height="138" /><strong>Química Zenit</strong><small>UNA EXPERIENCIA DE ACADEMIA ZENIT</small></div></div>
+            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="86" height="138" /><strong>Química Zenit</strong><small>UNA EXPERIENCIA DE ACADEMIA ZENIT</small></div></div>
             <div>
               <p className="sz-eyebrow">¿QUIÉN ESTÁ DETRÁS?</p>
               <h2>Academia Zenit: <span>enseñar química con recursos visuales.</span></h2>
@@ -248,7 +248,7 @@ export default function Landing() {
       </main>
 
       <footer className="sz-footer">
-        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="31" height="44"/></span><span><strong>Química <em>Zenit</em></strong><small>ACADEMIA ZENIT</small></span></Link>
+        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="31" height="44"/></span><span><strong>Química <em>Zenit</em></strong><small>ACADEMIA ZENIT</small></span></Link>
         <p>Química Zenit · Comprende, experimenta y practica.</p>
         <nav aria-label="Enlaces del pie"><a href="#metodo">Método</a><a href="#programa">Programa</a><a href="#planes">Planes</a><a href="#preguntas">Ayuda</a></nav>
       </footer>
