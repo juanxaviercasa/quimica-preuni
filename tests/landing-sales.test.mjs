@@ -32,7 +32,8 @@ test("sales page contains functional anchors and honest prelaunch payment messag
     assert.ok(landing.includes(anchor), "Missing " + anchor);
   }
   const pricing = readFileSync(new URL("../src/components/LaunchPricing.jsx", import.meta.url), "utf8");
-  assert.match(pricing, /No estamos procesando compras/);
+  assert.match(pricing, /El cobro no se ha iniciado/);
+  assert.match(pricing, /Elegir plan/);
   assert.match(landing, /<LaunchPricing \/>/);
   assert.match(pricing, /id="planes"/);
   assert.ok(landing.includes("/recursos/ruta-estudio.html"));
