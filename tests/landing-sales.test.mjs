@@ -28,10 +28,13 @@ test("hero is locked to Au and does not offer unnecessary element selectors", ()
 
 test("sales page contains functional anchors and honest prelaunch payment messaging", () => {
   const landing = readFileSync(new URL("../src/Landing.jsx", import.meta.url), "utf8");
-  for (const anchor of ["#metodo", "#programa", "#bonos", "#planes", "#preguntas"]) {
+  for (const anchor of ["#metodo", "#programa", "#bonos", "#preguntas"]) {
     assert.ok(landing.includes(anchor), "Missing " + anchor);
   }
-  assert.match(landing, /No estamos procesando compras/);
+  const pricing = readFileSync(new URL("../src/components/LaunchPricing.jsx", import.meta.url), "utf8");
+  assert.match(pricing, /No estamos procesando compras/);
+  assert.match(landing, /<LaunchPricing \/>/);
+  assert.match(pricing, /id="planes"/);
   assert.ok(landing.includes("/recursos/ruta-estudio.html"));
   assert.ok(landing.includes("/recursos/formulas-y-errores.html"));
   assert.ok(landing.includes("/recursos/repaso-preexamen.html"));
