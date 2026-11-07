@@ -6,6 +6,7 @@ import {
   LockKeyhole, Menu, Minus, PlayCircle, ShieldCheck, Sparkles, Target, X
 } from "lucide-react";
 import LandingAtomExperience from "./components/LandingAtomExperience.jsx";
+import GasPistonDemo from "./components/GasPistonDemo.jsx";
 import { salesModules, salesModuleCount, salesTopicCount } from "./landingProgram.js";
 import "./landing.css";
 
@@ -54,35 +55,6 @@ function SectionHead({ overline, title, description, light = false }) {
   </div>;
 }
 
-function GasDemo() {
-  const [temperature, setTemperature] = useState(330);
-  const pressure = (temperature / 300).toFixed(2);
-  const fill = ((temperature - 300) / 150) * 100;
-  return (
-    <div className="sz-demo-lab">
-      <div className="sz-demo-top"><span className="sz-demo-live"><span/> DEMOSTRACIÓN DE APRENDIZAJE</span><span>MÓDULO 05 · GASES</span></div>
-      <h3>¿Qué ocurre si calentamos un gas en un recipiente rígido?</h3>
-      <p>Con la misma cantidad de gas y volumen constante, modifica la temperatura y observa la presión calculada.</p>
-      <div className="sz-demo-stage">
-        <div className="sz-demo-vessel" aria-label="Representación esquemática de un recipiente cerrado">
-          {Array.from({ length: 12 }, (_, i) => <span key={i} className="sz-particle" style={{ left: (17 + (i * 23) % 66) + "%", top: (17 + (i * 37) % 65) + "%", opacity: .45 + fill / 250 }}/>)}
-          <div className="sz-demo-vessel-label">V constante</div>
-        </div>
-        <div className="sz-demo-metrics" aria-live="polite">
-          <div><span>Temperatura</span><strong>{temperature} <small>K</small></strong></div>
-          <div><span>Presión</span><strong>{pressure} <small>atm</small></strong></div>
-          <div className="sz-demo-meter"><span style={{ width: (40 + fill * .55) + "%" }}/></div>
-        </div>
-      </div>
-      <label className="sz-demo-slider-label" htmlFor="sz-temperature">Ajusta la temperatura</label>
-      <input id="sz-temperature" className="sz-demo-slider" type="range" min="300" max="450" step="10" value={temperature} onChange={event => setTemperature(Number(event.target.value))} />
-      <div className="sz-demo-scale"><span>300 K</span><span>450 K</span></div>
-      <p className="sz-demo-explanation"><CheckCircle2 size={17} aria-hidden="true"/> <span>Al mantenerse constante el volumen, la presión absoluta aumenta proporcionalmente a la temperatura absoluta (modelo de gas ideal).</span></p>
-      <p className="sz-demo-disclaimer">Muestra conceptual basada en los temas de gases del programa. No reemplaza la lección completa.</p>
-    </div>
-  );
-}
-
 export default function Landing() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -90,8 +62,8 @@ export default function Landing() {
       <a className="sz-skip" href="#contenido">Saltar al contenido principal</a>
       <header className="sz-header">
         <Link className="sz-brand" to="/" aria-label="Academia Zenit, inicio" onClick={() => setMenuOpen(false)}>
-          <span className="sz-brand-mark"><Atom size={25} strokeWidth={2.1}/></span>
-          <span><strong>ZENIT</strong><small>ACADEMIA</small></span>
+          <span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="35" height="52" /></span>
+          <span><strong>Química <em>Zenit</em></strong><small>CURSO PREUNIVERSITARIO</small></span>
         </Link>
         <button type="button" className="sz-menu" aria-label={menuOpen ? "Cerrar navegación" : "Abrir navegación"} aria-expanded={menuOpen} aria-controls="sz-nav" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={23}/> : <Menu size={23}/>}
@@ -108,17 +80,19 @@ export default function Landing() {
       <main id="contenido">
         <section className="sz-hero" aria-labelledby="sz-hero-title">
           <div className="sz-hero-content">
-            <p className="sz-hero-kicker"><span/> QUÍMICA PREUNIVERSITARIA · ACADEMIA ZENIT</p>
-            <h1 id="sz-hero-title">Deja de memorizar química <em>sin entenderla.</em></h1>
-            <p className="sz-hero-lead">Aprende a visualizar los conceptos, resolver ejercicios y prepararte para tu examen de admisión con una ruta guiada de química, ejemplos desarrollados y práctica interactiva.</p>
+            <p className="sz-hero-kicker"><span/> ACADEMIA ZENIT · QUÍMICA ZENIT</p>
+            <h1 id="sz-hero-title">La química que necesitas <em>entender, no solo memorizar.</em></h1>
+            <p className="sz-hero-lead">Prepárate para tu examen de admisión con Química Zenit: 18 módulos, explicaciones visuales, simuladores manipulables y ejercicios guiados para convertir los conceptos en respuestas.</p>
             <div className="sz-hero-actions">
-              <a className="sz-btn sz-btn-primary" href="#planes" data-cta="hero-plans">Conocer los planes <ArrowRight size={18}/></a>
+              <a className="sz-btn sz-btn-primary" href="#planes" data-cta="hero-plans">Ver los planes de acceso <ArrowRight size={18}/></a>
               <a className="sz-btn sz-btn-outline" href="#demostracion" data-cta="hero-demo"><PlayCircle size={18}/> Ver cómo se aprende</a>
             </div>
             <div className="sz-hero-reassurance"><span><CheckCircle2 size={17}/> Programa organizado</span><span><CheckCircle2 size={17}/> Visual y práctico</span><span><CheckCircle2 size={17}/> A tu ritmo</span></div>
           </div>
           <div className="sz-hero-visual">
+            <div className="sz-hero-visual-brand"><span>VISUALIZA LA QUÍMICA</span><strong>Au <span>· Oro</span></strong></div>
             <LandingAtomExperience />
+            <div className="sz-atom-hint">Arrastra con el mouse o el dedo para girar el átomo</div>
           </div>
         </section>
 
@@ -157,15 +131,15 @@ export default function Landing() {
           <div className="sz-demo-copy">
             <p className="sz-eyebrow">NO SOLO TE CONTAMOS CÓMO FUNCIONA</p>
             <h2>Haz una prueba. <span>Observa qué cambia.</span></h2>
-            <p>Los temas de química se vuelven más fáciles de relacionar cuando puedes modificar variables y revisar la explicación al instante.</p>
+            <p>No memorices la fórmula «pavo ratón» sin comprenderla. Mueve el pistón, cambia el volumen y observa en tiempo real cómo responde la presión según PV = nRT.</p>
             <ul className="sz-check-list">
-              <li><Check size={17}/> Observa el fenómeno antes de sustituir números.</li>
-              <li><Check size={17}/> Relaciona las magnitudes con la ley que estás estudiando.</li>
-              <li><Check size={17}/> Contrasta la respuesta con la explicación.</li>
+              <li><Check size={17}/> Arrastra el pistón hacia abajo para comprimir el gas.</li>
+              <li><Check size={17}/> Observa cómo la presión aumenta al disminuir el volumen.</li>
+              <li><Check size={17}/> Comprueba la ecuación PV = nRT con los valores del modelo.</li>
             </ul>
-            <Link to="/curso/quimica/05" className="sz-text-cta">Conocer el módulo de gases <ArrowUpRight size={17}/></Link>
+            <a href="#programa" className="sz-text-cta">Descubrir la ruta de aprendizaje <ArrowUpRight size={17}/></a>
           </div>
-          <GasDemo/>
+          <GasPistonDemo/>
         </section>
 
         <section className="sz-section sz-program" id="programa">
@@ -182,8 +156,8 @@ export default function Landing() {
                   <ChevronDown className="sz-stage-chevron" size={22}/>
                 </summary>
                 <div className="sz-module-grid">{modules.map(module => <article key={module.number} className="sz-module">
-                  <Link to={module.route} aria-label={"Explorar módulo " + module.number + ": " + module.title} className="sz-module-photo"><img src={module.imageUrl} alt="" loading="lazy" /></Link>
-                  <div><span>MÓDULO {String(module.number).padStart(2,"0")} · {module.topics} TEMAS</span><h3>{module.title}</h3><Link to={module.route}>Ver temas <ArrowRight size={15}/></Link></div>
+                  <div className="sz-module-photo"><img src={module.imageUrl} alt="" loading="lazy" /></div>
+                  <div><span>MÓDULO {String(module.number).padStart(2,"0")} · {module.topics} TEMAS</span><h3>{module.title}</h3><span className="sz-module-included"><CheckCircle2 size={14}/> Incluido en el programa</span></div>
                 </article>)}</div>
               </details>;
             })}
@@ -218,9 +192,9 @@ export default function Landing() {
           <div className="sz-evidence-grid">
             <article className="sz-evidence-hero">
               <img src={salesModules[1].imageUrl} alt="Portada real del módulo de estructura atómica y mecánica cuántica" loading="lazy" />
-              <div><span>MÓDULO REAL</span><h3>Estructura atómica y mecánica cuántica</h3><Link to="/curso/quimica/02">Explorar contenidos <ArrowUpRight size={17}/></Link></div>
+              <div><span>MÓDULO REAL</span><h3>Estructura atómica y mecánica cuántica</h3><a href="#programa">Ver módulos del programa <ArrowUpRight size={17}/></a></div>
             </article>
-            <article className="sz-evidence-simple"><span className="sz-evidence-symbol"><Atom size={36}/></span><h3>Explora la ficha atómica del oro</h3><p>Conoce la representación del átomo y la información de un elemento en la plataforma.</p><Link to="/elemento/au">Ver ejemplo real <ArrowUpRight size={17}/></Link></article>
+            <article className="sz-evidence-simple"><span className="sz-evidence-symbol"><Atom size={36}/></span><h3>Explora la ficha atómica del oro</h3><p>Conoce la representación del átomo y la información de un elemento en la plataforma.</p><a href="#demostracion">Explorar un simulador <ArrowUpRight size={17}/></a></article>
           </div>
         </section>
 
@@ -230,7 +204,7 @@ export default function Landing() {
             <div>
               <p className="sz-eyebrow">¿QUIÉN ESTÁ DETRÁS?</p>
               <h2>Academia Zenit: <span>enseñar química con recursos visuales.</span></h2>
-              <p>Química PreUNI reúne contenidos estructurados, modelos interactivos y práctica orientada a comprender los conceptos antes de aplicarlos. La propuesta está centrada en que el estudiante participe activamente, no solo consuma teoría.</p>
+              <p>Química Zenit reúne contenidos estructurados, modelos interactivos y práctica orientada a comprender los conceptos antes de aplicarlos. La propuesta está centrada en que el estudiante participe activamente, no solo consuma teoría.</p>
               <p>Conoce el proyecto y su comunidad desde el espacio oficial de Academia Zenit.</p>
               <a href="https://www.skool.com/academia-zenit-3587/about" className="sz-text-cta" target="_blank" rel="noopener noreferrer">Conocer Academia Zenit <ArrowUpRight size={17}/></a>
             </div>
@@ -240,8 +214,8 @@ export default function Landing() {
         <section className="sz-section sz-pricing" id="planes">
           <SectionHead overline="ELIGE TU MODALIDAD" title={<>Una inversión en tu forma de <span>aprender y practicar química.</span></>} description="La integración de pagos está en preparación. Estos son los precios previstos para las dos modalidades de acceso, sujetos a confirmación antes de habilitar la inscripción."/>
           <div className="sz-plan-grid">
-            <article className="sz-plan-card"><p className="sz-plan-kicker">MODALIDAD FLEXIBLE</p><h3>Mensual</h3><p className="sz-plan-sub">Para avanzar módulo por módulo con renovación mensual.</p><div className="sz-plan-price"><strong>US$19</strong><span>/ mes</span></div><div className="sz-plan-divider"/><ul><li><Check size={16}/> Acceso al programa durante la membresía</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Recursos de aprendizaje disponibles</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-outline" data-cta="monthly-access">Revisar el acceso <ArrowRight size={18}/></Link></article>
-            <article className="sz-plan-card is-featured"><span className="sz-plan-highlight">MEJOR VALOR ANUAL PREVISTO</span><p className="sz-plan-kicker">MODALIDAD CONTINUA</p><h3>Anual</h3><p className="sz-plan-sub">Para organizar tu preparación con una perspectiva de todo el año.</p><div className="sz-plan-price"><strong>US$190</strong><span>/ año</span></div><p className="sz-plan-savings">US$38 menos que 12 meses del precio mensual previsto.</p><div className="sz-plan-divider"/><ul><li><Check size={16}/> El mismo programa completo</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Un solo pago anual previsto</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-primary" data-cta="annual-access">Explorar el programa <ArrowRight size={18}/></Link></article>
+            <article className="sz-plan-card"><p className="sz-plan-kicker">MODALIDAD FLEXIBLE</p><h3>Mensual</h3><p className="sz-plan-sub">Para avanzar módulo por módulo con renovación mensual.</p><div className="sz-plan-price"><strong>US$19</strong><span>/ mes</span></div><div className="sz-plan-divider"/><ul><li><Check size={16}/> Acceso al programa durante la membresía</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Recursos de aprendizaje disponibles</li></ul><button type="button" className="sz-btn sz-btn-outline sz-plan-pending" disabled>Inscripción próximamente</button></article>
+            <article className="sz-plan-card is-featured"><span className="sz-plan-highlight">MEJOR VALOR ANUAL PREVISTO</span><p className="sz-plan-kicker">MODALIDAD CONTINUA</p><h3>Anual</h3><p className="sz-plan-sub">Para organizar tu preparación con una perspectiva de todo el año.</p><div className="sz-plan-price"><strong>US$190</strong><span>/ año</span></div><p className="sz-plan-savings">US$38 menos que 12 meses del precio mensual previsto.</p><div className="sz-plan-divider"/><ul><li><Check size={16}/> El mismo programa completo</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Un solo pago anual previsto</li></ul><button type="button" className="sz-btn sz-btn-primary sz-plan-pending" disabled>Inscripción próximamente</button></article>
           </div>
           <div className="sz-plan-notice" role="note"><LockKeyhole size={19}/><p><strong>Inscripción online aún no habilitada.</strong> No estamos procesando compras desde esta página. El registro con Clerk y el cobro con Whop se activarán solo después de configurar los planes y verificar el checkout, la renovación y el acceso.</p></div>
         </section>
@@ -254,7 +228,7 @@ export default function Landing() {
         </section>
 
         <section className="sz-final">
-          <p className="sz-eyebrow">ACADEMIA ZENIT · QUÍMICA PREUNI</p>
+          <p className="sz-eyebrow">ACADEMIA ZENIT · QUÍMICA ZENIT</p>
           <h2>La química deja de sentirse abstracta <span>cuando puedes comprenderla y practicarla.</span></h2>
           <p>Revisa los contenidos, experimenta con una muestra y descubre la ruta de estudio que estamos preparando para ti.</p>
           <div className="sz-final-actions"><a href="#planes" className="sz-btn sz-btn-light" data-cta="final-plans">Conocer los planes <ArrowRight size={18}/></a><a href="#programa" className="sz-btn sz-btn-ghost">Explorar los 18 módulos</a></div>
@@ -262,8 +236,8 @@ export default function Landing() {
       </main>
 
       <footer className="sz-footer">
-        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><Atom size={21}/></span><span><strong>ZENIT</strong><small>ACADEMIA</small></span></Link>
-        <p>Química PreUNI · Comprende, explora y practica.</p>
+        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="31" height="44"/></span><span><strong>Química <em>Zenit</em></strong><small>ACADEMIA ZENIT</small></span></Link>
+        <p>Química Zenit · Comprende, experimenta y practica.</p>
         <nav aria-label="Enlaces del pie"><a href="#metodo">Método</a><a href="#programa">Programa</a><a href="#planes">Planes</a><a href="#preguntas">Ayuda</a></nav>
       </footer>
       <a className="sz-mobile-cta" href="#planes">Ver planes de acceso <ArrowRight size={17}/></a>
