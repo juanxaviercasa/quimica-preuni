@@ -37,7 +37,7 @@ const bonuses = [
 ];
 
 const faqs = [
-  { q: "¿Para quién está pensado Química PreUNI?", a: "Para estudiantes que se preparan para exámenes de admisión y quieren fortalecer sus bases, comprender conceptos y practicar problemas de química. Puedes empezar por los fundamentos o revisar un módulo concreto." },
+  { q: "¿Para quién está pensado Química Zenit?", a: "Para estudiantes que se preparan para exámenes de admisión y quieren fortalecer sus bases, comprender conceptos y practicar problemas de química. Puedes empezar por los fundamentos o revisar un módulo concreto." },
   { q: "¿Qué contiene el programa?", a: "El índice reúne 18 módulos y 179 temas organizados, con objetivos de aprendizaje, ejemplos, actividades interactivas y evaluaciones. La disponibilidad y revisión final de cada lección debe comprobarse en el temario." },
   { q: "¿Necesito tener una base sólida antes de empezar?", a: "No necesariamente. El recorrido comienza con materia, medición y estructura atómica antes de avanzar a cálculos, reacciones, equilibrio y química orgánica." },
   { q: "¿Puedo estudiar desde mi celular?", a: "La plataforma tiene un diseño adaptable a pantallas móviles y computadoras. Algunos modelos 3D necesitan un navegador moderno y un dispositivo compatible con WebGL." },
@@ -105,6 +105,10 @@ export default function Landing() {
 
         <section className="sz-section sz-problem" id="problema">
           <SectionHead overline="EL PROBLEMA NO ES SOLO RECORDAR" title={<>¿Lees la teoría, memorizas fórmulas… <span>y te bloqueas ante un ejercicio?</span></>} description="Es difícil avanzar cuando cada tema parece una lista aislada de reglas. Una preparación más activa conecta lo que ves, lo que entiendes y lo que eres capaz de resolver."/>
+          <figure className="sz-learning-figure">
+            <img src="/brand/ruta-visual-zenit.svg" alt="Una hoja llena de dudas se transforma en visualización del átomo y práctica química guiada." loading="lazy"/>
+            <figcaption><span>1. Identifica qué te confunde</span><span>2. Visualiza para comprender</span><span>3. Practica y comprueba</span></figcaption>
+          </figure>
           <div className="sz-problem-grid">
             <article><span>01</span><h3>Demasiadas fórmulas, poca conexión</h3><p>Aprender de memoria sin relacionar conceptos hace más difícil transferirlos a problemas nuevos.</p></article>
             <article><span>02</span><h3>Conceptos que parecen abstractos</h3><p>Átomos, enlaces y reacciones se comprenden mejor cuando puedes explorar representaciones visuales.</p></article>
@@ -194,13 +198,13 @@ export default function Landing() {
               <img src={salesModules[1].imageUrl} alt="Portada real del módulo de estructura atómica y mecánica cuántica" loading="lazy" />
               <div><span>MÓDULO REAL</span><h3>Estructura atómica y mecánica cuántica</h3><a href="#programa">Ver módulos del programa <ArrowUpRight size={17}/></a></div>
             </article>
-            <article className="sz-evidence-simple"><span className="sz-evidence-symbol"><Atom size={36}/></span><h3>Explora la ficha atómica del oro</h3><p>Conoce la representación del átomo y la información de un elemento en la plataforma.</p><a href="#demostracion">Explorar un simulador <ArrowUpRight size={17}/></a></article>
+            <article className="sz-evidence-simple"><span className="sz-evidence-symbol"><Atom size={36}/></span><h3>El átomo de oro, en movimiento</h3><p>Observa en el inicio el átomo de oro, gira su modelo 3D y controla la animación con Play/Pausa.</p><a href="#demostracion">Explorar un simulador <ArrowUpRight size={17}/></a></article>
           </div>
         </section>
 
         <section className="sz-founder-wrap" id="academia">
           <div className="sz-section sz-founder">
-            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><Atom size={65}/><strong>ZENIT</strong><small>ACADEMIA</small></div></div>
+            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="86" height="138" /><strong>Química Zenit</strong><small>UNA EXPERIENCIA DE ACADEMIA ZENIT</small></div></div>
             <div>
               <p className="sz-eyebrow">¿QUIÉN ESTÁ DETRÁS?</p>
               <h2>Academia Zenit: <span>enseñar química con recursos visuales.</span></h2>
