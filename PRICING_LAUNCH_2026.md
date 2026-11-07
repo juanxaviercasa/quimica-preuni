@@ -15,7 +15,7 @@ Esta política se publica en la landing de `main` mediante `src/components/Launc
 - **Ahorro promocional respecto al plan regular:** US$10 por mes o US$100 por año. El anual equivale a US$15.83 al mes si se paga el año completo, y representa US$38 menos que 12 meses del plan mensual promocional.
 - **Después de la fecha:** las tarjetas ya **no muestran el descuento ni un precio tachado**. Nuevos compradores ven US$29 / US$290. Los clientes promocionales que continúen activos siguen vinculados a su plan original.
 
-**Importante:** el proyecto de landing en `main` NO está procesando compras todavía. Su UI muestra las condiciones previstas con botones deshabilitados. Esta implementación no activa cobros ni asigna automáticamente los planes de Whop. Hay que probar la integración antes de habilitar la inscripción; si no se lanza hasta después del plazo anunciado, se debe actualizar la promoción y sus condiciones en lugar de simular una oferta vencida.
+**Importante:** el proyecto de landing en `main` NO está procesando compras todavía. Su UI muestra las condiciones previstas y botones activos «Elegir plan mensual/anual» que envían la opción a `POST /api/checkout`. El frontend valida que el enlace de respuesta sea HTTPS y pertenezca a Whop; si no hay backend o el pago falla, se muestra un error claro sin cobrar. **Este endpoint todavía no está publicado en `main`**, por lo que los botones no pueden completar pagos hasta que se integre el backend y la autenticación. Esta implementación no activa cobros ni asigna automáticamente los planes de Whop. Hay que probar la integración antes de habilitar la inscripción; si no se lanza hasta después del plazo anunciado, se debe actualizar la promoción y sus condiciones en lugar de simular una oferta vencida.
 
 ## Estructura recomendada de Whop para proteger el precio de renovación
 
@@ -61,3 +61,26 @@ Referencias para la configuración de planes:
 - https://docs.whop.com/api-reference/plans/create-plan
 - https://docs.whop.com/api-reference/plans/update-plan
 - https://whop.com/blog/add-checkout-to-nextjs-app/
+
+
+## Oferta de membresía propuesta (última actualización)
+
+La página presenta una oferta de formación continua, no solo acceso a videos:
+
+- Clases grupales en vivo cada semana para reforzar temas y resolver preguntas.
+- 18 módulos y ruta de contenidos de química preuniversitaria.
+- Modelos 3D, simuladores interactivos y materiales complementarios.
+- Evaluaciones y prácticas con calificación automática, resultados y solucionarios que explican errores (comprobado en `src/course/QuestionSet.jsx`).
+- Comunidad privada de aprendizaje para mantener el ritmo y compartir dudas.
+- Acompañamiento con docentes y profesionales de química formados en el método Zenit.
+
+**Validar operativamente antes de cobrar:** confirmar quiénes serán los docentes/ingenieros químicos, el horario efectivo de al menos una sesión en vivo semanal, la plataforma elegida para la comunidad (Skool o WhatsApp), soporte, la política de sesiones perdidas y la disponibilidad de las funciones de membresía. No dar por realizado un servicio aún pendiente de organizar.
+
+La landing utiliza los textos comerciales «Elegir plan mensual» y «Elegir plan anual», conectados a `POST /api/checkout` y con aviso seguro si la infraestructura de pagos no responde. Los botones no confirman un cobro ni garantizan el acceso mientras Clerk/Whop no estén conectados.
+
+**Ruta mínima para habilitar pagos en horas:**
+1. Configurar los cuatro planes recurrentes en Whop con sus montos de renovación, y confirmar sus IDs en variables privadas de servidor.
+2. Configurar la aplicación de Clerk y permitir que la sesión llegue al checkout por token validado en el backend.
+3. Implementar o desplegar la ruta `POST /api/checkout` para leer exclusivamente `plan: "monthly"|"annual"` del cuerpo, validar sesión, elegir tarifa por fecha del servidor usando `resolveWhopPlanId`, y devolver `checkoutUrl` apuntando a whop.com.
+4. Verificar webhooks Whop, protección de lecciones, altas, cancelaciones y conservación del precio inicial.
+5. Probar mensual y anual Sandbox, incluida expiración de promoción e ingreso con cuenta distinta, antes de enviar tráfico.
