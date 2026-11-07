@@ -560,3 +560,19 @@
   .sz-piston-gas,.sz-piston-shaft,.sz-gas-bar span{transition:none}
   .sz-piston-particle{animation:none}
 }
+
+
+/* Infografía narrativa de los obstáculos que resuelve el método */
+.sz-learning-figure{margin:0 0 27px;padding:20px;border:1px solid #EAD7B4;border-radius:22px;background:linear-gradient(135deg,#FFF9F0,#FFF);box-shadow:0 15px 32px #5B39100B}
+.sz-learning-figure img{display:block;width:100%;height:auto;aspect-ratio:1020/295;object-fit:contain}
+.sz-learning-figure figcaption{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;text-align:center;margin-top:13px;color:#745323;font:700 13px/1.4 'Inter',sans-serif}
+.sz-learning-figure figcaption span:nth-child(2){color:#9A680A}
+.sz-founder-mark img{height:130px;width:84px;object-fit:contain;filter:drop-shadow(0 15px 18px #0007)}
+.sz-founder-mark strong{font-size:clamp(32px,4vw,46px);letter-spacing:-.03em;white-space:nowrap}
+.sz-founder-mark small{font-size:10px;text-align:center;line-height:1.6}
+@media(max-width:610px){
+  .sz-learning-figure{padding:11px;margin-bottom:18px;border-radius:15px}
+  .sz-learning-figure figcaption{gap:7px;font-size:9px}
+  .sz-founder-mark img{height:99px}
+  .sz-founder-mark strong{font-size:32px}
+}
