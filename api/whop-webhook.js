@@ -1,5 +1,5 @@
 import { unwrapWebhook } from "@whop/sdk/helpers";
-import { clerkClient, configured, isValidMembership, linkMembership, noStore, whopClient } from "./_lib/security.js";
+import { clerkClient, configured, linkMembership, noStore } from "./_lib/security.js";
 
 export const config = { api: { bodyParser: false } };
 
@@ -40,9 +40,10 @@ export default async function handler(req, res) {
       return res.status(200).json({ received: true });
     }
 
-    const verified = kind === "payment.succeeded" && data?.id
-      ? await whopClient().payments.retrieve({ id: data.id })
-      : data;
+    // The signed Whop payload is already authenticated above. Avoid payments.retrieve,
+    // which requires broad access to customer, dispute, and shipment data. Membership
+    // details are fetched and validated by linkMembership before any Clerk mapping.
+    const verified = data;
     const clerkId = clerkIdOf(verified) || clerkIdOf(data);
     const membershipId = membershipIdOf(verified) || membershipIdOf(data) ||
       (kind === "membership.activated" ? idOf(data) : null);

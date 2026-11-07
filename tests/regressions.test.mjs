@@ -153,6 +153,13 @@ test("blocked storage keeps quiz and diagnostic usable for the current session",
 });
 
 
+test("Whop webhook avoids broad payment reads and validates membership after signature verification", async () => {
+  const source = await readFile(new URL("../api/whop-webhook.js", import.meta.url), "utf8");
+  assert.match(source, /unwrapWebhook/);
+  assert.match(source, /linkMembership/);
+  assert.doesNotMatch(source, /\.payments\.retrieve\s*\(/);
+});
+
 test("the zinc question explains the mnemonic group without teaching variable valence", async () => {
   const bank = JSON.parse(await readFile(new URL("../banco-preguntas-quiz.json", import.meta.url), "utf8"));
   const question = bank["elementos-38"].preguntas.find(q => q.id === "e4");
