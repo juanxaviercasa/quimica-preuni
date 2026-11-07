@@ -13,7 +13,8 @@ function githubPagesFallback() {
     closeBundle() {
       const outputDir = resolve("dist");
       mkdirSync(outputDir, { recursive: true });
-      copyFileSync(resolve(outputDir, "index.html"), resolve(outputDir, "404.html"));
+      const indexFile = resolve(outputDir, "index.html");
+      if (existsSync(indexFile)) copyFileSync(indexFile, resolve(outputDir, "404.html"));
     }
   };
 }

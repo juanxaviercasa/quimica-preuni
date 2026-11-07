@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, CheckCircle, ExternalLink, HelpCircle, Lightbulb, ShieldCheck, Sparkles, Target } from "lucide-react";
-import { getEntry, getModule, neighbours } from "./registry.js";
+import { CourseAccessState, useCourseResource } from "./useCourseResource.jsx";
 import { segmentToNumber } from "./routes.js";
 import { ACTIVITY_COMPONENTS, FAMILY_LABELS } from "./activities.jsx";
 import { PracticeSet, ExamSet } from "./QuestionSet.jsx";
@@ -13,9 +13,12 @@ export default function TopicPage() {
   const modNum = segmentToNumber(moduleSegment);
   const topNum = segmentToNumber(topicSegment);
   const code = modNum !== null && topNum !== null ? `${modNum}.${topNum}` : null;
-  const topic = code ? getEntry(code) : null;
-  const mod = modNum ? getModule(modNum) : null;
-  const { prev, next } = topic ? neighbours(topic.code) : { prev: null, next: null };
+  const resource = useCourseResource(`kind=topic&module=${modNum ?? ""}&code=${encodeURIComponent(code ?? "")}`);
+  const topic = resource.data?.topic ?? null;
+  const mod = resource.data?.module ?? null;
+  const { prev, next } = resource.data?.neighbours ?? { prev: null, next: null };
+
+  if (!resource.data && resource.status !== 404) return <CourseAccessState state={resource} />;
 
   if (!topic || topic.kind === "intro") {
     return (

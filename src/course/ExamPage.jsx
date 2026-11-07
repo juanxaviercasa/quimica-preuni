@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, FileQuestion } from "lucide-react";
-import { getModule } from "./registry.js";
+import { CourseAccessState, useCourseResource } from "./useCourseResource.jsx";
 import { segmentToNumber, moduleRoute } from "./routes.js";
 import { ExamSet } from "./QuestionSet.jsx";
 import "./course.css";
@@ -8,7 +8,10 @@ import "./course.css";
 export default function ExamPage() {
   const { moduleSegment } = useParams();
   const modNum = segmentToNumber(moduleSegment);
-  const mod = modNum ? getModule(modNum) : null;
+  const resource = useCourseResource(`kind=exam&module=${modNum ?? ""}`);
+  const mod = resource.data?.module ?? null;
+
+  if (!resource.data && resource.status !== 404) return <CourseAccessState state={resource} />;
 
   if (!mod) {
     return (

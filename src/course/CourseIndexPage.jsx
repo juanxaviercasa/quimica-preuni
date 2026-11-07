@@ -1,13 +1,15 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Atom, BookOpen, ChevronRight, ClipboardCheck, FlaskConical, GraduationCap, Search, Sparkles } from "lucide-react";
-import { courseModules, courseStats } from "./registry.js";
+import { CourseAccessState, useCourseResource } from "./useCourseResource.jsx";
 import "./course.css";
 
 const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
 export default function CourseIndexPage() {
-  const stats = courseStats();
+  const resource = useCourseResource("kind=index");
+  const courseModules = resource.data?.modules ?? [];
+  const stats = resource.data?.stats ?? { modules: 0, topics: 0 };
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("todos");
   const modules = useMemo(() => courseModules.filter((m) => {
@@ -16,6 +18,7 @@ export default function CourseIndexPage() {
     return matchesSearch && matchesFilter;
   }), [search, filter]);
 
+  if (!resource.data) return <CourseAccessState state={resource} />;
   return (
     <main className="cq-page cq-catalog" aria-labelledby="course-index-title">
       <header className="cq-catalog-hero">
@@ -47,7 +50,7 @@ export default function CourseIndexPage() {
             {m.imageUrl ? <img src={m.imageUrl} alt="" loading="lazy"/> : <div className="cq-module-placeholder"><Atom size={46}/></div>}
             <span className="cq-module-number">MÓDULO {String(m.number).padStart(2,"0")}</span>
           </Link>
-          <div className="cq-module-body"><span className="cq-module-eyebrow"><BookOpen size={14}/> {m.topics.length} lecciones</span><h3><Link to={m.route}>{m.title}</Link></h3><p>{m.description}</p><div className="cq-module-actions"><Link to={m.route} className="cq-module-primary">Ver lecciones <ArrowRight size={17}/></Link>{m.exam.length>0 && <Link to={m.examRoute} className="cq-module-exam" aria-label={`Evaluación del módulo ${m.number}`}><ClipboardCheck size={17}/> Evaluación</Link>}</div></div>
+          <div className="cq-module-body"><span className="cq-module-eyebrow"><BookOpen size={14}/> {m.topics.length} lecciones</span><h3><Link to={m.route}>{m.title}</Link></h3><p>{m.description}</p><div className="cq-module-actions"><Link to={m.route} className="cq-module-primary">Ver lecciones <ArrowRight size={17}/></Link>{m.examCount>0 && <Link to={m.examRoute} className="cq-module-exam" aria-label={`Evaluación del módulo ${m.number}`}><ClipboardCheck size={17}/> Evaluación</Link>}</div></div>
         </article>)}</div> : <div className="cq-catalog-empty"><Search size={28}/><h3>No encontramos módulos con esa búsqueda</h3><p>Prueba con otro término o vuelve a mostrar todos los módulos.</p><button type="button" onClick={()=>{setSearch("");setFilter("todos")}}>Mostrar todos los módulos</button></div>}
       </section>
       <div className="cq-catalog-bottom"><div><strong>Aprender química es un proceso.</strong><p>Empieza por una lección, experimenta con las actividades y revisa tus respuestas antes de seguir avanzando.</p></div><Link to="/diagnostico">Hacer diagnóstico <ArrowRight size={18}/></Link></div>
