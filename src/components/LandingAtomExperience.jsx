@@ -3,6 +3,17 @@ import { elements118 } from "../elementsData.js";
 
 const AtomViewer3D = lazy(() => import("./AtomViewer3D.jsx"));
 const gold = elements118.find(element => element.symbol === "Au");
+const goldMassNumber = gold ? Math.round(Number(gold.atomic_mass)) : 197;
+const goldProtons = gold?.number ?? 79;
+const goldElectrons = gold?.shells?.reduce((sum, n) => sum + n, 0) ?? goldProtons;
+const goldNeutrons = goldMassNumber - goldProtons;
+const goldFacts = [
+  ["Número atómico", goldProtons],
+  ["Número de masa", goldMassNumber],
+  ["Protones", goldProtons],
+  ["Neutrones", goldNeutrons],
+  ["Electrones", goldElectrons]
+];
 
 function GoldFallback({ message }) {
   return (
@@ -64,6 +75,12 @@ export default function LandingAtomExperience() {
           <GoldFallback message={supported ? undefined : "Visualización 3D no disponible en este dispositivo"} />
         )}
       </div>
+      <dl className="sz-gold-facts" aria-label="Datos del isótopo oro-197">
+        {goldFacts.map(([label, value]) => (
+          <div key={label} className="sz-gold-fact"><dt>{label}</dt><dd>{value}</dd></div>
+        ))}
+      </dl>
+      <span className="sz-gold-isotope">Au-197 · isótopo estable · modelo visual didáctico</span>
     </div>
   );
 }
