@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useAuth, useClerk } from "@clerk/react";
 import {
   ArrowRight, CalendarDays, Check, Clock3,
   LockKeyhole, MonitorPlay, ShieldCheck, Sparkles,
@@ -71,8 +72,10 @@ function PriceCard({ plan, featured = false, onChoose, busy, anyBusy }) {
   </article>;
 }
 
-async function openCheckout(planKey) {
-  const token = await window.Clerk?.session?.getToken?.();
+async function openCheckout(planKey, getToken) {
+  const token = await getToken();
+  // If Clerk opened sign-in, wait until the user clicks a plan again.
+  if (!token) return;
   const response = await fetch("/api/checkout", {
     method: "POST",
     headers: {
@@ -80,13 +83,17 @@ async function openCheckout(planKey) {
       ...(token ? { Authorization: `Bearer ${token}` } : {})
     },
     body: JSON.stringify({ plan: planKey }),
-    credentials: "same-origin",
+    credentials: "omit",
     cache: "no-store"
   });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
     if (response.status === 401) throw new Error("Inicia sesión para continuar con tu inscripción.");
     throw new Error(data.error || "No pudimos abrir el pago en este momento. Inténtalo nuevamente.");
+  }
+  if (data.alreadyMember) {
+    window.location.assign("/curso/quimica");
+    return;
   }
   const candidate = data.checkoutUrl;
   let url;
@@ -96,7 +103,7 @@ async function openCheckout(planKey) {
   window.location.assign(url.toString());
 }
 
-export default function LaunchPricing() {
+function PricingContent({ getCheckoutToken }) {
   const [now, setNow] = useState(() => Date.now());
   const [busy, setBusy] = useState(null);
   const [error, setError] = useState("");
@@ -120,11 +127,9 @@ export default function LaunchPricing() {
     if (busy) return;
     setBusy(key);
     setError("");
-    try { await openCheckout(key); }
-    catch (err) {
-      setError(err instanceof Error ? err.message : "No se pudo iniciar la inscripción.");
-      setBusy(null);
-    }
+    try { await openCheckout(key, getCheckoutToken); }
+    catch (err) { setError(err instanceof Error ? err.message : "No se pudo iniciar la inscripción."); }
+    finally { setBusy(null); }
   }
 
   return <section className="sz-section sz-pricing" id="planes">
@@ -179,4 +184,28 @@ export default function LaunchPricing() {
       La membresía se renueva automáticamente según el plan elegido. Puedes cancelar futuras renovaciones; al contratar nuevamente se aplica el precio vigente. Consulta las condiciones de pago antes de confirmar.
     </p>
   </section>;
+}
+
+function ClerkPricing() {
+  const { isLoaded, isSignedIn, getToken } = useAuth();
+  const clerk = useClerk();
+  async function sessionToken() {
+    if (!isLoaded) throw new Error("Estamos preparando tu sesión. Intenta nuevamente.");
+    if (!isSignedIn) {
+      clerk.openSignIn({});
+      return null;
+    }
+    const token = await getToken();
+    if (!token) throw new Error("No pudimos validar tu sesión. Vuelve a iniciar sesión.");
+    return token;
+  }
+  return <PricingContent getCheckoutToken={sessionToken} />;
+}
+
+export default function LaunchPricing() {
+  // The public landing must remain visible before Clerk's public key is set.
+  if (import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) return <ClerkPricing />;
+  return <PricingContent getCheckoutToken={async () => {
+    throw new Error("No se pudo iniciar la sesión segura. Intenta más tarde.");
+  }} />;
 }

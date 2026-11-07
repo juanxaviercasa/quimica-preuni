@@ -92,6 +92,7 @@ const LabPage = lazy(() => import("./LabPage.jsx"));
 const TeacherPage = lazy(() => import("./TeacherPage.jsx"));
 const ElementDetailPage = lazy(() => import("./ElementDetailPage.jsx"));
 const CourseIndexPage = lazy(() => import("./course/CourseIndexPage.jsx"));
+const PaymentResult = lazy(() => import("./payments/PaymentResult.jsx"));
 const ModulePage = lazy(() => import("./course/ModulePage.jsx"));
 const TopicPage = lazy(() => import("./course/TopicPage.jsx"));
 const ExamPage = lazy(() => import("./course/ExamPage.jsx"));
@@ -2383,6 +2384,7 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/pago/resultado" element={<PaymentResult />} />
           <Route path="/elemento/:elementId" element={<ElementDetailPage />} />
           <Route
             path="*"
