@@ -1,17 +1,17 @@
 {
-  "name": "Curso de Química PreUNI | Academia Zenit",
+  "name": "Química Zenit | Academia Zenit",
   "short_name": "Química Zenit",
-  "description": "Curso completo de química preuniversitaria con 18 módulos interactivos, simuladores, tabla periódica oficial y exámenes de admisión.",
+  "description": "Curso de Química Zenit con 18 módulos, modelos 3D, simuladores de gases y práctica guiada para estudiantes preuniversitarios.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#191024",
-  "theme_color": "#6B2D8C",
+  "background_color": "#0B1D3C",
+  "theme_color": "#0B1D3C",
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
