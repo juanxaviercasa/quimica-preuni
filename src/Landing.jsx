@@ -47,7 +47,7 @@ export default function Landing() {
             </div>
             <div className="zl-hero-proof"><span><CheckCircle2 size={16}/> 18 módulos</span><span><CheckCircle2 size={16}/> Simuladores interactivos</span><span><CheckCircle2 size={16}/> Práctica guiada</span></div>
           </div>
-          <div className="zl-visual" aria-label="Vista ilustrativa de las herramientas de estudio de química">
+          <div className="zl-visual" aria-label="Laboratorio interactivo con visualizador atómico 3D">
             <LandingAtomExperience />
           </div>
         </section>
