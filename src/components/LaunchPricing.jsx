@@ -1,52 +1,24 @@
 import { useEffect, useState } from "react";
 import {
-  ArrowRight, CalendarDays, Check, Clock3, GraduationCap,
-  LockKeyhole, MessageCircle, MonitorPlay, ShieldCheck, Sparkles,
-  Target, Users, X, BookOpenCheck
+  ArrowRight, CalendarDays, Check, Clock3,
+  LockKeyhole, MonitorPlay, ShieldCheck, Sparkles,
+  Target, Users, X
 } from "lucide-react";
 import { pricingFor } from "../pricing/zenitOffer.js";
 import "./LaunchPricing.css";
 
 const memberBenefits = [
-  {
-    label: "Clases grupales en vivo todas las semanas",
-    detail: "Refuerza temas difíciles y lleva tus preguntas a cada sesión.",
-    icon: CalendarDays
-  },
-  {
-    label: "18 módulos con una ruta de aprendizaje",
-    detail: "Aprende desde los fundamentos hasta los temas más exigentes.",
-    icon: GraduationCap
-  },
-  {
-    label: "Laboratorios y simuladores interactivos",
-    detail: "Explora modelos, mueve variables y comprende lo que ocurre.",
-    icon: MonitorPlay
-  },
-  {
-    label: "Prácticas y exámenes autocorregidos",
-    detail: "Conoce tu calificación y revisa el solucionario de tus errores.",
-    icon: Target
-  },
-  {
-    label: "Comunidad privada de estudiantes",
-    detail: "Comparte dudas, mantén el ritmo y aprende acompañado.",
-    icon: MessageCircle
-  },
-  {
-    label: "Acompañamiento del equipo Zenit",
-    detail: "Clases y orientación de docentes e ingenieros químicos preparados con el método Zenit.",
-    icon: Users
-  }
+  { label: "Clases semanales en vivo", detail: "Resuelve dudas y refuerza los temas que más te cuestan.", icon: CalendarDays },
+  { label: "Herramientas que puedes explorar", detail: "Visualiza conceptos con simuladores, modelos y experimentos digitales.", icon: MonitorPlay },
+  { label: "Evaluaciones con solucionario", detail: "Comprueba tu avance y entiende por qué fallaste una respuesta.", icon: Target },
+  { label: "Comunidad y acompañamiento", detail: "Aprende junto a otros estudiantes y al equipo docente Zenit.", icon: Users }
 ];
 
 const planExtras = [
-  "Clases grupales en vivo cada semana",
-  "Simuladores, modelos 3D y recursos descargables",
-  "Prácticas y exámenes con calificación automática",
-  "Solucionario para comprender tus errores",
-  "Comunidad privada y acompañamiento académico",
-  "Acceso al recorrido de 18 módulos"
+  "18 módulos de química preuniversitaria",
+  "Clases grupales en vivo y comunidad privada",
+  "Simuladores y herramientas digitales interactivas",
+  "Prácticas y exámenes autocorregidos con solucionario"
 ];
 
 function UsdAmount({ amount, crossed = false }) {
@@ -113,8 +85,8 @@ async function openCheckout(planKey) {
   });
   const data = await response.json().catch(() => ({}));
   if (!response.ok) {
-    if (response.status === 401) throw new Error("Para inscribirte debes iniciar sesión. El acceso seguro con Clerk debe estar habilitado.");
-    throw new Error(data.error || "No se pudo abrir el pago. Verifica que el checkout esté habilitado.");
+    if (response.status === 401) throw new Error("Inicia sesión para continuar con tu inscripción.");
+    throw new Error(data.error || "No pudimos abrir el pago en este momento. Inténtalo nuevamente.");
   }
   const candidate = data.checkoutUrl;
   let url;
@@ -158,8 +130,8 @@ export default function LaunchPricing() {
   return <section className="sz-section sz-pricing" id="planes">
     <div className="sz-launch-head">
       <p className="sz-eyebrow">QUÍMICA ZENIT · MEMBRESÍA DE APRENDIZAJE</p>
-      <h2>No necesitas otro curso para acumular videos. <span>Necesitas un sistema para aprender, practicar y avanzar.</span></h2>
-      <p className="sz-section-desc">Lecciones visuales, clases en directo, ejercicios corregidos y una comunidad que te ayuda a mantener el ritmo. Todo en una sola membresía de química preuniversitaria.</p>
+      <h2>Todo el apoyo para estudiar química <span>sin quedarte solo con la teoría.</span></h2>
+      <p className="sz-section-desc">Una sola membresía, dos formas de acceder. Elige tu ritmo y aprovecha las clases en vivo, los simuladores y la práctica con retroalimentación.</p>
     </div>
 
     <div className="sz-membership-grid" aria-label="Beneficios de la membresía">
@@ -170,11 +142,6 @@ export default function LaunchPricing() {
           <div><h3>{benefit.label}</h3><p>{benefit.detail}</p></div>
         </article>;
       })}
-    </div>
-
-    <div className="sz-membership-conclusion">
-      <BookOpenCheck size={23} aria-hidden="true"/>
-      <p><strong>De la teoría a la solución.</strong> Estudia el concepto, experimenta con él, responde preguntas y descubre cómo corregir tus errores.</p>
     </div>
 
     {isLaunch ? <div className="sz-launch-banner">
@@ -196,20 +163,20 @@ export default function LaunchPricing() {
 
     {error && <div className="sz-launch-checkout-error" role="alert">
       <LockKeyhole size={18} aria-hidden="true"/>
-      <span>{error} El cobro no se ha iniciado.</span>
+      <span>{error} No se realizó ningún cargo.</span>
       <button type="button" aria-label="Cerrar aviso" onClick={() => setError("")}><X size={17}/></button>
     </div>}
 
-    <div className="sz-launch-grandfather">
+    {isLaunch && <div className="sz-launch-grandfather">
       <span className="sz-launch-shield"><ShieldCheck size={24} aria-hidden="true"/></span>
       <div>
         <h3>Tu precio de lanzamiento se queda contigo.</h3>
         <p>Si contratas el plan promocional antes del 1 de diciembre, mantendrás su tarifa en las renovaciones de <strong>esa misma membresía</strong> mientras permanezca activa y al día. Si cancelas o dejas vencer la membresía, una nueva alta tendrá el precio vigente.</p>
       </div>
-    </div>
+    </div>}
 
     <p className="sz-launch-terms">
-      Las clases en vivo y el espacio comunitario forman parte de la propuesta de membresía; el calendario, los docentes participantes y el canal de comunidad se comunicarán durante el proceso de incorporación. El acceso, los cobros y las renovaciones se confirmarán en el checkout seguro de Whop cuando esté configurado.
+      La membresía se renueva automáticamente según el plan elegido. Puedes cancelar futuras renovaciones; al contratar nuevamente se aplica el precio vigente. Consulta las condiciones de pago antes de confirmar.
     </p>
   </section>;
 }
