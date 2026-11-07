@@ -39,5 +39,5 @@ test("sales page contains only conversion-focused anchors and offers", () => {
   assert.match(landing, /Quiero los bonos con mi membresía/);
   assert.doesNotMatch(landing, /Abrir recurso imprimible|muestras descargables|Algunas lecciones|en desarrollo|testimonios inventados/);
   assert.doesNotMatch(landing, /className="sz-benefits-wrap"|className="sz-evidence"/);
-  assert.doesNotMatch(landing, /href="\\/recursos\\//);
+  assert.ok(!landing.includes('href="/recursos/'));
 });
