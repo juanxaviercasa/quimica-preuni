@@ -36,7 +36,7 @@ function Result({ topic, questions, answers, score, onRetry, reviewMode }) {
         >
           <div className="cta-mistake-badge">
             <Sparkles size={13} />
-            <span>Comunidad Oficial Academia Zenit</span>
+            <span>Academia Zenit · Comunidad de estudio</span>
           </div>
           <strong>Revisa las explicaciones y refuerza los conceptos que te costaron.</strong>
           <span>Unirme gratis a la comunidad en Skool para seguir aprendiendo →</span>
@@ -79,8 +79,8 @@ function Result({ topic, questions, answers, score, onRetry, reviewMode }) {
         <button className="secondary-action" onClick={onRetry}>
           {reviewMode ? "Repetir repaso" : "Reintentar"}
         </button>
-        <Link className="primary-action" to="/">
-          Volver a los temas
+        <Link className="primary-action" to="/tabla">
+          Volver a la tabla
         </Link>
       </div>
     </section>

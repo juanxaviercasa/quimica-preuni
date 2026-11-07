@@ -24,7 +24,7 @@ export default function ModulePage() {
 
 
   return (
-    <main className="cq-page" aria-labelledby="mod-title">
+    <main className="cq-page cq-module-page" aria-labelledby="mod-title">
       <header className="cq-header">
         <div className="cq-breadcrumb">
           <Link to="/">Inicio</Link>
@@ -51,7 +51,7 @@ export default function ModulePage() {
       {mod.intro?.summary && (
         <section className="cq-section" aria-labelledby="intro-heading">
           <h2 id="intro-heading" className="cq-section-title">
-            <Sparkles size={18} /> Presentación del Módulo
+            <Sparkles size={18} /> Qué aprenderás en este módulo
           </h2>
           {mod.intro.objective && (
             <div className="cq-objective-box">
@@ -68,7 +68,7 @@ export default function ModulePage() {
 
       <section className="cq-section" aria-labelledby="topics-heading">
         <h2 id="topics-heading" className="cq-section-title">
-          <BookOpen size={18} /> Lecciones y Actividades Prácticas
+          <BookOpen size={18} /> Lecciones y actividades
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           {mod.topics.map((t) => (
@@ -81,12 +81,12 @@ export default function ModulePage() {
                 </div>
                 <h3 style={{ fontSize: "1.05rem", fontWeight: "600", margin: "0.25rem 0" }}>{t.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted, #6b7280)", margin: 0 }}>
-                  {t.objective || t.sourceObjective || "Sin objetivo registrado"}
+                  {t.objective || t.sourceObjective || "Explora los conceptos y practica con las actividades de esta lección."}
                 </p>
               </div>
               <div>
                 <Link to={t.route} className="cq-btn small primary" style={{ textDecoration: "none" }}>
-                  Abrir actividad <ChevronRight size={14} />
+                  Estudiar tema <ChevronRight size={14} />
                 </Link>
               </div>
             </article>
@@ -99,21 +99,21 @@ export default function ModulePage() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
             <div>
               <h2 style={{ fontSize: "1.2rem", fontWeight: "700", color: "#8b4db0", margin: 0 }}>
-                Evaluación Acumulativa del Módulo {String(mod.number).padStart(2, "0")}
+                Pon a prueba lo aprendido · Módulo {String(mod.number).padStart(2, "0")}
               </h2>
               <p style={{ fontSize: "0.9rem", color: "var(--muted, #6b7280)", margin: "0.25rem 0 0 0" }}>
                 {mod.exam.length} preguntas de estilo admisión que integran todos los temas del módulo.
               </p>
             </div>
             <Link to={mod.examRoute} className="cq-btn primary" style={{ textDecoration: "none" }}>
-              <FileQuestion size={16} /> Rendir evaluación
+              <FileQuestion size={16} /> Empezar evaluación
             </Link>
           </div>
         </section>
       )}
 
       <div className="cq-nav">
-        <Link to="/curso/quimica"><ArrowLeft size={16} /> Índice general del curso</Link>
+        <Link to="/curso/quimica"><ArrowLeft size={16} /> Volver a todos los módulos</Link>
         {mod.topics.length > 0 && (
           <Link to={mod.topics[0].route}>Iniciar con tema {mod.topics[0].code} <ChevronRight size={16} /></Link>
         )}

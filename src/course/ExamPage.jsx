@@ -31,7 +31,7 @@ export default function ExamPage() {
           <ChevronRight size={14} aria-hidden="true" />
           <Link to={mod.route}>Módulo {String(mod.number).padStart(2, "0")}</Link>
           <ChevronRight size={14} aria-hidden="true" />
-          <span>Evaluación Acumulativa</span>
+          <span>Evaluación del módulo</span>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem", flexWrap: "wrap" }}>
@@ -39,12 +39,12 @@ export default function ExamPage() {
             <span style={{ fontSize: "0.85rem", fontWeight: "700", color: "#8b4db0", textTransform: "uppercase" }}>
               EVALUACIÓN ACUMULATIVA · MÓDULO {String(mod.number).padStart(2, "0")}
             </span>
-            <h1 id="exam-title" className="cq-title">Examen de Integración y Dominio</h1>
+            <h1 id="exam-title" className="cq-title">Comprueba lo que has aprendido</h1>
           </div>
           <span className="cq-tag">{mod.exam.length} preguntas de admisión</span>
         </div>
         <p style={{ color: "var(--muted, #6b7280)", fontSize: "1.05rem", marginTop: "0.5rem" }}>
-          Repaso acumulativo de «{mod.title}». Reutiliza preguntas de las lecciones para comprobar la retención. Las claves del material original siguen en revisión.
+          Repasa «{mod.title}» con preguntas integradoras. Al terminar, revisa tus respuestas y vuelve a estudiar los conceptos que necesites reforzar.
         </p>
       </header>
 
