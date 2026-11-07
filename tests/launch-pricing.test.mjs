@@ -68,12 +68,13 @@ test("pricing UI shows a single currency symbol, full membership value and conne
   assert.doesNotMatch(page, /US\$\$\{/);
   assert.doesNotMatch(page, /Inscripción próximamente/);
   assert.match(page, /Elegir plan/);
-  assert.match(page, /Clases grupales en vivo todas las semanas/);
+  assert.match(page, /Clases semanales en vivo/);
   assert.match(page, /Prácticas y exámenes autocorregidos/);
-  assert.match(page, /Comunidad privada de estudiantes/);
+  assert.match(page, /Comunidad y acompañamiento/);
   assert.match(page, /\/api\/checkout/);
-  assert.match(page, /El cobro no se ha iniciado/);
+  assert.match(page, /No se realizó ningún cargo/);
   assert.match(page, /30 de noviembre de 2026/);
   assert.match(page, /1 de diciembre de 2026/);
   assert.match(page, /mantendrás su tarifa en las renovaciones/i);
+  assert.doesNotMatch(page, /cuando esté configurado|calendario, los docentes participantes|propuesta de membresía/);
 });
