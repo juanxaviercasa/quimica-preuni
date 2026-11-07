@@ -4,7 +4,7 @@ import {
   LockKeyhole, MessageCircle, MonitorPlay, ShieldCheck, Sparkles,
   Target, Users, X, BookOpenCheck
 } from "lucide-react";
-import { LAUNCH_END_EXCLUSIVE_MS, pricingFor } from "../pricing/zenitOffer.js";
+import { pricingFor } from "../pricing/zenitOffer.js";
 import "./LaunchPricing.css";
 
 const memberBenefits = [
@@ -35,7 +35,7 @@ const memberBenefits = [
   },
   {
     label: "Acompañamiento del equipo Zenit",
-    detail: "Sesiones guiadas por docentes y profesionales de química formados en el método Zenit.",
+    detail: "Clases y orientación de docentes e ingenieros químicos preparados con el método Zenit.",
     icon: Users
   }
 ];
@@ -57,7 +57,7 @@ function UsdAmount({ amount, crossed = false }) {
   </Tag>;
 }
 
-function PriceCard({ plan, featured = false, onChoose, busy }) {
+function PriceCard({ plan, featured = false, onChoose, busy, anyBusy }) {
   return <article className={`sz-plan-card sz-launch-plan${featured ? " is-featured" : ""}`}>
     <div className="sz-launch-card-top">
       <span className="sz-plan-kicker">{featured ? "PARA PREPARARTE SIN INTERRUPCIONES" : "PARA ESTUDIAR CON FLEXIBILIDAD"}</span>
@@ -89,7 +89,7 @@ function PriceCard({ plan, featured = false, onChoose, busy }) {
       type="button"
       className={`sz-btn ${featured ? "sz-btn-primary" : "sz-btn-outline"} sz-plan-select`}
       onClick={() => onChoose(plan.key)}
-      disabled={busy}
+      disabled={anyBusy}
       aria-label={`Elegir plan ${plan.label.toLowerCase()} de ${plan.priceUsd} dólares por ${plan.billingUnit}`}
     >
       {busy ? "Conectando con el pago…" : `Elegir plan ${plan.label.toLowerCase()}`}
@@ -190,8 +190,8 @@ export default function LaunchPricing() {
     </div>}
 
     <div className="sz-plan-grid">
-      <PriceCard plan={monthly} onChoose={choosePlan} busy={busy !== null}/>
-      <PriceCard plan={annual} featured onChoose={choosePlan} busy={busy !== null}/>
+      <PriceCard plan={monthly} onChoose={choosePlan} busy={busy === "monthly"} anyBusy={busy !== null}/>
+      <PriceCard plan={annual} featured onChoose={choosePlan} busy={busy === "annual"} anyBusy={busy !== null}/>
     </div>
 
     {error && <div className="sz-launch-checkout-error" role="alert">
