@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Atom, BookOpen, CheckCircle2, ChevronRight, FlaskConical, GraduationCap, Menu, PlayCircle, Sparkles, Target, X } from "lucide-react";
 import { useState } from "react";
+import LandingAtomExperience from "./components/LandingAtomExperience.jsx";
 import "./landing.css";
 
 const resources = [
@@ -47,19 +48,7 @@ export default function Landing() {
             <div className="zl-hero-proof"><span><CheckCircle2 size={16}/> 18 módulos</span><span><CheckCircle2 size={16}/> Simuladores interactivos</span><span><CheckCircle2 size={16}/> Práctica guiada</span></div>
           </div>
           <div className="zl-visual" aria-label="Vista ilustrativa de las herramientas de estudio de química">
-            <div className="zl-visual-glow"/>
-            <div className="zl-visual-top"><span className="zl-live-dot"/> LABORATORIO DE APRENDIZAJE <span>PREUNI</span></div>
-            <div className="zl-atom-scene" aria-hidden="true">
-              <div className="zl-orbit zl-orbit-a"/><div className="zl-orbit zl-orbit-b"/><div className="zl-orbit zl-orbit-c"/>
-              <div className="zl-nucleus">O<span>8</span></div>
-              <i className="zl-electron zl-electron-a"/><i className="zl-electron zl-electron-b"/><i className="zl-electron zl-electron-c"/>
-            </div>
-            <div className="zl-visual-bottom">
-              <div><span className="zl-visual-kicker">EXPLORA LOS ELEMENTOS</span><strong>La teoría cobra vida.</strong><small>Del átomo a las reacciones químicas.</small></div>
-              <Link to="/tabla" className="zl-visual-link" aria-label="Ir a la tabla periódica"><ArrowUpRight size={22}/></Link>
-            </div>
-            <div className="zl-floating zl-floating-left"><FlaskConical size={18}/> Aprende experimentando</div>
-            <div className="zl-floating zl-floating-right"><Sparkles size={18}/> Comprende a tu ritmo</div>
+            <LandingAtomExperience />
           </div>
         </section>
 
