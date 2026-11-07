@@ -336,3 +336,227 @@
 @media(prefers-reduced-motion:reduce){
   .sz-landing *, .sz-landing *::before, .sz-landing *::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   QUÍMICA ZENIT · Identidad comercial 2026
+   Fénix original de Academia Zenit · Marino / oro / ámbar / rojo-naranja
+   ───────────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,0,0;9..144,600,0,0;9..144,700,0,0;9..144,800,0,0&family=Inter:wght@400;500;600;700;800&display=swap');
+
+.sz-landing{
+  --sz-navy:#0B1D3C;--sz-carbon:#1F2633;--sz-gold:#D4AF37;--sz-amber:#F59E0B;
+  --sz-flame:#E43D0B;--sz-cream:#FFF8ED;--sz-ink:#12243C;--sz-muted:#606D80;
+  --sz-violet:#936318;--sz-violet-deep:#6C4610;--sz-violet-light:#FFF4D9;--sz-border:#E7DCC9;
+  background:#FFFCF7;color:var(--sz-ink);font-family:'Inter','DM Sans',Arial,sans-serif
+}
+.sz-landing h1,.sz-landing h2,.sz-landing h3,.sz-landing h4{font-family:'Fraunces',Georgia,serif;letter-spacing:-.032em}
+.sz-landing h2{line-height:1.17}
+.sz-landing h2 span{color:#A96B11}
+.sz-landing .sz-eyebrow{color:#9A650C}
+.sz-landing :focus-visible{outline-color:#E2A72A}
+.sz-header{max-width:none;position:sticky;top:0;z-index:30;background:#0A1A34;color:#fff;border-bottom:1px solid #E7B84B28;box-shadow:0 12px 32px #0B1D3C16;padding-inline:max(22px,calc((100vw - 1340px)/2))}
+.sz-brand{gap:12px}
+.sz-brand-mark{height:54px;width:43px;display:grid;place-items:center;flex:none;background:transparent;border-radius:0;box-shadow:none}
+.sz-brand-mark img{width:39px;height:53px;object-fit:contain;filter:drop-shadow(0 3px 5px #0003)}
+.sz-brand strong{font:700 24px/1.02 'Fraunces',Georgia,serif;letter-spacing:-.03em;color:#fff;white-space:nowrap}
+.sz-brand strong em{font-style:normal;color:#E9B64A}
+.sz-brand small{font:700 9px/1.4 'Inter',sans-serif;letter-spacing:.19em;color:#D5C7A6;margin-top:4px}
+.sz-nav{gap:28px}
+.sz-nav a{color:#D9E1EB;font-weight:700}
+.sz-nav a:hover,.sz-footer nav a:hover{color:#F6C55B}
+.sz-header-cta{background:linear-gradient(145deg,#FFD16A,#E5A62D);color:#18243A!important;border:1px solid #FFDE95;box-shadow:0 7px 20px #E5A62D25}
+.sz-header-cta:hover{background:linear-gradient(145deg,#FFE2A0,#F2B63B);box-shadow:0 9px 26px #E5A62D40}
+.sz-menu{color:#FFE0A3;background:#1F3250;border-color:#8D734F}
+
+.sz-btn-primary{background:linear-gradient(145deg,#FAD369 0%,#F2B73A 58%,#DB921B 100%);color:#14233C!important;border:1px solid #FFDC88;box-shadow:0 10px 24px #5F3E0A30;font-weight:800}
+.sz-btn-primary:hover{background:linear-gradient(145deg,#FFE5A3,#F8C65A);box-shadow:0 12px 28px #AE770B44}
+.sz-btn-outline{border-color:#D8B978;background:#FFFCF7;color:#192B43!important}
+.sz-btn-outline:hover{border-color:#BB851D;box-shadow:0 11px 22px #9E761A1B}
+.sz-btn-light{background:linear-gradient(145deg,#FFE1A0,#E8B540);color:#172943!important}
+.sz-btn-ghost{border-color:#E4B8608A}
+.sz-text-cta,.sz-inline-link{color:#946014!important}
+.sz-inline-link.is-light{color:#FFD27D!important}
+
+.sz-hero{max-width:none;background:
+  radial-gradient(ellipse at 82% 35%,#153F61 0%,transparent 42%),
+  radial-gradient(ellipse at 8% 15%,#1E2B51 0%,transparent 47%),
+  linear-gradient(135deg,#09172C,#0B1D3C 65%,#182439);
+  color:#FFF;min-height:640px;padding:76px max(22px,calc((100vw - 1340px)/2)) 85px;position:relative;isolation:isolate}
+.sz-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#F5BA42,#E63F14,#E8B143,transparent)}
+.sz-hero::after{content:'';position:absolute;right:5%;top:8%;width:230px;height:230px;border:1px solid #A7915730;border-radius:50%;pointer-events:none;z-index:-1;box-shadow:0 0 0 55px #B9942308,0 0 0 110px #B9942306}
+.sz-hero-content{max-width:670px;z-index:1}
+.sz-hero-kicker{color:#FBD480;background:#F0B74A19;border:1px solid #F6BC6740}
+.sz-hero-kicker span{background:#F7BB48;box-shadow:0 0 0 4px #F1B54818}
+.sz-hero h1{color:#fff;font-size:clamp(45px,5.05vw,75px);line-height:1.13;letter-spacing:-.042em;font-weight:700}
+.sz-hero h1 em{color:#F4C76B;font-style:normal}
+.sz-hero-lead{color:#C8D5E7;font-size:clamp(16px,1.45vw,19px)}
+.sz-hero-reassurance{color:#DDE6EF}
+.sz-hero-reassurance svg{color:#F3BD4D}
+.sz-hero-visual{height:530px;background:radial-gradient(circle at 53% 44%,#285176 0%,#0C2A44 45%,#061324 100%);border:1px solid #BE954B72;border-radius:27px;box-shadow:0 36px 70px #0006, inset 0 0 75px #EEAC3022;padding:24px;overflow:hidden}
+.sz-hero-visual:before{border:1px solid #FFCC5E3D}
+.sz-hero-visual:after{background:#A56E283F;filter:blur(80px)}
+.sz-hero-visual-brand{display:flex;align-items:center;justify-content:space-between;gap:10px;z-index:2;position:relative}
+.sz-hero-visual-brand>span{font:700 10px 'Inter',sans-serif;letter-spacing:.18em;color:#F9D393}
+.sz-hero-visual-brand strong{font:700 18px 'Fraunces',serif;color:#FBE1AA}
+.sz-hero-visual-brand strong span{font:600 11px 'Inter',sans-serif;color:#D6DDEA}
+.sz-gold-stage{min-height:0}
+.sz-gold-stage .atom-canvas-stage canvas{cursor:grab!important;touch-action:none}
+.sz-gold-stage .atom-canvas-stage canvas:active{cursor:grabbing!important}
+.sz-gold-stage .atom-presentation-toggle{background:#0A1D37D9;border-color:#D6A54177;color:#F8D58F;bottom:14px;right:12px}
+.sz-gold-stage .atom-presentation-toggle:hover{background:#1C3554}
+.sz-atom-hint{text-align:center;color:#D4E2F3;font-size:11px;margin-top:3px}
+.sz-gold-fallback-core{background:linear-gradient(155deg,#FFE39A,#D7A530);color:#1A2336}
+.sz-gold-fallback-orbit{border-color:#F9D37E70}
+.sz-value-strip{background:#FFF4DE;border-top:1px solid #E4D1AA;border-bottom:1px solid #E4D1AA}
+.sz-value-strip>div{border-right-color:#DBC393}
+.sz-value-strip strong{color:#916110}
+.sz-value-strip span{color:#514F51}
+.sz-problem{background:#FFFCF7}
+.sz-problem-grid article{background:linear-gradient(155deg,#FFF,#FFFBF3);border-color:#EBDCC4;box-shadow:0 14px 32px #7549110A}
+.sz-problem-grid article>span{color:#B16F11}
+.sz-problem-grid article:nth-child(1){border-top:3px solid #E43D0B}
+.sz-problem-grid article:nth-child(2){border-top:3px solid #F59E0B}
+.sz-problem-grid article:nth-child(3){border-top:3px solid #D4AF37}
+.sz-problem-grid h3{color:#1B2A40}
+.sz-problem-grid p{color:#647082}
+
+.sz-method-wrap{background:radial-gradient(ellipse at 85% 30%,#1D3658,#0B1D3C 75%)}
+.sz-method .sz-eyebrow{color:#FFC76A}
+.sz-method .sz-section-head h2 span{color:#FFE2A0}
+.sz-method-steps article{background:#FFFFFF0C;border-color:#D7A74258;box-shadow:inset 0 1px #FFFFFF0D}
+.sz-method-num,.sz-method-steps svg{color:#F4C66B}
+.sz-method-steps article:hover{background:#FFFFFF12}
+.sz-method-steps h3{color:#FFF6E5}
+.sz-method-steps p{color:#C6D3E0}
+
+.sz-demo-section{background:#FFFCF7}
+.sz-demo-copy h2{color:#0B1D3C}
+.sz-demo-copy h2 span{color:#B17917}
+.sz-check-list li svg{color:#C88A1C}
+.sz-demo-lab.sz-gas-lab{background:radial-gradient(circle at 42% 30%,#173B5F,#08182E 80%);border:1px solid #D4AF3766;box-shadow:0 28px 55px #0B1D3C36;color:white}
+.sz-gas-lab>h3{color:#FFE5AD}
+.sz-gas-lab .sz-demo-live span{background:#FFCA52;box-shadow:0 0 0 4px #FFD15A22}
+.sz-gas-lab .sz-demo-top{color:#E8D6A9}
+.sz-gas-lead{font-size:13px;line-height:1.66;color:#C7D7E7;margin:6px 0 17px}
+.sz-gas-law{background:#061326A3;border:1px solid #C7963C66;border-radius:16px;padding:14px 18px;text-align:center}
+.sz-gas-law-formula{font:700 clamp(25px,3.2vw,39px) 'Fraunces',Georgia,serif;letter-spacing:.05em;color:#F9CD69;line-height:1.2}
+.sz-gas-law-formula em{font-style:italic}
+.sz-gas-law small{font:500 10px 'Inter',sans-serif;line-height:1.5;color:#C6D6E4}
+.sz-piston-grid{display:grid;grid-template-columns:minmax(145px,.8fr) minmax(165px,1fr);gap:18px;align-items:center;margin-top:21px}
+.sz-piston-area{min-width:0;display:flex;align-items:center;flex-direction:column}
+.sz-piston-vessel{position:relative;width:min(190px,100%);height:252px;border:2px solid #DCE7EF9A;border-top:0;border-radius:9px 9px 17px 17px;background:linear-gradient(90deg,#D4EDFF15,#42698A0F 45%,#D4EDFF13);box-shadow:inset 8px 0 15px #73B3D114,inset -8px 0 16px #73B3D110,0 17px 25px #0006;isolation:isolate;touch-action:none}
+.sz-piston-vessel::before{content:'';position:absolute;top:-3px;left:-6px;right:-6px;height:6px;border-radius:40px;background:linear-gradient(90deg,#6E869E,#EBC06A,#9AAFC1,#C59443)}
+.sz-piston-gas{position:absolute;bottom:10%;left:3px;right:3px;background:linear-gradient(0deg,#D89E3019,#6EACD81A);border:1px solid #D5AD5240;border-radius:3px 3px 9px 9px;overflow:hidden;transition:height .09s linear;pointer-events:none}
+.sz-piston-particle{position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#FFE3AE,#F4A623 58%,#9F4D0A);box-shadow:0 0 12px #FFC16388;animation:sz-bounce ease-in-out infinite alternate}
+@keyframes sz-bounce{from{transform:translate(-3px,6px)}to{transform:translate(var(--gas-shift),-7px)}}
+.sz-piston-shaft{position:absolute;left:50%;top:-23px;width:11px;transform:translateX(-50%);background:linear-gradient(90deg,#6F8494,#FFF1CC 40%,#B9852D 65%,#415466);border-radius:8px 8px 2px 2px;z-index:2;pointer-events:none;transition:height .09s linear}
+.sz-piston-handle{position:absolute;left:5%;right:5%;height:25px;z-index:4;transform:translateY(-50%);border:2px solid #FFDC85;border-radius:8px;background:linear-gradient(180deg,#FAE7B4,#CAA15F 40%,#80643C 70%,#E4C37D);box-shadow:0 5px 15px #0007,0 0 0 4px #FFCA3F15;touch-action:none;cursor:ns-resize;user-select:none}
+.sz-piston-handle.is-dragging{box-shadow:0 0 0 5px #FFD15F40,0 6px 16px #0008}
+.sz-piston-handle-grip{display:block;position:absolute;inset:9px 28%;border-top:2px dashed #675036A6;pointer-events:none}
+.sz-piston-handle-hint{position:absolute;right:-27px;top:-12px;color:#FFD36A;display:flex;flex-direction:column;pointer-events:none}
+.sz-piston-base{position:absolute;bottom:-4px;left:-9px;right:-9px;height:13px;border-radius:5px;background:linear-gradient(180deg,#EBC26F,#7B6034);box-shadow:0 8px 16px #0008}
+.sz-piston-instruction{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:16px;text-align:center;font:600 10px 'Inter',sans-serif;color:#EDCF96;line-height:1.4}
+.sz-gas-dashboard{display:grid;gap:12px;align-content:center}
+.sz-gas-metric{border:1px solid #4C6382;border-radius:14px;background:#FFFFFF0B;padding:13px 15px}
+.sz-gas-metric>span{font-size:11px;color:#CED9E9;display:flex;justify-content:space-between;gap:5px}
+.sz-gas-metric>div:nth-child(2){display:flex;align-items:baseline;gap:6px;margin:8px 0}
+.sz-gas-metric>div:nth-child(2)>strong{font:700 31px 'Fraunces',Georgia,serif;letter-spacing:-.02em;color:#FFF2D7}
+.sz-gas-metric>div:nth-child(2)>small{font-size:11px;color:#B8C5D6}
+.sz-gas-bar{height:7px;border-radius:99px;background:#FFFFFF20;overflow:hidden}
+.sz-gas-bar>span{display:block;height:100%;border-radius:inherit;transition:width .1s linear}
+.sz-gas-pressure .sz-gas-bar>span{background:linear-gradient(90deg,#F0A01E,#FFDC82)}
+.sz-gas-volume .sz-gas-bar>span{background:linear-gradient(90deg,#2F8FB5,#75C4E5)}
+.sz-gas-fixed-values{display:grid;gap:6px;background:#091D33A1;border-radius:12px;padding:12px;font-size:11px;color:#B6C8DD}
+.sz-gas-fixed-values span{display:flex;justify-content:space-between;gap:8px}
+.sz-gas-fixed-values strong{color:#E8C67A}
+.sz-gas-reset{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;border:1px solid #B6915282;border-radius:9px;background:#FFF4DD12;color:#FFE3AD;cursor:pointer;font-size:11px;font-weight:700}
+.sz-gas-reset:hover{background:#FFF4DD26}
+.sz-gas-calculation{display:flex;flex-direction:column;gap:6px;background:#0613289E;border:1px solid #4E677F;border-radius:12px;padding:15px;text-align:center;margin-top:14px}
+.sz-gas-calculation>span{font-size:9px;letter-spacing:.12em;color:#E2C48A;font-weight:700}
+.sz-gas-calculation>strong{font-size:clamp(12px,1.35vw,16px);font-weight:800;line-height:1.5;color:white}
+.sz-gas-calculation>small{font-size:10px;color:#B7C8DA;line-height:1.5}
+.sz-gas-feedback{display:flex;gap:9px;align-items:start;color:#ECF7E4;border:1px solid #A6C88959;background:#86B25717;padding:12px;border-radius:12px;font-size:11px;line-height:1.6;margin:12px 0}
+.sz-gas-feedback svg{flex:none;color:#C6DA8A}
+.sz-gas-lab .sz-demo-disclaimer{font-size:10px;color:#C2C7D2}
+
+.sz-program{background:#FFFCF7}
+.sz-stage{border-color:#E6D6BE;box-shadow:0 8px 28px #3B270B09}
+.sz-stage summary:hover{background:#FFFBF2}
+.sz-stage-index,.sz-stage-summary small{color:#AB7419}
+.sz-stage-symbol{background:#FFF0D0;color:#B17218}
+.sz-stage-chevron{color:#B17218}
+.sz-module{background:#FFFBF5;border-color:#EBDDC9}
+.sz-module>div>span{color:#9C6D1D}
+.sz-module-included{display:inline-flex;align-items:center;gap:6px;color:#8B682A!important;font-weight:700!important;font-size:10px!important;letter-spacing:0!important;margin-top:5px}
+.sz-program-note{color:#6C6C72}
+.sz-benefits-wrap{background:#FFF5E6}
+.sz-benefit-grid article{border-color:#E9DBBF;background:#fffefb}
+.sz-benefit-icon{background:#FFF1CE;color:#A46A0B}
+.sz-bonus-card{border-color:#E7D8BE;background:#fffefc}
+.sz-bonus-top,.sz-bonus-tag,.sz-bonus-card a{color:#9A681A}
+.sz-bonus-top>span:last-child{background:#FFF0D1}
+.sz-bonus-card a{border-top-color:#E9DCC4}
+.sz-evidence-grid article{border-color:#E9DCC6}
+.sz-evidence-hero>div>span{color:#AE7418}
+.sz-evidence-grid a{color:#946014}
+.sz-evidence-symbol{background:#FFF0D1;color:#AC7115}
+.sz-founder-wrap{background:#FFF4E1}
+.sz-founder-illustration{background:radial-gradient(circle at 50%,#1C4263,#0A1B36 75%);border:1px solid #D2A74C4A}
+.sz-founder-glow{background:#BF7F2A35}
+.sz-founder-mark svg{color:#FFBE53}
+.sz-founder-mark strong{font-family:'Fraunces',Georgia,serif;color:#F7C361}
+.sz-founder-mark small{color:#E2C99C}
+.sz-plan-card{border-color:#E8D7BA}
+.sz-plan-card.is-featured{border-color:#D0A048;box-shadow:0 17px 43px #81560918}
+.sz-plan-highlight{background:linear-gradient(90deg,#0C2342,#30435D);color:#FFD779}
+.sz-plan-kicker{color:#9B6716}
+.sz-plan-savings{color:#376D55}
+.sz-plan-card li svg{color:#B98225}
+.sz-plan-notice{background:#FFF3DA;border-color:#E7CC99;color:#594A31}
+.sz-plan-notice svg{color:#B18127}
+.sz-plan-pending{cursor:not-allowed;opacity:.7;box-shadow:none}
+.sz-plan-pending:hover{transform:none;box-shadow:none}
+.sz-faq-wrap{background:#FFF5E6}
+.sz-faq-list details{border-color:#E6D9C3}
+.sz-faq-list summary svg{color:#A77724}
+.sz-final{background:radial-gradient(circle at 75% 10%,#264C6C,#0A1C37 65%);border-top:3px solid #D4AF37}
+.sz-final .sz-eyebrow{color:#F8C56D}
+.sz-final h2 span{color:#FFD277}
+.sz-footer{max-width:none;background:#07172D;color:#C6CDD5;border-top:1px solid #D4AF373A;padding-inline:max(22px,calc((100vw - 1340px)/2))}
+.sz-footer .sz-brand strong{color:#FFF}
+.sz-footer .sz-brand em{color:#F0C365}
+.sz-mobile-cta{background:linear-gradient(140deg,#FFE09A,#DBAA35);color:#10223E!important;border:1px solid #FFF0B6;box-shadow:0 10px 28px #10234266}
+
+@media(max-width:840px){
+  .sz-header{padding-inline:22px}
+  .sz-nav{background:#112746;border-color:#7B5D31}
+  .sz-nav a{color:#F3E7C9}
+  .sz-hero{padding-inline:23px}
+  .sz-footer{padding-inline:23px}
+}
+@media(max-width:610px){
+  .sz-brand strong{font-size:21px}
+  .sz-brand small{font-size:8px}
+  .sz-brand-mark{width:32px;height:46px}
+  .sz-brand-mark img{width:31px;height:45px}
+  .sz-hero{padding:50px 21px 74px}
+  .sz-hero h1{font-size:clamp(39px,9vw,58px);line-height:1.15}
+  .sz-hero-visual{height:435px;min-height:435px;padding:16px}
+  .sz-hero-visual-brand>span{font-size:9px}
+  .sz-atom-hint{font-size:10px}
+  .sz-piston-grid{grid-template-columns:minmax(118px,.87fr) minmax(125px,1fr);gap:11px}
+  .sz-piston-vessel{height:216px;width:140px}
+  .sz-piston-handle-hint{right:-20px}
+  .sz-gas-metric{padding:10px}
+  .sz-gas-metric>div:nth-child(2)>strong{font-size:23px}
+  .sz-gas-law-formula{font-size:28px}
+  .sz-demo-lab.sz-gas-lab{padding:20px 14px}
+  .sz-gas-calculation>strong{font-size:11px}
+  .sz-value-strip strong{font-size:28px}
+  .sz-footer{padding-bottom:92px}
+}
+@media(prefers-reduced-motion:reduce){
+  .sz-piston-gas,.sz-piston-shaft,.sz-gas-bar span{transition:none}
+  .sz-piston-particle{animation:none}
+}
