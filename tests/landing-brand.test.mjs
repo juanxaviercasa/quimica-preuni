@@ -13,7 +13,7 @@ test("brand assets use the Zenit phoenix and preserve sales-only navigation", ()
   assert.match(landing, /Química Zenit/);
   assert.match(landing, /zenit-phoenix\.svg/);
   assert.match(landing, /ruta-visual-zenit\.svg/);
-  assert.match(logo, /Ave fénix de Academia Zenit/);
+  assert.match(logo, /Fénix de Academia Zenit/);
   assert.match(favicon, /#0B1D3C/);
   assert.match(css, /--sz-navy:#0B1D3C/);
   assert.doesNotMatch(landing, /to="\/curso\/quimica/);
