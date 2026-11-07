@@ -75,5 +75,5 @@ test("pricing UI shows a single currency symbol, full membership value and conne
   assert.match(page, /El cobro no se ha iniciado/);
   assert.match(page, /30 de noviembre de 2026/);
   assert.match(page, /1 de diciembre de 2026/);
-  assert.match(page, /tu tarifa en las renovaciones/i);
+  assert.match(page, /mantendrás su tarifa en las renovaciones/i);
 });
