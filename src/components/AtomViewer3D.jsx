@@ -354,7 +354,10 @@ function AtomScene({
         ref={controlsRef}
         enablePan={false}
         enableZoom={!presentationOnly}
-        enableRotate={!presentationOnly}
+        enableRotate
+        enableDamping
+        dampingFactor={0.075}
+        rotateSpeed={0.72}
         minDistance={3.5}
         maxDistance={Math.max(38, maxRadius * 3.8)}
         autoRotate={!isPaused}
@@ -410,6 +413,7 @@ export default function AtomViewer3D({ element, compact = false, presentationOnl
         <AtomErrorBoundary>
           <Canvas
             camera={cameraConfig}
+            style={presentationOnly ? { touchAction: "none" } : undefined}
             dpr={[1, compact ? 1.5 : 2]}
             gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
             onCreated={({ gl }) => {
