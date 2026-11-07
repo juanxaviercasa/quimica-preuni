@@ -21,7 +21,8 @@ test("brand assets use the Zenit phoenix and preserve sales-only navigation", ()
   assert.match(css, /--sz-navy:#0B1D3C/);
   assert.doesNotMatch(landing, /to="\/curso\/quimica/);
   assert.doesNotMatch(landing, /to=\{module\.route\}/);
-  assert.match(landing, /Inscripción próximamente/);
+  const pricing = read("../src/components/LaunchPricing.jsx");
+  assert.match(pricing, /Inscripción próximamente/);
   assert.match(css, /\.sz-module-photo img\{[^}]*object-fit:contain/);
 });
 
