@@ -30,7 +30,7 @@
 .zl-atom-viewport{position:relative;flex:1;min-height:0;border-radius:16px;background:radial-gradient(circle at center,#28234f60,#0c1125a8);border:1px solid #ffffff1b;overflow:hidden}
 .zl-atom-viewport .atom-viewer-3d-compact{height:100%;width:100%;min-height:0;display:flex;flex-direction:column;gap:0}
 .zl-atom-viewport .atom-viewer-3d-compact .atom-canvas-stage{height:auto;min-height:0;flex:1;border:0;border-radius:0;background:transparent;box-shadow:none}
-.zl-atom-viewport .atom-viewer-3d-compact .atom-canvas-stage canvas{touch-action:pan-y;cursor:grab}
+.zl-atom-viewport .atom-viewer-3d-compact .atom-canvas-stage canvas{touch-action:none;cursor:grab}
 .zl-atom-viewport .atom-viewer-3d-compact .atom-viewer-toolbar{position:relative;z-index:2;flex:none;margin:0;padding:8px;gap:6px;background:#141529dc;border:0;border-top:1px solid #ffffff24;border-radius:0;box-shadow:none}
 .zl-atom-viewport .atom-viewer-3d-compact .toolbar-group{gap:4px;flex-wrap:wrap}
 .zl-atom-viewport .atom-viewer-3d-compact .toolbar-btn{padding:6px 8px;font-family:'DM Sans',sans-serif;font-size:10px;border-radius:7px;box-shadow:none}
