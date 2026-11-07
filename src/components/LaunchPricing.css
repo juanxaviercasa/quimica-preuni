@@ -53,3 +53,61 @@
   .sz-landing .sz-launch-grandfather h3{font-size:19px}
   .sz-landing .sz-launch-grandfather p{font-size:12px}
 }
+
+
+/* Precio y moneda en nodos independientes: evita duplicaciones de "US$". */
+.sz-landing .sz-launch-was del,
+.sz-landing .sz-launch-price-main .sz-launch-amount{font-family:'Inter',Arial,sans-serif;letter-spacing:-.045em}
+.sz-landing .sz-launch-was del{display:inline-flex;gap:2px;align-items:baseline;text-decoration:none;position:relative}
+.sz-landing .sz-launch-was del:after{content:"";position:absolute;left:-2px;right:-2px;top:52%;border-top:2px solid #BC5638;transform:rotate(-5deg);pointer-events:none}
+.sz-landing .sz-launch-was .sz-launch-currency{font-size:15px;font-weight:750}
+.sz-landing .sz-launch-was .sz-launch-digits{font-size:23px;font-weight:800;color:#677285}
+.sz-landing .sz-launch-price-main .sz-launch-amount{display:inline-flex;align-items:baseline;gap:2px;white-space:nowrap;color:#0B1D3C;line-height:1}
+.sz-landing .sz-launch-price-main .sz-launch-currency{font-size:clamp(18px,2vw,24px);font-weight:800;letter-spacing:-.05em}
+.sz-landing .sz-launch-price-main .sz-launch-digits{font-weight:850;font-size:clamp(50px,5vw,68px);letter-spacing:-.075em;font-variant-numeric:tabular-nums}
+.sz-landing .sz-launch-price-main .sz-launch-billing{font:650 14px/1.2 'Inter',sans-serif;letter-spacing:0;color:#63748A}
+.sz-landing .sz-launch-pricing{gap:9px;padding-top:22px}
+.sz-landing .sz-launch-discount{font-size:12px;background:#E7F4EB;color:#1C6946;padding:8px 12px}
+.sz-landing .sz-launch-comparison strong{font-weight:800;color:#38495E}
+.sz-landing .sz-launch-card-top{min-height:148px}
+.sz-landing .sz-launch-plan-mark{max-width:fit-content}
+.sz-landing .sz-plan-includes-title{font:800 12px/1.45 'Inter',sans-serif;color:#223449;letter-spacing:.015em;margin:0 0 15px}
+.sz-landing .sz-launch-plan ul{gap:13px;margin-bottom:26px}
+.sz-landing .sz-launch-plan li{align-items:flex-start;line-height:1.5}
+.sz-landing .sz-launch-plan li span{display:block}
+.sz-landing .sz-launch-plan li svg{margin-top:1px}
+.sz-landing .sz-launch-plan .sz-plan-select{cursor:pointer;opacity:1;box-shadow:0 10px 20px #0B1D3C10;border-color:#E4B74C;font-size:14px}
+.sz-landing .sz-launch-plan .sz-plan-select:hover{transform:translateY(-2px)}
+.sz-landing .sz-launch-plan .sz-plan-select:disabled{opacity:.65;cursor:wait}
+.sz-landing .sz-launch-plan .sz-plan-select:disabled:hover{transform:none}
+.sz-landing .sz-launch-plan .sz-launch-card-footnote{font-size:11px}
+.sz-landing .sz-launch-head{max-width:990px;margin-bottom:31px}
+.sz-landing .sz-launch-head h2{max-width:970px}
+.sz-landing .sz-membership-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:0 0 20px}
+.sz-landing .sz-membership-benefit{display:flex;gap:12px;align-items:flex-start;padding:23px 19px;background:#FFF;border:1px solid #E8D9C1;border-radius:17px;box-shadow:0 9px 22px #2D1E0E09;min-width:0}
+.sz-landing .sz-membership-icon{display:grid;place-items:center;flex:none;width:43px;height:43px;border-radius:12px;background:#FFF0D3;color:#99620D}
+.sz-landing .sz-membership-benefit h3{font:800 15px/1.3 'Inter',sans-serif;letter-spacing:-.015em;color:#172940;margin:0 0 8px}
+.sz-landing .sz-membership-benefit p{font:450 12px/1.7 'Inter',sans-serif;color:#617085;margin:0}
+.sz-landing .sz-membership-conclusion{display:flex;gap:13px;align-items:center;max-width:1020px;padding:18px 21px;border:1px solid #E2CD9F;border-radius:14px;background:#FFF6E3;margin:0 auto 28px;color:#35445B}
+.sz-landing .sz-membership-conclusion svg{flex:none;color:#A36D19}
+.sz-landing .sz-membership-conclusion p{font-size:13px;line-height:1.6;margin:0}
+.sz-landing .sz-membership-conclusion strong{color:#132B45}
+.sz-landing .sz-launch-terms{max-width:1020px;margin:20px auto 0;font-size:11px;line-height:1.75;color:#63718B}
+.sz-landing .sz-launch-checkout-error{display:flex;align-items:center;gap:11px;padding:15px 17px;margin:20px auto 0;max-width:1020px;border:1px solid #C78166;border-radius:13px;background:#FFF2EE;color:#793D2E;font-size:12px;line-height:1.6}
+.sz-landing .sz-launch-checkout-error svg{flex:none}
+.sz-landing .sz-launch-checkout-error span{flex:1}
+.sz-landing .sz-launch-checkout-error button{border:0;background:transparent;color:inherit;cursor:pointer;padding:6px}
+@media(max-width:1100px){
+ .sz-landing .sz-membership-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sz-landing .sz-membership-benefit{padding:19px}
+}
+@media(max-width:610px){
+ .sz-landing .sz-membership-grid{grid-template-columns:1fr;gap:10px}
+ .sz-landing .sz-membership-benefit{padding:17px}
+ .sz-landing .sz-membership-benefit h3{font-size:14px}
+ .sz-landing .sz-launch-price-main .sz-launch-digits{font-size:54px}
+ .sz-landing .sz-launch-price-main .sz-launch-currency{font-size:22px}
+ .sz-landing .sz-launch-card-top{min-height:0}
+ .sz-landing .sz-membership-conclusion{align-items:flex-start;padding:16px}
+ .sz-landing .sz-membership-conclusion p{font-size:12px}
+}
