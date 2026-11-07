@@ -74,7 +74,15 @@ export default function GasPistonDemo() {
       <p className="sz-gas-lead">Arrastra el pistón hacia abajo para reducir el volumen. Observa cómo sube la presión y cómo responde la ecuación.</p>
 
       <div className="sz-gas-law" aria-label="Ecuación general de gases ideales">
-        <div className="sz-gas-law-formula"><em>P</em> · <em>V</em> = <em>n</em> · <em>R</em> · <em>T</em></div>
+        <div className="sz-gas-law-formula">
+          {[
+            ["P", "Presión"], ["·", null], ["V", "Volumen"], ["=", null],
+            ["n", "Moles"], ["·", null], ["R", "Constante"], ["·", null], ["T", "Temperatura"]
+          ].map(([symbol, label], i) => label ?
+            <span className="sz-gas-law-term" key={i}><em>{symbol}</em><small>{label}</small></span> :
+            <span className="sz-gas-law-operator" key={i} aria-hidden="true">{symbol}</span>
+          )}
+        </div>
         <small>Presión × volumen = cantidad × constante × temperatura</small>
       </div>
 
@@ -130,20 +138,23 @@ export default function GasPistonDemo() {
             <div><strong>{volume.toFixed(1)}</strong><small>L</small></div>
             <div className="sz-gas-bar"><span style={{ width: `${Math.round(volume / GAS_DEMO.maxVolume * 100)}%` }}/></div>
           </div>
-          <div className="sz-gas-fixed-values">
-            <span>Temperatura: <strong>{GAS_DEMO.temperatureKelvin} K</strong></span>
-            <span>Cantidad: <strong>{GAS_DEMO.moles.toFixed(1)} mol</strong></span>
-          </div>
+          <p className="sz-gas-isothermal">En esta demostración, n y T se mantienen constantes.</p>
           <button className="sz-gas-reset" type="button" onClick={() => setVolume(GAS_DEMO.initialVolume)}>
             <RefreshCcw size={15}/> Reiniciar
           </button>
         </div>
       </div>
 
+      <div className="sz-gas-constants" aria-label="Valores de la cantidad de sustancia, la constante de los gases y la temperatura">
+        <div className="sz-gas-constant"><span><b>n</b> · Cantidad de gas</span><strong>{GAS_DEMO.moles.toFixed(2)}</strong><small>mol</small></div>
+        <div className="sz-gas-constant"><span><b>R</b> · Constante de los gases</span><strong>{GAS_DEMO.gasConstant.toFixed(5)}</strong><small>L·atm/(mol·K)</small></div>
+        <div className="sz-gas-constant"><span><b>T</b> · Temperatura</span><strong>{GAS_DEMO.temperatureKelvin}</strong><small>K</small></div>
+      </div>
+
       <div className="sz-gas-calculation" aria-live="off">
         <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
         <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
-        <small>nRT = {GAS_DEMO.moles.toFixed(1)} × {GAS_DEMO.gasConstant} × {GAS_DEMO.temperatureKelvin} ≈ {gasWork.toFixed(2)} L·atm</small>
+        <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
       </div>
 
       <p className="sz-gas-feedback"><CheckCircle2 size={18}/>
