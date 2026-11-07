@@ -68,7 +68,7 @@ function GasDemo() {
           {Array.from({ length: 12 }, (_, i) => <span key={i} className="sz-particle" style={{ left: (17 + (i * 23) % 66) + "%", top: (17 + (i * 37) % 65) + "%", opacity: .45 + fill / 250 }}/>)}
           <div className="sz-demo-vessel-label">V constante</div>
         </div>
-        <div className="sz-demo-metrics">
+        <div className="sz-demo-metrics" aria-live="polite">
           <div><span>Temperatura</span><strong>{temperature} <small>K</small></strong></div>
           <div><span>Presión</span><strong>{pressure} <small>atm</small></strong></div>
           <div className="sz-demo-meter"><span style={{ width: (40 + fill * .55) + "%" }}/></div>
@@ -112,13 +112,12 @@ export default function Landing() {
             <h1 id="sz-hero-title">Deja de memorizar química <em>sin entenderla.</em></h1>
             <p className="sz-hero-lead">Aprende a visualizar los conceptos, resolver ejercicios y prepararte para tu examen de admisión con una ruta guiada de química, ejemplos desarrollados y práctica interactiva.</p>
             <div className="sz-hero-actions">
-              <a className="sz-btn sz-btn-primary" href="#planes">Conocer los planes <ArrowRight size={18}/></a>
-              <a className="sz-btn sz-btn-outline" href="#demostracion"><PlayCircle size={18}/> Ver cómo se aprende</a>
+              <a className="sz-btn sz-btn-primary" href="#planes" data-cta="hero-plans">Conocer los planes <ArrowRight size={18}/></a>
+              <a className="sz-btn sz-btn-outline" href="#demostracion" data-cta="hero-demo"><PlayCircle size={18}/> Ver cómo se aprende</a>
             </div>
             <div className="sz-hero-reassurance"><span><CheckCircle2 size={17}/> Programa organizado</span><span><CheckCircle2 size={17}/> Visual y práctico</span><span><CheckCircle2 size={17}/> A tu ritmo</span></div>
           </div>
           <div className="sz-hero-visual">
-            <div className="sz-hero-visual-top"><span>LA QUÍMICA SE VUELVE VISIBLE</span><span className="sz-visual-symbol">Au · 79</span></div>
             <LandingAtomExperience />
           </div>
         </section>
@@ -241,8 +240,8 @@ export default function Landing() {
         <section className="sz-section sz-pricing" id="planes">
           <SectionHead overline="ELIGE TU MODALIDAD" title={<>Una inversión en tu forma de <span>aprender y practicar química.</span></>} description="La integración de pagos está en preparación. Estos son los precios previstos para las dos modalidades de acceso, sujetos a confirmación antes de habilitar la inscripción."/>
           <div className="sz-plan-grid">
-            <article className="sz-plan-card"><p className="sz-plan-kicker">MODALIDAD FLEXIBLE</p><h3>Mensual</h3><p className="sz-plan-sub">Para avanzar módulo por módulo con renovación mensual.</p><div className="sz-plan-price"><strong>US$19</strong><span>/ mes</span></div><div className="sz-plan-divider"/><ul><li><Check size={16}/> Acceso al programa durante la membresía</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Recursos de aprendizaje disponibles</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-outline">Revisar el acceso <ArrowRight size={18}/></Link></article>
-            <article className="sz-plan-card is-featured"><span className="sz-plan-highlight">MEJOR VALOR ANUAL PREVISTO</span><p className="sz-plan-kicker">MODALIDAD CONTINUA</p><h3>Anual</h3><p className="sz-plan-sub">Para organizar tu preparación con una perspectiva de todo el año.</p><div className="sz-plan-price"><strong>US$190</strong><span>/ año</span></div><p className="sz-plan-savings">US$38 menos que 12 meses del precio mensual previsto.</p><div className="sz-plan-divider"/><ul><li><Check size={16}/> El mismo programa completo</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Un solo pago anual previsto</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-primary">Explorar el programa <ArrowRight size={18}/></Link></article>
+            <article className="sz-plan-card"><p className="sz-plan-kicker">MODALIDAD FLEXIBLE</p><h3>Mensual</h3><p className="sz-plan-sub">Para avanzar módulo por módulo con renovación mensual.</p><div className="sz-plan-price"><strong>US$19</strong><span>/ mes</span></div><div className="sz-plan-divider"/><ul><li><Check size={16}/> Acceso al programa durante la membresía</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Recursos de aprendizaje disponibles</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-outline" data-cta="monthly-access">Revisar el acceso <ArrowRight size={18}/></Link></article>
+            <article className="sz-plan-card is-featured"><span className="sz-plan-highlight">MEJOR VALOR ANUAL PREVISTO</span><p className="sz-plan-kicker">MODALIDAD CONTINUA</p><h3>Anual</h3><p className="sz-plan-sub">Para organizar tu preparación con una perspectiva de todo el año.</p><div className="sz-plan-price"><strong>US$190</strong><span>/ año</span></div><p className="sz-plan-savings">US$38 menos que 12 meses del precio mensual previsto.</p><div className="sz-plan-divider"/><ul><li><Check size={16}/> El mismo programa completo</li><li><Check size={16}/> Actividades, ejercicios y evaluaciones</li><li><Check size={16}/> Un solo pago anual previsto</li></ul><Link to="/curso/quimica" className="sz-btn sz-btn-primary" data-cta="annual-access">Explorar el programa <ArrowRight size={18}/></Link></article>
           </div>
           <div className="sz-plan-notice" role="note"><LockKeyhole size={19}/><p><strong>Inscripción online aún no habilitada.</strong> No estamos procesando compras desde esta página. El registro con Clerk y el cobro con Whop se activarán solo después de configurar los planes y verificar el checkout, la renovación y el acceso.</p></div>
         </section>
@@ -258,7 +257,7 @@ export default function Landing() {
           <p className="sz-eyebrow">ACADEMIA ZENIT · QUÍMICA PREUNI</p>
           <h2>La química deja de sentirse abstracta <span>cuando puedes comprenderla y practicarla.</span></h2>
           <p>Revisa los contenidos, experimenta con una muestra y descubre la ruta de estudio que estamos preparando para ti.</p>
-          <div className="sz-final-actions"><a href="#planes" className="sz-btn sz-btn-light">Conocer los planes <ArrowRight size={18}/></a><a href="#programa" className="sz-btn sz-btn-ghost">Explorar los 18 módulos</a></div>
+          <div className="sz-final-actions"><a href="#planes" className="sz-btn sz-btn-light" data-cta="final-plans">Conocer los planes <ArrowRight size={18}/></a><a href="#programa" className="sz-btn sz-btn-ghost">Explorar los 18 módulos</a></div>
         </section>
       </main>
 
