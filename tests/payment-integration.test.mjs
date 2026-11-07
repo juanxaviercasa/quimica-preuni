@@ -59,7 +59,7 @@ test("the integration is payments-only: no legacy paid-course components are cop
   assert.match(source, /useAuth/);
   assert.match(source, /openSignIn/);
   assert.doesNotMatch(source, /window\.Clerk/);
-  assert.match(main, /publishableKey \?/);
+  assert.match(main, /\{publishableKey\s*\?/);
   assert.match(backend, /authenticatedUser\(req\)/);
   assert.match(backend, /matchesWhopPlan\(actualPlan/);
   assert.match(webhook, /unwrapWebhook/);
