@@ -32,7 +32,7 @@ test("sales page contains functional anchors and honest prelaunch payment messag
     assert.ok(landing.includes(anchor), "Missing " + anchor);
   }
   assert.match(landing, /No estamos procesando compras/);
-  assert.match(landing, //recursos/ruta-estudio\.html/);
-  assert.match(landing, //recursos/formulas-y-errores\.html/);
-  assert.match(landing, //recursos/repaso-preexamen\.html/);
+  assert.ok(landing.includes("/recursos/ruta-estudio.html"));
+  assert.ok(landing.includes("/recursos/formulas-y-errores.html"));
+  assert.ok(landing.includes("/recursos/repaso-preexamen.html"));
 });
