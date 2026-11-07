@@ -47,7 +47,10 @@ const faqs = [
   { q: "¿Cómo funcionarán los pagos mensual y anual?", a: "Ambas opciones serán suscripciones recurrentes; la mensual se renueva cada mes y la anual cada año. El pago con Whop y el acceso con Clerk aún no están habilitados en esta landing. Antes del lanzamiento comprobaremos en el checkout los importes y condiciones exactas." },
   { q: "¿Los recursos complementarios se pueden descargar?", a: "Sí. La ruta de estudio, la ficha de fórmulas y la guía de repaso tienen una versión imprimible. Puedes abrirlas y elegir «Imprimir o guardar en PDF» desde tu navegador." },
   { q: "¿El curso garantiza ingresar a la universidad?", a: "No. El curso ofrece herramientas para estudiar y practicar química. El resultado de un examen depende de la preparación integral y de múltiples factores, por lo que no se promete una admisión garantizada." },
-  { q: "¿Qué sucede si aún no está habilitada la inscripción?", a: "Puedes revisar el contenido del programa y las muestras disponibles. La compra se habilitará cuando las cuentas de autenticación, las membresías y los cobros estén correctamente configurados y verificados." }
+  { q: "¿Qué incluyen las clases en vivo?", a: "La membresía contempla clases grupales semanales para reforzar los temas del curso y resolver dudas. El calendario, los docentes que participarán y los mecanismos de acceso se comunicarán al incorporar a los estudiantes." },
+  { q: "¿La comunidad será en Skool o WhatsApp?", a: "Habrá un espacio privado para que los estudiantes compartan dudas, se acompañen y mantengan el ritmo. El canal definitivo (Skool o WhatsApp) y sus reglas se confirmarán al realizar la inscripción." },
+  { q: "¿Los exámenes muestran la respuesta a mis errores?", a: "Sí. El motor actual corrige automáticamente las respuestas, presenta la calificación del intento y muestra el solucionario con explicaciones, incluyendo motivos de error cuando las preguntas tienen ese detalle." },
+  { q: "¿Cómo elijo mi plan?", a: "Puedes seleccionar mensual o anual en la sección de precios. El pago se abrirá mediante Whop cuando su checkout esté conectado y Clerk pueda verificar tu sesión. Si el servicio todavía no responde, verás un aviso sin que se realice ningún cobro." }
 ];
 
 function SectionHead({ overline, title, description, light = false }) {
@@ -85,7 +88,7 @@ export default function Landing() {
           <div className="sz-hero-content">
             <p className="sz-hero-kicker"><span/> ACADEMIA ZENIT · QUÍMICA ZENIT</p>
             <h1 id="sz-hero-title">La química que necesitas <em>entender, no solo memorizar.</em></h1>
-            <p className="sz-hero-lead">Prepárate para tu examen de admisión con Química Zenit: 18 módulos, explicaciones visuales, simuladores manipulables y ejercicios guiados para convertir los conceptos en respuestas.</p>
+            <p className="sz-hero-lead">Prepárate para tu examen de admisión con algo más que lecciones: 18 módulos, herramientas interactivas, exámenes con solucionario, clases en vivo y una comunidad que estudia contigo.</p>
             <div className="sz-hero-actions">
               <a className="sz-btn sz-btn-primary" href="#planes" data-cta="hero-plans">Ver los planes de acceso <ArrowRight size={18}/></a>
               <a className="sz-btn sz-btn-outline" href="#demostracion" data-cta="hero-demo"><PlayCircle size={18}/> Ver cómo se aprende</a>
@@ -239,7 +242,7 @@ export default function Landing() {
           <p className="sz-eyebrow">ACADEMIA ZENIT · QUÍMICA ZENIT</p>
           <h2>La química deja de sentirse abstracta <span>cuando puedes comprenderla y practicarla.</span></h2>
           <p>Revisa los contenidos, experimenta con una muestra y descubre la ruta de estudio que estamos preparando para ti.</p>
-          <div className="sz-final-actions"><a href="#planes" className="sz-btn sz-btn-light" data-cta="final-plans">Conocer los planes <ArrowRight size={18}/></a><a href="#programa" className="sz-btn sz-btn-ghost">Explorar los 18 módulos</a></div>
+          <div className="sz-final-actions"><a href="#planes" className="sz-btn sz-btn-light" data-cta="final-plans">Ver la oferta de lanzamiento <ArrowRight size={18}/></a><a href="#programa" className="sz-btn sz-btn-ghost">Explorar los 18 módulos</a></div>
         </section>
       </main>
 
