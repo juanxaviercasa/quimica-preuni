@@ -64,7 +64,6 @@ export default function LandingAtomExperience() {
           <GoldFallback message={supported ? undefined : "Visualización 3D no disponible en este dispositivo"} />
         )}
       </div>
-      <span className="sz-gold-caption">Au · Oro · Modelo atómico didáctico</span>
     </div>
   );
 }
