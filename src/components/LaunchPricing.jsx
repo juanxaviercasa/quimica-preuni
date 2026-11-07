@@ -1,48 +1,133 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Check, Clock3, LockKeyhole, ShieldCheck, Sparkles } from "lucide-react";
+import {
+  ArrowRight, CalendarDays, Check, Clock3, GraduationCap,
+  LockKeyhole, MessageCircle, MonitorPlay, ShieldCheck, Sparkles,
+  Target, Users, X, BookOpenCheck
+} from "lucide-react";
 import { LAUNCH_END_EXCLUSIVE_MS, pricingFor } from "../pricing/zenitOffer.js";
 import "./LaunchPricing.css";
 
-const included = [
-  "18 módulos de química preuniversitaria",
-  "Modelos interactivos, ejercicios y evaluaciones",
-  "Recursos de apoyo para estudiar a tu ritmo"
+const memberBenefits = [
+  {
+    label: "Clases grupales en vivo todas las semanas",
+    detail: "Refuerza temas difíciles y lleva tus preguntas a cada sesión.",
+    icon: CalendarDays
+  },
+  {
+    label: "18 módulos con una ruta de aprendizaje",
+    detail: "Aprende desde los fundamentos hasta los temas más exigentes.",
+    icon: GraduationCap
+  },
+  {
+    label: "Laboratorios y simuladores interactivos",
+    detail: "Explora modelos, mueve variables y comprende lo que ocurre.",
+    icon: MonitorPlay
+  },
+  {
+    label: "Prácticas y exámenes autocorregidos",
+    detail: "Conoce tu calificación y revisa el solucionario de tus errores.",
+    icon: Target
+  },
+  {
+    label: "Comunidad privada de estudiantes",
+    detail: "Comparte dudas, mantén el ritmo y aprende acompañado.",
+    icon: MessageCircle
+  },
+  {
+    label: "Acompañamiento del equipo Zenit",
+    detail: "Sesiones guiadas por docentes y profesionales de química formados en el método Zenit.",
+    icon: Users
+  }
 ];
 
-function PriceCard({ plan, featured = false }) {
+const planExtras = [
+  "Clases grupales en vivo cada semana",
+  "Simuladores, modelos 3D y recursos descargables",
+  "Prácticas y exámenes con calificación automática",
+  "Solucionario para comprender tus errores",
+  "Comunidad privada y acompañamiento académico",
+  "Acceso al recorrido de 18 módulos"
+];
+
+function UsdAmount({ amount, crossed = false }) {
+  const Tag = crossed ? "del" : "span";
+  return <Tag className={crossed ? "sz-launch-amount sz-launch-amount-old" : "sz-launch-amount"}>
+    <span className="sz-launch-currency" aria-hidden="true">US$</span>
+    <span className="sz-launch-digits">{amount}</span>
+  </Tag>;
+}
+
+function PriceCard({ plan, featured = false, onChoose, busy }) {
   return <article className={`sz-plan-card sz-launch-plan${featured ? " is-featured" : ""}`}>
     <div className="sz-launch-card-top">
-      <div>
-        <span className="sz-plan-kicker">{featured ? "PREPARACIÓN CONTINUA" : "AVANZA CON FLEXIBILIDAD"}</span>
-        <h3>{plan.label}</h3>
-        <p className="sz-plan-sub">{plan.description}</p>
-      </div>
-      {featured && <span className="sz-launch-plan-mark"><Sparkles size={15} aria-hidden="true"/> Mejor valor del año</span>}
+      <span className="sz-plan-kicker">{featured ? "PARA PREPARARTE SIN INTERRUPCIONES" : "PARA ESTUDIAR CON FLEXIBILIDAD"}</span>
+      <h3>{plan.label}</h3>
+      <p className="sz-plan-sub">{plan.description}</p>
+      {featured && <span className="sz-launch-plan-mark"><Sparkles size={15} aria-hidden="true"/> Mejor inversión para un año de preparación</span>}
     </div>
 
     <div className="sz-launch-pricing" aria-label={`Plan ${plan.label}: ${plan.priceUsd} dólares por ${plan.billingUnit}`}>
-      {plan.isLaunch && <div className="sz-launch-was"><span>Precio regular</span> <del>US$${plan.regularUsd}</del></div>}
+      {plan.isLaunch && <div className="sz-launch-was"><span>Precio regular</span> <UsdAmount amount={plan.regularUsd} crossed /></div>}
       <div className="sz-launch-price-main">
-        <strong>US$${plan.priceUsd}</strong>
-        <span>/ {plan.billingUnit}</span>
+        <UsdAmount amount={plan.priceUsd}/>
+        <span className="sz-launch-billing">/ {plan.billingUnit}</span>
       </div>
-      {plan.isLaunch ? <span className="sz-launch-discount">Ahorras US$${plan.savingsUsd} en cada {plan.billingUnit} de facturación <span>({plan.discountPercent}% menos)</span></span>
-        : <span className="sz-launch-regular">Precio regular vigente</span>}
+      {plan.isLaunch ? <span className="sz-launch-discount">Ahorras {plan.savingsUsd} dólares {plan.billingUnit === "mes" ? "por mes" : "por año"} ({plan.discountPercent}% menos)</span>
+        : <span className="sz-launch-regular">Tarifa regular vigente</span>}
     </div>
-    {featured && <p className="sz-launch-comparison">Equivale a US$${(plan.priceUsd / 12).toFixed(2)}/mes, pagando el año por adelantado. Ahorras US$${(12 * pricingFor("monthly", plan.isLaunch ? LAUNCH_END_EXCLUSIVE_MS - 1 : LAUNCH_END_EXCLUSIVE_MS).priceUsd) - plan.priceUsd} frente a 12 pagos mensuales.</p>}
+
+    {featured && <p className="sz-launch-comparison">
+      Equivale a <strong>{(plan.priceUsd / 12).toFixed(2)} dólares al mes</strong> con pago anual.
+      Ahorras {12 * (plan.isLaunch ? 19 : 29) - plan.priceUsd} dólares frente a 12 mensualidades.
+    </p>}
 
     <div className="sz-plan-divider"/>
-    <ul>{included.map(item=><li key={item}><Check size={17} aria-hidden="true"/>{item}</li>)}</ul>
+    <p className="sz-plan-includes-title">Tu membresía incluye:</p>
+    <ul>{planExtras.map(item => <li key={item}><Check size={17} aria-hidden="true"/><span>{item}</span></li>)}</ul>
 
-    <button type="button" className={`sz-btn ${featured ? "sz-btn-primary" : "sz-btn-outline"} sz-plan-pending`} disabled aria-label={`Inscripción ${plan.label} no habilitada todavía`}>
-      Inscripción próximamente <ArrowRight size={16} aria-hidden="true"/>
+    <button
+      type="button"
+      className={`sz-btn ${featured ? "sz-btn-primary" : "sz-btn-outline"} sz-plan-select`}
+      onClick={() => onChoose(plan.key)}
+      disabled={busy}
+      aria-label={`Elegir plan ${plan.label.toLowerCase()} de ${plan.priceUsd} dólares por ${plan.billingUnit}`}
+    >
+      {busy ? "Conectando con el pago…" : `Elegir plan ${plan.label.toLowerCase()}`}
+      <ArrowRight size={17} aria-hidden="true"/>
     </button>
-    <p className="sz-launch-card-footnote">{plan.cadence} · Renueva automáticamente mientras esté activa.</p>
+    <p className="sz-launch-card-footnote">{plan.cadence} · Renovación automática. Puedes cancelar tu renovación.</p>
   </article>;
+}
+
+async function openCheckout(planKey) {
+  const token = await window.Clerk?.session?.getToken?.();
+  const response = await fetch("/api/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {})
+    },
+    body: JSON.stringify({ plan: planKey }),
+    credentials: "same-origin",
+    cache: "no-store"
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    if (response.status === 401) throw new Error("Para inscribirte debes iniciar sesión. El acceso seguro con Clerk debe estar habilitado.");
+    throw new Error(data.error || "No se pudo abrir el pago. Verifica que el checkout esté habilitado.");
+  }
+  const candidate = data.checkoutUrl;
+  let url;
+  try { url = new URL(candidate); } catch { throw new Error("El checkout no devolvió un enlace válido."); }
+  const whopHost = url.hostname === "whop.com" || url.hostname.endsWith(".whop.com");
+  if (url.protocol !== "https:" || !whopHost) throw new Error("El enlace de pago no pertenece a Whop.");
+  window.location.assign(url.toString());
 }
 
 export default function LaunchPricing() {
   const [now, setNow] = useState(() => Date.now());
+  const [busy, setBusy] = useState(null);
+  const [error, setError] = useState("");
   useEffect(() => {
     const sync = () => setNow(Date.now());
     const timer = window.setInterval(sync, 30000);
@@ -59,41 +144,72 @@ export default function LaunchPricing() {
   const annual = pricingFor("annual", now);
   const isLaunch = monthly.isLaunch;
 
+  async function choosePlan(key) {
+    if (busy) return;
+    setBusy(key);
+    setError("");
+    try { await openCheckout(key); }
+    catch (err) {
+      setError(err instanceof Error ? err.message : "No se pudo iniciar la inscripción.");
+      setBusy(null);
+    }
+  }
+
   return <section className="sz-section sz-pricing" id="planes">
     <div className="sz-launch-head">
-      <p className="sz-eyebrow">{isLaunch ? "OFERTA DE LANZAMIENTO · QUÍMICA ZENIT" : "PLANES DE ACCESO · QUÍMICA ZENIT"}</p>
-      <h2>Invierte en entender química. <span>No en memorizarla una y otra vez.</span></h2>
-      <p className="sz-section-desc">Elige cómo quieres avanzar: con la flexibilidad mensual o con un año completo para profundizar, practicar y repasar.</p>
+      <p className="sz-eyebrow">QUÍMICA ZENIT · MEMBRESÍA DE APRENDIZAJE</p>
+      <h2>No necesitas otro curso para acumular videos. <span>Necesitas un sistema para aprender, practicar y avanzar.</span></h2>
+      <p className="sz-section-desc">Lecciones visuales, clases en directo, ejercicios corregidos y una comunidad que te ayuda a mantener el ritmo. Todo en una sola membresía de química preuniversitaria.</p>
+    </div>
+
+    <div className="sz-membership-grid" aria-label="Beneficios de la membresía">
+      {memberBenefits.map(benefit => {
+        const Icon = benefit.icon;
+        return <article key={benefit.label} className="sz-membership-benefit">
+          <span className="sz-membership-icon"><Icon size={21} aria-hidden="true"/></span>
+          <div><h3>{benefit.label}</h3><p>{benefit.detail}</p></div>
+        </article>;
+      })}
+    </div>
+
+    <div className="sz-membership-conclusion">
+      <BookOpenCheck size={23} aria-hidden="true"/>
+      <p><strong>De la teoría a la solución.</strong> Estudia el concepto, experimenta con él, responde preguntas y descubre cómo corregir tus errores.</p>
     </div>
 
     {isLaunch ? <div className="sz-launch-banner">
       <Clock3 size={22} aria-hidden="true"/>
-      <div><strong>Precio especial de lanzamiento hasta el 30 de noviembre de 2026</strong>
-        <span>Finaliza a las 11:59 p. m. (hora de Perú). Desde el 1 de diciembre, nuevas suscripciones a precio regular.</span>
+      <div><strong>Tarifa de lanzamiento hasta el 30 de noviembre de 2026</strong>
+        <span>Termina a las 11:59 p. m. (hora de Perú). Desde el 1 de diciembre se aplican los precios regulares a nuevas inscripciones.</span>
       </div>
     </div> : <div className="sz-launch-banner is-regular">
       <ShieldCheck size={22} aria-hidden="true"/>
       <div><strong>Precios regulares desde el 1 de diciembre de 2026</strong>
-        <span>Las suscripciones promocionales contratadas dentro del plazo mantienen su tarifa mientras sigan activas, según sus condiciones.</span>
+        <span>Las membresías promocionales contratadas dentro del plazo mantienen su tarifa al renovar mientras sigan activas.</span>
       </div>
     </div>}
 
     <div className="sz-plan-grid">
-      <PriceCard plan={monthly}/>
-      <PriceCard plan={annual} featured/>
+      <PriceCard plan={monthly} onChoose={choosePlan} busy={busy !== null}/>
+      <PriceCard plan={annual} featured onChoose={choosePlan} busy={busy !== null}/>
     </div>
 
-    {isLaunch && <div className="sz-launch-grandfather">
-      <span className="sz-launch-shield"><ShieldCheck size={24} aria-hidden="true"/></span>
-      <div>
-        <h3>Entra durante la promoción. Conserva tu tarifa mientras sigas activo.</h3>
-        <p>Si contratas el plan mensual a US$19 o el anual a US$190 antes del cierre, ese será tu precio de renovación de la <strong>misma suscripción</strong> mientras permanezca activa y con pagos al día. Si cancelas o tu membresía vence, una nueva contratación tendrá el precio vigente en ese momento.</p>
-      </div>
+    {error && <div className="sz-launch-checkout-error" role="alert">
+      <LockKeyhole size={18} aria-hidden="true"/>
+      <span>{error} El cobro no se ha iniciado.</span>
+      <button type="button" aria-label="Cerrar aviso" onClick={() => setError("")}><X size={17}/></button>
     </div>}
 
-    <div className="sz-plan-notice" role="note">
-      <LockKeyhole size={19} aria-hidden="true"/>
-      <p><strong>Inscripciones online todavía no habilitadas.</strong> No estamos procesando compras desde esta página. Los precios y la permanencia de la tarifa de lanzamiento son las condiciones comerciales previstas; se habilitarán al configurar y probar los cuatro planes recurrentes de Whop y el acceso con Clerk. La fecha límite no se extiende automáticamente por falta de checkout.</p>
+    <div className="sz-launch-grandfather">
+      <span className="sz-launch-shield"><ShieldCheck size={24} aria-hidden="true"/></span>
+      <div>
+        <h3>Tu precio de lanzamiento se queda contigo.</h3>
+        <p>Si contratas el plan promocional antes del 1 de diciembre, mantendrás su tarifa en las renovaciones de <strong>esa misma membresía</strong> mientras permanezca activa y al día. Si cancelas o dejas vencer la membresía, una nueva alta tendrá el precio vigente.</p>
+      </div>
     </div>
+
+    <p className="sz-launch-terms">
+      Las clases en vivo y el espacio comunitario forman parte de la propuesta de membresía; el calendario, los docentes participantes y el canal de comunidad se comunicarán durante el proceso de incorporación. El acceso, los cobros y las renovaciones se confirmarán en el checkout seguro de Whop cuando esté configurado.
+    </p>
   </section>;
 }
