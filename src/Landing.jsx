@@ -62,7 +62,7 @@ export default function Landing() {
       <a className="sz-skip" href="#contenido">Saltar al contenido principal</a>
       <header className="sz-header">
         <Link className="sz-brand" to="/" aria-label="Academia Zenit, inicio" onClick={() => setMenuOpen(false)}>
-          <span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="35" height="52" /></span>
+          <span className="sz-brand-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="35" height="52" /></span>
           <span><strong>Química <em>Zenit</em></strong><small>CURSO PREUNIVERSITARIO</small></span>
         </Link>
         <button type="button" className="sz-menu" aria-label={menuOpen ? "Cerrar navegación" : "Abrir navegación"} aria-expanded={menuOpen} aria-controls="sz-nav" onClick={() => setMenuOpen(!menuOpen)}>
@@ -105,10 +105,18 @@ export default function Landing() {
 
         <section className="sz-section sz-problem" id="problema">
           <SectionHead overline="EL PROBLEMA NO ES SOLO RECORDAR" title={<>¿Lees la teoría, memorizas fórmulas… <span>y te bloqueas ante un ejercicio?</span></>} description="Es difícil avanzar cuando cada tema parece una lista aislada de reglas. Una preparación más activa conecta lo que ves, lo que entiendes y lo que eres capaz de resolver."/>
-          <figure className="sz-learning-figure">
-            <img src="/brand/ruta-visual-zenit.svg" alt="Una hoja llena de dudas se transforma en visualización del átomo y práctica química guiada." loading="lazy"/>
-            <figcaption><span>1. Identifica qué te confunde</span><span>2. Visualiza para comprender</span><span>3. Practica y comprueba</span></figcaption>
-          </figure>
+          <div className="sz-learning-photos" aria-label="Tres escenas de aprendizaje, desde las dudas hasta la práctica guiada">
+            {[
+              { image: "/brand/dolor-estudiante.webp", alt: "Fotografía de apuntes de química con fórmulas incompletas y preguntas pendientes de resolver", step: "01 · EL PROBLEMA", title: "Tantas fórmulas… y las mismas dudas." },
+              { image: "/brand/visualizacion-atomica.webp", alt: "Representación fotorrealista de un modelo atómico luminoso en un laboratorio", step: "02 · EL CAMBIO", title: "Cuando lo visualizas, empiezas a entenderlo." },
+              { image: "/brand/practica-guiada.webp", alt: "Fotografía de una práctica guiada sobre gases ideales con cálculos y verificaciones", step: "03 · EL RESULTADO", title: "Resuelve con método y comprueba tus pasos." }
+            ].map(item => (
+              <figure key={item.step} className="sz-learning-photo">
+                <img src={item.image} alt={item.alt} loading="lazy" width="720" height="540" />
+                <figcaption><span>{item.step}</span><strong>{item.title}</strong></figcaption>
+              </figure>
+            ))}
+          </div>
           <div className="sz-problem-grid">
             <article><span>01</span><h3>Demasiadas fórmulas, poca conexión</h3><p>Aprender de memoria sin relacionar conceptos hace más difícil transferirlos a problemas nuevos.</p></article>
             <article><span>02</span><h3>Conceptos que parecen abstractos</h3><p>Átomos, enlaces y reacciones se comprenden mejor cuando puedes explorar representaciones visuales.</p></article>
@@ -160,7 +168,7 @@ export default function Landing() {
                   <ChevronDown className="sz-stage-chevron" size={22}/>
                 </summary>
                 <div className="sz-module-grid">{modules.map(module => <article key={module.number} className="sz-module">
-                  <div className="sz-module-photo"><img src={module.imageUrl} alt="" loading="lazy" /></div>
+                  <div className="sz-module-photo"><img src={module.imageUrl} alt={"Portada completa del módulo " + module.number + ": " + module.title} loading="lazy" /></div>
                   <div><span>MÓDULO {String(module.number).padStart(2,"0")} · {module.topics} TEMAS</span><h3>{module.title}</h3><span className="sz-module-included"><CheckCircle2 size={14}/> Incluido en el programa</span></div>
                 </article>)}</div>
               </details>;
@@ -195,7 +203,7 @@ export default function Landing() {
           </div>
           <div className="sz-evidence-grid">
             <article className="sz-evidence-hero">
-              <img src={salesModules[1].imageUrl} alt="Portada real del módulo de estructura atómica y mecánica cuántica" loading="lazy" />
+              <img src={salesModules[1].imageUrl} alt="Portada completa del módulo de estructura atómica y mecánica cuántica, sin recortes" loading="lazy" />
               <div><span>MÓDULO REAL</span><h3>Estructura atómica y mecánica cuántica</h3><a href="#programa">Ver módulos del programa <ArrowUpRight size={17}/></a></div>
             </article>
             <article className="sz-evidence-simple"><span className="sz-evidence-symbol"><Atom size={36}/></span><h3>El átomo de oro, en movimiento</h3><p>Observa en el inicio el átomo de oro, gira su modelo 3D y controla la animación con Play/Pausa.</p><a href="#demostracion">Explorar un simulador <ArrowUpRight size={17}/></a></article>
@@ -204,7 +212,7 @@ export default function Landing() {
 
         <section className="sz-founder-wrap" id="academia">
           <div className="sz-section sz-founder">
-            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="86" height="138" /><strong>Química Zenit</strong><small>UNA EXPERIENCIA DE ACADEMIA ZENIT</small></div></div>
+            <div className="sz-founder-illustration"><span className="sz-founder-glow"/><div className="sz-founder-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="86" height="138" /><strong>Química Zenit</strong><small>UNA EXPERIENCIA DE ACADEMIA ZENIT</small></div></div>
             <div>
               <p className="sz-eyebrow">¿QUIÉN ESTÁ DETRÁS?</p>
               <h2>Academia Zenit: <span>enseñar química con recursos visuales.</span></h2>
@@ -240,7 +248,7 @@ export default function Landing() {
       </main>
 
       <footer className="sz-footer">
-        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><img src="/brand/zenit-phoenix.svg" alt="" width="31" height="44"/></span><span><strong>Química <em>Zenit</em></strong><small>ACADEMIA ZENIT</small></span></Link>
+        <Link className="sz-brand" to="/"><span className="sz-brand-mark"><img src="/brand/zenit-phoenix-authentic.webp" alt="" width="31" height="44"/></span><span><strong>Química <em>Zenit</em></strong><small>ACADEMIA ZENIT</small></span></Link>
         <p>Química Zenit · Comprende, experimenta y practica.</p>
         <nav aria-label="Enlaces del pie"><a href="#metodo">Método</a><a href="#programa">Programa</a><a href="#planes">Planes</a><a href="#preguntas">Ayuda</a></nav>
       </footer>
