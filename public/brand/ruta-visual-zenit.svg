@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 295" role="img" aria-labelledby="title desc">
+<title id="title">Del estudio confuso a la comprensión visual y la práctica</title>
+<desc id="desc">Tres escenas muestran apuntes y fórmulas desordenadas, un modelo de química visual y finalmente una hoja de ejercicios comprobados.</desc>
+<defs>
+  <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#153B5A"/><stop offset="1" stop-color="#08182F"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFE5A0"/><stop offset="1" stop-color="#D9A339"/></linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFF8E7"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#07182C" flood-opacity=".16"/></filter>
+</defs>
+<rect x="4" y="4" width="309" height="287" rx="25" fill="#FFF1E9" stroke="#EBCFC3"/>
+<rect x="358" y="4" width="309" height="287" rx="25" fill="url(#navy)" stroke="#B8914C"/>
+<rect x="711" y="4" width="305" height="287" rx="25" fill="#FFF8EB" stroke="#E8D8B8"/>
+<!-- confusion / messy notes -->
+<g transform="translate(61 22) rotate(-7 100 130)" filter="url(#shadow)">
+  <rect x="25" y="19" width="195" height="239" rx="14" fill="url(#paper)" stroke="#E3D3C2" stroke-width="2"/>
+  <rect x="47" y="19" width="6" height="239" rx="3" fill="#ECA07D" opacity=".65"/>
+  <path d="M65 63h133M65 89h122M65 115h131M65 141h106M65 167h131M65 193h120M65 219h132" stroke="#DFE4EA" stroke-width="2.5"/>
+  <g fill="#5D7186" font-family="monospace" font-weight="700" font-size="18"><text x="72" y="78">n = m / ?</text><text x="76" y="124">PV = ?</text><text x="72" y="169">ΔH + ???</text><text x="73" y="212">¿por qué?</text></g>
+  <path d="M80 87l95 23m-104 30 110-24" stroke="#E65D39" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+</g>
+<circle cx="262" cy="48" r="23" fill="#E43D0B"/><text x="262" y="58" text-anchor="middle" fill="#fff" font-size="29" font-family="Georgia,serif" font-weight="700">?</text>
+<!-- atoms / idea -->
+<circle cx="512" cy="150" r="103" fill="#F6BA4840"/>
+<ellipse cx="512" cy="151" rx="112" ry="41" fill="none" stroke="#F5CC74" stroke-width="2" transform="rotate(35 512 151)"/>
+<ellipse cx="512" cy="151" rx="112" ry="41" fill="none" stroke="#A1D7F0" stroke-width="2" transform="rotate(-43 512 151)"/>
+<ellipse cx="512" cy="151" rx="112" ry="41" fill="none" stroke="#EAC27D" stroke-width="2" transform="rotate(90 512 151)"/>
+<g fill="#F3C770"><circle cx="495" cy="133" r="18"/><circle cx="524" cy="132" r="16"/><circle cx="507" cy="163" r="19"/><circle cx="537" cy="162" r="13"/></g>
+<g fill="#E4592B"><circle cx="495" cy="163" r="12"/><circle cx="528" cy="184" r="11"/><circle cx="535" cy="119" r="10"/></g>
+<g fill="#AEE4F7"><circle cx="609" cy="93" r="8"/><circle cx="447" cy="80" r="8"/><circle cx="480" cy="246" r="8"/><circle cx="572" cy="229" r="7"/></g>
+<g fill="#FFDD88" font-family="Georgia,serif" font-weight="700"><text x="511" y="42" text-anchor="middle" font-size="21">COMPRENDE</text></g>
+<!-- solved exercises -->
+<g transform="translate(758 20)" filter="url(#shadow)">
+ <rect x="4" y="5" width="202" height="244" rx="14" fill="url(#paper)" stroke="#E5D5AF" stroke-width="2"/>
+ <rect x="4" y="5" width="202" height="38" rx="14" fill="#FCE4AB"/>
+ <path d="M4 29h202" stroke="#E2B451" stroke-width="2"/>
+ <text x="104" y="32" text-anchor="middle" fill="#17334B" font-size="16" font-family="sans-serif" font-weight="700">PRÁCTICA GUIADA</text>
+ <g font-family="monospace" font-size="15" fill="#23364B" font-weight="700"><text x="27" y="82">P · V = nRT</text><text x="27" y="125">V = 12 L</text><text x="27" y="164">P = 1.03 atm</text></g>
+ <g stroke="#3BA374" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M163 71l7 8 14-17"/><path d="M163 116l7 8 14-17"/><path d="M163 157l7 8 14-17"/></g>
+ <rect x="24" y="197" width="164" height="30" rx="8" fill="#DDF5E9"/>
+ <text x="106" y="218" text-anchor="middle" fill="#28765C" font-size="13" font-family="sans-serif" font-weight="700">¡Ahora lo entiendo!</text>
+</g>
+<!-- transformation arrows -->
+<g fill="#E5AF38" stroke="#FFF8E7" stroke-width="4" stroke-linejoin="round"><path d="M322 132h28v-17l22 30-22 30v-17h-28z"/><path d="M675 132h28v-17l22 30-22 30v-17h-28z"/></g>
+</svg>
