@@ -181,9 +181,9 @@ export default function Landing() {
             <div>
               <p className="sz-eyebrow">EL EQUIPO DETRÁS DE TU APRENDIZAJE</p>
               <h2>No estudies solo: <span>aprende con el sistema Zenit.</span></h2>
-              <p>Química Zenit combina el acompañamiento de docentes y profesionales de química con recursos digitales que te ayudan a entender, practicar y detectar lo que necesitas reforzar.</p>
+              <p>Química Zenit combina el acompañamiento de docentes e ingenieros químicos preparados bajo el método Zenit con recursos digitales para comprender conceptos, resolver ejercicios y corregir errores.</p>
               <p>Un método pensado para que cada explicación se convierta en una oportunidad de resolver mejor.</p>
-              <a href="https://www.skool.com/academia-zenit-3587/about" className="sz-text-cta" target="_blank" rel="noopener noreferrer">Conocer la comunidad Zenit <ArrowUpRight size={17}/></a>
+              <a href="#planes" className="sz-text-cta">Estudiar con el equipo Zenit <ArrowRight size={17}/></a>
             </div>
           </div>
         </section>
