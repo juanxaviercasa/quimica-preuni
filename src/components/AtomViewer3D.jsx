@@ -305,7 +305,8 @@ function AtomScene({
   isPaused,
   showLabels,
   modelMode,
-  controlsRef
+  controlsRef,
+  presentationOnly = false
 }) {
   const z = element.number || element.z;
   const mass = parseFloat(element.atomic_mass || element.mass) || z * 2;
@@ -322,7 +323,8 @@ function AtomScene({
       <directionalLight position={[-12, -10, -10]} intensity={0.6} color="#93c5fd" />
 
       {/* Volumetric 3D Nucleus with GPU Instancing */}
-      <VolumetricNucleus z={z} mass={mass} isPaused={isPaused} />
+      <group scale={presentationOnly ? 0.6 : 1}>
+        <VolumetricNucleus z={z} mass={mass} isPaused={isPaused} />
 
       {/* Orbital Representation: Bohr vs Quantum Cloud */}
       {modelMode === "bohr" ? (
@@ -347,10 +349,12 @@ function AtomScene({
         <QuantumCloudOrbitals shells={shells} isPaused={isPaused} />
       )}
 
+      </group>
       <OrbitControls
         ref={controlsRef}
         enablePan={false}
-        enableZoom={true}
+        enableZoom={!presentationOnly}
+        enableRotate={!presentationOnly}
         minDistance={3.5}
         maxDistance={Math.max(38, maxRadius * 3.8)}
         autoRotate={!isPaused}
@@ -362,9 +366,9 @@ function AtomScene({
 }
 
 // Main Interactive AtomViewer3D Component
-export default function AtomViewer3D({ element, compact = false }) {
-  const [isPaused, setIsPaused] = useState(false);
-  const [showLabels, setShowLabels] = useState(true);
+export default function AtomViewer3D({ element, compact = false, presentationOnly = false }) {
+  const [isPaused, setIsPaused] = useState(() => presentationOnly && typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches === true);
+  const [showLabels, setShowLabels] = useState(!presentationOnly);
   const [modelMode, setModelMode] = useState("bohr"); // 'bohr' | 'cloud'
   const controlsRef = useRef();
 
@@ -389,13 +393,13 @@ export default function AtomViewer3D({ element, compact = false }) {
 
   const cameraConfig = useMemo(() => {
     const maxR = 2.6 + (shells.length - 1) * 1.35;
-    const zDist = Math.max(compact ? 18 : 16, maxR * (compact ? 3 : 2.35));
-    const yDist = Math.min(5, 2.5 + shells.length * 0.35);
+    const zDist = presentationOnly ? Math.max(17, maxR * 2.1) : Math.max(compact ? 18 : 16, maxR * (compact ? 3 : 2.35));
+    const yDist = presentationOnly ? 2.3 : Math.min(5, 2.5 + shells.length * 0.35);
     return {
       position: [0, yDist, zDist],
       fov: 42
     };
-  }, [shells, compact]);
+  }, [shells, compact, presentationOnly]);
 
   if (!element) return null;
 
@@ -420,11 +424,21 @@ export default function AtomViewer3D({ element, compact = false }) {
               showLabels={showLabels}
               modelMode={modelMode}
               controlsRef={controlsRef}
+              presentationOnly={presentationOnly}
             />
           </Canvas>
         </AtomErrorBoundary>
       </div>
 
+      {presentationOnly ? (
+        <button type="button" className="atom-presentation-toggle" onClick={() => setIsPaused(p => !p)}
+          aria-label={isPaused ? "Reproducir animación del átomo de oro" : "Pausar animación del átomo de oro"}
+          title={isPaused ? "Reproducir" : "Pausar"}>
+          {isPaused ? <Play size={18} fill="currentColor" /> : <Pause size={18} fill="currentColor" />}
+          <span>{isPaused ? "Reproducir" : "Pausar"}</span>
+        </button>
+      ) : (
+        <>
       {/* Floating Modern Interactive Control Bar */}
       <div className="atom-viewer-toolbar" role="toolbar" aria-label="Controles del visor 3D">
         <div className="toolbar-group">
@@ -486,6 +500,8 @@ export default function AtomViewer3D({ element, compact = false }) {
           <span className="dist-total">({totalElectrons}e⁻)</span>
         </div>
       </div>
+        </>
+      )}
     </div>
   );
 }
