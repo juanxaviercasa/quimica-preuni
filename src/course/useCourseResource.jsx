@@ -9,7 +9,7 @@ export function useCourseResource(query) {
   useEffect(() => {
     if (!isLoaded) return;
     if (!isSignedIn) {
-      setState({ loading: false, data: null, status: 401, error: "Inicia sesión para acceder al curso." });
+      setState({ loading: false, data: null, status: 401, error: "Este contenido requiere una membresía pagada en Skool y una cuenta Zenit verificada." });
       return;
     }
     const controller = new AbortController();
@@ -35,7 +35,7 @@ export function useCourseResource(query) {
 export function CourseAccessState({ state }) {
   const clerk = useClerk();
   if (state.loading) return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>Cargando tu curso…</h2></div></main>;
-  if (state.status === 401) return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>Tu curso te espera</h2><p>Inicia sesión con la cuenta que usarás para tu membresía.</p><button className="cq-btn primary" onClick={() => clerk.openSignIn({ fallbackRedirectUrl: window.location.href })}>Iniciar sesión</button></div></main>;
-  if (state.status === 403) return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>Activa tu acceso completo</h2><p>Elige una membresía para desbloquear lecciones, prácticas y evaluaciones.</p><Link className="cq-btn primary" to="/#precios">Ver planes</Link></div></main>;
+  if (state.status === 401) return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>Tu curso te espera</h2><p>Si ya pagaste en Skool y tu acceso Zenit está activado, inicia sesión aquí.</p><button className="cq-btn primary" onClick={() => clerk.openSignIn({ fallbackRedirectUrl: window.location.href })}>Iniciar sesión</button></div></main>;
+  if (state.status === 403) return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>Tu membresía aún no está verificada</h2><p>El pago se realiza en Skool. Si ya te inscribiste, solicita la activación de tu acceso Zenit; no necesitas volver a pagar.</p><a className="cq-btn primary" href="https://www.skool.com/academia-zenit-3587/about">Ir a Academia Zenit en Skool</a></div></main>;
   return <main className="cq-page"><div className="cq-section" style={{ textAlign: "center", padding: "4rem 1.5rem" }}><h2>No pudimos verificar tu acceso</h2><p>{state.error}</p><button className="cq-btn" onClick={() => window.location.reload()}>Intentar de nuevo</button></div></main>;
 }
