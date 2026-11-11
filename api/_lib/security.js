@@ -1,6 +1,6 @@
 import { createClerkClient, verifyToken } from "@clerk/backend";
-import { WhopClient, WhopEnvironment } from "@whop/sdk";
-import { isAllowedWhopPlanId, plansConfigured } from "./plans.js";
+
+const SKOOL_GROUP = "academia-zenit-3587";
 
 export function noStore(res) {
   res.setHeader("Cache-Control", "private, no-store, max-age=0");
@@ -8,8 +8,7 @@ export function noStore(res) {
 }
 
 export function configured(env = process.env) {
-  return Boolean(env.CLERK_SECRET_KEY && env.WHOP_COMPANY_API_KEY &&
-    env.WHOP_PRODUCT_ID && env.APP_URL && plansConfigured(env));
+  return Boolean(env.CLERK_SECRET_KEY && env.APP_URL);
 }
 
 export function clerkClient() {
@@ -17,17 +16,9 @@ export function clerkClient() {
   return createClerkClient({ secretKey: process.env.CLERK_SECRET_KEY });
 }
 
-export function whopClient() {
-  if (!process.env.WHOP_COMPANY_API_KEY) throw new Error("Missing WHOP_COMPANY_API_KEY");
-  return new WhopClient({
-    token: process.env.WHOP_COMPANY_API_KEY,
-    environment: process.env.WHOP_SANDBOX === "true" ? WhopEnvironment.Sandbox : WhopEnvironment.Production
-  });
-}
-
 export async function authenticatedUser(req) {
-  if (!process.env.CLERK_SECRET_KEY || !process.env.APP_URL) return null;
-  const match = /^Bearer (\S+)$/.exec(req.headers?.authorization || "");
+  if (!configured()) return null;
+  const match = /^Bearer (\\S+)$/.exec(req.headers?.authorization || "");
   if (!match) return null;
   try {
     const claims = await verifyToken(match[1], {
@@ -38,32 +29,19 @@ export async function authenticatedUser(req) {
   } catch { return null; }
 }
 
-const idOf = value => typeof value === "string" ? value : value?.id;
-
-export function isValidMembership(membership, env = process.env) {
-  if (!membership || !env.WHOP_PRODUCT_ID) return false;
-  if ((idOf(membership.product) || membership.product_id) !== env.WHOP_PRODUCT_ID) return false;
-  if (!isAllowedWhopPlanId(idOf(membership.plan) || membership.plan_id, env)) return false;
-  if (String(membership.status || "").toLowerCase() !== "active" || membership.banned === true) return false;
-  const periodEnd = membership.current_period_end || membership.renewal_period_end || membership.expires_at;
-  if (periodEnd && (!Number.isFinite(Date.parse(periodEnd)) || Date.parse(periodEnd) <= Date.now())) return false;
-  return true;
+// Private Clerk metadata is only a staging entitlement record, NOT a proof
+// of payment. A trusted operator/integration must reconcile it with Skool.
+// Never accept these fields from browser requests or redirect parameters.
+export function isValidSkoolEntitlement(value, now = Date.now()) {
+  if (!value || value.groupSlug !== SKOOL_GROUP) return false;
+  if (value.status !== "active" && value.status !== "cancelled") return false;
+  if (typeof value.paidThrough !== "string" || !/^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,3})?Z$/.test(value.paidThrough)) return false;
+  const end = Date.parse(value.paidThrough);
+  return Number.isFinite(end) && end > now;
 }
 
 export async function membershipFor(clerkUserId) {
   const user = await clerkClient().users.getUser(clerkUserId);
-  const membershipId = user.privateMetadata?.whopCourse?.membershipId;
-  if (!/^mem_[A-Za-z0-9]+$/.test(membershipId || "")) return null;
-  const membership = await whopClient().memberships.retrieve({ id: membershipId });
-  return isValidMembership(membership) ? membership : null;
-}
-
-export async function linkMembership(clerkId, membershipId) {
-  if (!/^user_[A-Za-z0-9]+$/.test(clerkId || "") || !/^mem_[A-Za-z0-9]+$/.test(membershipId || "")) return false;
-  const membership = await whopClient().memberships.retrieve({ id: membershipId });
-  if (!isValidMembership(membership)) return false;
-  await clerkClient().users.updateUserMetadata(clerkId, {
-    privateMetadata: { whopCourse: { membershipId } }
-  });
-  return true;
+  const entitlement = user.privateMetadata?.skoolMembership;
+  return isValidSkoolEntitlement(entitlement) ? entitlement : null;
 }
