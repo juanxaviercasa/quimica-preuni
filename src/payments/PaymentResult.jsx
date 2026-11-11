@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import { communityUrl } from "../config.js";
 
-// A redirect from checkout is not proof of payment. Entitlement is verified on
-// the server, independently of this page, after receiving a signed Whop event.
+// Historical route: no checkout runs on the Zenit site.
 export default function PaymentResult() {
-  return <main style={{ minHeight: "70vh", display: "grid", placeItems: "center", padding: "30px 18px", background: "#FFF9EF" }}>
-    <section style={{ width: "100%", maxWidth: 600, background: "#fff", color: "#12243C", border: "1px solid #E8D9C1", borderRadius: 22, padding: "36px 28px", textAlign: "center", boxShadow: "0 12px 36px #0B1D3C10" }}>
-      <ShieldCheck size={42} color="#9A6B16" aria-hidden="true"/>
-      <h1 style={{ fontFamily: "Georgia,serif", fontSize: "clamp(26px,5vw,37px)", lineHeight: 1.18 }}>Comprueba tu membresía de Química Zenit</h1>
-      <p style={{ lineHeight: 1.8, color: "#5C687B" }}>Si completaste el pago en Whop, la activación se confirma mediante una verificación segura de tu membresía. Volver a esta página no habilita el acceso por sí solo.</p>
-      <p style={{ lineHeight: 1.65, color: "#5C687B" }}>No necesitas realizar otro pago si tu membresía todavía se está sincronizando.</p>
-      <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: 9, borderRadius: 12, padding: "14px 22px", color: "#11243E", fontWeight: 800, background: "#F5C65E", textDecoration: "none" }}>Volver a Química Zenit <CheckCircle2 size={18}/></Link>
+  return <main style={{ minHeight: "70vh", display: "grid", placeItems: "center", padding: 30 }}>
+    <section style={{ maxWidth: 620, textAlign: "center" }}>
+      <ShieldCheck size={42} aria-hidden="true" />
+      <h1>Los pagos se realizan únicamente en Skool</h1>
+      <p>Esta página ya no procesa ni confirma pagos. Si todavía no te has inscrito,
+        continúa en Academia Zenit en Skool. Si ya pagaste, no repitas el cobro:
+        solicita la activación de tu acceso a las herramientas de estudio.</p>
+      <p><a href={communityUrl}>Ir a Skool para inscribirme</a></p>
+      <Link to="/">Volver a Química Zenit</Link>
     </section>
   </main>;
 }
