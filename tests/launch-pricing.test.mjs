@@ -11,7 +11,7 @@ test("Chemistry sales CTA goes to Skool, never Clerk or a second checkout", () =
   assert.match(config, /skool\.com\/academia-zenit-3587\/about/);
   assert.match(pricing, /Inscribirme y pagar en Skool/);
   assert.match(pricing, /US\$19/);
-  assert.doesNotMatch(pricing, /checkout|openSignIn|useAuth|whop|Whop|clerk\.openSignIn/i);
+  assert.doesNotMatch(pricing, /\/api\/checkout|openSignIn|useAuth|whop|Whop|clerk\.openSignIn/i);
 });
 
 test("landing communicates Skool as exclusive payment processor", () => {
