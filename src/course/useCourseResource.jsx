@@ -19,8 +19,17 @@ export function useCourseResource(query) {
         const response = await fetch(`/api/course?${query}`, {
           headers: { Authorization: `Bearer ${token}` }, signal: controller.signal, credentials: "same-origin"
         });
+        const contentType = response.headers.get("content-type") || "";
+        // Static hosting can answer /api/course with an HTML fallback and HTTP 200.
+        // That is NOT a verified subscription or a valid course response.
+        if (!contentType.includes("application/json")) {
+          throw Object.assign(new Error("La verificación de acceso todavía no está disponible."), { status: 503 });
+        }
         const body = await response.json().catch(() => ({}));
         if (!response.ok) throw Object.assign(new Error(body.error || "No pudimos cargar el curso."), { status: response.status });
+        if (!body || typeof body !== "object" || !Object.keys(body).length) {
+          throw Object.assign(new Error("La respuesta de acceso no es válida."), { status: 503 });
+        }
         setState({ loading: false, data: body, status: 200, error: "" });
       } catch (error) {
         if (error.name !== "AbortError") setState({ loading: false, data: null, status: error.status || 503, error: error.message });
