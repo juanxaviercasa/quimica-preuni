@@ -18,7 +18,7 @@ export function clerkClient() {
 
 export async function authenticatedUser(req) {
   if (!configured()) return null;
-  const match = /^Bearer (\\S+)$/.exec(req.headers?.authorization || "");
+  const match = /^Bearer (\S+)$/.exec(req.headers?.authorization || "");
   if (!match) return null;
   try {
     const claims = await verifyToken(match[1], {
@@ -29,13 +29,14 @@ export async function authenticatedUser(req) {
   } catch { return null; }
 }
 
-// Private Clerk metadata is only a staging entitlement record, NOT a proof
-// of payment. A trusted operator/integration must reconcile it with Skool.
-// Never accept these fields from browser requests or redirect parameters.
+// Trusted administrative record, not evidence of payment by itself.
+// Never accept these values from browser, form, redirect or query string.
+// Skool subscriptions must be reconciled externally by a trusted operator.
 export function isValidSkoolEntitlement(value, now = Date.now()) {
   if (!value || value.groupSlug !== SKOOL_GROUP) return false;
   if (value.status !== "active" && value.status !== "cancelled") return false;
-  if (typeof value.paidThrough !== "string" || !/^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d{1,3})?Z$/.test(value.paidThrough)) return false;
+  if (typeof value.paidThrough !== "string" ||
+      !/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d{1,3})?Z$/.test(value.paidThrough)) return false;
   const end = Date.parse(value.paidThrough);
   return Number.isFinite(end) && end > now;
 }
