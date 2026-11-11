@@ -34,9 +34,9 @@ const faqs = [
   { q: "¿Puedo empezar si tengo dificultades con química?", a: "Sí. El programa comienza por los fundamentos y avanza por etapas. Puedes recorrer los módulos en orden y reforzar los temas que más te cuesten." },
   { q: "¿Las evaluaciones me muestran en qué me equivoqué?", a: "Sí. Recibes una calificación al terminar y puedes revisar las respuestas con explicaciones para comprender tus errores y volver a practicar." },
   { q: "¿Cómo son las clases en vivo y la comunidad?", a: "La membresía incluye encuentros grupales semanales para reforzar conceptos y resolver dudas, además de un espacio privado para compartir preguntas con otros estudiantes y el equipo Zenit." },
-  { q: "¿Qué diferencia hay entre el plan mensual y el anual?", a: "Ambos incluyen los mismos beneficios. El mensual se renueva cada mes y te da flexibilidad; el anual se paga por adelantado y tiene un costo equivalente por mes menor." },
-  { q: "¿Conservo la tarifa de lanzamiento?", a: "Si te inscribes hasta el 30 de noviembre de 2026 (hora de Perú), mantienes la tarifa promocional de tu plan en sus renovaciones mientras la misma membresía permanezca activa y al día. Si cancelas y vuelves a contratar, se aplicará el precio vigente." },
-  { q: "¿Puedo cancelar mi renovación?", a: "Puedes cancelar la renovación de tu membresía. La cancelación evita renovaciones posteriores; si decides regresar con una nueva suscripción, se aplicará la tarifa vigente." }
+  { q: "¿Dónde se realiza el pago?", a: "La inscripción y el pago se realizan exclusivamente en Skool. Puedes llegar desde esta landing o directamente desde la comunidad: es el mismo cobro." },
+  { q: "¿Necesito crear otra cuenta para las herramientas?", a: "No tienes que crear una cuenta en Clerk para realizar el pago. Después de inscribirte, tu acceso a las herramientas se habilitará tras verificar tu membresía pagada con la Academia Zenit." },
+  { q: "¿Puedo cancelar mi renovación?", a: "Sí, la suscripción se administra en Skool. Si cancelas, conservas el acceso hasta finalizar el período ya pagado, de acuerdo con las condiciones de Skool." }
 ];
 
 function SectionHead({ overline, title, description, light = false }) {
