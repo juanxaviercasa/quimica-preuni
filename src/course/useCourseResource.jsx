@@ -1,6 +1,5 @@
 import { useAuth, useClerk } from "@clerk/react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export function useCourseResource(query) {
   const { isLoaded, isSignedIn, getToken } = useAuth();
