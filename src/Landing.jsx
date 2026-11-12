@@ -99,7 +99,7 @@ export default function Landing() {
           <div className="sz-learning-photos" aria-label="Tres escenas de aprendizaje, desde las dudas hasta la práctica guiada">
             {[
               { image: "/brand/dolor-estudiante.webp", alt: "Fotografía de apuntes de química con fórmulas incompletas y preguntas pendientes de resolver", step: "01 · EL PROBLEMA", title: "Tantas fórmulas… y las mismas dudas." },
-              { image: "/brand/visualizacion-atomica-horizontal.svg", alt: "Modelo atómico luminoso en una escena panorámica de laboratorio", step: "02 · EL CAMBIO", title: "Cuando lo visualizas, empiezas a entenderlo." },
+              { image: "/brand/visualizacion-atomica-zenit.webp", alt: "Modelo atómico luminoso en una escena panorámica de laboratorio", step: "02 · EL CAMBIO", title: "Cuando lo visualizas, empiezas a entenderlo." },
               { image: "https://images.presentationgo.com/2025/04/latino-student-chemistry-lab.jpg", alt: "Fotografía de un estudiante practicando química con apuntes y materiales de laboratorio", step: "03 · EL RESULTADO", title: "Resuelve con método y comprueba tus pasos." }
             ].map(item => (
               <figure key={item.step} className="sz-learning-photo">
