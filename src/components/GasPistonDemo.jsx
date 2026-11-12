@@ -89,11 +89,6 @@ export default function GasPistonDemo() {
           <div className="sz-gas-constant"><span><b>T</b> · Temperatura</span><strong>{GAS_DEMO.temperatureKelvin}</strong><small>K</small></div>
         </div>
 
-        <div className="sz-gas-calculation" aria-live="off">
-          <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
-          <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
-          <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
-        </div>
         <a href="#programa" className="sz-text-cta sz-gas-modules-link">Conocer los 18 módulos <ArrowUpRight size={17}/></a>
       </div>
 
@@ -162,7 +157,11 @@ export default function GasPistonDemo() {
         </div>
       </div>
 
-
+        <div className="sz-gas-calculation sz-gas-calculation-live" aria-label="Comprobación en tiempo real de la ley de los gases ideales">
+          <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
+          <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
+          <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
+        </div>
         <p className="sz-gas-feedback"><CheckCircle2 size={18}/><span>{feedback}</span></p>
         <p className="sz-demo-disclaimer">Modelo didáctico isotérmico: el recipiente y las partículas son esquemáticos y no están a escala.</p>
       </div>
