@@ -61,7 +61,6 @@ export default function LaunchPricing() {
         <a className="sz-btn sz-btn-primary sz-skool-cta" href={communityUrl}>
           Ver opciones e inscribirme en Skool <ArrowRight size={18} aria-hidden="true" />
         </a>
-        <small>Skool confirma el precio, las condiciones y el acceso disponible antes de inscribirte.</small>
       </div>
     </section>
   );
