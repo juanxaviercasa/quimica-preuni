@@ -92,3 +92,23 @@ test("three story cards use the same landscape media ratio without white gutters
   assert.equal(art.toString("ascii", 8, 12), "WEBP");
   assert.doesNotMatch(landing, /image: "\/brand\/visualizacion-atomica\.webp"/);
 });
+
+test("gas demonstration keeps balanced columns and shows live equation with the simulator", () => {
+  const gas = read("../src/components/GasPistonDemo.jsx");
+  const css = read("../src/landing.css");
+  const left = gas.indexOf('className="sz-gas-explainer"');
+  const right = gas.indexOf('className="sz-demo-lab sz-gas-lab"');
+  const constants = gas.indexOf('className="sz-gas-constants"');
+  const calculation = gas.indexOf('className="sz-gas-calculation sz-gas-calculation-live"');
+  const piston = gas.indexOf('className="sz-piston-grid"');
+
+  assert.ok(left >= 0 && right > left);
+  assert.ok(constants > left && constants < right, "Fixed constants belong to the explainer");
+  assert.ok(calculation > right && calculation > piston, "Live equation belongs below the simulator controls");
+  assert.equal(gas.match(/className="sz-gas-calculation sz-gas-calculation-live"/g)?.length, 1);
+  assert.match(css, /\.sz-landing \.sz-gas-experience\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(css, /\.sz-landing \.sz-gas-lab \.sz-gas-calculation-live\{/);
+  assert.match(css, /@media\(max-width:1020px\)\{\s*\.sz-landing \.sz-gas-experience\{grid-template-columns:1fr/);
+  assert.match(gas, /setPointerCapture/);
+  assert.match(gas, /onKeyDown/);
+});
