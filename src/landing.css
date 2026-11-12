@@ -355,7 +355,7 @@
 .sz-landing h2 span{color:#A96B11}
 .sz-landing .sz-eyebrow{color:#9A650C}
 .sz-landing :focus-visible{outline-color:#E2A72A}
-.sz-header{max-width:none;position:sticky;top:0;z-index:30;background:#0A1A34;color:#fff;border-bottom:1px solid #E7B84B28;box-shadow:0 12px 32px #0B1D3C16;padding-inline:max(22px,calc((100vw - 1340px)/2))}
+.sz-header{max-width:none;position:sticky;top:0;z-index:30;background:#0A1A34;color:#fff;border-bottom:0;box-shadow:none;padding-inline:max(22px,calc((100vw - 1340px)/2))}
 .sz-brand{gap:12px}
 .sz-brand-mark{height:54px;width:43px;display:grid;place-items:center;flex:none;background:transparent;border-radius:0;box-shadow:none}
 .sz-brand-mark img{width:39px;height:53px;object-fit:contain;filter:drop-shadow(0 3px 5px #0003)}
@@ -383,7 +383,6 @@
   radial-gradient(ellipse at 8% 15%,#1E2B51 0%,transparent 47%),
   linear-gradient(135deg,#09172C,#0B1D3C 65%,#182439);
   color:#FFF;min-height:640px;padding:76px max(22px,calc((100vw - 1340px)/2)) 85px;position:relative;isolation:isolate}
-.sz-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#F5BA42,#E63F14,#E8B143,transparent)}
 .sz-hero::after{content:'';position:absolute;right:5%;top:8%;width:230px;height:230px;border:1px solid #A7915730;border-radius:50%;pointer-events:none;z-index:-1;box-shadow:0 0 0 55px #B9942308,0 0 0 110px #B9942306}
 .sz-hero-content{max-width:670px;z-index:1}
 .sz-hero-kicker{color:#FBD480;background:#F0B74A19;border:1px solid #F6BC6740}
@@ -905,14 +904,14 @@
 }
 
 
-/* Hero principal Zenit: columnas alineadas arriba y átomo completamente visible.
-   Evita que el tamaño del titular empuje la tarjeta 3D hacia el borde inferior. */
+/* Portada principal: una vista completa (sin revelar la franja de estadísticas).
+   El mínimo solo se exige en escritorio: si el contenido crece, el hero crece con él. */
 .sz-landing .sz-hero{
   grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);
-  align-items:start;
+  align-items:center;
   gap:clamp(34px,4.2vw,66px);
-  padding-block:clamp(48px,4.4vw,66px) clamp(76px,5vw,88px);
-  min-height:0;
+  min-height:max(740px,calc(100svh - 84px));
+  padding-block:clamp(60px,7vh,86px);
 }
 .sz-landing .sz-hero-content{min-width:0;max-width:630px}
 .sz-landing .sz-hero h1{
@@ -931,11 +930,11 @@
 .sz-landing .sz-hero-actions{margin-top:24px}
 .sz-landing .sz-hero-reassurance{margin-top:21px;gap:12px 17px}
 .sz-landing .sz-hero-visual{
-  align-self:start;
-  margin:4px 0 0;
-  height:508px;
+  align-self:center;
+  margin:0;
+  height:536px;
   min-height:0;
-  padding:22px 24px 21px;
+  padding:24px 26px 23px;
   border-radius:25px;
 }
 .sz-landing .sz-gold-experience{min-height:0}
@@ -952,6 +951,8 @@
 @media(max-width:960px){
   .sz-landing .sz-hero{
     grid-template-columns:minmax(0,1fr);
+    align-items:start;
+    min-height:0;
     gap:33px;
     padding-block:48px 64px;
   }
