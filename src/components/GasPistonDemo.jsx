@@ -64,28 +64,46 @@ export default function GasPistonDemo() {
     }
   }
 
+  const feedback = volume < GAS_DEMO.initialVolume - 0.5
+    ? "Al comprimir el gas, la presión aumenta."
+    : volume > GAS_DEMO.initialVolume + 0.5
+      ? "Al expandir el gas, la presión disminuye."
+      : "Arrastra el pistón hacia abajo para comprimir o hacia arriba para expandir.";
+
   return (
-    <div className="sz-demo-lab sz-gas-lab" aria-label="Demostración interactiva de la ley de los gases ideales">
-      <div className="sz-demo-top">
-        <span className="sz-demo-live"><span/> SIMULADOR INTERACTIVO</span>
-        <span>QUÍMICA · GASES IDEALES</span>
-      </div>
-      <h3>Comprímelo y observa lo que ocurre.</h3>
-      <p className="sz-gas-lead">Arrastra el pistón hacia abajo para reducir el volumen. Observa cómo sube la presión y cómo responde la ecuación.</p>
+    <section className="sz-section sz-demo-section sz-gas-experience" id="demostracion">
+      <div className="sz-demo-copy sz-gas-explainer">
+        <p className="sz-eyebrow">PRUÉBALO TÚ MISMO</p>
+        <h2>Mueve el pistón. <span>Entiende la ecuación.</span></h2>
+        <p>Comprueba de forma interactiva cómo aumenta la presión al reducir el volumen de un gas cuando la temperatura se mantiene constante.</p>
 
-      <div className="sz-gas-law" aria-label="Ecuación general de gases ideales">
-        <div className="sz-gas-law-formula">
-          {[
-            ["P", "Presión"], ["·", null], ["V", "Volumen"], ["=", null],
-            ["n", "Moles"], ["·", null], ["R", "Constante"], ["·", null], ["T", "Temperatura"]
-          ].map(([symbol, label], i) => label ?
-            <span className="sz-gas-law-term" key={i}><em>{symbol}</em><small>{label}</small></span> :
-            <span className="sz-gas-law-operator" key={i} aria-hidden="true">{symbol}</span>
-          )}
+        <div className="sz-gas-theory">
+          <span className="sz-gas-theory-kicker">LA LEY DE LOS GASES IDEALES</span>
+          <div className="sz-gas-theory-formula" aria-label="Presión por volumen es igual a cantidad de gas por constante de los gases por temperatura">PV = nRT</div>
+          <p>Al mover el pistón, cambian <strong>P</strong> (presión) y <strong>V</strong> (volumen). La cantidad de gas y la temperatura permanecen constantes.</p>
         </div>
-        <small>Presión × volumen = cantidad × constante × temperatura</small>
+
+        <div className="sz-gas-constants" aria-label="Parámetros fijos del experimento">
+          <div className="sz-gas-constant"><span><b>n</b> · Cantidad de gas</span><strong>{GAS_DEMO.moles.toFixed(2)}</strong><small>mol</small></div>
+          <div className="sz-gas-constant"><span><b>R</b> · Constante de los gases</span><strong>{GAS_DEMO.gasConstant.toFixed(5)}</strong><small>L·atm/(mol·K)</small></div>
+          <div className="sz-gas-constant"><span><b>T</b> · Temperatura</span><strong>{GAS_DEMO.temperatureKelvin}</strong><small>K</small></div>
+        </div>
+
+        <div className="sz-gas-calculation" aria-live="off">
+          <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
+          <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
+          <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
+        </div>
+        <a href="#programa" className="sz-text-cta sz-gas-modules-link">Conocer los 18 módulos <ArrowUpRight size={17}/></a>
       </div>
 
+      <div className="sz-demo-lab sz-gas-lab" aria-label="Demostración interactiva de la ley de los gases ideales">
+        <div className="sz-demo-top">
+          <span className="sz-demo-live"><span/> SIMULADOR INTERACTIVO</span>
+          <span>QUÍMICA · GASES IDEALES</span>
+        </div>
+        <h3>Comprime el gas y observa la presión.</h3>
+        <p className="sz-gas-lead">Arrastra el pistón: hacia abajo reduces el volumen y hacia arriba lo aumentas.</p>
       <div className="sz-piston-grid">
         <div className="sz-piston-area">
           <div className="sz-piston-vessel">
@@ -138,33 +156,16 @@ export default function GasPistonDemo() {
             <div><strong>{volume.toFixed(1)}</strong><small>L</small></div>
             <div className="sz-gas-bar"><span style={{ width: `${Math.round(volume / GAS_DEMO.maxVolume * 100)}%` }}/></div>
           </div>
-          <p className="sz-gas-isothermal">En esta demostración, n y T se mantienen constantes.</p>
           <button className="sz-gas-reset" type="button" onClick={() => setVolume(GAS_DEMO.initialVolume)}>
             <RefreshCcw size={15}/> Reiniciar
           </button>
         </div>
       </div>
 
-      <div className="sz-gas-constants" aria-label="Valores de la cantidad de sustancia, la constante de los gases y la temperatura">
-        <div className="sz-gas-constant"><span><b>n</b> · Cantidad de gas</span><strong>{GAS_DEMO.moles.toFixed(2)}</strong><small>mol</small></div>
-        <div className="sz-gas-constant"><span><b>R</b> · Constante de los gases</span><strong>{GAS_DEMO.gasConstant.toFixed(5)}</strong><small>L·atm/(mol·K)</small></div>
-        <div className="sz-gas-constant"><span><b>T</b> · Temperatura</span><strong>{GAS_DEMO.temperatureKelvin}</strong><small>K</small></div>
-      </div>
 
-      <div className="sz-gas-calculation" aria-live="off">
-        <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
-        <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
-        <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
+        <p className="sz-gas-feedback"><CheckCircle2 size={18}/><span>{feedback}</span></p>
+        <p className="sz-demo-disclaimer">Modelo didáctico isotérmico: el recipiente y las partículas son esquemáticos y no están a escala.</p>
       </div>
-
-      <p className="sz-gas-feedback"><CheckCircle2 size={18}/>
-        <span>{volume < GAS_DEMO.initialVolume - 0.5
-          ? "Al comprimir el gas, las partículas chocan más frecuentemente contra las paredes: la presión aumenta."
-          : volume > GAS_DEMO.initialVolume + 0.5
-            ? "Al expandir el gas, el volumen disponible crece y la presión disminuye."
-            : "Arrastra hacia abajo para comprimir o hacia arriba para expandir. La presión varía en sentido inverso al volumen."}</span>
-      </p>
-      <p className="sz-demo-disclaimer">Modelo didáctico de gas ideal isotérmico: n y T permanecen constantes. El pistón representa cambios de volumen; las partículas son esquemáticas y el recipiente no está a escala.</p>
-    </div>
+    </section>
   );
 }
