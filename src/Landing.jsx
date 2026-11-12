@@ -72,7 +72,6 @@ export default function Landing() {
       <main id="contenido">
         <section className="sz-hero" aria-labelledby="sz-hero-title">
           <div className="sz-hero-content">
-            <p className="sz-hero-kicker"><span/> ACADEMIA ZENIT · QUÍMICA ZENIT</p>
             <h1 id="sz-hero-title">Entiende la química, <em>resuelve con seguridad y prepárate para ingresar.</em></h1>
             <p className="sz-hero-lead">Aprende química preuniversitaria con explicaciones visuales, simuladores que puedes manipular y práctica autocorregida. Refuerza lo aprendido en clases en vivo y prepárate con seguridad para tu examen de admisión.</p>
             <div className="sz-hero-actions">
