@@ -93,22 +93,26 @@ test("three story cards use the same landscape media ratio without white gutters
   assert.doesNotMatch(landing, /image: "\/brand\/visualizacion-atomica\.webp"/);
 });
 
-test("gas demonstration keeps balanced columns and shows live equation with the simulator", () => {
+test("gas demo separates physical piston shaft from header and explanatory formula", () => {
   const gas = read("../src/components/GasPistonDemo.jsx");
   const css = read("../src/landing.css");
   const left = gas.indexOf('className="sz-demo-copy sz-gas-explainer"');
   const right = gas.indexOf('className="sz-demo-lab sz-gas-lab"');
   const constants = gas.indexOf('className="sz-gas-constants"');
-  const calculation = gas.indexOf('className="sz-gas-calculation sz-gas-calculation-live"');
+  const proof = gas.indexOf('className="sz-gas-proof"');
   const piston = gas.indexOf('className="sz-piston-grid"');
+  const footer = gas.indexOf('className="sz-gas-lab-footer"');
 
   assert.ok(left >= 0 && right > left);
-  assert.ok(constants > left && constants < right, "Fixed constants belong to the explainer");
-  assert.ok(calculation > right && calculation > piston, "Live equation belongs below the simulator controls");
-  assert.equal(gas.match(/className="sz-gas-calculation sz-gas-calculation-live"/g)?.length, 1);
-  assert.match(css, /\.sz-landing \.sz-gas-experience\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
-  assert.match(css, /\.sz-landing \.sz-gas-lab \.sz-gas-calculation-live\{/);
-  assert.match(css, /@media\(max-width:1020px\)\{\s*\.sz-landing \.sz-gas-experience\{grid-template-columns:1fr/);
+  assert.ok(proof > left && proof < right, "Live equation belongs next to the mathematical explanation");
+  assert.ok(constants > proof && constants < right, "Fixed parameters stay with the explanation");
+  assert.ok(piston > right && footer > piston, "Interactive controls precede their separated footer");
+  assert.equal(gas.match(/className="sz-gas-proof"/g)?.length, 1);
+  assert.doesNotMatch(gas, /sz-gas-calculation-live/);
+  assert.match(css, /\.sz-landing \.sz-gas-experience\{\s*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(css, /\.sz-landing \.sz-gas-experience \.sz-piston-grid\{[\s\S]*?padding:42px 0 10px/);
+  assert.match(css, /\.sz-landing \.sz-gas-lab-footer\{[\s\S]*?padding-top:22px/);
+  assert.match(css, /@media\(max-width:1020px\)\{\s*\.sz-landing \.sz-gas-experience\{\s*grid-template-columns:1fr/);
   assert.match(gas, /setPointerCapture/);
   assert.match(gas, /onKeyDown/);
 });
