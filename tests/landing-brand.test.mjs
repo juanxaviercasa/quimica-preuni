@@ -96,7 +96,7 @@ test("three story cards use the same landscape media ratio without white gutters
 test("gas demonstration keeps balanced columns and shows live equation with the simulator", () => {
   const gas = read("../src/components/GasPistonDemo.jsx");
   const css = read("../src/landing.css");
-  const left = gas.indexOf('className="sz-gas-explainer"');
+  const left = gas.indexOf('className="sz-demo-copy sz-gas-explainer"');
   const right = gas.indexOf('className="sz-demo-lab sz-gas-lab"');
   const constants = gas.indexOf('className="sz-gas-constants"');
   const calculation = gas.indexOf('className="sz-gas-calculation sz-gas-calculation-live"');
