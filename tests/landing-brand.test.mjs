@@ -13,7 +13,7 @@ test("brand assets use the Zenit phoenix and preserve sales-only navigation", ()
   assert.match(landing, /Química Zenit/);
   assert.match(landing, /zenit-phoenix\.svg/);
   assert.match(landing, /dolor-estudiante\.webp/);
-  assert.match(landing, /visualizacion-atomica\.webp/);
+  assert.match(landing, /visualizacion-atomica-horizontal\.svg/);
   assert.match(landing, /sz-learning-photos/);
   assert.match(logo, /Fénix de Academia Zenit/);
   assert.match(logo, /M1154 1298/); // eye restored
@@ -77,4 +77,19 @@ test("hero removes repeated branding and spaces atom captions below the fact car
   assert.match(css, /\.sz-landing \.sz-gold-facts\{[^}]*margin-bottom:13px/);
   assert.match(css, /\.sz-landing \.sz-gold-isotope\{[^}]*line-height:1\.55/);
   assert.match(css, /\.sz-landing \.sz-atom-hint\{[^}]*margin-top:9px/);
+});
+
+test("three story cards use the same landscape media ratio without white gutters", () => {
+  const css = read("../src/landing.css");
+  const landing = read("../src/Landing.jsx");
+  const art = read("../public/brand/visualizacion-atomica-horizontal.svg");
+
+  assert.match(css, /\.sz-learning-photos\{[^}]*repeat\(3,minmax\(0,1fr\)\)/);
+  assert.match(css, /\.sz-learning-photo img\{[^}]*aspect-ratio:4\/3[^}]*object-fit:cover/);
+  assert.match(landing, /width="720" height="540"/);
+  assert.match(art, /viewBox="0 0 1200 900"/);
+  assert.match(art, /data:image\/webp;base64,UklGR/);
+  assert.match(art, /background-blur/);
+  assert.match(art, /photo-mask/);
+  assert.doesNotMatch(landing, /image: "\/brand\/visualizacion-atomica\.webp"/);
 });
