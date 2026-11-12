@@ -81,6 +81,11 @@ export default function GasPistonDemo() {
           <span className="sz-gas-theory-kicker">LA LEY DE LOS GASES IDEALES</span>
           <div className="sz-gas-theory-formula" aria-label="Presión por volumen es igual a cantidad de gas por constante de los gases por temperatura">PV = nRT</div>
           <p>Al mover el pistón, cambian <strong>P</strong> (presión) y <strong>V</strong> (volumen). La cantidad de gas y la temperatura permanecen constantes.</p>
+          <div className="sz-gas-proof" aria-label="Comprobación en tiempo real de la ecuación">
+            <span>COMPROBACIÓN EN TIEMPO REAL</span>
+            <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
+            <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
+          </div>
         </div>
 
         <div className="sz-gas-constants" aria-label="Parámetros fijos del experimento">
@@ -99,7 +104,7 @@ export default function GasPistonDemo() {
         </div>
         <h3>Comprime el gas y observa la presión.</h3>
         <p className="sz-gas-lead">Arrastra el pistón: hacia abajo reduces el volumen y hacia arriba lo aumentas.</p>
-      <div className="sz-piston-grid">
+        <div className="sz-piston-grid">
         <div className="sz-piston-area">
           <div className="sz-piston-vessel">
             <div className="sz-piston-gas" style={{ height: `${height}%` }} aria-hidden="true">
@@ -155,15 +160,12 @@ export default function GasPistonDemo() {
             <RefreshCcw size={15}/> Reiniciar
           </button>
         </div>
-      </div>
-
-        <div className="sz-gas-calculation sz-gas-calculation-live" aria-label="Comprobación en tiempo real de la ley de los gases ideales">
-          <span>COMPRUEBA LA ECUACIÓN EN TIEMPO REAL</span>
-          <strong>{pressure.toFixed(2)} atm × {volume.toFixed(1)} L ≈ {gasWork.toFixed(2)} L·atm</strong>
-          <small>nRT = {GAS_DEMO.moles.toFixed(2)} mol × {GAS_DEMO.gasConstant.toFixed(5)} L·atm/(mol·K) × {GAS_DEMO.temperatureKelvin} K ≈ {gasWork.toFixed(2)} L·atm</small>
         </div>
-        <p className="sz-gas-feedback"><CheckCircle2 size={18}/><span>{feedback}</span></p>
-        <p className="sz-demo-disclaimer">Modelo didáctico isotérmico: el recipiente y las partículas son esquemáticos y no están a escala.</p>
+
+        <div className="sz-gas-lab-footer">
+          <p className="sz-gas-feedback"><CheckCircle2 size={18}/><span>{feedback}</span></p>
+          <p className="sz-demo-disclaimer">Modelo didáctico isotérmico: el recipiente y las partículas son esquemáticos y no están a escala.</p>
+        </div>
       </div>
     </section>
   );
