@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ArrowDown, ArrowUp, CheckCircle2, Hand, RefreshCcw } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpRight, CheckCircle2, Hand, RefreshCcw } from "lucide-react";
 import {
   GAS_DEMO, clampGasVolume, gasHeightPercent, gasPressureAtVolume,
   gasPressureVolumeProduct, pistonTopPercent, volumeFromPistonDrag
