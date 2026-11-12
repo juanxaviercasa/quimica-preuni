@@ -68,3 +68,13 @@ test("gold isotope and ideal gas parameters are displayed in the sales page", ()
   }
   assert.match(gas, /sz-gas-constants/);
 });
+
+test("hero removes repeated branding and spaces atom captions below the fact cards", () => {
+  const landing = read("../src/Landing.jsx");
+  const css = read("../src/landing.css");
+  assert.doesNotMatch(landing, /className="sz-hero-kicker"/);
+  assert.match(landing, /id="sz-hero-title"/);
+  assert.match(css, /\.sz-landing \.sz-gold-facts\{[^}]*margin-bottom:13px/);
+  assert.match(css, /\.sz-landing \.sz-gold-isotope\{[^}]*line-height:1\.55/);
+  assert.match(css, /\.sz-landing \.sz-atom-hint\{[^}]*margin-top:9px/);
+});
