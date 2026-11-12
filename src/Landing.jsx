@@ -127,20 +127,7 @@ export default function Landing() {
           </div>
         </section>
 
-        <section className="sz-section sz-demo-section" id="demostracion">
-          <div className="sz-demo-copy">
-            <p className="sz-eyebrow">PRUÉBALO TÚ MISMO</p>
-            <h2>Mueve el pistón. <span>Entiende la ecuación.</span></h2>
-            <p>Arrastra el pistón del recipiente: cuando el volumen disminuye, la presión aumenta. Así puedes experimentar con PV = nRT antes de resolver un ejercicio.</p>
-            <ul className="sz-check-list">
-              <li><Check size={17}/> Arrastra el pistón hacia abajo para comprimir el gas.</li>
-              <li><Check size={17}/> Observa cómo la presión aumenta al disminuir el volumen.</li>
-              <li><Check size={17}/> Comprueba la ecuación PV = nRT con los valores del modelo.</li>
-            </ul>
-            <a href="#programa" className="sz-text-cta">Conocer los 18 módulos <ArrowUpRight size={17}/></a>
-          </div>
-          <GasPistonDemo/>
-        </section>
+        <GasPistonDemo/>
 
         <section className="sz-section sz-program" id="programa">
           <SectionHead overline="TU CAMINO POR EL CURSO" title={<>18 módulos para pasar <span>de las bases a resolver problemas.</span></>} description="De las bases de la química hasta los temas más exigentes. Recorre las cuatro etapas y conoce qué aprenderás en cada módulo."/>
