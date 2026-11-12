@@ -63,7 +63,7 @@ test("gold isotope and ideal gas parameters are displayed in the sales page", ()
     assert.ok(atom.includes(field));
   }
   assert.match(atom, /goldMassNumber - goldProtons/);
-  for (const field of ["Presión", "Volumen", "Moles", "Constante", "Temperatura"]) {
+  for (const field of ["Presión", "Volumen", "Cantidad de gas", "Constante", "Temperatura"]) {
     assert.ok(gas.includes(field));
   }
   assert.match(gas, /sz-gas-constants/);
