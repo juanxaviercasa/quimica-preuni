@@ -32,8 +32,8 @@ test("sales page contains only conversion-focused anchors and offers", () => {
     assert.ok(landing.includes(anchor), "Missing " + anchor);
   }
   const pricing = readFileSync(new URL("../src/components/LaunchPricing.jsx", import.meta.url), "utf8");
-  assert.match(pricing, /Inscribirme y pagar en Skool/);
-  assert.match(pricing, /Inscribirme y pagar en Skool/);
+  assert.match(pricing, /Ver opciones e inscribirme en Skool/);
+  assert.match(pricing, /Ver opciones e inscribirme en Skool/);
   assert.match(landing, /<LaunchPricing \/>/);
   assert.match(pricing, /id="planes"/);
   assert.match(landing, /Quiero los bonos con mi membresía/);
