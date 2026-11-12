@@ -116,3 +116,14 @@ test("gas demo separates physical piston shaft from header and explanatory formu
   assert.match(gas, /setPointerCapture/);
   assert.match(gas, /onKeyDown/);
 });
+
+test("hero fills the first desktop viewport without a mustard divider", () => {
+  const css = read("../src/landing.css");
+  const landing = read("../src/Landing.jsx");
+  assert.match(css, /\.sz-landing \.sz-hero\{[^}]*min-height:max\(740px,calc\(100svh - 84px\)\)/);
+  assert.match(css, /\.sz-landing \.sz-hero\{[^}]*align-items:center/);
+  assert.doesNotMatch(css, /\.sz-hero::before\{content:'';position:absolute;top:0/);
+  assert.match(css, /\.sz-header\{[^}]*border-bottom:0;box-shadow:none/);
+  assert.match(css, /@media\(max-width:960px\)\{\s*\.sz-landing \.sz-hero\{[^}]*min-height:0/);
+  assert.match(landing, /className="sz-value-strip"/);
+});
