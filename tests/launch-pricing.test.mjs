@@ -21,7 +21,7 @@ function pricingForTest() { return read("../src/components/LaunchPricing.jsx"); 
 
 test("landing keeps Skool options and removes old checkout/duplicate payment warnings", () => {
   const landing = read("../src/Landing.jsx");
-  assert.match(pricingForTest(), /Skool confirma el precio/);
+  assert.doesNotMatch(pricingForTest(), /Skool confirma el precio, las condiciones y el acceso disponible antes de inscribirte/);
   assert.match(landing, /<LaunchPricing \/>/);
   assert.doesNotMatch(landing, /tarifa promocional de tu plan/);
   assert.doesNotMatch(pricingForTest(), /no vuelvas a comprar|doble pago/i);
